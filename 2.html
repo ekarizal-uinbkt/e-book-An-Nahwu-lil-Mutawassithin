@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 2: Al-Fa'il — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 2: Analisis fungsi sintaksis Fa'il dalam teks narasi, deteksi tanda i'rab, perbandingan Mazhab Basrah vs Kufah, dan bedah Surah Al-Kahfi ayat 1-10." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--ink);color:var(--cream);
+  line-height:1.7;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201,169,97,.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(201,169,97,.06) 0%, transparent 40%);
+}
+.bg-ornament{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(201,169,97,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,97,.03) 1px, transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{
+  min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1;
+}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{
+  display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;
+  border:1px solid var(--gold);border-radius:2px;
+}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{
+  background:linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;
+  font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none;
+}
+.btn-primary{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;
+  color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line);
+}
+h2.section-title em{
+  font-style:italic;
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+h3.sub-title{
+  font-family:var(--serif);font-size:1.5rem;color:var(--gold);
+  margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem;
+}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{
+  font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);
+  font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem;
+}
+.arabic-display{
+  background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;
+  padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);
+  font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2;
+}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{
+  background:rgba(201,169,97,.04);border-left:3px solid var(--gold);
+  padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;
+}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center;
+}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg, transparent, var(--gold), transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;
+}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box, .warning-box, .insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4, .warning-box h4, .insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul, .warning-box ul, .insight-box ul{list-style:none;padding:0}
+.tips-box li, .warning-box li, .insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative;
+}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{
+  display:inline-block;padding:1rem 2rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3);
+}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center;
+}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  flex-wrap:wrap;gap:1rem;
+}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{
+  background:linear-gradient(135deg, rgba(100,180,220,.08) 0%, rgba(100,180,220,.02) 100%);
+  border:1px solid rgba(100,180,220,.3);border-radius:6px;
+  padding:2rem;margin:2rem 0;
+}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{
+  display:inline-block;margin-top:1rem;padding:.4rem 1rem;
+  background:rgba(100,180,220,.15);border-radius:4px;
+  font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase;
+}
+.quiz-section{
+  background:linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+  padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1;
+}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{
+  display:inline-block;padding:.5rem 1.5rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-size:.75rem;letter-spacing:3px;
+  text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem;
+}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input, .form-group select{
+  padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);
+  border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s;
+}
+.form-group input:focus, .form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{
+  width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);
+  border:1px solid var(--line);border-radius:4px;color:var(--cream);
+  font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s;
+}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{
+  padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+  font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.btn-submit{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf, .btn-score, .btn-email, .btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover, .btn-score:hover, .btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{
+  display:none;
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center;
+}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 2
+  </div>
+  <span class="chapter-label">Pertemuan 2 · 2 SKS</span>
+  <h1>Al-Fa'il: <span class="accent">Mengungkap Pelaku dalam Kalimat Arab</span></h1>
+  <div class="hero-arabic">الْفَاعِلُ: كَشْفُ صَاحِبِ الْفِعْلِ فِي الْجُمْلَةِ الْعَرَبِيَّةِ</div>
+  <p class="subtitle">Analisis fungsi sintaksis Fa'il, deteksi tanda i'rab, perbandingan Mazhab Basrah vs Kufah, dan bedah Surah Al-Kahfi ayat 1–10 sebagai teks otentik.</p>
+  <div class="hero-actions">
+    <a href="1.html" class="btn btn-outline">← Pertemuan Sebelumnya</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 2</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s2-1">2.1 Landasan Teoretis Fa'il</a>
+        <ol>
+          <li><a href="#s2-1-1">2.1.1 Definisi dan Hakikat Fa'il</a></li>
+          <li><a href="#s2-1-2">2.1.2 Syarat-syarat Fa'il</a></li>
+          <li><a href="#s2-1-3">2.1.3 Perbedaan Mazhab Basrah dan Kufah</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-2">2.2 Klasifikasi Fa'il</a>
+        <ol>
+          <li><a href="#s2-2-1">2.2.1 Fa'il Zhahir (Sarih)</a></li>
+          <li><a href="#s2-2-2">2.2.2 Fa'il Mu'awwal</a></li>
+          <li><a href="#s2-2-3">2.2.3 Fa'il Mustatir (Dhamir)</a></li>
+          <li><a href="#s2-2-4">2.2.4 Fa'il dalam Fi'il Ma'lum vs Majhul</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-3">2.3 Tanda I'rab Fa'il</a>
+        <ol>
+          <li><a href="#s2-3-1">2.3.1 Tanda Asli dan Cabang</a></li>
+          <li><a href="#s2-3-2">2.3.2 Analisis I'rab dalam Surah Al-Kahfi (1–10)</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-4">2.4 Fa'il dalam Konteks Kontemporer</a>
+        <ol>
+          <li><a href="#s2-4-1">2.4.1 Analisis Teks Berita Arab</a></li>
+          <li><a href="#s2-4-2">2.4.2 Integrasi Linguistik Modern</a></li>
+        </ol>
+      </li>
+      <li><a href="#s2-5">2.5 Pendekatan Pembelajaran Kontekstual</a></li>
+      <li><a href="#s2-6">2.6 Peta Konsep Fa'il</a></li>
+      <li><a href="#s2-7">2.7 Glosarium Istilah Fa'il</a></li>
+      <li><a href="#s2-8">2.8 Tugas Pertemuan 2</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika kalimat Arab adalah sebuah panggung, maka <em>Fa'il</em> adalah bintang utamanya — ia yang menggerakkan aksi, yang menentukan makna, dan yang menjadi pusat perhatian dalam setiap peristiwa linguistik.
+  </p>
+
+  <p>
+    Setelah pada pertemuan pertama kita meletakkan fondasi filosofis dan peta jalan pembelajaran, pada pertemuan kedua ini kita melangkah ke unsur <strong>Marfu'atul Asma</strong> yang paling fundamental: <strong>Al-Fa'il</strong> (الْفَاعِلُ). Sebagai mahasiswa Pendidikan Bahasa Arab (PBA), penguasaan terhadap Fa'il bukan sekadar syarat lulus mata kuliah — ia adalah kunci untuk membuka seluruh pintu nahwu tingkat menengah.
+  </p>
+
+  <p>
+    Fa'il adalah unsur yang paling sering muncul dalam kalimat Arab, baik dalam Al-Qur'an, hadis, karya ulama klasik, maupun teks kontemporer. Memahaminya secara mendalam akan melatih kepekaan linguistik mahasiswa dalam menganalisis struktur kalimat, sekaligus membekali keterampilan pedagogik untuk mengajarkan nahwu kepada siswa di masa depan.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Fa'il dari berbagai perspektif: definisi dan hakikatnya, syarat-syaratnya menurut berbagai mazhab, klasifikasi jenis-jenisnya, tanda-tanda i'rabnya, serta analisis mendalam terhadap Surah Al-Kahfi ayat 1–10 sebagai teks otentik. Kita juga akan membandingkan pandangan Mazhab Basrah dan Kufah — sebuah dialog intelektual yang memperkaya khazanah keilmuan nahwu.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">الْفَاعِلُ هُوَ الاسْمُ الْمَرْفُوعُ الْمَذْكُورُ قَبْلَهُ فِعْلُهُ</div>
+    <div class="translation">"Fa'il adalah isim marfu' yang disebutkan sebelum fi'il-nya (dalam susunan standar)."</div>
+    <div class="source">— Definisi Klasik dalam Alfiyyah Ibnu Malik</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal Al-Fa'il dalam Kalimat Arab</h4>
+    <p>Simak penjelasan visual tentang bagaimana Fa'il bekerja dalam struktur kalimat Arab — dari definisi dasar hingga analisis teks otentik.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 2</h4>
+    <ul>
+      <li><strong>Al-Fa'il (الْفَاعِلُ):</strong> Isim marfu' yang disebutkan sebelum fi'il ma'lum, sebagai pelaku atau subjek yang melakukan pekerjaan.</li>
+      <li><strong>Fa'il Zhahir (Sarih):</strong> Fa'il yang berupa isim zhahir (kata benda nyata) yang disebutkan secara eksplisit dalam kalimat.</li>
+      <li><strong>Fa'il Mu'awwal:</strong> Fa'il yang berupa jumlah (kalimat) atau syibh jumlah yang ditakwilkan menjadi isim mufrad.</li>
+      <li><strong>Fa'il Mustatir:</strong> Fa'il yang berupa dhamir (kata ganti) yang tersembunyi, baik wajib maupun boleh mustatir.</li>
+      <li><strong>Ta'lil Nahwi:</strong> Argumentasi logis yang digunakan untuk memvalidasi kedudukan Fa'il dalam kalimat.</li>
+      <li><strong>Fi'il Ma'lum vs Majhul:</strong> Perbedaan fi'il yang menyebutkan pelakunya (ma'lum) dan yang tidak (majhul) — di mana Fa'il hanya ada pada fi'il ma'lum.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Salah Identifikasi Fa'il, Salah Pemahaman</h4>
+    <div class="case-content">
+      Seorang siswa menerjemahkan kalimat <span class="arab" style="font-size:1.3rem">جَاءَ الطَّالِبُ</span> dengan menerjemahkan <span class="arab" style="font-size:1.2rem">جَاءَ</span> sebagai "datanglah" dan <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span> sebagai objek. Akibatnya, terjemahannya menjadi "datanglah sang pelajar" — seolah-olah ada yang memanggil pelajar. Padahal, <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span> adalah <strong>Fa'il</strong> (pelaku), sehingga terjemahan yang benar adalah "Sang pelajar telah datang" — dialah yang melakukan perbuatan datang.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Kesalahan identifikasi Fa'il berakibat pada kesalahan terjemahan yang mengubah makna kalimat secara fundamental. Dalam kalimat fi'liyyah, Fa'il adalah pelaku, bukan objek.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda tidak hanya dituntut untuk memahami Fa'il secara teoretis, tetapi juga mampu mengajarkannya kepada siswa dengan cara yang menarik dan kontekstual. Bayangkan bagaimana Anda akan menjelaskan konsep Fa'il kepada siswa MTs/MA — mungkin dengan contoh dari kehidupan sehari-hari, dari pepatah Minangkabau, atau dari ayat Al-Qur'an yang mereka hafal.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       2.1 LANDASAN TEORETIS FA'IL
+       ========================================================= -->
+  <h2 class="section-title" id="s2-1">2.1 Landasan Teoretis <em>Al-Fa'il</em></h2>
+
+  <p>
+    Sebelum masuk ke analisis praktis, kita perlu memahami landasan teoretis yang kokoh tentang Fa'il. Pemahaman ini akan menjadi fondasi untuk seluruh pembahasan selanjutnya.
+  </p>
+
+  <h3 class="sub-title" id="s2-1-1">2.1.1 Definisi dan Hakikat Fa'il</h3>
+
+  <p>
+    Secara etimologis, kata <em>fa'il</em> (فَاعِلٌ) berasal dari akar kata <em>fa'ala</em> (فَعَلَ) yang berarti "melakukan" atau "mengerjakan". Secara terminologis, para ulama nahwu mendefinisikan Fa'il dengan berbagai rumusan:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Definisi</th><th>Rumusan</th><th>Sumber</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Klasik (Ibnu Malik)</strong></td>
+        <td>"Isim marfu' yang disebutkan sebelum fi'il-nya (dalam susunan standar), yang menjadi pelaku perbuatan."</td>
+        <td><em>Alfiyyah Ibnu Malik</em>, bait 232</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong></td>
+        <td>"Isim marfu' yang disebutkan padanya fi'il ma'lum yang mutlak, baik fi'il tersebut disebutkan sebelum atau sesudahnya."</td>
+        <td><em>Mughni al-Labib</em></td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong></td>
+        <td>"Isim marfu' yang disebutkan sebelum fi'il ma'lum, yang menunjukkan pelaku perbuatan."</td>
+        <td><em>An-Nahw al-Wadhih</em></td>
+      </tr>
+      <tr>
+        <td><strong>Modern</strong></td>
+        <td>"Argumen eksternal verba (external argument) yang menempati posisi Spec-TP dalam teori generatif, sebagai pelaku semantis dari peristiwa yang dinyatakan oleh predikat."</td>
+        <td>Integrasi linguistik modern</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="sub-sub-title">Hakikat Fa'il dalam Struktur Kalimat</h4>
+
+  <p>
+    Fa'il memiliki beberapa karakteristik fundamental yang membedakannya dari unsur kalimat lainnya:
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Karakteristik Fundamental Fa'il</h4>
+    <ul>
+      <li><strong>Selalu Marfu':</strong> Fa'il selalu berkedudukan rafa' (dhommah atau tanda cabangnya), tidak pernah nashab atau khafadh.</li>
+      <li><strong>Mendahului Fi'il (pada asalnya):</strong> Dalam susunan standar, Fa'il mendahului fi'il-nya, meskipun dalam praktik sering didahulukan fi'il.</li>
+      <li><strong>Berupa Isim:</strong> Fa'il selalu berupa isim (kata benda), baik zhahir maupun muqaddar.</li>
+      <li><strong>Pelaku Semantis:</strong> Fa'il adalah pelaku (agent) yang melakukan perbuatan yang dinyatakan oleh fi'il.</li>
+      <li><strong>Hanya pada Fi'il Ma'lum:</strong> Fa'il hanya ada pada fi'il ma'lum (aktif). Pada fi'il majhul (pasif), posisinya digantikan oleh Na'ibul Fa'il.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s2-1-2">2.1.2 Syarat-syarat Fa'il</h3>
+
+  <p>
+    Para ulama nahwu sepakat bahwa Fa'il harus memenuhi beberapa syarat. Namun, terdapat perbedaan pendapat antara Mazhab Basrah dan Kufah mengenai beberapa syarat tertentu. Berikut adalah syarat-syarat yang disepakati:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Syarat</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Berupa Isim</strong></td>
+        <td>Fa'il harus berupa isim (kata benda), bukan fi'il atau huruf.</td>
+        <td><span class="arab">جَاءَ زَيْدٌ</span> — <span class="arab">زَيْدٌ</span> adalah isim</td>
+      </tr>
+      <tr>
+        <td><strong>Marfu'</strong></td>
+        <td>Fa'il selalu berkedudukan marfu' (rafa'), baik secara lafaz maupun taqdir.</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ</span> — <span class="arab">الطَّالِبُ</span> marfu' dengan dhommah</td>
+      </tr>
+      <tr>
+        <td><strong>Mendampingi Fi'il Ma'lum</strong></td>
+        <td>Fa'il hanya ada pada fi'il ma'lum (aktif), bukan pada fi'il majhul (pasif).</td>
+        <td><span class="arab">كَتَبَ الطَّالِبُ</span> (ma'lum) ✓<br><span class="arab">كُتِبَ الدَّرْسُ</span> (majhul) ✗ — ini Na'ibul Fa'il</td>
+      </tr>
+      <tr>
+        <td><strong>Mendahului atau Menyertai Fi'il</strong></td>
+        <td>Fa'il boleh mendahului atau mengiringi fi'il, tetapi tidak boleh didahului oleh maf'ul bih.</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ</span> ✓ (fi'il didahulukan)<br><span class="arab">الطَّالِبُ جَاءَ</span> ✓ (fa'il didahulukan)</td>
+      </tr>
+      <tr>
+        <td><strong>Tidak Terpisah dari Fi'il oleh Ajnabi</strong></td>
+        <td>Tidak boleh ada unsur asing (ajnabi) yang memisahkan Fa'il dari Fi'il-nya.</td>
+        <td><span class="arab">جَاءَ زَيْدٌ عَمْرٌو</span> ✗ (salah)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s2-1-3">2.1.3 Perbedaan Mazhab Basrah dan Kufah tentang Fa'il</h3>
+
+  <p>
+    Salah satu kekayaan intelektual dalam tradisi nahwu adalah perbedaan pendapat antara Mazhab Basrah dan Mazhab Kufah mengenai syarat-syarat Fa'il. Perbedaan ini bukan "kesalahan", melainkan manifestasi dari ijtihad linguistik yang memperkaya khazanah keilmuan.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Mazhab Basrah</th><th>Mazhab Kufah</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fa'il berupa Jumlah (Kalimat)</strong></td>
+        <td>Tidak boleh. Jumlah harus ditakwilkan menjadi isim mufrad terlebih dahulu sebelum menjadi Fa'il.</td>
+        <td>Boleh secara langsung. Jumlah bisa langsung menjadi Fa'il tanpa takwil.</td>
+      </tr>
+      <tr>
+        <td><strong>Fa'il berupa Zhahir Mu'awwal</strong></td>
+        <td>Tidak boleh. Harus berupa zhahir sharih atau dhamir mustatir.</td>
+        <td>Boleh, seperti <span class="arab">أَنْ تَقُومَ خَيْرٌ لَكَ</span> — <span class="arab">أَنْ تَقُومَ</span> ditakwil sebagai Fa'il.</td>
+      </tr>
+      <tr>
+        <td><strong>Sumber Data</strong></td>
+        <td>Hanya bahasa Arab fusha yang mutawatir dan qiyas yang ketat.</td>
+        <td>Termasuk qira'at syāzz dan syawahid sya'ir yang lemah menurut Basrah.</td>
+      </tr>
+      <tr>
+        <td><strong>Pendekatan Metodologis</strong></td>
+        <td>Qiyas (analogi) dan kaidah sistematis — ketat dan logis.</td>
+        <td>Sama' (pendengaran) dan akomodasi variasi — fleksibel dan deskriptif.</td>
+      </tr>
+      <tr>
+        <td><strong>Karya Rujukan Utama</strong></td>
+        <td><em>Al-Kitab</em> (Sibawayh), <em>Al-Muqtadha</em> (Al-Jurjani)</td>
+        <td><em>Al-Mufrad</em> (Al-Anbari), <em>Al-Hudud</em> (Al-Farra')</td>
+      </tr>
+      <tr>
+        <td><strong>Implikasi Pedagogis</strong></td>
+        <td>Cocok untuk pengajaran sistematis di level mubtadi' hingga mutawassith.</td>
+        <td>Cocok untuk analisis teks klasik yang kaya variasi bahasa.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Sebagai calon guru, Anda perlu memahami kedua mazhab agar dapat menjelaskan nuansa perbedaan kepada siswa yang kritis.</li>
+      <li>Dalam pengajaran di madrasah/sekolah, umumnya Mazhab Basrah yang diajarkan karena lebih sistematis. Namun, referensi Kufah berguna untuk analisis teks-teks sastra klasik.</li>
+      <li>Perbedaan ini dapat menjadi bahan diskusi yang menarik di kelas — melatih siswa berpikir kritis dan terbuka terhadap perbedaan pendapat.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Dialog Intelektual Basrah vs Kufah</h4>
+    <div class="case-content">
+      Dalam kalimat <span class="arab" style="font-size:1.3rem">يَسُرُّنِي أَنْ تَزُورَنِي</span> ("Aku senang engkau mengunjungiku"), Mazhab Basrah mengatakan bahwa <span class="arab" style="font-size:1.2rem">أَنْ تَزُورَنِي</span> ditakwilkan menjadi <span class="arab" style="font-size:1.2rem">زِيَارَتُكَ</span> ("kunjunganmu"), lalu menjadi Fa'il. Sementara Mazhab Kufah mengatakan bahwa <span class="arab" style="font-size:1.2rem">أَنْ تَزُورَنِي</span> langsung menjadi Fa'il tanpa perlu takwil — karena dalam penggunaan bahasa Arab, jumlah bisa langsung berfungsi sebagai Fa'il.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Kedua pendapat ini sama-sama valid dalam konteksnya masing-masing. Mahasiswa PBA perlu memahami keduanya agar mampu menganalisis teks Arab secara komprehensif.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       2.2 KLASIFIKASI FA'IL
+       ========================================================= -->
+  <h2 class="section-title" id="s2-2">2.2 Klasifikasi <em>Al-Fa'il</em></h2>
+
+  <p>
+    Fa'il dapat diklasifikasikan berdasarkan berbagai aspek: bentuknya (zhahir, mu'awwal, mustatir), keberadaannya (dalam fi'il ma'lum vs majhul), dan posisinya dalam kalimat. Pemahaman klasifikasi ini penting untuk analisis yang presisi.
+  </p>
+
+  <h3 class="sub-title" id="s2-2-1">2.2.1 Fa'il Zhahir (Sarih)</h3>
+
+  <p>
+    Fa'il zhahir (atau disebut juga Fa'il sharih) adalah Fa'il yang berupa isim zhahir — kata benda nyata yang disebutkan secara eksplisit dalam kalimat. Ini adalah jenis Fa'il yang paling mudah diidentifikasi.
+  </p>
+
+  <div class="arabic-display">
+    جَاءَ الطَّالِبُ إِلَى الْفَصْلِ
+    <small>"Sang pelajar telah datang ke kelas."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">جَاءَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Fi'il ma'lum (aktif) yang membutuhkan Fa'il.</small></span>
+
+      <span class="word">الطَّالِبُ</span>
+      <span class="detail"><strong>Fa'il zhahir</strong> — berkedudukan marfu'. Tanda rafa': dhommah zhahirah. <small>Isim zhahir yang disebutkan secara eksplisit sebagai pelaku perbuatan "datang".</small></span>
+
+      <span class="word">إِلَى الْفَصْلِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">إِلَى</span> = huruf jar; <span class="arab" style="font-size:1.1rem">الْفَصْلِ</span> = majrur dengan kasrah. <small>Keterangan tempat (zharf).</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Ciri-ciri Fa'il Zhahir</h4>
+
+  <table>
+    <thead>
+      <tr><th>Ciri</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Berupa Isim Zhahir</strong></td>
+        <td>Kata benda nyata yang disebutkan secara eksplisit, bukan dhamir (kata ganti).</td>
+        <td><span class="arab">جَاءَ زَيْدٌ</span> — <span class="arab">زَيْدٌ</span> adalah isim zhahir</td>
+      </tr>
+      <tr>
+        <td><strong>Bisa Mufrad, Mutsanna, atau Jamak</strong></td>
+        <td>Fa'il zhahir bisa berupa kata tunggal, ganda, atau jamak.</td>
+        <td><span class="arab">جَاءَ الطُّلَّابُ</span> — <span class="arab">الطُّلَّابُ</span> adalah jamak mudzakkar salim</td>
+      </tr>
+      <tr>
+        <td><strong>Boleh Mendahului atau Mengiringi Fi'il</strong></td>
+        <td>Fa'il zhahir boleh mendahului fi'il (menjadi mubtada') atau mengiringinya.</td>
+        <td><span class="arab">زَيْدٌ جَاءَ</span> (didahulukan) ✓<br><span class="arab">جَاءَ زَيْدٌ</span> (mengiringi) ✓</td>
+      </tr>
+      <tr>
+        <td><strong>Selalu Marfu'</strong></td>
+        <td>Fa'il zhahir selalu berkedudukan marfu', dengan tanda rafa' yang sesuai dengan bentuknya.</td>
+        <td><span class="arab">جَاءَ الطَّالِبَانِ</span> — <span class="arab">الطَّالِبَانِ</span> marfu' dengan alif</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s2-2-2">2.2.2 Fa'il Mu'awwal</h3>
+
+  <p>
+    Fa'il mu'awwal adalah Fa'il yang berupa jumlah (kalimat) atau syibh jumlah yang ditakwilkan menjadi isim mufrad. Jenis Fa'il ini lebih kompleks dan memerlukan pemahaman mendalam tentang konsep takwil.
+  </p>
+
+  <div class="arabic-display">
+    يَسُرُّنِي أَنْ تَنْجَحَ
+    <small>"Aku senang engkau berhasil."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">يَسُرُّنِي</span>
+      <span class="detail"><strong>Fi'il mudhari'</strong> + <strong>dhamir nashab</strong> — <span class="arab" style="font-size:1.1rem">يَسُرُّ</span> = fi'il mudhari' marfu'; <span class="arab" style="font-size:1.1rem">نِي</span> = dhamir munfashil manshub, berkedudukan maf'ul bih.</span>
+
+      <span class="word">أَنْ تَنْجَحَ</span>
+      <span class="detail"><strong>Fa'il mu'awwal min mashdar wa fa'ilihi</strong> — ditakwil menjadi <span class="arab" style="font-size:1.1rem">نَجَاحُكَ</span> ("keberhasilanmu"). <small>Menurut Mazhab Basrah, harus ditakwil; menurut Kufah, langsung menjadi Fa'il.</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Bentuk-bentuk Fa'il Mu'awwal</h4>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk</th><th>Struktur</th><th>Contoh</th><th>Takwil</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mashdar + Fa'il-nya</strong></td>
+        <td><span class="arab">أَنْ</span> + fi'il mudhari'</td>
+        <td><span class="arab">يَسُرُّنِي أَنْ تَنْجَحَ</span></td>
+        <td><span class="arab">نَجَاحُكَ</span> (keberhasilanmu)</td>
+      </tr>
+      <tr>
+        <td><strong>Jumla Ismiyyah</strong></td>
+        <td>Mubtada' + Khabar</td>
+        <td><span class="arab">يَكْفِي أَنَّكَ مُجْتَهِدٌ</span></td>
+        <td><span class="arab">اجْتِهَادُكَ</span> (kesungguhanmu)</td>
+      </tr>
+      <tr>
+        <td><strong>Jumla Syarthiyyah</strong></td>
+        <td>Syarat + Jawab</td>
+        <td><span class="arab">يُفْرِحُنِي إِنْ تَجِئْ</span></td>
+        <td><span class="arab">مَجِيؤُكَ</span> (kedatanganmu)</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Isyarah + Jumla</strong></td>
+        <td>Isyarah + kalimat</td>
+        <td><span class="arab">يَكْفِي ذَلِكَ أَنَّكَ حَضَرْتَ</span></td>
+        <td><span class="arab">حُضُورُكَ</span> (kehadiranmu)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Konsep Takwil dalam Nahwu</h4>
+    <ul>
+      <li><strong>Takwil</strong> adalah proses mengubah suatu konstruk (jumlah, syibh jumlah) menjadi isim mufrad yang setara maknanya.</li>
+      <li>Takwil diperlukan karena Fa'il harus berupa isim mufrad menurut Mazhab Basrah.</li>
+      <li>Contoh: <span class="arab" style="font-size:1.1rem">أَنْ تَنْجَحَ</span> ditakwil menjadi <span class="arab" style="font-size:1.1rem">نَجَاحُكَ</span> — dari "bahwa engkau berhasil" menjadi "keberhasilanmu".</li>
+      <li>Mazhab Kufah tidak memerlukan takwil — mereka menganggap jumlah bisa langsung menjadi Fa'il.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s2-2-3">2.2.3 Fa'il Mustatir (Dhamir)</h3>
+
+  <p>
+    Fa'il mustatir adalah Fa'il yang berupa dhamir (kata ganti) yang tersembunyi — tidak disebutkan secara eksplisit, tetapi dipahami dari konteks atau dari bentuk fi'il-nya. Ini adalah jenis Fa'il yang paling sering muncul dalam bahasa Arab.
+  </p>
+
+  <h4 class="sub-sub-title">Pembagian Fa'il Mustatir</h4>
+
+  <table>
+    <thead>
+      <tr><th>Jenis</th><th>Keterangan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Wajib Mustatir</strong></td>
+        <td>Dhamir yang tidak boleh disebutkan secara zhahir karena alasan tertentu.</td>
+        <td><span class="arab">أَذْهَبُ</span> — fa'il-nya <span class="arab">أَنَا</span> (wajib mustatir karena fi'il sudah menunjukkan orang pertama)</td>
+      </tr>
+      <tr>
+        <td><strong>Jaiz Mustatir</strong></td>
+        <td>Dhamir yang boleh disebutkan atau tidak — keduanya benar secara gramatikal.</td>
+        <td><span class="arab">يَقْرَأُ (الطَّالِبُ)</span> — fa'il-nya <span class="arab">هُوَ</span> (boleh disebut <span class="arab">الطَّالِبُ</span> atau tidak)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="sub-sub-title">Dhamir-dhamir yang Menjadi Fa'il</h4>
+
+  <table>
+    <thead>
+      <tr><th>Dhamir</th><th>Arti</th><th>Bentuk Fi'il</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="arab">أَنَا</span></td><td>Saya</td><td>Fi'il mudhari' + dhommah muqaddarah</td><td><span class="arab">أَكْتُبُ</span> (saya menulis)</td></tr>
+      <tr><td><span class="arab">نَحْنُ</span></td><td>Kami/Kita</td><td>Fi'il mudhari' + nun al-wiqayah</td><td><span class="arab">نَكْتُبُ</span> (kami menulis)</td></tr>
+      <tr><td><span class="arab">أَنْتَ</span></td><td>Engkau (lk)</td><td>Fi'il mudhari' + ta' mukhathabah</td><td><span class="arab">تَكْتُبُ</span> (engkau menulis)</td></tr>
+      <tr><td><span class="arab">أَنْتِ</span></td><td>Engkau (pr)</td><td>Fi'il mudhari' + ta' + alif</td><td><span class="arab">تَكْتُبِينَ</span> (engkau menulis)</td></tr>
+      <tr><td><span class="arab">أَنْتُمَا</span></td><td>Kalian berdua</td><td>Fi'il mudhari' + ta' + alif itsnain</td><td><span class="arab">تَكْتُبَانِ</span> (kalian berdua menulis)</td></tr>
+      <tr><td><span class="arab">هُمْ</span></td><td>Mereka (lk)</td><td>Fi'il mudhari' tanpa dhamir zhahir</td><td><span class="arab">يَكْتُبُونَ</span> (mereka menulis)</td></tr>
+      <tr><td><span class="arab">هُنَّ</span></td><td>Mereka (pr)</td><td>Fi'il mudhari' tanpa dhamir zhahir</td><td><span class="arab">يَكْتُبْنَ</span> (mereka menulis)</td></tr>
+      <tr><td><span class="arab">هُوَ</span></td><td>Ia (lk)</td><td>Fi'il mudhari' tanpa dhamir zhahir</td><td><span class="arab">يَكْتُبُ</span> (ia menulis)</td></tr>
+      <tr><td><span class="arab">هِيَ</span></td><td>Ia (pr)</td><td>Fi'il mudhari' + ta' ta'nits</td><td><span class="arab">تَكْتُبُ</span> (ia menulis)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Fa'il Mustatir dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Firman Allah: <span class="arab" style="font-size:1.5rem">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</span> (QS. Al-Fatihah: 5)
+    </div>
+    <div class="lesson">
+      <strong>Analisis:</strong> Kata <span class="arab" style="font-size:1.2rem">نَعْبُدُ</span> dan <span class="arab" style="font-size:1.2rem">نَسْتَعِينُ</span> keduanya memiliki Fa'il mustatir wajib, yaitu <span class="arab" style="font-size:1.2rem">نَحْنُ</span> (kami). Dhamir ini wajib mustatir karena bentuk fi'il sudah menunjukkan orang pertama jamak. Jika dhamir disebutkan secara zhahir (<span class="arab" style="font-size:1.2rem">نَحْنُ نَعْبُدُ</span>), akan menjadi penekanan (tauqid), bukan Fa'il biasa.
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s2-2-4">2.2.4 Fa'il dalam Fi'il Ma'lum vs Majhul</h3>
+
+  <p>
+    Penting untuk membedakan antara Fa'il (pada fi'il ma'lum) dan Na'ibul Fa'il (pada fi'il majhul). Keduanya berkedudukan marfu', tetapi memiliki fungsi yang berbeda.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Fa'il (Fi'il Ma'lum)</th><th>Na'ibul Fa'il (Fi'il Majhul)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Definisi</strong></td>
+        <td>Pelaku yang disebutkan secara eksplisit</td>
+        <td>Pelaku yang dihapus (tidak disebutkan) dan posisinya digantikan oleh maf'ul bih</td>
+      </tr>
+      <tr>
+        <td><strong>Status I'rab</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">كَتَبَ الطَّالِبُ الدَّرْسَ</span><br>(Pelajar menulis pelajaran)</td>
+        <td><span class="arab">كُتِبَ الدَّرْسُ</span><br>(Pelajaran telah ditulis)</td>
+      </tr>
+      <tr>
+        <td><strong>Peran Semantis</strong></td>
+        <td>Agent (pelaku aktif)</td>
+        <td>Patient (yang dikenai pekerjaan) — menggantikan posisi maf'ul bih</td>
+      </tr>
+      <tr>
+        <td><strong>Kejelasan Pelaku</strong></td>
+        <td>Pelaku disebutkan</td>
+        <td>Pelaku tidak disebutkan (karena alasan tertentu)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- =========================================================
+       2.3 TANDA I'RAB FA'IL
+       ========================================================= -->
+  <h2 class="section-title" id="s2-3">2.3 Tanda I'rab <em>Al-Fa'il</em></h2>
+
+  <p>
+    Fa'il selalu berkedudukan marfu' (rafa'). Tanda rafa' ini bisa berupa tanda asli (dhommah) atau tanda cabang (wawu, alif, dhommah muqaddarah) tergantung pada bentuk isimnya.
+  </p>
+
+  <h3 class="sub-title" id="s2-3-1">2.3.1 Tanda Asli dan Cabang</h3>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk Isim</th><th>Tanda Rafa'</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Isim Mufrad</strong></td>
+        <td>Dhommah zhahirah</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ</span></td>
+        <td><span class="arab">الطَّالِبُ</span> marfu' dengan dhommah zhahirah</td>
+      </tr>
+      <tr>
+        <td><strong>Jamak Mudzakkar Salim</strong></td>
+        <td>Wawu</td>
+        <td><span class="arab">جَاءَ الطُّلَّابُ</span></td>
+        <td><span class="arab">الطُّلَّابُ</span> marfu' dengan wawu (karena jamak mudzakkar salim)</td>
+      </tr>
+      <tr>
+        <td><strong>Itsna (Dua)</strong></td>
+        <td>Alif</td>
+        <td><span class="arab">جَاءَ الطَّالِبَانِ</span></td>
+        <td><span class="arab">الطَّالِبَانِ</span> marfu' dengan alif (karena itsna)</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Mu'takhir huruf (Ya'/Alif Maqshurah)</strong></td>
+        <td>Dhommah muqaddarah</td>
+        <td><span class="arab">جَاءَ الْقَاضِي</span></td>
+        <td><span class="arab">الْقَاضِي</span> marfu' dengan dhommah muqaddarah (karena huruf akhir ya' — halangan)</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Ghairu Munsharif</strong></td>
+        <td>Dhommah zhahirah (tanpa tanwin)</td>
+        <td><span class="arab">جَاءَ أَحْمَدُ</span></td>
+        <td><span class="arab">أَحْمَدُ</span> marfu' dengan dhommah, tanpa tanwin (karena ghairu munsharif)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s2-3-2">2.3.2 Analisis I'rab dalam Surah Al-Kahfi (Ayat 1–10)</h3>
+
+  <p>
+    Sebagai bagian dari tugas pertemuan ini, mari kita analisis Fa'il dalam 10 ayat pertama Surah Al-Kahfi. Analisis ini akan melatih kepekaan mahasiswa dalam mengidentifikasi Fa'il dalam teks otentik Al-Qur'an.
+  </p>
+
+  <div class="arabic-display">
+    بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>
+    الْحَمْدُ لِلَّهِ الَّذِي أَنزَلَ عَلَىٰ عَبْدِهِ الْكِتَابَ
+    <small>— QS. Al-Kahfi [18]: 1</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Ayat 1</h5>
+    <div class="word-analysis">
+      <span class="word">الْحَمْدُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>(Bukan Fa'il, karena ini jumla ismiyyah, bukan fi'liyyah)</small></span>
+
+      <span class="word">لِلَّهِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar mahallan.</span>
+
+      <span class="word">الَّذِي</span>
+      <span class="detail"><strong>Isim maushul</strong> — marfu', berkedudukan shifah (na'at) bagi <span class="arab" style="font-size:1.1rem">اللَّهِ</span>.</span>
+
+      <span class="word">أَنزَلَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Fi'il ma'lum yang membutuhkan Fa'il.</small></span>
+
+      <span class="word">(Fa'il Mustatir)</span>
+      <span class="detail"><strong>Fa'il mustatir wajib</strong> — taqdiruhu <span class="arab" style="font-size:1.1rem">هُوَ</span> (Dia, yaitu Allah). <small>Dhamir ini wajib mustatir karena kembali kepada <span class="arab" style="font-size:1.1rem">اللَّهِ</span> yang sudah disebutkan.</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    قَيِّمًا لِّيُنذِرَ بَأْسًا شَدِيدًا مِّن لَّدُنْهُ
+    <small>— QS. Al-Kahfi [18]: 2</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Ayat 2</h5>
+    <div class="word-analysis">
+      <span class="word">لِّيُنذِرَ</span>
+      <span class="detail"><strong>Lam ta'lil</strong> + <strong>fi'il mudhari' manshub</strong> — <span class="arab" style="font-size:1.1rem">يُنذِرَ</span> manshub dengan fathah (karena didahului lam ta'lil).</span>
+
+      <span class="word">(Fa'il Mustatir)</span>
+      <span class="detail"><strong>Fa'il mustatir wajib</strong> — taqdiruhu <span class="arab" style="font-size:1.1rem">هُوَ</span> (Dia, yaitu Allah). <small>Mengikuti Fa'il pada fi'il sebelumnya (<span class="arab" style="font-size:1.1rem">أَنزَلَ</span>).</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    وَيُبَشِّرَ الْمُؤْمِنِينَ الَّذِينَ يَعْمَلُونَ الصَّالِحَاتِ
+    <small>— QS. Al-Kahfi [18]: 2 (lanjutan)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Ayat 2 (lanjutan)</h5>
+    <div class="word-analysis">
+      <span class="word">وَيُبَشِّرَ</span>
+      <span class="detail"><strong>Wawu ma'iyyah</strong> + <strong>fi'il mudhari' manshub</strong> — <span class="arab" style="font-size:1.1rem">يُبَشِّرَ</span> manshub dengan fathah (athaf pada <span class="arab" style="font-size:1.1rem">يُنذِرَ</span>).</span>
+
+      <span class="word">(Fa'il Mustatir)</span>
+      <span class="detail"><strong>Fa'il mustatir wajib</strong> — taqdiruhu <span class="arab" style="font-size:1.1rem">هُوَ</span> (Dia, yaitu Allah).</span>
+
+      <span class="word">الْمُؤْمِنِينَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan ya' (karena jamak mudzakkar salim).</span>
+
+      <span class="word">يَعْمَلُونَ</span>
+      <span class="detail"><strong>Fi'il mudhari'</strong> — marfu' dengan dhommah. <small>Fi'il ma'lum yang memiliki Fa'il.</small></span>
+
+      <span class="word">الَّذِينَ</span>
+      <span class="detail"><strong>Fa'il zhahir</strong> — marfu' dengan dhommah zhahirah. <small>Isim maushul berfungsi sebagai Fa'il dari fi'il <span class="arab" style="font-size:1.1rem">يَعْمَلُونَ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ كَانَتْ لَهُمْ جَنَّاتُ الْفِرْدَوْسِ نُزُلًا
+    <small>— QS. Al-Kahfi [18]: 107 (sebagai pembanding)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Ayat 107 (Pembanding)</h5>
+    <div class="word-analysis">
+      <span class="word">آمَنُوا</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>wawu jama'ah</strong>. <span class="arab" style="font-size:1.1rem">آمَنُوا</span> mabni 'ala sukun (karena bersambung dengan wawu jama'ah).</span>
+
+      <span class="word">الَّذِينَ</span>
+      <span class="detail"><strong>Fa'il zhahir</strong> — marfu' dengan dhommah zhahirah. <small>Isim maushul yang berfungsi sebagai Fa'il dari <span class="arab" style="font-size:1.1rem">آمَنُوا</span>.</small></span>
+
+      <span class="word">عَمِلُوا</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>wawu jama'ah</strong>. <span class="arab" style="font-size:1.1rem">عَمِلُوا</span> mabni 'ala sukun.</span>
+
+      <span class="word">(Fa'il Mustatir)</span>
+      <span class="detail"><strong>Fa'il mustatir wajib</strong> — taqdiruhu <span class="arab" style="font-size:1.1rem">هُمْ</span> (mereka). <small>Mengikuti Fa'il sebelumnya (<span class="arab" style="font-size:1.1rem">الَّذِينَ</span>).</small></span>
+    </div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Analisis Surah Al-Kahfi (Ayat 1–10)</h4>
+    <ul>
+      <li>Identifikasi seluruh Fa'il dalam 10 ayat pertama Surah Al-Kahfi.</li>
+      <li>Klasifikasikan setiap Fa'il: zhahir, mu'awwal, atau mustatir.</li>
+      <li>Tentukan tanda i'rab setiap Fa'il (dhommah zhahirah, muqaddarah, wawu, atau alif).</li>
+      <li>Berikan ta'lil nahwi untuk setiap Fa'il yang Anda identifikasi.</li>
+      <li>Susun dalam bentuk tabel yang rapi dan sistematis.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <!-- =========================================================
+       2.4 FA'IL DALAM KONTEKS KONTEMPORER
+       ========================================================= -->
+  <h2 class="section-title" id="s2-4">2.4 Fa'il dalam <em>Konteks Kontemporer</em></h2>
+
+  <p>
+    Fa'il tidak hanya muncul dalam teks-teks klasik, tetapi juga dalam teks-teks kontemporer seperti berita, artikel ilmiah, dan media sosial. Memahami Fa'il dalam konteks ini akan memperkaya kompetensi mahasiswa sebagai calon guru bahasa Arab yang mampu mengajarkan nahwu secara kontekstual.
+  </p>
+
+  <h3 class="sub-title" id="s2-4-1">2.4.1 Analisis Teks Berita Arab</h3>
+
+  <div class="arabic-display">
+    أَصْدَرَ رَأِيسُ الْجَامِعَةِ قَرَارًا جَدِيدًا بِخُصُوصِ الِامْتِحَانَاتِ
+    <small>"Rektor universitas telah mengeluarkan keputusan baru terkait ujian."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Teks Berita</h5>
+    <div class="word-analysis">
+      <span class="word">أَصْدَرَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Fi'il ma'lum yang umum digunakan dalam teks berita.</small></span>
+
+      <span class="word">رَأِيسُ</span>
+      <span class="detail"><strong>Fa'il zhahir</strong> — marfu' dengan dhommah zhahirah. <small>Isim zhahir yang menjadi pelaku perbuatan "mengeluarkan".</small></span>
+
+      <span class="word">الْجَامِعَةِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah. <small>Menerangkan <span class="arab" style="font-size:1.1rem">رَأِيسُ</span>.</small></span>
+
+      <span class="word">قَرَارًا</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Objek dari fi'il <span class="arab" style="font-size:1.1rem">أَصْدَرَ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Fa'il dalam Teks Berita</h4>
+    <ul>
+      <li>Dalam teks berita Arab, Fa'il sering berupa gelar atau jabatan (<span class="arab" style="font-size:1.1rem">الرَّئِيسُ</span>, <span class="arab" style="font-size:1.1rem">الْوَزِيرُ</span>, <span class="arab" style="font-size:1.1rem">الْمُدِيرُ</span>).</li>
+      <li>Fi'il yang sering digunakan: <span class="arab" style="font-size:1.1rem">أَصْدَرَ</span> (mengeluarkan), <span class="arab" style="font-size:1.1rem">أَعْلَنَ</span> (mengumumkan), <span class="arab" style="font-size:1.1rem">قَرَّرَ</span> (memutuskan).</li>
+      <li>Mahasiswa PBA dapat menggunakan teks berita sebagai bahan ajar yang kontekstual dan menarik untuk siswa.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s2-4-2">2.4.2 Integrasi Linguistik Modern</h3>
+
+  <p>
+    Dalam perspektif linguistik modern, Fa'il dapat dianalisis melalui berbagai teori yang memperkaya pemahaman kita:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Teori Linguistik</th><th>Konsep Terkait</th><th>Padanan dalam Nahwu</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Generatif (Chomsky)</strong></td>
+        <td>External Argument, Spec-TP</td>
+        <td>Fa'il sebagai argumen eksternal yang menempati posisi Spec-TP</td>
+      </tr>
+      <tr>
+        <td><strong>Functional Grammar (Halliday)</strong></td>
+        <td>Actor, Participant</td>
+        <td>Fa'il sebagai "Actor" (pelaku) dalam proses material</td>
+      </tr>
+      <tr>
+        <td><strong>Role and Reference Grammar</strong></td>
+        <td>Macro-role (Agent)</td>
+        <td>Fa'il sebagai Agent (pelaku aktif) dalam struktur semantis</td>
+      </tr>
+      <tr>
+        <td><strong>Cognitive Linguistics</strong></td>
+        <td>Trajector, Landmark</td>
+        <td>Fa'il sebagai Trajector (pusat perhatian) dalam konstruksi</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 4: Analisis Fa'il dalam Perspektif Generatif</h4>
+    <div class="case-content">
+      Kalimat: <span class="arab" style="font-size:1.3rem">يَدْرُسُ الطَّالِبُ فِي الْمَكْتَبَةِ</span> ("Sang pelajar belajar di perpustakaan")
+    </div>
+    <div class="lesson">
+      <strong>Analisis Nahwu Klasik:</strong> <span class="arab" style="font-size:1.2rem">يَدْرُسُ</span> = fi'il mudhari' marfu'; <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span> = Fa'il zhahir marfu' dengan dhommah.<br><br>
+      <strong>Analisis Generatif:</strong> <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span> adalah External Argument yang menempati posisi Spec-TP (Specifier of Tense Phrase). Fi'il <span class="arab" style="font-size:1.2rem">يَدْرُسُ</span> bergerak dari V ke T untuk memeriksa fitur tense, sementara <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span> bergerak dari Spec-VP ke Spec-TP untuk memeriksa fitur nominative case.<br><br>
+      <strong>Implikasi:</strong> Kedua analisis ini saling melengkapi — analisis nahwu klasik memberikan deskripsi struktural, sementara analisis generatif memberikan penjelasan tentang mengapa struktur tersebut terbentuk.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       2.5 PENDEKATAN PEMBELAJARAN KONTEKSTUAL
+       ========================================================= -->
+  <h2 class="section-title" id="s2-5">2.5 Pendekatan <em>Pembelajaran Kontekstual</em></h2>
+
+  <p>
+    Sebagai calon guru bahasa Arab, mahasiswa PBA perlu menguasai berbagai pendekatan pembelajaran yang dapat digunakan untuk mengajarkan konsep Fa'il kepada siswa di masa depan.
+  </p>
+
+  <h3 class="sub-title">2.5.1 Case-Based Method untuk Fa'il</h3>
+
+  <p>
+    Case-Based Method (CBM) mengajak mahasiswa untuk menganalisis teks-teks otentik dan mengidentifikasi Fa'il dalam konteks nyata. Berikut contoh penerapannya:
+  </p>
+
+  <div class="tips-box">
+    <h4>✦ Langkah-langkah CBM untuk Fa'il</h4>
+    <ul>
+      <li><strong>Langkah 1:</strong> Sajikan teks otentik (ayat Al-Qur'an, hadis, atau teks berita Arab).</li>
+      <li><strong>Langkah 2:</strong> Minta mahasiswa mengidentifikasi seluruh Fa'il dalam teks.</li>
+      <li><strong>Langkah 3:</strong> Klasifikasikan setiap Fa'il (zhahir, mu'awwal, mustatir).</li>
+      <li><strong>Langkah 4:</strong> Tentukan tanda i'rab setiap Fa'il.</li>
+      <li><strong>Langkah 5:</strong> Berikan ta'lil nahwi untuk setiap Fa'il.</li>
+      <li><strong>Langkah 6:</strong> Diskusikan perbedaan pendapat (jika ada) antar mazhab.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title">2.5.2 Integrasi Nilai Budaya Minangkabau</h3>
+
+  <p>
+    Salah satu keunikan pembelajaran nahwu di UIN Bukittinggi adalah integrasi nilai-nilai budaya Minangkabau. Berikut contoh penerapannya dalam pembelajaran Fa'il:
+  </p>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 5: Fa'il dalam Pepatah Minangkabau</h4>
+    <div class="case-content">
+      Pepatah Minang: <span class="arab" style="font-size:1.3rem">يَطْلُبُ الْعَالِمُ الْعِلْمَ لِخِدْمَةِ الْأُمَّةِ</span><br>
+      ("Sang penuntut ilmu mencari ilmu untuk melayani umat")
+    </div>
+    <div class="lesson">
+      <strong>Analisis:</strong> <span class="arab" style="font-size:1.2rem">يَطْلُبُ</span> = fi'il mudhari' marfu'; <span class="arab" style="font-size:1.2rem">الْعَالِمُ</span> = Fa'il zhahir marfu' dengan dhommah zhahirah; <span class="arab" style="font-size:1.2rem">الْعِلْمَ</span> = maf'ul bih manshub dengan fathah.<br><br>
+      <strong>Nilai Minangkabau:</strong> Pepatah ini mencerminkan nilai <em>"Tuntutlah ilmu untuk mengabdi"</em> — selaras dengan filosofi <em>"Adat basandi syarak, syarak basandi Kitabullah"</em>. Mahasiswa dapat menggunakan pepatah ini sebagai bahan ajar yang kontekstual dan bermakna.
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Ide Bahan Ajar Kontekstual</h4>
+    <ul>
+      <li>Terjemahkan pepatah Minangkabau ke dalam bahasa Arab, lalu identifikasi Fa'il-nya.</li>
+      <li>Gunakan teks-teks tentang budaya Minangkabau (Rumah Gadang, Rendang, Surau) sebagai bahan analisis Fa'il.</li>
+      <li>Buat video pendek berbahasa Arab tentang kehidupan mahasiswa PBA, lalu analisis Fa'il dalam narasinya.</li>
+      <li>Gunakan berita lokal Sumatra Barat berbahasa Arab (jika ada) sebagai bahan analisis.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       2.6 PETA KONSEP
+       ========================================================= -->
+  <h2 class="section-title" id="s2-6">2.6 Peta Konsep <em>Al-Fa'il</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep Al-Fa'il</h4>
+    <div class="map-center">
+      <div class="core">AL-FA'IL</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Isim marfu' yang menjadi pelaku dalam fi'il ma'lum</p>
+        <ul>
+          <li>Selalu marfu'</li>
+          <li>Berupa isim</li>
+          <li>Hanya pada fi'il ma'lum</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Klasifikasi</h5>
+        <ul>
+          <li>Fa'il Zhahir (Sarih)</li>
+          <li>Fa'il Mu'awwal</li>
+          <li>Fa'il Mustatir (wajib/jaiz)</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Tanda I'rab</h5>
+        <ul>
+          <li>Dhommah zhahirah (mufrad)</li>
+          <li>Wawu (jamak mudzakkar salim)</li>
+          <li>Alif (itsna)</li>
+          <li>Dhommah muqaddarah (mu'takhir huruf)</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Perbandingan Mazhab</h5>
+        <ul>
+          <li>Basrah: ketat, qiyas</li>
+          <li>Kufah: fleksibel, sama'</li>
+          <li>Fa'il berupa jumlah: berbeda pandangan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       2.7 GLOSARIUM
+       ========================================================= -->
+  <h2 class="section-title" id="s2-7">2.7 Glosarium <em>Istilah Fa'il</em></h2>
+
+  <div class="glossary">
+    <h4>📖 Istilah Pokok Seputar Fa'il</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Fa'il</strong><span class="arab">فَاعِل</span></div>
+        <p>Pelaku; isim marfu' yang melakukan perbuatan fi'il ma'lum.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fa'il Zhahir</strong><span class="arab">فَاعِلٌ ظَاهِر</span></div>
+        <p>Fa'il yang berupa isim zhahir (kata benda nyata) yang disebutkan secara eksplisit.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fa'il Mu'awwal</strong><span class="arab">فَاعِلٌ مُؤَوَّل</span></div>
+        <p>Fa'il yang berupa jumlah atau syibh jumlah yang ditakwilkan menjadi isim mufrad.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fa'il Mustatir</strong><span class="arab">فَاعِلٌ مُسْتَتِر</span></div>
+        <p>Fa'il yang berupa dhamir (kata ganti) yang tersembunyi, tidak disebutkan secara zhahir.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fi'il Ma'lum</strong><span class="arab">فِعْلٌ مَعْلُوم</span></div>
+        <p>Fi'il aktif yang menyebutkan pelakunya (Fa'il).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fi'il Majhul</strong><span class="arab">فِعْلٌ مَجْهُول</span></div>
+        <p>Fi'il pasif yang tidak menyebutkan pelakunya; pelakunya digantikan oleh Na'ibul Fa'il.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Na'ibul Fa'il</strong><span class="arab">نَائِبُ الْفَاعِل</span></div>
+        <p>Pengganti Fa'il dalam fi'il majhul; berkedudukan marfu' seperti Fa'il.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Takwil</strong><span class="arab">تَأْوِيل</span></div>
+        <p>Proses mengubah jumlah/syibh jumlah menjadi isim mufrad yang setara maknanya.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Isim Mufrad</strong><span class="arab">اسْمٌ مُفْرَد</span></div>
+        <p>Isim tunggal (bukan jumlah atau syibh jumlah).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Dhamir</strong><span class="arab">ضَمِير</span></div>
+        <p>Kata ganti; bisa munfashil (terpisah) atau muttashil (bersambung).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mazhab Basrah</strong><span class="arab">الْمَذْهَبُ الْبَصْرِيّ</span></div>
+        <p>Mazhab nahwu yang ketat dan sistematis, berpusat di Basrah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mazhab Kufah</strong><span class="arab">الْمَذْهَبُ الْكُوفِيّ</span></div>
+        <p>Mazhab nahwu yang fleksibel dan akomodatif, berpusat di Kufah.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       2.8 TUGAS PERTEMUAN 2
+       ========================================================= -->
+  <h2 class="section-title" id="s2-8">2.8 Tugas <em>Pertemuan 2</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Menganalisis dan mengidentifikasi Fa'il (Sarih & Mu'awwal) dalam 10 ayat pertama Surah Al-Kahfi.</li>
+      <li>Klasifikasikan setiap Fa'il: zhahir, mu'awwal, atau mustatir.</li>
+      <li>Tentukan tanda i'rab setiap Fa'il dan berikan ta'lil nahwi.</li>
+      <li>Susun dalam bentuk tabel yang rapi dan sistematis.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Mencari dan merangkum 3 pendapat ulama Nahwu (Basrah vs Kufah) tentang syarat-syarat Fa'il.</li>
+      <li>Sumber: kitab <em>Al-Kitab</em> (Sibawayh), <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>Al-Mufrad</em> (Al-Anbari).</li>
+      <li>Bandingkan ketiga pendapat tersebut dalam bentuk esai singkat (500–800 kata).</li>
+      <li>Berikan analisis kritis: pendapat mana yang lebih kuat dan mengapa?</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 2 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 2</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep Al-Fa'il — dari definisi dan hakikatnya, klasifikasi jenis-jenisnya, hingga analisis mendalam dalam Surah Al-Kahfi. Ingatlah, Fa'il bukan sekadar unsur gramatikal — ia adalah "bintang utama" dalam setiap kalimat Arab yang menggerakkan makna dan menentukan pesan. Sebagai calon guru bahasa Arab, penguasaan terhadap Fa'il akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       KESIMPULAN
+       ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 2</h3>
+    <p>
+      Pertemuan kedua ini telah membahas secara komprehensif tentang Al-Fa'il — unsur Marfu'atul Asma yang paling fundamental. Mahasiswa telah memahami definisi dan hakikat Fa'il, syarat-syaratnya menurut berbagai mazhab, klasifikasi jenis-jenisnya (zhahir, mu'awwal, mustatir), serta tanda-tanda i'rabnya.
+    </p>
+    <p>
+      Melalui analisis Surah Al-Kahfi ayat 1–10, mahasiswa telah berlatih mengidentifikasi Fa'il dalam teks otentik Al-Qur'an. Perbandingan Mazhab Basrah dan Kufah telah memperkaya perspektif mahasiswa tentang dinamika intelektual dalam tradisi nahwu. Integrasi linguistik modern dan nilai budaya Minangkabau telah menunjukkan relevansi Fa'il dalam konteks kontemporer.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 3 yang akan membahas <strong>Na'ibul Fa'il</strong> — unsur yang menggantikan posisi Fa'il dalam fi'il majhul. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       DAFTAR PUSTAKA
+       ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Anbari, Ibnu. <em>Al-Mufrad fi Ushul an-Nahw</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Al-Jurjani, Abd al-Qahir. <em>Al-Muqtadha fi Ushul an-Nahw</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Chomsky, N. (1981). <em>Lectures on Government and Binding</em>. Dordrecht: Foris.</li>
+      <li>Halliday, M. A. K. (1994). <em>An Introduction to Functional Grammar</em>. London: Edward Arnold.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="1.html">← Pertemuan 1: Prolog</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="3.html">Pertemuan 3: Na'ibul Fa'il →</a>
+  </div>
+
+</section>
+
+<!-- =========================================================
+     UJI FORMATIF
+     ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 2</span>
+      <h2>Al-Fa'il: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Mengungkap Pelaku</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Definisi, klasifikasi, tanda i'rab, perbandingan mazhab, dan analisis Surah Al-Kahfi</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">جَاءَ الطَّالِبُ</span>, kata <span class="arab">الطَّالِبُ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Fa'il zhahir</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Maf'ul bih</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Khabar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>2.</strong> Tanda i'rab Fa'il pada isim mufrad (kata tunggal) adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Fathah</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Kasrah</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Sukun</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Fa'il yang berupa dhamir (kata ganti) yang tersembunyi disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Fa'il mustatir</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Fa'il zhahir</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Fa'il mu'awwal</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Na'ibul Fa'il</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Dalam kalimat <span class="arab">يَسُرُّنِي أَنْ تَنْجَحَ</span>, Fa'il dari fi'il <span class="arab">يَسُرُّ</span> adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Fa'il zhahir</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Fa'il mustatir</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Na'ibul Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Fa'il mu'awwal dari mashdar dan fa'il-nya</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Menurut Mazhab Basrah, Fa'il harus berupa...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Jumlah (kalimat) secara langsung</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Isim mufrad atau dhamir mustatir (harus ditakwil jika berupa jumlah)</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Fi'il mudhari'</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Huruf jar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> Tanda i'rab Fa'il pada jamak mudzakkar salim adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Alif</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Wawu</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. Ya'</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Fa'il hanya ada pada fi'il...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Ma'lum (aktif)</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Majhul (pasif)</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Lazim</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Mut'addi</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Dalam ayat <span class="arab">إِيَّاكَ نَعْبُدُ</span>, Fa'il dari fi'il <span class="arab">نَعْبُدُ</span> adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Fa'il zhahir (أَنْتَ)</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Fa'il mustatir jaiz (هُوَ)</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Na'ibul Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Fa'il mustatir wajib (نَحْنُ)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Proses mengubah jumlah menjadi isim mufrad yang setara maknanya disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. I'rab</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Takwil</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Ta'lil</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Takhrij</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Tokoh utama Mazhab Kufah yang dikenal dengan pendekatan fleksibel terhadap variasi bahasa Arab adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Sibawayh</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Al-Khalil bin Ahmad</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Al-Kisa'i dan Al-Farra'</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Ibnu Malik</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat Al-Fa'il menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda, dan analisislah persamaan serta perbedaan di antara definisi-definisi tersebut!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Bandingkan pandangan Mazhab Basrah dan Mazhab Kufah mengenai syarat-syarat Fa'il, khususnya tentang Fa'il yang berupa jumlah (kalimat)! Berikan contoh konkret dari Al-Qur'an atau hadis, dan analisislah pendapat mana yang lebih kuat menurut Anda!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Identifikasi seluruh Fa'il dalam Surah Al-Kahfi ayat 1–5! Klasifikasikan setiap Fa'il (zhahir, mu'awwal, atau mustatir), tentukan tanda i'rabnya, dan berikan ta'lil nahwi untuk setiap Fa'il yang Anda identifikasi!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Jelaskan perbedaan antara Fa'il dan Na'ibul Fa'il! Berikan contoh konkret dari Al-Qur'an atau hadis untuk masing-masing, dan analisislah mengapa perbedaan ini penting dalam memahami makna teks keislaman!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Rancanglah sebuah skenario pembelajaran Fa'il untuk siswa MTs/MA dengan mengintegrasikan pendekatan Case-Based Method dan nilai-nilai budaya Minangkabau! Jelaskan langkah-langkah pembelajaran, bahan ajar yang digunakan, dan asesmen yang akan dilakukan!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 2,
+    topik: 'Al-Fa\'il',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 2
+  An-Nahw lil Mutawassithin
+  Topik: Al-Fa'il
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P2_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P2 (Al-Fa'il) - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 2 (Al-Fa'il) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 3: Na'ibul Fa'il — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 3: Analisis perubahan struktur Na'ibul Fa'il dari pola aktif ke pasif, deteksi tanda i'rab, transformasi fi'il ma'lum ke majhul, dan bedah teks berita Arab kontemporer." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--ink);color:var(--cream);
+  line-height:1.7;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201,169,97,.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(201,169,97,.06) 0%, transparent 40%);
+}
+.bg-ornament{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(201,169,97,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,97,.03) 1px, transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{
+  min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1;
+}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{
+  display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;
+  border:1px solid var(--gold);border-radius:2px;
+}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{
+  background:linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;
+  font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none;
+}
+.btn-primary{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;
+  color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line);
+}
+h2.section-title em{
+  font-style:italic;
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+h3.sub-title{
+  font-family:var(--serif);font-size:1.5rem;color:var(--gold);
+  margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem;
+}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{
+  font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);
+  font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem;
+}
+.arabic-display{
+  background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;
+  padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);
+  font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2;
+}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{
+  background:rgba(201,169,97,.04);border-left:3px solid var(--gold);
+  padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;
+}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center;
+}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg, transparent, var(--gold), transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;
+}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box, .warning-box, .insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4, .warning-box h4, .insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul, .warning-box ul, .insight-box ul{list-style:none;padding:0}
+.tips-box li, .warning-box li, .insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative;
+}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{
+  display:inline-block;padding:1rem 2rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3);
+}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center;
+}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  flex-wrap:wrap;gap:1rem;
+}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{
+  background:linear-gradient(135deg, rgba(100,180,220,.08) 0%, rgba(100,180,220,.02) 100%);
+  border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0;
+}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{
+  display:inline-block;margin-top:1rem;padding:.4rem 1rem;
+  background:rgba(100,180,220,.15);border-radius:4px;
+  font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase;
+}
+.transformation-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.06) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:8px;
+  padding:2rem;margin:2rem 0;
+}
+.transformation-box h5{
+  font-family:var(--serif);color:var(--gold);font-size:1.1rem;
+  margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.transformation-flow{
+  display:grid;grid-template-columns:1fr auto 1fr;
+  gap:1rem;align-items:center;margin:1rem 0;
+}
+.transformation-flow .arrow{
+  font-size:2rem;color:var(--gold);text-align:center;
+}
+.transformation-flow .box{
+  padding:1rem;background:rgba(0,0,0,.3);
+  border:1px solid var(--line);border-radius:6px;
+  text-align:center;
+}
+.transformation-flow .box .arab{
+  font-family:var(--arab);font-size:1.4rem;color:var(--gold);
+  direction:rtl;display:block;margin-bottom:.5rem;
+}
+.transformation-flow .box small{color:var(--muted);font-size:.8rem}
+.quiz-section{
+  background:linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+  padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1;
+}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{
+  display:inline-block;padding:.5rem 1.5rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-size:.75rem;letter-spacing:3px;
+  text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem;
+}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input, .form-group select{
+  padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);
+  border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s;
+}
+.form-group input:focus, .form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{
+  width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);
+  border:1px solid var(--line);border-radius:4px;color:var(--cream);
+  font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s;
+}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{
+  padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+  font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.btn-submit{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf, .btn-score, .btn-email, .btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover, .btn-score:hover, .btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{
+  display:none;
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center;
+}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .transformation-flow{grid-template-columns:1fr}
+  .transformation-flow .arrow{transform:rotate(90deg)}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 3
+  </div>
+  <span class="chapter-label">Pertemuan 3 · 2 SKS</span>
+  <h1>Na'ibul Fa'il: <span class="accent">Transformasi Aktif ke Pasif</span></h1>
+  <div class="hero-arabic">نَائِبُ الْفَاعِلِ: التَّحْوِيلُ مِنَ الْمَعْلُومِ إِلَى الْمَجْهُولِ</div>
+  <p class="subtitle">Analisis perubahan struktur Na'ibul Fa'il dari pola aktif ke pasif, deteksi tanda i'rab, transformasi fi'il ma'lum ke majhul, dan bedah teks berita Arab kontemporer.</p>
+  <div class="hero-actions">
+    <a href="2.html" class="btn btn-outline">← Pertemuan Sebelumnya</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 3</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s3-1">3.1 Landasan Teoretis Na'ibul Fa'il</a>
+        <ol>
+          <li><a href="#s3-1-1">3.1.1 Definisi dan Hakikat</a></li>
+          <li><a href="#s3-1-2">3.1.2 Perbedaan Fa'il dan Na'ibul Fa'il</a></li>
+          <li><a href="#s3-1-3">3.1.3 Syarat Pembentukan Fi'il Majhul</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-2">3.2 Transformasi Aktif ke Pasif</a>
+        <ol>
+          <li><a href="#s3-2-1">3.2.1 Pola Dasar Transformasi</a></li>
+          <li><a href="#s3-2-2">3.2.2 Transformasi dalam Berbagai Bentuk Fi'il</a></li>
+          <li><a href="#s3-2-3">3.2.3 Analisis Teks Berita Arab</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-3">3.3 Tanda I'rab Na'ibul Fa'il</a>
+        <ol>
+          <li><a href="#s3-3-1">3.3.1 Tanda Asli dan Cabang</a></li>
+          <li><a href="#s3-3-2">3.3.2 Analisis Teks Otentik Al-Qur'an</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-4">3.4 Perspektif Linguistik Modern</a>
+        <ol>
+          <li><a href="#s3-4-1">3.4.1 Passive Voice & Ergativity</a></li>
+          <li><a href="#s3-4-2">3.4.2 Integrasi dengan Teori Linguistik</a></li>
+        </ol>
+      </li>
+      <li><a href="#s3-5">3.5 Pendekatan Pembelajaran Kontekstual</a></li>
+      <li><a href="#s3-6">3.6 Peta Konsep Na'ibul Fa'il</a></li>
+      <li><a href="#s3-7">3.7 Glosarium Istilah</a></li>
+      <li><a href="#s3-8">3.8 Tugas Pertemuan 3</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika Fa'il adalah "bintang utama" dalam kalimat aktif, maka <em>Na'ibul Fa'il</em> adalah "pengganti yang diangkat" ketika bintang utama memilih untuk bersembunyi — sebuah transformasi linguistik yang mengubah fokus dari pelaku kepada yang dikenai pekerjaan.
+  </p>
+
+  <p>
+    Setelah pada pertemuan kedua kita menyelami kedalaman konsep Al-Fa'il sebagai pelaku dalam fi'il ma'lum, pada pertemuan ketiga ini kita melangkah ke konsep yang tak kalah penting: <strong>Na'ibul Fa'il</strong> (نَائِبُ الْفَاعِلِ) — pengganti Fa'il dalam fi'il majhul (pasif). Sebagai mahasiswa Pendidikan Bahasa Arab (PBA), penguasaan terhadap Na'ibul Fa'il bukan hanya syarat kelulusan mata kuliah, melainkan bekal penting untuk memahami bagaimana bahasa Arab menyampaikan informasi secara objektif, terutama dalam teks berita, laporan ilmiah, dan nash-nash keislaman.
+  </p>
+
+  <p>
+    Dalam Al-Qur'an, fi'il majhul sering digunakan untuk memberikan kesan universal dan timeless — ketika pelaku tidak disebutkan, pesan menjadi berlaku untuk siapa saja dan kapan saja. Dalam teks berita Arab kontemporer, fi'il majhul digunakan untuk menekankan peristiwa itu sendiri, bukan pelakunya — sebuah strategi jurnalistik yang penting untuk dipahami.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Na'ibul Fa'il dari berbagai perspektif: definisi dan hakikatnya, perbedaan dengan Fa'il, syarat-syarat pembentukan fi'il majhul, pola transformasi dari aktif ke pasif, tanda-tanda i'rabnya, serta analisis mendalam terhadap teks-teks otentik. Kita juga akan mengintegrasikan perspektif linguistik modern tentang passive voice dan ergativity, sehingga mahasiswa mampu menjembatani nahwu klasik dengan teori kebahasaan kontemporer.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">نَائِبُ الْفَاعِلِ هُوَ الاسْمُ الْمَرْفُوعُ الَّذِي يُذْكَرُ بَعْدَ فِعْلٍ مَجْهُولٍ</div>
+    <div class="translation">"Na'ibul Fa'il adalah isim marfu' yang disebutkan setelah fi'il majhul (pasif)."</div>
+    <div class="source">— Definisi Klasik dalam Alfiyyah Ibnu Malik</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Transformasi Aktif ke Pasif dalam Bahasa Arab</h4>
+    <p>Simak penjelasan visual tentang bagaimana fi'il ma'lum berubah menjadi fi'il majhul, dan bagaimana Fa'il digantikan oleh Na'ibul Fa'il.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 3</h4>
+    <ul>
+      <li><strong>Na'ibul Fa'il (نَائِبُ الْفَاعِلِ):</strong> Isim marfu' yang menggantikan posisi Fa'il dalam fi'il majhul (pasif), sebagai yang dikenai pekerjaan.</li>
+      <li><strong>Fi'il Ma'lum (فِعْلٌ مَعْلُوم):</strong> Fi'il aktif yang menyebutkan pelakunya (Fa'il) secara eksplisit.</li>
+      <li><strong>Fi'il Majhul (فِعْلٌ مَجْهُول):</strong> Fi'il pasif yang tidak menyebutkan pelakunya; pelakunya digantikan oleh Na'ibul Fa'il.</li>
+      <li><strong>Transformasi (التَّحْوِيل):</strong> Proses perubahan struktur kalimat dari aktif (ma'lum) ke pasif (majhul) dengan mengubah bentuk fi'il dan kedudukan unsur-unsurnya.</li>
+      <li><strong>Ta'lil Nahwi:</strong> Argumentasi logis yang digunakan untuk memvalidasi kebenaran struktur kalimat pasif berdasarkan kaidah nahwu.</li>
+      <li><strong>Passive Voice:</strong> Padanan konsep fi'il majhul dalam linguistik modern — struktur kalimat yang menekankan objek/pasien daripada agen/pelaku.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Mengapa Pelaku Disembunyikan?</h4>
+    <div class="case-content">
+      Dalam sebuah berita Arab kontemporer: <span class="arab" style="font-size:1.3rem">قُرِرَ الْقَرَارُ الْجَدِيدُ</span> ("Keputusan baru telah ditetapkan"). Mengapa penulis berita tidak menyebutkan siapa yang menetapkan keputusan? Apakah ini bentuk ketidakjujuran? Tidak — dalam jurnalistik Arab, penggunaan fi'il majhul sering kali bertujuan untuk menekankan <strong>peristiwa</strong> itu sendiri, bukan pelakunya. Atau bisa juga karena pelaku sudah diketahui secara umum, atau sengaja disembunyikan untuk alasan diplomasi.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Fi'il majhul bukan sekadar "transformasi gramatikal" — ia memiliki fungsi komunikatif dan retorika yang penting. Memahami kapan dan mengapa fi'il majhul digunakan akan memperkaya kompetensi mahasiswa dalam menganalisis dan memproduksi teks Arab.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda perlu memahami bahwa fi'il majhul bukan sekadar "versi pasif" dari fi'il aktif. Ia memiliki fungsi pragmatis yang kaya — dari memberikan kesan objektif dalam teks ilmiah, hingga menegaskan keagungan Allah dalam nash-nash keislaman (misalnya: <span class="arab" style="font-size:1.1rem">خُلِقَ الْإِنْسَانُ</span> — "Manusia telah diciptakan", tanpa menyebutkan "oleh Allah" karena sudah maklum).
+    </p>
+  </div>
+
+  <!-- =========================================================
+       3.1 LANDASAN TEORETIS
+       ========================================================= -->
+  <h2 class="section-title" id="s3-1">3.1 Landasan Teoretis <em>Na'ibul Fa'il</em></h2>
+
+  <p>
+    Sebelum masuk ke analisis praktis, kita perlu memahami landasan teoretis yang kokoh tentang Na'ibul Fa'il. Pemahaman ini akan menjadi fondasi untuk seluruh pembahasan selanjutnya.
+  </p>
+
+  <h3 class="sub-title" id="s3-1-1">3.1.1 Definisi dan Hakikat Na'ibul Fa'il</h3>
+
+  <p>
+    Secara etimologis, kata <em>na'ib</em> (نَائِب) berasal dari akar kata <em>na'aba</em> (نَابَ) yang berarti "menggantikan" atau "berdiri sebagai pengganti". Secara terminologis, para ulama nahwu mendefinisikan Na'ibul Fa'il dengan berbagai rumusan:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Definisi</th><th>Rumusan</th><th>Sumber</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Klasik (Ibnu Malik)</strong></td>
+        <td>"Isim marfu' yang disebutkan setelah fi'il majhul, sebagai pengganti Fa'il yang dihapus."</td>
+        <td><em>Alfiyyah Ibnu Malik</em>, bait 265</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong></td>
+        <td>"Isim marfu' yang disebutkan padanya fi'il majhul, yang menempati kedudukan Fa'il dalam hal i'rab dan fungsi."</td>
+        <td><em>Mughni al-Labib</em></td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong></td>
+        <td>"Isim marfu' yang disebutkan setelah fi'il majhul, sebagai yang dikenai pekerjaan (al-maf'ul bih yang diangkat)."</td>
+        <td><em>An-Nahw al-Wadhih</em></td>
+      </tr>
+      <tr>
+        <td><strong>Modern</strong></td>
+        <td>"Argumen internal verba (internal argument) yang dipromosikan ke posisi subjek (Spec-TP) dalam struktur pasif, menggantikan agen yang dihapus."</td>
+        <td>Integrasi linguistik modern</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="sub-sub-title">Hakikat Na'ibul Fa'il dalam Struktur Kalimat</h4>
+
+  <p>
+    Na'ibul Fa'il memiliki beberapa karakteristik fundamental yang membedakannya dari unsur kalimat lainnya:
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Karakteristik Fundamental Na'ibul Fa'il</h4>
+    <ul>
+      <li><strong>Selalu Marfu':</strong> Na'ibul Fa'il selalu berkedudukan rafa' (dhommah atau tanda cabangnya), persis seperti Fa'il.</li>
+      <li><strong>Hanya pada Fi'il Majhul:</strong> Na'ibul Fa'il hanya ada pada fi'il majhul (pasif), tidak pernah pada fi'il ma'lum (aktif).</li>
+      <li><strong>Berupa Isim:</strong> Na'ibul Fa'il selalu berupa isim (kata benda), baik zhahir maupun muqaddar.</li>
+      <li><strong>Yang Dikenai Pekerjaan:</strong> Secara semantis, Na'ibul Fa'il adalah pasien (patient) — yang dikenai pekerjaan, bukan pelaku.</li>
+      <li><strong>Pengganti Maf'ul Bih:</strong> Pada asalnya, Na'ibul Fa'il adalah maf'ul bih (objek) dari fi'il ma'lum yang "diangkat" menjadi subjek ketika kalimat dipasifkan.</li>
+      <li><strong>Mengikuti Hukum Fa'il:</strong> Dalam banyak hal, Na'ibul Fa'il mengikuti hukum Fa'il — misalnya dalam hal taqdim (pengdahuluhan) dan syarat-syarat lainnya.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s3-1-2">3.1.2 Perbedaan Fa'il dan Na'ibul Fa'il</h3>
+
+  <p>
+    Meskipun keduanya berkedudukan marfu' dan menempati posisi yang sama dalam struktur kalimat, Fa'il dan Na'ibul Fa'il memiliki perbedaan fundamental yang perlu dipahami:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Fa'il</th><th>Na'ibul Fa'il</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Definisi</strong></td>
+        <td>Pelaku yang disebutkan secara eksplisit</td>
+        <td>Pelaku yang dihapus; posisinya digantikan oleh maf'ul bih</td>
+      </tr>
+      <tr>
+        <td><strong>Jenis Fi'il</strong></td>
+        <td>Fi'il Ma'lum (aktif)</td>
+        <td>Fi'il Majhul (pasif)</td>
+      </tr>
+      <tr>
+        <td><strong>Status I'rab</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+      </tr>
+      <tr>
+        <td><strong>Peran Semantis</strong></td>
+        <td>Agent (pelaku aktif)</td>
+        <td>Patient (yang dikenai pekerjaan)</td>
+      </tr>
+      <tr>
+        <td><strong>Asal Usul</strong></td>
+        <td>Sejak awal sebagai subjek</td>
+        <td>Asalnya adalah maf'ul bih yang "diangkat"</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">كَتَبَ الطَّالِبُ الدَّرْسَ</span><br>(Pelajar menulis pelajaran)</td>
+        <td><span class="arab">كُتِبَ الدَّرْسُ</span><br>(Pelajaran telah ditulis)</td>
+      </tr>
+      <tr>
+        <td><strong>Fokus Kalimat</strong></td>
+        <td>Menekankan pelaku</td>
+        <td>Menekankan peristiwa/yang dikenai</td>
+      </tr>
+      <tr>
+        <td><strong>Fungsi Pragmatis</strong></td>
+        <td>Memberikan informasi tentang siapa yang melakukan</td>
+        <td>Menyembunyikan pelaku (karena alasan tertentu)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Perbedaan mendasar antara Fa'il dan Na'ibul Fa'il bukan pada <strong>status i'rab</strong> (keduanya marfu'), melainkan pada <strong>peran semantis</strong> dan <strong>jenis fi'il</strong>.</li>
+      <li>Dalam pengajaran di madrasah/sekolah, tekankan bahwa Na'ibul Fa'il adalah "yang dikenai pekerjaan" — bukan pelaku, meskipun secara gramatikal ia menempati posisi subjek.</li>
+      <li>Latihan transformasi dari aktif ke pasif akan membantu mahasiswa memahami perbedaan ini secara konkret.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Kesalahan Umum Mahasiswa</h4>
+    <div class="case-content">
+      Seorang mahasiswa menerjemahkan kalimat <span class="arab" style="font-size:1.3rem">كُتِبَ الكِتَابُ</span> dengan menerjemahkannya sebagai "Penulis telah menulis buku" — seolah-olah <span class="arab" style="font-size:1.2rem">الْكِتَابُ</span> adalah pelaku. Padahal, kalimat ini adalah fi'il majhul, sehingga <span class="arab" style="font-size:1.2rem">الْكِتَابُ</span> adalah Na'ibul Fa'il (yang dikenai pekerjaan). Terjemahan yang benar: "Buku telah ditulis" (oleh seseorang yang tidak disebutkan).
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Kesalahan identifikasi antara Fa'il dan Na'ibul Fa'il berakibat pada kesalahan terjemahan yang mengubah makna kalimat secara fundamental. Mahasiswa perlu dilatih untuk mengenali ciri-ciri fi'il majhul terlebih dahulu sebelum menentukan Na'ibul Fa'il.
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s3-1-3">3.1.3 Syarat Pembentukan Fi'il Majhul</h3>
+
+  <p>
+    Tidak semua fi'il dapat dipasifkan. Ada syarat-syarat tertentu yang harus dipenuhi agar suatu fi'il dapat diubah menjadi fi'il majhul:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Syarat</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fi'il Mut'addi (Transitif)</strong></td>
+        <td>Fi'il harus memerlukan objek (maf'ul bih). Fi'il lazim (intransitif) tidak dapat dipasifkan karena tidak memiliki objek yang bisa diangkat menjadi Na'ibul Fa'il.</td>
+        <td><span class="arab">كَتَبَ</span> (menulis) ✓ — mut'addi<br><span class="arab">ذَهَبَ</span> (pergi) ✗ — lazim</td>
+      </tr>
+      <tr>
+        <td><strong>Bukan Fi'il yang Sudah Majhul</strong></td>
+        <td>Fi'il yang sudah berbentuk majhul tidak dapat dipasifkan lagi.</td>
+        <td><span class="arab">كُتِبَ</span> ✗ — sudah majhul</td>
+      </tr>
+      <tr>
+        <td><strong>Bukan Fi'il yang Maknanya Sudah Mengandung Pasif</strong></td>
+        <td>Beberapa fi'il secara makna sudah mengandung makna pasif, sehingga tidak perlu dipasifkan lagi.</td>
+        <td><span class="arab">عَجِبَ</span> (heran) ✗ — maknanya sudah pasif</td>
+      </tr>
+      <tr>
+        <td><strong>Memiliki Maf'ul Bih yang Jelas</strong></td>
+        <td>Harus ada objek yang jelas yang dapat diangkat menjadi Na'ibul Fa'il.</td>
+        <td><span class="arab">أَكَلَ الطَّعَامَ</span> ✓ — <span class="arab">الطَّعَامَ</span> adalah maf'ul bih</td>
+      </tr>
+      <tr>
+        <td><strong>Bukan Fi'il Do'a (Permintaan)</strong></td>
+        <td>Fi'il yang berbentuk do'a biasanya tidak dipasifkan karena memiliki fungsi pragmatis khusus.</td>
+        <td><span class="arab">غَفَرَ اللهُ لَهُ</span> ✗ — berbentuk do'a</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kesalahan Umum dalam Pembentukan Fi'il Majhul</h4>
+    <ul>
+      <li>Mepasifkan fi'il lazim (intransitif) — ini tidak mungkin karena tidak ada objek yang bisa diangkat.</li>
+      <li>Mengubah harakat fi'il secara sembarangan tanpa memahami pola wazan (تُفُعِّلَ، تُفَعَّلَ، إلخ).</li>
+      <li>Lupa mengubah maf'ul bih menjadi marfu' (Na'ibul Fa'il) setelah fi'il dipasifkan.</li>
+      <li>Menggunakan fi'il majhul dalam konteks yang seharusnya menggunakan fi'il ma'lum — misalnya dalam teks yang membutuhkan kejelasan pelaku.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       3.2 TRANSFORMASI AKTIF KE PASIF
+       ========================================================= -->
+  <h2 class="section-title" id="s3-2">3.2 Transformasi <em>Aktif ke Pasif</em></h2>
+
+  <p>
+    Transformasi dari fi'il ma'lum (aktif) ke fi'il majhul (pasif) adalah proses sistematis yang melibatkan perubahan bentuk fi'il dan pergeseran kedudukan unsur-unsur kalimat. Pemahaman yang baik tentang proses ini akan melatih kepekaan linguistik mahasiswa.
+  </p>
+
+  <h3 class="sub-title" id="s3-2-1">3.2.1 Pola Dasar Transformasi</h3>
+
+  <p>
+    Berikut adalah pola dasar transformasi dari aktif ke pasif dalam bahasa Arab:
+  </p>
+
+  <div class="transformation-box">
+    <h5>🔄 Pola Dasar: Fi'il Madhi</h5>
+    <div class="transformation-flow">
+      <div class="box">
+        <span class="arab">كَتَبَ الطَّالِبُ الدَّرْسَ</span>
+        <small>Fi'il Ma'lum (Aktif)<br>Fa'il + Maf'ul Bih</small>
+      </div>
+      <div class="arrow">→</div>
+      <div class="box">
+        <span class="arab">كُتِبَ الدَّرْسُ</span>
+        <small>Fi'il Majhul (Pasif)<br>Na'ibul Fa'il (mantan Maf'ul Bih)</small>
+      </div>
+    </div>
+    <p style="margin-top:1rem;font-size:.9rem;color:var(--muted)">
+      <strong>Langkah-langkah:</strong> (1) Ubah fi'il <span class="arab" style="font-size:1.1rem">كَتَبَ</span> menjadi <span class="arab" style="font-size:1.1rem">كُتِبَ</span> (wazan فُعِلَ); (2) Hapus Fa'il <span class="arab" style="font-size:1.1rem">الطَّالِبُ</span>; (3) Angkat Maf'ul Bih <span class="arab" style="font-size:1.1rem">الدَّرْسَ</span> menjadi Na'ibul Fa'il <span class="arab" style="font-size:1.1rem">الدَّرْسُ</span> (dari fathah ke dhommah).
+    </p>
+  </div>
+
+  <div class="transformation-box">
+    <h5>🔄 Pola Dasar: Fi'il Mudhari'</h5>
+    <div class="transformation-flow">
+      <div class="box">
+        <span class="arab">يَكْتُبُ الطَّالِبُ الدَّرْسَ</span>
+        <small>Fi'il Ma'lum (Aktif)<br>Fa'il + Maf'ul Bih</small>
+      </div>
+      <div class="arrow">→</div>
+      <div class="box">
+        <span class="arab">يُكْتَبُ الدَّرْسُ</span>
+        <small>Fi'il Majhul (Pasif)<br>Na'ibul Fa'il</small>
+      </div>
+    </div>
+    <p style="margin-top:1rem;font-size:.9rem;color:var(--muted)">
+      <strong>Langkah-langkah:</strong> (1) Ubah fi'il <span class="arab" style="font-size:1.1rem">يَكْتُبُ</span> menjadi <span class="arab" style="font-size:1.1rem">يُكْتَبُ</span> (wazan يُفْعَلُ); (2) Hapus Fa'il; (3) Angkat Maf'ul Bih menjadi Na'ibul Fa'il.
+    </p>
+  </div>
+
+  <div class="transformation-box">
+    <h5>🔄 Pola Dasar: Fi'il Amr</h5>
+    <div class="transformation-flow">
+      <div class="box">
+        <span class="arab">اُكْتُبِ الدَّرْسَ</span>
+        <small>Fi'il Amr Ma'lum (Aktif)</small>
+      </div>
+      <div class="arrow">→</div>
+      <div class="box">
+        <span class="arab">لِيُكْتَبِ الدَّرْسُ</span>
+        <small>Fi'il Amr Majhul (Pasif)<br>(Menggunakan lam al-amr)</small>
+      </div>
+    </div>
+    <p style="margin-top:1rem;font-size:.9rem;color:var(--muted)">
+      <strong>Catatan:</strong> Fi'il amr tidak memiliki bentuk majhul langsung. Untuk membentuk pasif, digunakan <span class="arab" style="font-size:1.1rem">لَامُ الْأَمْرِ</span> + fi'il mudhari' majhul.
+    </p>
+  </div>
+
+  <h4 class="sub-sub-title">Wazan (Pola) Pembentukan Fi'il Majhul</h4>
+
+  <p>
+    Berikut adalah wazan-wazan pembentukan fi'il majhul untuk berbagai bentuk fi'il:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk Fi'il</th><th>Wazan Ma'lum</th><th>Wazan Majhul</th><th>Contoh Ma'lum</th><th>Contoh Majhul</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Madhi 3 huruf</strong></td>
+        <td><span class="arab">فَعَلَ</span></td>
+        <td><span class="arab">فُعِلَ</span></td>
+        <td><span class="arab">كَتَبَ</span></td>
+        <td><span class="arab">كُتِبَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mudhari' 3 huruf</strong></td>
+        <td><span class="arab">يَفْعَلُ</span></td>
+        <td><span class="arab">يُفْعَلُ</span></td>
+        <td><span class="arab">يَكْتُبُ</span></td>
+        <td><span class="arab">يُكْتَبُ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Madhi 4 huruf</strong></td>
+        <td><span class="arab">أَفْعَلَ</span></td>
+        <td><span class="arab">أُفْعِلَ</span></td>
+        <td><span class="arab">أَكْرَمَ</span></td>
+        <td><span class="arab">أُكْرِمَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mudhari' 4 huruf</strong></td>
+        <td><span class="arab">يُفْعِلُ</span></td>
+        <td><span class="arab">يُفْعَلُ</span></td>
+        <td><span class="arab">يُكْرِمُ</span></td>
+        <td><span class="arab">يُكْرَمُ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Madhi 5 huruf (تَفَعَّلَ)</strong></td>
+        <td><span class="arab">تَفَعَّلَ</span></td>
+        <td><span class="arab">تُفُعِّلَ</span></td>
+        <td><span class="arab">عَلَّمَ</span></td>
+        <td><span class="arab">عُلِّمَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Madhi 6 huruf (تَفَاعَلَ)</strong></td>
+        <td><span class="arab">تَفَاعَلَ</span></td>
+        <td><span class="arab">تُفُوعِلَ</span></td>
+        <td><span class="arab">تَجَاهَلَ</span></td>
+        <td><span class="arab">تُجُوهِلَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Madhi 7 huruf (اِنْفَعَلَ)</strong></td>
+        <td><span class="arab">اِنْفَعَلَ</span></td>
+        <td><span class="arab">اُنْفُعِلَ</span></td>
+        <td><span class="arab">انْكَسَرَ</span></td>
+        <td><span class="arab">انْكُسِرَ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tips-box">
+    <h4>✦ Rumus Praktis Pembentukan Fi'il Majhul</h4>
+    <ul>
+      <li><strong>Untuk fi'il madhi:</strong> Kasrahkan huruf pertama, dhammah huruf kedua dari akhir (untuk fi'il 3 huruf).</li>
+      <li><strong>Untuk fi'il mudhari':</strong> Dhammah huruf pertama, fathah huruf kedua dari akhir.</li>
+      <li><strong>Prinsip umum:</strong> "Lawan harakat fi'il ma'lum" — jika fi'il ma'lum berharakat dhommah di awal, fi'il majhul berharakat kasrah, dan sebaliknya.</li>
+      <li><strong>Latihan rutin:</strong> Hafalkan wazan-wazan di atas dan latih dengan berbagai fi'il agar terbiasa.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s3-2-2">3.2.2 Transformasi dalam Berbagai Bentuk Fi'il</h3>
+
+  <p>
+    Transformasi dari aktif ke pasif dapat terjadi dalam berbagai bentuk fi'il. Berikut adalah contoh-contohnya:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk</th><th>Kalimat Aktif (Ma'lum)</th><th>Kalimat Pasif (Majhul)</th><th>Perubahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Madhi</strong></td>
+        <td><span class="arab">فَتَحَ الْجَيْشُ الْمَدِينَةَ</span><br>(Tentara membuka kota)</td>
+        <td><span class="arab">فُتِحَتِ الْمَدِينَةُ</span><br>(Kota telah dibuka)</td>
+        <td>Fa'il <span class="arab">الْجَيْشُ</span> dihapus; Maf'ul Bih <span class="arab">الْمَدِينَةَ</span> diangkat menjadi Na'ibul Fa'il <span class="arab">الْمَدِينَةُ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mudhari'</strong></td>
+        <td><span class="arab">يَدْرُسُ الطُّلَّابُ اللُّغَةَ</span><br>(Para pelajar mempelajari bahasa)</td>
+        <td><span class="arab">تُدْرَسُ اللُّغَةُ</span><br>(Bahasa dipelajari)</td>
+        <td>Fa'il <span class="arab">الطُّلَّابُ</span> dihapus; Maf'ul Bih <span class="arab">اللُّغَةَ</span> diangkat</td>
+      </tr>
+      <tr>
+        <td><strong>Madhi + Dhamir</strong></td>
+        <td><span class="arab">ضَرَبَهُ زَيْدٌ</span><br>(Zaid memukulnya)</td>
+        <td><span class="arab">ضُرِبَ</span> atau <span class="arab">ضُرِبَ هُوَ</span><br>(Ia telah dipukul)</td>
+        <td>Dhamir <span class="arab">هُ</span> tetap sebagai Na'ibul Fa'il mustatir; Zaid dihapus</td>
+      </tr>
+      <tr>
+        <td><strong>Fi'il + 2 Objek</strong></td>
+        <td><span class="arab">أَعْطَى الْمُعَلِّمُ الطَّالِبَ كِتَابًا</span><br>(Guru memberikan pelajar sebuah buku)</td>
+        <td><span class="arab">أُعْطِيَ الطَّالِبُ كِتَابًا</span><br>(Pelajar diberikan sebuah buku)</td>
+        <td>Objek pertama <span class="arab">الطَّالِبَ</span> lebih utama diangkat menjadi Na'ibul Fa'il</td>
+      </tr>
+      <tr>
+        <td><strong>Fi'il + Maf'ul Muthlaq</strong></td>
+        <td><span class="arab">ضَرَبَ ضَرْبًا شَدِيدًا</span><br>(Ia memukul dengan pukulan keras)</td>
+        <td><span class="arab">ضُرِبَ ضَرْبًا شَدِيدًا</span><br>(Ia dipukul dengan pukulan keras)</td>
+        <td>Maf'ul muthlaq tetap manshub; tidak bisa diangkat karena bukan objek sejati</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan Khusus: Fi'il dengan Dua Objek</h4>
+    <ul>
+      <li>Fi'il seperti <span class="arab" style="font-size:1.1rem">أَعْطَى</span>, <span class="arab" style="font-size:1.1rem">عَلَّمَ</span>, <span class="arab" style="font-size:1.1rem">سَأَلَ</span> memiliki dua objek.</li>
+      <li>Ketika dipasifkan, <strong>objek pertama</strong> (biasanya orang) lebih utama diangkat menjadi Na'ibul Fa'il.</li>
+      <li>Objek kedua tetap manshub sebagai maf'ul bih kedua (atau bisa juga diangkat menjadi Na'ibul Fa'il menurut sebagian ulama).</li>
+      <li>Contoh: <span class="arab" style="font-size:1.1rem">عَلَّمَ الطَّالِبَ الْعِلْمَ</span> → <span class="arab" style="font-size:1.1rem">عُلِّمَ الطَّالِبُ الْعِلْمَ</span> (Pelajar diajarkan ilmu).</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s3-2-3">3.2.3 Analisis Teks Berita Arab</h3>
+
+  <p>
+    Fi'il majhul sangat sering digunakan dalam teks berita Arab kontemporer. Mari kita analisis beberapa contoh nyata:
+  </p>
+
+  <div class="arabic-display">
+    قَرَّرَتِ الْحُكُومَةُ إِقَامَةَ مَشْرُوعٍ جَدِيدٍ
+    <small>"Pemerintah telah memutuskan untuk mendirikan proyek baru." (Aktif)</small>
+  </div>
+
+  <div class="arabic-display">
+    قُرِّرَ إِقَامَةُ مَشْرُوعٍ جَدِيدٍ
+    <small>"Telah diputuskan untuk mendirikan proyek baru." (Pasif)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Transformasi</h5>
+    <div class="word-analysis">
+      <span class="word">قَرَّرَتِ</span>
+      <span class="detail"><strong>Fi'il madhi ma'lum</strong> — mabni 'ala fathah. <small>Dalam kalimat aktif, fi'il ini memiliki Fa'il <span class="arab" style="font-size:1.1rem">الْحُكُومَةُ</span>.</small></span>
+
+      <span class="word">قُرِّرَ</span>
+      <span class="detail"><strong>Fi'il madhi majhul</strong> — mabni 'ala fathah. <small>Bentuk pasif dari <span class="arab" style="font-size:1.1rem">قَرَّرَ</span> dengan wazan فُعِّلَ.</small></span>
+
+      <span class="word">إِقَامَةُ</span>
+      <span class="detail"><strong>Na'ibul Fa'il</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya adalah maf'ul bih yang diangkat menjadi Na'ibul Fa'il.</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    أُعْلِنَ عَنْ تَعْيينِ مُدِيرٍ جَدِيدٍ لِلْجَامِعَةِ
+    <small>"Telah diumumkan tentang penunjukan direktur baru untuk universitas."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Teks Berita</h5>
+    <div class="word-analysis">
+      <span class="word">أُعْلِنَ</span>
+      <span class="detail"><strong>Fi'il madhi majhul</strong> — mabni 'ala fathah. <small>Bentuk pasif dari <span class="arab" style="font-size:1.1rem">أَعْلَنَ</span> dengan wazan أُفْعِلَ.</small></span>
+
+      <span class="word">عَنْ</span>
+      <span class="detail"><strong>Huruf jar</strong> — <small>menghubungkan fi'il dengan objeknya.</small></span>
+
+      <span class="word">تَعْيينِ</span>
+      <span class="detail"><strong>Majrur</strong> — <small>karena didahului huruf jar <span class="arab" style="font-size:1.1rem">عَنْ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Mengapa Fi'il Majhul Populer di Berita?</h4>
+    <ul>
+      <li><strong>Objektivitas:</strong> Memberikan kesan bahwa informasi bersifat faktual, bukan opini individu.</li>
+      <li><strong>Fokus pada peristiwa:</strong> Yang penting adalah "apa yang terjadi", bukan "siapa yang melakukan".</li>
+      <li><strong>Diplomasi:</strong> Ketika pelaku sensitif untuk disebutkan (misalnya dalam konflik politik).</li>
+      <li><strong>Keringkasan:</strong> Kalimat menjadi lebih ringkas tanpa menyebutkan pelaku yang sudah diketahui umum.</li>
+      <li><strong>Gaya jurnalistik:</strong> Merupakan konvensi dalam jurnalistik Arab modern.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       3.3 TANDA I'RAB
+       ========================================================= -->
+  <h2 class="section-title" id="s3-3">3.3 Tanda I'rab <em>Na'ibul Fa'il</em></h2>
+
+  <p>
+    Na'ibul Fa'il selalu berkedudukan marfu' (rafa'), persis seperti Fa'il. Tanda rafa' ini bisa berupa tanda asli (dhommah) atau tanda cabang (wawu, alif, dhommah muqaddarah) tergantung pada bentuk isimnya.
+  </p>
+
+  <h3 class="sub-title" id="s3-3-1">3.3.1 Tanda Asli dan Cabang</h3>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk Isim</th><th>Tanda Rafa'</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Isim Mufrad</strong></td>
+        <td>Dhommah zhahirah</td>
+        <td><span class="arab">كُتِبَ الدَّرْسُ</span></td>
+        <td><span class="arab">الدَّرْسُ</span> Na'ibul Fa'il marfu' dengan dhommah zhahirah</td>
+      </tr>
+      <tr>
+        <td><strong>Jamak Mudzakkar Salim</strong></td>
+        <td>Wawu</td>
+        <td><span class="arab">كُرِّمَ الْمُدَرِّسُونَ</span></td>
+        <td><span class="arab">الْمُدَرِّسُونَ</span> Na'ibul Fa'il marfu' dengan wawu</td>
+      </tr>
+      <tr>
+        <td><strong>Itsna (Dua)</strong></td>
+        <td>Alif</td>
+        <td><span class="arab">فُتِحَتِ الْمَدِينَتَانِ</span></td>
+        <td><span class="arab">الْمَدِينَتَانِ</span> Na'ibul Fa'il marfu' dengan alif</td>
+      </tr>
+      <tr>
+        <td><strong>Jamak Muannats Salim</strong></td>
+        <td>Dhommah zhahirah</td>
+        <td><span class="arab">قُرِئَتِ الْقِصَصُ</span></td>
+        <td><span class="arab">الْقِصَصُ</span> Na'ibul Fa'il marfu' dengan dhommah</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Mu'takhir huruf (Ya'/Alif Maqshurah)</strong></td>
+        <td>Dhommah muqaddarah</td>
+        <td><span class="arab">بُنِيَ الْمَسْعَى</span></td>
+        <td><span class="arab">الْمَسْعَى</span> Na'ibul Fa'il marfu' dengan dhommah muqaddarah</td>
+      </tr>
+      <tr>
+        <td><strong>Dhamir Mustatir</strong></td>
+        <td>(Tidak tampak)</td>
+        <td><span class="arab">ضُرِبَ</span></td>
+        <td>Fa'il mustatir wajib — taqdiruhu <span class="arab">هُوَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Dhamir Munfashil</strong></td>
+        <td>Dhommah zhahirah</td>
+        <td><span class="arab">ضُرِبَ هُوَ</span></td>
+        <td><span class="arab">هُوَ</span> Na'ibul Fa'il marfu' dengan dhommah zhahirah</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s3-3-2">3.3.2 Analisis Teks Otentik Al-Qur'an</h3>
+
+  <p>
+    Al-Qur'an banyak menggunakan fi'il majhul untuk memberikan kesan universal dan timeless. Mari kita analisis beberapa ayat:
+  </p>
+
+  <div class="arabic-display">
+    خُلِقَ الْإِنْسَانُ مِنْ عَجَلٍ
+    <small>— QS. Al-Anbiya' [21]: 37</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">خُلِقَ</span>
+      <span class="detail"><strong>Fi'il madhi majhul</strong> — mabni 'ala fathah. <small>Bentuk pasif dari <span class="arab" style="font-size:1.1rem">خَلَقَ</span> (menciptakan). Wazan: فُعِلَ.</small></span>
+
+      <span class="word">الْإِنْسَانُ</span>
+      <span class="detail"><strong>Na'ibul Fa'il</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya adalah maf'ul bih yang diangkat. Makna: "Manusia".</small></span>
+
+      <span class="word">مِنْ عَجَلٍ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">مِنْ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">عَجَلٍ</span> = majrur dengan kasrah. <small>Keterangan asal (zharf). Makna: "dari sesuatu yang tergesa-gesa".</small></span>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Teologis</h4>
+    <p>
+      Mengapa Allah menggunakan fi'il majhul dalam ayat ini? Karena penciptaan manusia adalah fakta universal yang tidak perlu disebutkan pelakunya — semua orang tahu bahwa Allah-lah yang menciptakan. Penggunaan fi'il majhul di sini memberikan kesan keagungan dan timeless — pesan berlaku untuk siapa saja dan kapan saja.
+    </p>
+  </div>
+
+  <div class="arabic-display">
+    وَقُضِيَ بَيْنَهُمْ بِالْحَقِّ
+    <small>— QS. Az-Zumar [39]: 69</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">وَقُضِيَ</span>
+      <span class="detail"><strong>Wawu isti'nafiyyah</strong> + <strong>fi'il madhi majhul</strong> — <span class="arab" style="font-size:1.1rem">قُضِيَ</span> mabni 'ala fathah. <small>Bentuk pasif dari <span class="arab" style="font-size:1.1rem">قَضَى</span> (memutuskan). Wazan: فُعِلَ.</small></span>
+
+      <span class="word">بَيْنَهُمْ</span>
+      <span class="detail"><strong>Zharf makan</strong> — manshub dengan fathah. <small>Makna: "di antara mereka".</small></span>
+
+      <span class="word">بِالْحَقِّ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">بِ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">الْحَقِّ</span> = majrur dengan kasrah. <small>Keterangan cara (hal). Makna: "dengan kebenaran".</small></span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Fi'il Majhul dalam Hadis</h4>
+    <div class="case-content">
+      Hadis: <span class="arab" style="font-size:1.3rem">غُفِرَ لَهُ</span> ("Ia telah diampuni")
+    </div>
+    <div class="lesson">
+      <strong>Analisis:</strong> <span class="arab" style="font-size:1.2rem">غُفِرَ</span> adalah fi'il madhi majhul dari <span class="arab" style="font-size:1.2rem">غَفَرَ</span> (mengampuni). <span class="arab" style="font-size:1.2rem">لَهُ</span> = jar-majrur yang berkedudukan sebagai Na'ibul Fa'il (karena fi'il <span class="arab" style="font-size:1.2rem">غَفَرَ</span> membutuhkan jar, bukan objek langsung).<br><br>
+      <strong>Pembelajaran:</strong> Tidak semua Na'ibul Fa'il berasal dari maf'ul bih. Beberapa fi'il yang membutuhkan jar (seperti <span class="arab" style="font-size:1.1rem">غَفَرَ لَ</span>) memiliki Na'ibul Fa'il berupa jar-majrur yang diangkat.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       3.4 PERSPEKTIF LINGUISTIK MODERN
+       ========================================================= -->
+  <h2 class="section-title" id="s3-4">3.4 Perspektif <em>Linguistik Modern</em></h2>
+
+  <p>
+    Sebagai mahasiswa Pendidikan Bahasa Arab, penting untuk menjembatani konsep Na'ibul Fa'il dengan teori linguistik modern. Pendekatan ini akan memperkaya analisis dan membuka perspektif baru dalam memahami struktur pasif bahasa Arab.
+  </p>
+
+  <h3 class="sub-title" id="s3-4-1">3.4.1 Passive Voice & Ergativity</h3>
+
+  <p>
+    Dalam linguistik modern, konsep fi'il majhul dapat dianalisis melalui beberapa teori:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Teori Linguistik</th><th>Konsep Terkait</th><th>Padanan dalam Nahwu</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Generatif (Chomsky)</strong></td>
+        <td>Passive Transformation, A-movement</td>
+        <td>Transformasi dari struktur aktif ke pasif dengan memindahkan objek ke posisi subjek</td>
+      </tr>
+      <tr>
+        <td><strong>Functional Grammar (Halliday)</strong></td>
+        <td>Theme-Rheme, Information Structure</td>
+        <td>Fi'il majhul digunakan untuk mengatur struktur informasi — menekankan yang dikenai daripada pelaku</td>
+      </tr>
+      <tr>
+        <td><strong>Role and Reference Grammar</strong></td>
+        <td>Macro-role (Patient promoted to Subject)</td>
+        <td>Na'ibul Fa'il sebagai Patient yang dipromosikan menjadi Subjek</td>
+      </tr>
+      <tr>
+        <td><strong>Cognitive Linguistics</strong></td>
+        <td>Figure-Ground, Perspective</td>
+        <td>Fi'il majhul mengubah perspektif: dari pelaku (figure) ke yang dikenai (figure baru)</td>
+      </tr>
+      <tr>
+        <td><strong>Typological Linguistics</strong></td>
+        <td>Ergativity, Voice Systems</td>
+        <td>Bahasa Arab memiliki sistem voice yang kaya, termasuk pasif morfologis (fi'il majhul) dan pasif perifrasistik</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s3-4-2">3.4.2 Integrasi dengan Teori Linguistik</h3>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 4: Analisis Pasif dalam Perspektif Generatif</h4>
+    <div class="case-content">
+      Kalimat: <span class="arab" style="font-size:1.3rem">كُتِبَ الدَّرْسُ</span> ("Pelajaran telah ditulis")
+    </div>
+    <div class="lesson">
+      <strong>Analisis Nahwu Klasik:</strong> <span class="arab" style="font-size:1.2rem">كُتِبَ</span> = fi'il madhi majhul; <span class="arab" style="font-size:1.2rem">الدَّرْسُ</span> = Na'ibul Fa'il marfu' dengan dhommah.<br><br>
+      <strong>Analisis Generatif:</strong> Dalam struktur deep structure, kalimat ini berasal dari <span class="arab" style="font-size:1.2rem">[X] كَتَبَ الدَّرْسَ</span> (seseorang menulis pelajaran). Melalui <em>Passive Transformation</em>: (1) Objek <span class="arab" style="font-size:1.2rem">الدَّرْسَ</span> bergerak ke posisi Spec-TP (A-movement); (2) Agen <span class="arab" style="font-size:1.2rem">[X]</span> dihapus atau direduksi menjadi by-phrase (dalam bahasa Arab, by-phrase sering dihilangkan); (3) Fi'il berubah bentuk menjadi <span class="arab" style="font-size:1.2rem">كُتِبَ</span> untuk menandai pasif.<br><br>
+      <strong>Implikasi:</strong> Kedua analisis ini saling melengkapi — analisis nahwu klasik memberikan deskripsi struktural, sementara analisis generatif memberikan penjelasan tentang <em>mengapa</em> dan <em>bagaimana</em> struktur tersebut terbentuk.
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Mengapa Integrasi Ini Penting bagi Mahasiswa PBA?</h4>
+    <ul>
+      <li>Membuka peluang publikasi <strong>skripsi dan artikel ilmiah</strong> di jurnal linguistik nasional maupun internasional.</li>
+      <li>Memperkaya analisis teks Arab dengan perspektif komparatif (Arab vs bahasa lain).</li>
+      <li>Memungkinkan pengembangan <strong>bahan ajar</strong> yang lebih inovatif dan berbasis riset.</li>
+      <li>Menjadi jembatan antara tradisi keilmuan Islam dan sains modern — bekal penting bagi calon guru bahasa Arab profesional.</li>
+      <li>Membantu mahasiswa memahami <em>mengapa</em> fi'il majhul digunakan dalam konteks tertentu, bukan hanya <em>bagaimana</em> bentuknya.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       3.5 PENDEKATAN PEMBELAJARAN KONTEKSTUAL
+       ========================================================= -->
+  <h2 class="section-title" id="s3-5">3.5 Pendekatan <em>Pembelajaran Kontekstual</em></h2>
+
+  <p>
+    Sebagai calon guru bahasa Arab, mahasiswa PBA perlu menguasai berbagai pendekatan pembelajaran yang dapat digunakan untuk mengajarkan konsep Na'ibul Fa'il kepada siswa di masa depan.
+  </p>
+
+  <h3 class="sub-title">3.5.1 Discovery Learning untuk Transformasi</h3>
+
+  <p>
+    Discovery Learning mengajak mahasiswa untuk menemukan sendiri pola transformasi dari aktif ke pasif melalui latihan klasifikasi kata. Berikut contoh penerapannya:
+  </p>
+
+  <div class="tips-box">
+    <h4>✦ Langkah-langkah Discovery Learning</h4>
+    <ul>
+      <li><strong>Langkah 1:</strong> Sajikan beberapa pasangan kalimat aktif-pasif tanpa penjelasan.</li>
+      <li><strong>Langkah 2:</strong> Minta mahasiswa mengidentifikasi pola perubahan (bentuk fi'il, kedudukan unsur).</li>
+      <li><strong>Langkah 3:</strong> Minta mahasiswa merumuskan sendiri kaidah transformasi.</li>
+      <li><strong>Langkah 4:</strong> Verifikasi kaidah yang ditemukan dengan literatur nahwu.</li>
+      <li><strong>Langkah 5:</strong> Latihan menerapkan kaidah pada kalimat baru.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title">3.5.2 Integrasi Nilai Budaya Minangkabau</h3>
+
+  <p>
+    Salah satu keunikan pembelajaran nahwu di UIN Bukittinggi adalah integrasi nilai-nilai budaya Minangkabau. Berikut contoh penerapannya dalam pembelajaran Na'ibul Fa'il:
+  </p>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 5: Na'ibul Fa'il dalam Konteks Minangkabau</h4>
+    <div class="case-content">
+      Contoh kalimat dalam konteks Minangkabau:<br>
+      <span class="arab" style="font-size:1.3rem">بُنِيَ الْمَسْجِدُ بِالتَعَاوُنِ بَيْنَ السُّكَانِ</span><br>
+      ("Masjid telah dibangun dengan gotong royong antarwarga")
+    </div>
+    <div class="lesson">
+      <strong>Analisis:</strong> <span class="arab" style="font-size:1.2rem">بُنِيَ</span> = fi'il madhi majhul dari <span class="arab" style="font-size:1.2rem">بَنَى</span> (membangun). <span class="arab" style="font-size:1.2rem">الْمَسْجِدُ</span> = Na'ibul Fa'il marfu' dengan dhommah.<br><br>
+      <strong>Nilai Minangkabau:</strong> Penggunaan fi'il majhul di sini menekankan <em>peristiwa pembangunan</em> dan <em>gotong royong</em>, bukan siapa yang membangun. Ini selaras dengan nilai <em>"Basemenda jo Saiyo Saiyo"</em> (bekerja bersama-sama) — yang penting adalah hasil kolektif, bukan individu.
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Ide Bahan Ajar Kontekstual</h4>
+    <ul>
+      <li>Gunakan teks berita lokal Sumatra Barat berbahasa Arab (jika ada) sebagai bahan analisis Na'ibul Fa'il.</li>
+      <li>Buat latihan transformasi dengan tema-tema yang relevan dengan kehidupan mahasiswa (kampus, madrasah, budaya Minang).</li>
+      <li>Gunakan pepatah Minangkabau yang diterjemahkan ke bahasa Arab dengan fi'il majhul.</li>
+      <li>Buat video pendek berbahasa Arab tentang kegiatan kampus, lalu identifikasi fi'il majhul dalam narasinya.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       3.6 PETA KONSEP
+       ========================================================= -->
+  <h2 class="section-title" id="s3-6">3.6 Peta Konsep <em>Na'ibul Fa'il</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep Na'ibul Fa'il</h4>
+    <div class="map-center">
+      <div class="core">NA'IBUL FA'IL</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Isim marfu' yang menggantikan Fa'il dalam fi'il majhul</p>
+        <ul>
+          <li>Selalu marfu'</li>
+          <li>Hanya pada fi'il majhul</li>
+          <li>Yang dikenai pekerjaan</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Transformasi</h5>
+        <ul>
+          <li>Ma'lum → Majhul</li>
+          <li>Fa'il dihapus</li>
+          <li>Maf'ul Bih diangkat</li>
+          <li>Wazan fi'il berubah</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Tanda I'rab</h5>
+        <ul>
+          <li>Dhommah zhahirah (mufrad)</li>
+          <li>Wawu (jamak mudzakkar salim)</li>
+          <li>Alif (itsna)</li>
+          <li>Dhommah muqaddarah (mu'takhir huruf)</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Fungsi Pragmatis</h5>
+        <ul>
+          <li>Objektivitas (berita)</li>
+          <li>Universalitas (Al-Qur'an)</li>
+          <li>Diplomasi (politik)</li>
+          <li>Keringkasan (ilmiah)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       3.7 GLOSARIUM
+       ========================================================= -->
+  <h2 class="section-title" id="s3-7">3.7 Glosarium <em>Istilah</em></h2>
+
+  <div class="glossary">
+    <h4>📖 Istilah Pokok Seputar Na'ibul Fa'il</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Na'ibul Fa'il</strong><span class="arab">نَائِبُ الْفَاعِل</span></div>
+        <p>Pengganti Fa'il; isim marfu' yang menempati posisi Fa'il dalam fi'il majhul.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fi'il Ma'lum</strong><span class="arab">فِعْلٌ مَعْلُوم</span></div>
+        <p>Fi'il aktif yang menyebutkan pelakunya (Fa'il).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fi'il Majhul</strong><span class="arab">فِعْلٌ مَجْهُول</span></div>
+        <p>Fi'il pasif yang tidak menyebutkan pelakunya; pelakunya digantikan oleh Na'ibul Fa'il.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Transformasi</strong><span class="arab">التَّحْوِيل</span></div>
+        <p>Proses perubahan struktur kalimat dari aktif ke pasif.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Wazan</strong><span class="arab">وَزْن</span></div>
+        <p>Pola morfologis pembentukan kata; dalam konteks ini, pola pembentukan fi'il majhul.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mut'addi</strong><span class="arab">مُتَعَدٍّ</span></div>
+        <p>Fi'il transitif yang membutuhkan objek (maf'ul bih).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Lazim</strong><span class="arab">لَازِم</span></div>
+        <p>Fi'il intransitif yang tidak membutuhkan objek; tidak dapat dipasifkan.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Agent</strong><span class="arab">الْفَاعِل</span></div>
+        <p>Pelaku dalam struktur aktif; dalam pasif, agen dihapus atau direduksi.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Patient</strong><span class="arab">الْمَفْعُول</span></div>
+        <p>Yang dikenai pekerjaan; dalam pasif, patient dipromosikan menjadi Na'ibul Fa'il.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Passive Voice</strong><span class="arab">الْبِنَاءُ الْمَجْهُول</span></div>
+        <p>Padanan konsep fi'il majhul dalam linguistik modern.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ergativity</strong><span class="arab">الأُرْجَاتِيَّة</span></div>
+        <p>Sistem linguistik di mana subjek kalimat intransitif diperlakukan seperti objek kalimat transitif.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>A-Movement</strong><span class="arab">الْحَرَكَةُ أ</span></div>
+        <p>Dalam teori generatif: perpindahan argumen ke posisi subjek (seperti dalam pasif).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       3.8 TUGAS PERTEMUAN 3
+       ========================================================= -->
+  <h2 class="section-title" id="s3-8">3.8 Tugas <em>Pertemuan 3</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Mengubah 15 kalimat aktif (Ma'lum) menjadi pasif (Majhul) dari teks berita bahasa Arab kontemporer.</li>
+      <li>Sumber: portal berita Arab seperti Al-Jazeera, BBC Arabic, atau media Arab lainnya.</li>
+      <li>Untuk setiap transformasi, berikan:</li>
+      <li style="padding-left:2.5rem">— Kalimat asli (aktif)</li>
+      <li style="padding-left:2.5rem">— Kalimat hasil transformasi (pasif)</li>
+      <li style="padding-left:2.5rem">— Analisis i'rab Na'ibul Fa'il</li>
+      <li style="padding-left:2.5rem">— Ta'lil nahwi untuk transformasi</li>
+      <li>Susun dalam bentuk tabel yang rapi dan sistematis.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Membuat daftar kosakata Fi'il ma'lum yang bisa diubah menjadi majhul.</li>
+      <li>Minimal 30 fi'il dari berbagai wazan (فَعَلَ، أَفْعَلَ، فَعَّلَ، تَفَعَّلَ، إلخ).</li>
+      <li>Untuk setiap fi'il, tuliskan:</li>
+      <li style="padding-left:2.5rem">— Bentuk ma'lum dan majhul</li>
+      <li style="padding-left:2.5rem">— Wazan (pola morfologis)</li>
+      <li style="padding-left:2.5rem">— Contoh kalimat aktif dan pasif</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 2 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 3</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep Na'ibul Fa'il — dari definisi dan hakikatnya, transformasi dari aktif ke pasif, hingga analisis mendalam dalam teks Al-Qur'an dan berita Arab kontemporer. Ingatlah, fi'il majhul bukan sekadar "versi pasif" dari fi'il aktif — ia memiliki fungsi pragmatis yang kaya, dari memberikan kesan objektif dalam berita, hingga menegaskan keagungan Allah dalam nash-nash keislaman. Sebagai calon guru bahasa Arab, penguasaan terhadap Na'ibul Fa'il akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       KESIMPULAN
+       ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 3</h3>
+    <p>
+      Pertemuan ketiga ini telah membahas secara komprehensif tentang Na'ibul Fa'il — unsur Marfu'atul Asma yang menggantikan posisi Fa'il dalam fi'il majhul. Mahasiswa telah memahami definisi dan hakikat Na'ibul Fa'il, perbedaan dengan Fa'il, syarat-syarat pembentukan fi'il majhul, serta pola transformasi dari aktif ke pasif.
+    </p>
+    <p>
+      Melalui analisis teks Al-Qur'an dan berita Arab kontemporer, mahasiswa telah berlatih mengidentifikasi Na'ibul Fa'il dalam teks otentik. Perbandingan perspektif nahwu klasik dan linguistik modern telah memperkaya wawasan mahasiswa tentang konsep passive voice dan ergativity. Integrasi nilai budaya Minangkabau telah menunjukkan relevansi Na'ibul Fa'il dalam konteks lokal.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 4 yang akan membahas <strong>Al-Mubtada'</strong> — fondasi kalimat nominal (jumla ismiyyah). Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       DAFTAR PUSTAKA
+       ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Ashmawi, Muhammad. <em>Al-Usul fi an-Nahw</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Chomsky, N. (1981). <em>Lectures on Government and Binding</em>. Dordrecht: Foris.</li>
+      <li>Halliday, M. A. K. (1994). <em>An Introduction to Functional Grammar</em>. London: Edward Arnold.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+      <li>Ryding, K. (2005). <em>Modern Written Arabic: A Comprehensive Grammar</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="2.html">← Pertemuan 2: Al-Fa'il</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="4.html">Pertemuan 4: Al-Mubtada' →</a>
+  </div>
+
+</section>
+
+<!-- =========================================================
+     UJI FORMATIF
+     ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 3</span>
+      <h2>Na'ibul Fa'il: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Transformasi Aktif ke Pasif</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Definisi, transformasi, tanda i'rab, analisis teks, dan integrasi linguistik modern</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">كُتِبَ الدَّرْسُ</span>, kata <span class="arab">الدَّرْسُ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Na'ibul Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Maf'ul bih</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>2.</strong> Fi'il majhul dari <span class="arab">كَتَبَ</span> adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. كَاتَبَ</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. كَتَّбَ</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. كُتِبَ</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. اِكْتَتَبَ</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Syarat utama agar suatu fi'il dapat dipasifkan adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Fi'il harus mut'addi (transitif)</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Fi'il harus lazim (intransitif)</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Fi'il harus berupa fi'il amr</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Fi'il harus berupa fi'il mudhari'</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Dalam ayat <span class="arab">خُلِقَ الْإِنْسَانُ مِنْ عَجَلٍ</span>, kata <span class="arab">الْإِنْسَانُ</span> adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Fa'il zhahir</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Maf'ul bih</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Na'ibul Fa'il</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Tanda i'rab Na'ibul Fa'il pada jamak mudzakkar salim adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Wawu</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Alif</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Ya'</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> Fi'il majhul dari <span class="arab">أَكْرَمَ</span> (memuliakan) adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. أُكْرِمَ</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. كَرُمَ</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. يُكْرَمُ</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. إِكْرَام</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Dalam perspektif linguistik modern, Na'ibul Fa'il padanan dengan konsep...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Patient yang dipromosikan menjadi Subject dalam passive construction</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Agent dalam active voice</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Experiencer dalam psychological predicate</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Theme dalam locative inversion</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Mengapa fi'il lazim (intransitif) tidak dapat dipasifkan?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Karena fi'il lazim sudah berbentuk majhul</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Karena fi'il lazim tidak memiliki Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Karena fi'il lazim tidak dapat berubah bentuk</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Karena fi'il lazim tidak memiliki maf'ul bih yang bisa diangkat menjadi Na'ibul Fa'il</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Dalam kalimat <span class="arab">ضُرِبَ</span>, Na'ibul Fa'il-nya adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Zhahir (terlihat jelas)</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Mustatir (tersembunyi) — taqdiruhu هُوَ</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Mu'awwal (ditakwil)</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Tidak ada Na'ibul Fa'il</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Fungsi pragmatis fi'il majhul dalam teks berita Arab adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Menekankan pelaku</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Menyebutkan semua unsur kalimat secara lengkap</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Memberikan kesan objektif dan menekankan peristiwa</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Mengubah makna kalimat secara drastis</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat Na'ibul Fa'il menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda, dan analisislah persamaan serta perbedaan di antara definisi-definisi tersebut!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Bandingkan dan kontraskan antara Fa'il dan Na'ibul Fa'il! Jelaskan perbedaan mendasar dari segi: (a) jenis fi'il, (b) peran semantis, (c) asal usul, dan (d) fungsi pragmatis! Berikan contoh konkret untuk masing-masing!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Transformasikan 5 kalimat aktif (ma'lum) menjadi pasif (majhul)! Untuk setiap transformasi, jelaskan langkah-langkahnya dan berikan analisis i'rab Na'ibul Fa'il! Gunakan berbagai bentuk fi'il (madhi, mudhari', fi'il dengan 2 objek, dll).</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Analisislah penggunaan fi'il majhul dalam 3 ayat Al-Qur'an yang berbeda! Jelaskan mengapa Allah menggunakan fi'il majhul dalam ayat-ayat tersebut, dan apa implikasi teologisnya!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Jelaskan konsep passive voice dalam linguistik modern dan hubungannya dengan fi'il majhul dalam nahwu klasik! Analisislah bagaimana teori A-movement (Chomsky) dapat menjelaskan transformasi dari aktif ke pasif dalam bahasa Arab! Berikan contoh konkret!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 3,
+    topik: 'Na\'ibul Fa\'il',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 3
+  An-Nahw lil Mutawassithin
+  Topik: Na'ibul Fa'il
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P3_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P3 (Na'ibul Fa'il) - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 3 (Na'ibul Fa'il) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

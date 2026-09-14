@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 1: Prolog Peta Jalan Nahwu Mutawassithin — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 1: Kontrak perkuliahan, etika akademik, landasan teoretis nahwu klasik & modern, serta urgensi i'rab sebagai fondasi perjalanan menapaki sintaksis Arab tingkat menengah." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--ink);color:var(--cream);
+  line-height:1.7;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201,169,97,.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(201,169,97,.06) 0%, transparent 40%);
+}
+.bg-ornament{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(201,169,97,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,97,.03) 1px, transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{
+  min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1;
+}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{
+  display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;
+  border:1px solid var(--gold);border-radius:2px;
+}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{
+  background:linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;
+  font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none;
+}
+.btn-primary{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;
+  color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line);
+}
+h2.section-title em{
+  font-style:italic;
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+h3.sub-title{
+  font-family:var(--serif);font-size:1.5rem;color:var(--gold);
+  margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem;
+}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{
+  font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);
+  font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem;
+}
+.arabic-display{
+  background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;
+  padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);
+  font-size:2rem;color:var(--gold);direction:rtl;line-height:2.2;
+}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{
+  background:rgba(201,169,97,.04);border-left:3px solid var(--gold);
+  padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;
+}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center;
+}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg, transparent, var(--gold), transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;
+}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box, .warning-box, .insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4, .warning-box h4, .insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul, .warning-box ul, .insight-box ul{list-style:none;padding:0}
+.tips-box li, .warning-box li, .insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative;
+}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{
+  display:inline-block;padding:1rem 2rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3);
+}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center;
+}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  flex-wrap:wrap;gap:1rem;
+}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.quiz-section{
+  background:linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+  padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1;
+}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{
+  display:inline-block;padding:.5rem 1.5rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-size:.75rem;letter-spacing:3px;
+  text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem;
+}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input, .form-group select{
+  padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);
+  border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s;
+}
+.form-group input:focus, .form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{
+  width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);
+  border:1px solid var(--line);border-radius:4px;color:var(--cream);
+  font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s;
+}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{
+  padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+  font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.btn-submit{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf, .btn-score, .btn-email, .btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover, .btn-score:hover, .btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{
+  display:none;
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center;
+}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 1
+  </div>
+  <span class="chapter-label">Pertemuan 1 · 2 SKS</span>
+  <h1>Prolog: <span class="accent">Peta Jalan Nahwu Mutawassithin</span></h1>
+  <div class="hero-arabic">الخَرِيطَةُ الطَّرِيقِيَّةُ لِلنَّحْوِ المُتَوَسِّطِينَ</div>
+  <p class="subtitle">Kontrak perkuliahan, etika akademik, landasan teoretis nahwu klasik & modern, serta urgensi i'rab sebagai fondasi perjalanan menapaki sintaksis Arab tingkat menengah.</p>
+  <div class="hero-actions">
+    <a href="index.html" class="btn btn-outline">← Kembali ke Daftar Bab</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 1</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s1-1">1.1 Landasan Filosofis Ilmu Nahwu</a>
+        <ol>
+          <li><a href="#s1-1-1">1.1.1 Definisi dan Ruang Lingkup</a></li>
+          <li><a href="#s1-1-2">1.1.2 Sejarah Perkembangan</a></li>
+          <li><a href="#s1-1-3">1.1.3 Urgensi dalam Tradisi Keilmuan Islam</a></li>
+          <li><a href="#s1-1-4">1.1.4 Nahwu dalam Perspektif Linguistik Modern</a></li>
+          <li><a href="#s1-1-5">1.1.5 Pendekatan Struktural vs Fungsional</a></li>
+        </ol>
+      </li>
+      <li><a href="#s1-2">1.2 Peta Jalan Pembelajaran</a>
+        <ol>
+          <li><a href="#s1-2-1">1.2.1 Capaian Pembelajaran (CPMK)</a></li>
+          <li><a href="#s1-2-2">1.2.2 Alur 16 Pertemuan</a></li>
+          <li><a href="#s1-2-3">1.2.3 Sistem Penilaian</a></li>
+          <li><a href="#s1-2-4">1.2.4 Asesmen Autentik & Portofolio</a></li>
+        </ol>
+      </li>
+      <li><a href="#s1-3">1.3 Etika Akademik & Kontrak Perkuliahan</a></li>
+      <li><a href="#s1-4">1.4 I'rab: Jantung Ilmu Nahwu</a>
+        <ol>
+          <li><a href="#s1-4-1">1.4.1 Konsep Dasar I'rab</a></li>
+          <li><a href="#s1-4-2">1.4.2 Tanda-tanda I'rab</a></li>
+          <li><a href="#s1-4-3">1.4.3 Analisis I'rab dalam Teks Otentik</a></li>
+          <li><a href="#s1-4-4">1.4.4 Taksonomi I'rab: Klasifikasi Lengkap</a></li>
+        </ol>
+      </li>
+      <li><a href="#s1-5">1.5 Pendekatan Pembelajaran Kontekstual</a></li>
+      <li><a href="#s1-6">1.6 Peta Konsep: Marfu'atul Asma & Tawabi'</a></li>
+      <li><a href="#s1-7">1.7 Glosarium Istilah Nahwu</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Ilmu Nahwu adalah "pintu gerbang" untuk memahami bahasa Arab secara utuh. Tanpa penguasaan nahwu, seorang pembaca teks Arab ibarat seorang pelaut tanpa kompas — ia dapat berlayar, tetapi tidak tahu arah tujuannya.
+  </p>
+
+  <p>
+    Pertemuan pertama mata kuliah <strong>An-Nahw lil Mutawassithin</strong> ini dirancang sebagai fondasi filosofis dan praktis sebelum mahasiswa melangkah lebih jauh ke dalam lautan sintaksis Arab tingkat menengah. Sebagai mahasiswa <strong>Pendidikan Bahasa Arab (PBA)</strong>, Anda tidak hanya dituntut untuk <em>menghafal</em> kaidah, tetapi lebih dari itu — untuk <em>menganalisis</em>, <em>memvalidasi</em>, dan <em>mengonstruksi</em> wacana Arab secara kreatif dengan landasan teoretis yang kokoh.
+  </p>
+
+  <p>
+    Pada pertemuan ini, mahasiswa diajak menyepakati kontrak belajar dan etika akademik, memahami peta jalan (<em>roadmap</em>) pembelajaran selama 16 pertemuan ke depan — mulai dari <em>Marfu'atul Asma</em> hingga <em>Tawabi'</em> — serta merefleksikan urgensi i'rab dalam tradisi keilmuan Islam. Lebih jauh, pertemuan ini juga memperkenalkan perspektif linguistik modern terhadap nahwu klasik, sehingga mahasiswa mampu menjembatani warisan intelektual ulama terdahulu dengan pendekatan keilmuan kontemporer.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">أَوَّلُ الْعِلْمِ الصَّمْتُ وَالثَّانِي الاسْتِمَاعُ وَالثَّالِثُ الْحِفْظُ وَالرَّابِعُ الْعَمَلُ وَالْخَامِسُ نَشْرُهُ</div>
+    <div class="translation">"Awal ilmu adalah diam, kemudian mendengar, kemudian menghafal, kemudian mengamalkan, dan kelima menyebarkannya."</div>
+    <div class="source">— Imam Sufyan ats-Tsauri</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengapa Ilmu Nahwu Penting?</h4>
+    <p>Simak cuplikan singkat tentang peran vital ilmu nahwu dalam menjaga kemurnian pemahaman teks keislaman — dari masa Abu al-Aswad ad-Duali hingga era kontemporer.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci</h4>
+    <ul>
+      <li><strong>Ilmu Nahwu:</strong> Ilmu tentang kaidah yang mengatur kedudukan kata dalam kalimat bahasa Arab, termasuk perubahan akhir kata (i'rab) akibat faktor-faktor sintaksis.</li>
+      <li><strong>I'rab:</strong> Perubahan akhir kata (harakat atau huruf) yang terjadi karena perbedaan faktor ('awamil) yang memasukinya — baik berupa rafa', nashab, khafadh, maupun jazm.</li>
+      <li><strong>Marfu'atul Asma:</strong> Kelompok isim yang berkedudukan marfu', mencakup Fa'il, Na'ibul Fa'il, Mubtada'-Khabar, dan isim-isim nawasikh (Kana wa akhwatuha, Inna wa akhwatuha, Khabar La Nafiyah lil Jins).</li>
+      <li><strong>Tawabi':</strong> Kelompok kata yang mengikuti (tabi') kata yang didahuluinya dalam hal i'rab, mencakup Na'at, Taukid, Badal, dan 'Athaf.</li>
+      <li><strong>Ta'lil Nahwi:</strong> Argumentasi logis yang digunakan untuk memvalidasi kebenaran struktur bahasa Arab berdasarkan kaidah nahwu.</li>
+      <li><strong>'Awamil:</strong> Faktor-faktor (kata atau konstruk) yang menyebabkan terjadinya i'rab pada kata lain dalam kalimat.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Salah Harakat, Salah Makna</h4>
+    <div class="case-content">
+      Seorang mahasiswa membaca sebuah hadis: <span class="arab" style="font-size:1.3rem">لَيْسَ لِلْمُؤْمِنِ أَنْ يُذِلَّ نَفْسَهُ</span>. Ia membaca kata "يُذِلَّ" dengan fathah (يُذِلَّ), padahal seharusnya dengan kasrah (يُذِلَّ). Perubahan satu harakat ini mengubah makna dari "menghinakan" menjadi "dihinakan". Akibatnya, pemahaman terhadap hadis tersebut menjadi keliru — seolah-olah hadis memerintahkan untuk menghinakan diri, padahal maksudnya adalah larangan membiarkan diri dihinakan oleh keadaan.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Ketidaktelitian dalam i'rab dapat berakibat fatal dalam memahami teks keislaman. Inilah mengapa ilmu nahwu disebut sebagai "ilmu yang paling mulia" (<span class="arab" style="font-size:1.1rem">أَشْرَفُ الْعُلُومِ</span>) oleh para ulama.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa Minangkabau</h4>
+    <p>
+      Di Minangkabau, pepatah <em>"Alam Takambang Jadi Guru"</em> mengajarkan bahwa alam dan ilmu harus berjalan beriringan. Dalam konteks nahwu, kaidah bukan sekadar hafalan — ia adalah "kompas" yang membimbing kita memahami pesan Ilahi dan warisan intelektual umat. Mulailah semester ini dengan niat yang lurus: belajar nahwu bukan untuk nilai, tetapi untuk menjaga kemurnian pemahaman.
+    </p>
+  </div>
+
+  <h2 class="section-title" id="s1-1">1.1 Landasan Filosofis <em>Ilmu Nahwu</em></h2>
+
+  <p>
+    Sebelum melangkah ke materi teknis, mahasiswa perlu memahami landasan filosofis mengapa ilmu nahwu begitu sentral dalam tradisi keilmuan Islam. Pemahaman ini akan menjadi fondasi kokoh bagi seluruh perjalanan akademik selama satu semester.
+  </p>
+
+  <h3 class="sub-title" id="s1-1-1">1.1.1 Definisi dan Ruang Lingkup Nahwu</h3>
+
+  <p>
+    Secara etimologis, kata <em>an-nahwu</em> (<span class="arab" style="font-size:1.2rem">النَّحْوُ</span>) berasal dari akar kata <em>nahā</em> (<span class="arab" style="font-size:1.2rem">نَحَا</span>) yang berarti "menuju" atau "mengarah". Secara terminologis, para ulama mendefinisikan nahwu dengan berbagai rumusan yang saling melengkapi:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Definisi</th><th>Rumusan</th><th>Sumber</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Klasik</strong></td>
+        <td>"Ilmu tentang kaidah-kaidah yang diketahui dengannya keadaan lafaz-lafaz Arab dari segi i'rab-nya, dan keadaan lafaz-lafaz tersebut dari segi bangunannya."</td>
+        <td>Ibnu Hisyam, <em>Mughni al-Labib</em></td>
+      </tr>
+      <tr>
+        <td><strong>Modern</strong></td>
+        <td>"Ilmu yang mempelajari struktur sintaksis bahasa Arab, termasuk hubungan antar kata dalam kalimat, perubahan akhir kata (i'rab), dan faktor-faktor yang memengaruhinya."</td>
+        <td>Adaptasi kontemporer</td>
+      </tr>
+      <tr>
+        <td><strong>Fungsional</strong></td>
+        <td>"Ilmu yang mengatur kedudukan kata dalam konteks wacana, sehingga makna yang dikehendaki pembicara dapat tersampaikan secara tepat kepada pendengar."</td>
+        <td>Abbas Hasan, <em>Al-Nahw al-Wafi</em></td>
+      </tr>
+      <tr>
+        <td><strong>Struktural</strong></td>
+        <td>"Ilmu tentang pola-pola hubungan hierarkis antar unsur kalimat, yang membentuk struktur sintaksis yang koheren dan bermakna."</td>
+        <td>Integrasi linguistik modern</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="sub-sub-title">Ruang Lingkup Nahwu Mutawassithin</h4>
+
+  <p>Ruang lingkup nahwu tingkat menengah mencakup lima domain utama:</p>
+
+  <table>
+    <thead>
+      <tr><th>Domain</th><th>Unsur Utama</th><th>Status I'rab</th><th>Pertemuan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Marfu'atul Asma</strong></td>
+        <td>Fa'il, Na'ibul Fa'il, Mubtada'-Khabar, Isim Kana, Isim Kada, Khabar Inna, Khabar La Nafiyah lil Jins</td>
+        <td><span class="arab">رَفْع</span> (Rafa')</td>
+        <td>P.2–P.10</td>
+      </tr>
+      <tr>
+        <td><strong>Manshubatul Asma</strong></td>
+        <td>Maf'ul Bih, Hal, Tamyiz, Maf'ul Muthlaq, Maf'ul Li Ajlih, Istitsna'</td>
+        <td><span class="arab">نَصْب</span> (Nashab)</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><strong>Majruratul Asma</strong></td>
+        <td>Jar-Majrur, Idhafah, Na'at Majrur, Taukid Majrur</td>
+        <td><span class="arab">جَرّ</span> (Khafadh)</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><strong>Tawabi'</strong></td>
+        <td>Na'at, Taukid, Badal, 'Athaf (Bayan, Nasaq)</td>
+        <td>Mengikuti matbu'</td>
+        <td>P.11–P.15</td>
+      </tr>
+      <tr>
+        <td><strong>Jumla</strong></td>
+        <td>Jumla Ismiyyah, Jumla Fi'liyyah, Jumla Syarthiyyah</td>
+        <td>Bervariasi</td>
+        <td>Terintegrasi</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s1-1-2">1.1.2 Sejarah Perkembangan Ilmu Nahwu</h3>
+
+  <p>
+    Ilmu nahwu lahir dari kebutuhan mendesak umat Islam untuk menjaga kemurnian Al-Qur'an dan hadis dari kesalahan bacaan (<em>lahn</em>). Berikut adalah fase-fase perkembangannya:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fase</th><th>Periode</th><th>Tokoh Kunci</th><th>Karya Monumental</th><th>Kontribusi</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Pembukaan</strong></td>
+        <td>Abad ke-1 H</td>
+        <td>Abu al-Aswad ad-Duali</td>
+        <td>—</td>
+        <td>Meletakkan kaidah dasar nahwu atas instruksi Ali bin Abi Thalib; memperkenalkan konsep i'rab (rafa', nashab, khafadh, jazm) dan tanda-tandanya dengan titik.</td>
+      </tr>
+      <tr>
+        <td><strong>Keemasan Basrah</strong></td>
+        <td>Abad ke-2 H</td>
+        <td>Al-Khalil bin Ahmad, Sibawayh</td>
+        <td><em>Al-Kitab</em></td>
+        <td>Sibawayh menulis <em>Al-Kitab</em> — karya nahwu paling komprehensif dalam sejarah; Al-Khalil menemukan ilmu 'arudh dan kamus <em>Al-'Ain</em>.</td>
+      </tr>
+      <tr>
+        <td><strong>Mazhab Kufah</strong></td>
+        <td>Abad ke-2–3 H</td>
+        <td>Al-Kisa'i, Al-Farra'</td>
+        <td><em>Al-Hudud</em> (Al-Farra')</td>
+        <td>Mengembangkan pendekatan yang lebih fleksibel terhadap variasi bahasa Arab (syawāhid qirā'āt, syāzz).</td>
+      </tr>
+      <tr>
+        <td><strong>Masa Andalus</strong></td>
+        <td>Abad ke-4–5 H</td>
+        <td>Ibnu Malik, Ibnu Hisyam</td>
+        <td><em>Alfiyyah</em>, <em>Mughni al-Labib</em></td>
+        <td>Penyusunan kitab-kitab sistematis dan syarah-syarah yang menjadi rujukan utama hingga kini.</td>
+      </tr>
+      <tr>
+        <td><strong>Kodifikasi Ottoman</strong></td>
+        <td>Abad ke-10–13 H</td>
+        <td>Ibnu 'Aqil, Al-Ashmawi</td>
+        <td><em>Syarah Ibnu 'Aqil</em></td>
+        <td>Penyederhanaan dan pengajaran nahwu untuk level mubtadi' hingga mutawassith.</td>
+      </tr>
+      <tr>
+        <td><strong>Kontemporer</strong></td>
+        <td>Abad ke-14–21 M</td>
+        <td>Musthafa Al-Ghalayaini, 'Abbas Hasan, Ali Al-Jarim</td>
+        <td><em>Jami' ad-Durus</em>, <em>Al-Nahw al-Wafi</em>, <em>An-Nahw al-Wadhih</em></td>
+        <td>Integrasi nahwu dengan linguistik modern dan pendekatan pedagogis kontekstual.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Sebagai mahasiswa S1 Pendidikan Bahasa Arab, Anda tidak hanya dituntut menguasai kaidah, tetapi juga memahami <strong>genealogi keilmuan</strong> — bagaimana suatu kaidah lahir, berkembang, dan diperdebatkan antar mazhab.</li>
+      <li>Perbedaan pandangan antara Mazhab Basrah dan Kufah bukan "kesalahan", melainkan <em>kekayaan intelektual</em> yang menunjukkan dinamika ijtihad linguistik ulama terdahulu.</li>
+      <li>Pahami bahwa setiap kitab nahwu memiliki <em>manhaj</em> (metodologi) tersendiri — misalnya, <em>Alfiyyah Ibnu Malik</em> bersifat <em>nazham</em> (puisi) yang padat, sementara <em>Jami' ad-Durus</em> lebih sistematis untuk pengajaran.</li>
+      <li>Pemahaman ini akan sangat berguna ketika Anda kelak menjadi guru bahasa Arab dan harus memilih kitab rujukan yang tepat untuk siswa.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s1-1-3">1.1.3 Urgensi Nahwu dalam Tradisi Keilmuan Islam</h3>
+
+  <p>Para ulama sepakat bahwa ilmu nahwu memiliki kedudukan yang sangat mulia. Beberapa alasan utamanya:</p>
+
+  <div class="tips-box">
+    <h4>✦ Mengapa Nahwu Begitu Penting?</h4>
+    <ul>
+      <li><strong>Alat Memahami Wahyu:</strong> Al-Qur'an dan hadis diturunkan dalam bahasa Arab. Memahaminya secara tepat memerlukan penguasaan kaidah bahasa Arab, terutama nahwu.</li>
+      <li><strong>Menjaga dari Kesalahan (Lahn):</strong> Kesalahan i'rab dapat mengubah makna secara drastis — dari halal menjadi haram, dari pujian menjadi celaan.</li>
+      <li><strong>Kunci Ilmu-ilmu Islam:</strong> Tafsir, hadis, fiqh, ushul fiqh — semuanya bertumpu pada pemahaman bahasa Arab yang presisi.</li>
+      <li><strong>Warisan Peradaban:</strong> Menguasai nahwu berarti terhubung dengan ribuan karya intelektual ulama terdahulu yang ditulis dalam bahasa Arab.</li>
+      <li><strong>Nilai Ibadah:</strong> Belajar nahwu dengan niat yang lurus bernilai ibadah, karena ia menjadi wasilah untuk memahami agama.</li>
+      <li><strong>Identitas Intelektual Muslim:</strong> Nahwu adalah bagian dari <em>hifzh al-lisan</em> (menjaga lisan) yang termasuk dalam maqashid syariah.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Perdebatan Ulama Nahwu Basrah vs Kufah</h4>
+    <div class="case-content">
+      Dalam sejarah nahwu, terjadi perdebatan panjang antara Mazhab Basrah dan Mazhab Kufah mengenai syarat-syarat Fa'il. Mazhab Basrah cenderung ketat dan sistematis, sementara Mazhab Kufah lebih longgar dan mengakomodasi variasi bahasa. Perbedaan ini menunjukkan bahwa nahwu bukan ilmu yang "mati" — ia hidup dalam dialog intelektual yang kaya.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Mahasiswa perlu memahami bahwa kaidah nahwu memiliki dimensi historis dan filosofis. Memahaminya secara utuh akan membantu kita bersikap lebih bijaksana dalam membaca teks-teks klasik.
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Perbandingan Mazhab Basrah dan Kufah</h4>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Mazhab Basrah</th><th>Mazhab Kufah</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Tokoh Utama</strong></td>
+        <td>Abu al-Aswad ad-Duali, Al-Khalil, Sibawayh, Al-Mubarrad</td>
+        <td>Al-Kisa'i, Al-Farra', Ibnu al-Anbari</td>
+      </tr>
+      <tr>
+        <td><strong>Pendekatan</strong></td>
+        <td>Qiyas (analogi) dan kaidah sistematis</td>
+        <td>Sama' (pendengaran) dan akomodasi variasi</td>
+      </tr>
+      <tr>
+        <td><strong>Syarat Fa'il</strong></td>
+        <td>Harus berupa zhahir atau dhamir mustatir; tidak boleh mu'awwal</td>
+        <td>Membolehkan Fa'il berupa jumlah (kalimat) atau zhahran mu'awwal</td>
+      </tr>
+      <tr>
+        <td><strong>Sumber Data</strong></td>
+        <td>Bahasa Arab fusha yang mutawatir</td>
+        <td>Termasuk qira'at syāzz dan syawahid sya'ir</td>
+      </tr>
+      <tr>
+        <td><strong>Karakteristik</strong></td>
+        <td>Ketat, logis, sistematis</td>
+        <td>Fleksibel, akomodatif, deskriptif</td>
+      </tr>
+      <tr>
+        <td><strong>Karya Rujukan</strong></td>
+        <td><em>Al-Kitab</em> (Sibawayh)</td>
+        <td><em>Al-Muqtadha</em> (Al-Jurjani), <em>Al-Mufrad</em> (Al-Anbari)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s1-1-4">1.1.4 Nahwu dalam Perspektif Linguistik Modern</h3>
+
+  <p>
+    Sebagai mahasiswa Pendidikan Bahasa Arab, penting untuk menjembatani nahwu klasik dengan teori linguistik modern. Pendekatan ini akan memperkaya analisis dan membuka perspektif baru dalam memahami struktur bahasa Arab — terutama ketika Anda kelak merancang bahan ajar atau melakukan penelitian skripsi.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Konsep Nahwu Klasik</th><th>Padanan Linguistik Modern</th><th>Penjelasan Integratif</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>I'rab</strong></td>
+        <td>Infleksi (Inflection)</td>
+        <td>Perubahan bentuk kata untuk menunjukkan fungsi gramatikal — mirip dengan kasus (case) dalam bahasa Latin atau Jerman.</td>
+      </tr>
+      <tr>
+        <td><strong>'Awamil</strong></td>
+        <td>Government / Head-Dependency</td>
+        <td>Kata "kepala" (head) yang mengatur bentuk kata "dependen" di bawahnya, seperti dalam teori X-bar.</td>
+      </tr>
+      <tr>
+        <td><strong>Jumla Ismiyyah</strong></td>
+        <td>Nominal Clause / Equational Sentence</td>
+        <td>Kalimat tanpa kata kerja kopula (copula-less sentence), khas bahasa Semitik.</td>
+      </tr>
+      <tr>
+        <td><strong>Fa'il</strong></td>
+        <td>Subject / External Argument</td>
+        <td>Argumen eksternal verba yang menempati posisi Spec-TP dalam teori generatif.</td>
+      </tr>
+      <tr>
+        <td><strong>Mubtada'-Khabar</strong></td>
+        <td>Topic-Comment Structure</td>
+        <td>Struktur topik-komen yang khas bahasa tematik (topic-prominent language).</td>
+      </tr>
+      <tr>
+        <td><strong>Tawabi'</strong></td>
+        <td>Apposition & Adjunction</td>
+        <td>Konstituen yang menempel pada konstituen lain dan mengikuti fitur gramatikalnya.</td>
+      </tr>
+      <tr>
+        <td><strong>Ta'lil Nahwi</strong></td>
+        <td>Grammaticality Judgment</td>
+        <td>Proses evaluasi gramatikalitas suatu struktur berdasarkan kaidah internal bahasa.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Mengapa Integrasi Ini Penting bagi Mahasiswa PBA?</h4>
+    <ul>
+      <li>Membuka peluang publikasi <strong>skripsi dan artikel ilmiah</strong> di jurnal linguistik nasional maupun internasional.</li>
+      <li>Memperkaya khazanah teori linguistik universal dengan data bahasa Arab.</li>
+      <li>Memungkinkan pengembangan <strong>bahan ajar</strong> yang lebih inovatif dan berbasis riset.</li>
+      <li>Menjadi jembatan antara tradisi keilmuan Islam dan sains modern — bekal penting bagi calon guru bahasa Arab profesional.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s1-1-5">1.1.5 Pendekatan Struktural vs Fungsional dalam Nahwu</h3>
+
+  <p>
+    Dalam menganalisis teks Arab, mahasiswa dapat menggunakan dua pendekatan utama yang saling melengkapi:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Pendekatan Struktural</th><th>Pendekatan Fungsional</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fokus</strong></td>
+        <td>Struktur internal kalimat (sintaksis)</td>
+        <td>Fungsi komunikatif dalam wacana</td>
+      </tr>
+      <tr>
+        <td><strong>Pertanyaan Kunci</strong></td>
+        <td>"Apa kedudukan kata ini dalam kalimat?"</td>
+        <td>"Mengapa pembicara memilih struktur ini?"</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh Analisis</strong></td>
+        <td>"<span class="arab" style="font-size:1.1rem">اللهُ</span> berkedudukan sebagai Fa'il karena didahului fi'il ma'lum."</td>
+        <td>"Pembicara mendahulukan <span class="arab" style="font-size:1.1rem">اللهُ</span> untuk memberikan penekanan teologis (taqdim al-muhimm)." </td>
+      </tr>
+      <tr>
+        <td><strong>Teori Pendukung</strong></td>
+        <td>Tata bahasa tradisional, Generatif Chomsky</td>
+        <td>Functional Grammar (Halliday), Pragmatik</td>
+      </tr>
+      <tr>
+        <td><strong>Aplikasi</strong></td>
+        <td>Analisis i'rab, validasi kaidah</td>
+        <td>Analisis wacana, terjemahan, stilistika</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Analisis Ganda Ayat Al-Fatihah</h4>
+    <div class="case-content">
+      Firman Allah: <span class="arab" style="font-size:1.5rem">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</span>
+    </div>
+    <div class="lesson">
+      <strong>Analisis Struktural:</strong> Kata <span class="arab" style="font-size:1.1rem">إِيَّاكَ</span> adalah maf'ul bih muqaddam (objek yang didahulukan), berkedudukan nashab dengan ya' karena berupa isim isyarah munfashil. <span class="arab" style="font-size:1.1rem">نَعْبُدُ</span> adalah fi'il mudhari' marfu' dengan dhammah muqaddarah, dan fa'il-nya dhamir mustatir taqdiruhu "nahnu".<br><br>
+      <strong>Analisis Fungsional:</strong> Mengapa objek didahulukan? Untuk menunjukkan <em>hasr</em> (pembatasan) — "hanya kepada-Mu kami menyembah". Taqdim di sini bukan sekadar variasi, melainkan strategi retorika untuk menegaskan tauhid ibadah.
+    </div>
+  </div>
+
+  <h2 class="section-title" id="s1-2">1.2 Peta Jalan <em>Pembelajaran Nahwu Mutawassithin</em></h2>
+
+  <p>
+    Mata kuliah ini dirancang selama 16 pertemuan dengan alur yang sistematis — dari fondasi hingga konstruksi wacana utuh. Memahami peta jalan ini adalah kunci keberhasilan mahasiswa selama satu semester.
+  </p>
+
+  <h3 class="sub-title" id="s1-2-1">1.2.1 Capaian Pembelajaran Mata Kuliah (CPMK)</h3>
+
+  <p>Setelah menyelesaikan mata kuliah ini, mahasiswa diharapkan mampu:</p>
+
+  <div class="key-concept">
+    <ul>
+      <li><strong>CPMK 1 (Analisis):</strong> Menganalisis fungsi dan karakteristik sintaksis pola <em>Marfu'atul Asma</em> (Fa'il, Khabar, dll) serta <em>Tawabi'</em> secara akurat pada berbagai struktur kalimat teks bahasa Arab. <em>(Level Kognitif: C4 – Menganalisis)</em></li>
+      <li><strong>CPMK 2 (Validasi):</strong> Memvalidasi ketepatan bacaan dan i'rab pada teks keislaman atau teks bertema budaya Minangkabau yang menggunakan variasi Marfu'at dan Tawabi' dengan argumentasi logis (ta'lil nahwi) secara mandiri dan disiplin. <em>(Level Kognitif: C5 – Mengevaluasi)</em></li>
+      <li><strong>CPMK 3 (Konstruksi):</strong> Mengonstruksi wacana pendek berbahasa Arab yang secara kreatif mengintegrasikan seluruh unsur Marfu'atul Asma dan Tawabi' untuk menjelaskan konsep sains atau keislaman dengan kaidah yang presisi. <em>(Level Kognitif: C6 – Mencipta)</em></li>
+    </ul>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Taksonomi Bloom dan Level Kognitif</h4>
+    <ul>
+      <li>CPMK 1 berada pada level <strong>C4 (Menganalisis)</strong> — mahasiswa mampu mengurai struktur nahwu menjadi bagian-bagian dan menentukan hubungan antar bagiannya.</li>
+      <li>CPMK 2 berada pada level <strong>C5 (Mengevaluasi)</strong> — mahasiswa mampu memberikan pertimbangan berdasarkan kriteria dan standar (ta'lil nahwi).</li>
+      <li>CPMK 3 berada pada level <strong>C6 (Mencipta)</strong> — mahasiswa mampu menghasilkan produk baru (wacana Arab) yang orisinal dan presisi.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s1-2-2">1.2.2 Alur 16 Pertemuan</h3>
+
+  <table>
+    <thead>
+      <tr><th>Pertemuan</th><th>Materi Pokok</th><th>Fokus Kompetensi</th><th>Metode</th><th>Bobot</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1</strong></td><td>Kontrak Kuliah & Peta Jalan</td><td>Pemahaman roadmap, etika akademik, urgensi i'rab</td><td>Ceramah interaktif, brainstorming</td><td>5%</td></tr>
+      <tr><td><strong>2</strong></td><td>Al-Fa'il</td><td>Analisis fungsi sintaksis Fa'il dalam teks narasi</td><td>Ceramah, diskusi, latihan identifikasi</td><td>10%</td></tr>
+      <tr><td><strong>3</strong></td><td>Na'ibul Fa'il</td><td>Transformasi struktur aktif ke pasif</td><td>Discovery learning, klasifikasi</td><td>10%</td></tr>
+      <tr><td><strong>4</strong></td><td>Al-Mubtada'</td><td>Konstruksi kalimat nominal yang efektif</td><td>Problem-based learning</td><td>5%</td></tr>
+      <tr><td><strong>5</strong></td><td>Al-Khabar</td><td>Variasi pola Khabar dan posisinya</td><td>Text-based learning</td><td>10%</td></tr>
+      <tr><td><strong>6</strong></td><td>Isim Kana</td><td>Pengaruh Isim Kana terhadap hukum i'rab</td><td>Drill & practice, cooperative</td><td>5%</td></tr>
+      <tr><td><strong>7</strong></td><td>Isim Kada</td><td>Validasi penggunaan Muqarabah, Raja', Syuru'</td><td>Ceramah aplikatif, latihan i'rab</td><td>5%</td></tr>
+      <tr style="background:rgba(201,169,97,.1)"><td><strong>8</strong></td><td>Ujian Tengah Semester (UTS)</td><td>Evaluasi komprehensif pertemuan 1–7</td><td>Ujian tertulis</td><td>30%</td></tr>
+      <tr><td><strong>9</strong></td><td>Khabar Inna</td><td>Penegasan makna dalam teks keislaman</td><td>Case method, analisis Al-Qur'an</td><td>5%</td></tr>
+      <tr><td><strong>10</strong></td><td>Khabar La Nafiyah lil Jins</td><td>Struktur negasi universal</td><td>Concept mapping</td><td>5%</td></tr>
+      <tr><td><strong>11</strong></td><td>At-Taukid</td><td>Seni penekanan informasi</td><td>Guided inquiry, praktik i'rab</td><td>10%</td></tr>
+      <tr><td><strong>12</strong></td><td>Al-Badal</td><td>Substitusi informasi dalam teks budaya</td><td>Problem solving</td><td>5%</td></tr>
+      <tr><td><strong>13</strong></td><td>An-Na'at</td><td>Penjelas sifat Hakiki & Sababi</td><td>Cooperative learning, presentasi</td><td>10%</td></tr>
+      <tr><td><strong>14</strong></td><td>Athaf Bayan</td><td>Perbedaan fungsi Athaf Bayan dan Na'at</td><td>Contextual learning</td><td>5%</td></tr>
+      <tr><td><strong>15</strong></td><td>'Athaf Nasaq</td><td>Kohesi wacana dengan huruf athaf</td><td>Cooperative learning</td><td>10%</td></tr>
+      <tr style="background:rgba(201,169,97,.1)"><td><strong>16</strong></td><td>Ujian Akhir Semester (UAS)</td><td>Validasi akhir: Marfu'at & Tawabi'</td><td>Ujian tertulis + proyek</td><td>30%</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s1-2-3">1.2.3 Sistem Penilaian</h3>
+
+  <p>Komposisi penilaian selama satu semester:</p>
+
+  <table>
+    <thead>
+      <tr><th>Komponen</th><th>Bobot</th><th>Keterangan</th><th>Instrumen</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Keaktifan (Kehadiran & Sikap)</td><td><strong>15%</strong></td><td>Konsistensi partisipasi di kelas</td><td>Observasi, rubrik sikap</td></tr>
+      <tr><td>Harian, Tugas, dan Kuis</td><td><strong>25%</strong></td><td>Tugas mandiri & terstruktur</td><td>Rubrik tugas, kuis formatif</td></tr>
+      <tr><td>Ujian Tengah Semester (UTS)</td><td><strong>30%</strong></td><td>Pertemuan ke-8</td><td>Soal analisis & ta'lil</td></tr>
+      <tr><td>Ujian Akhir Semester (UAS)</td><td><strong>30%</strong></td><td>Pertemuan ke-16</td><td>Soal komprehensif + proyek wacana</td></tr>
+    </tbody>
+  </table>
+
+  <h4 class="sub-sub-title">Interval Nilai Akhir</h4>
+
+  <table>
+    <thead>
+      <tr><th>Interval Skor</th><th>Nilai Huruf</th><th>Nilai Angka</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>85–100</td><td><strong>A</strong></td><td>4.00</td><td>Lulus</td></tr>
+      <tr><td>80–84</td><td><strong>B</strong></td><td>3.00</td><td>Lulus</td></tr>
+      <tr><td>60–79</td><td><strong>C</strong></td><td>2.00</td><td>Lulus</td></tr>
+      <tr><td>50–59</td><td><strong>D</strong></td><td>1.00</td><td>Lulus</td></tr>
+      <tr><td>0–49</td><td><strong>E</strong></td><td>0</td><td>Tidak Lulus</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s1-2-4">1.2.4 Asesmen Autentik & Portofolio</h3>
+
+  <p>
+    Selain ujian tertulis, Anda akan dikenalkan dengan bentuk-bentuk asesmen autentik yang lebih komprehensif dan relevan dengan kompetensi calon guru bahasa Arab:
+  </p>
+
+  <div class="tips-box">
+    <h4>✦ Ragam Asesmen Autentik</h4>
+    <ul>
+      <li><strong>Portofolio Analisis Teks:</strong> Kumpulan hasil analisis i'rab dari berbagai teks (Al-Qur'an, hadis, kitab kuning, teks kontemporer) yang menunjukkan perkembangan kompetensi.</li>
+      <li><strong>Proyek Konstruksi Wacana:</strong> Menulis esai berbahasa Arab (min. 300 kata) yang mengintegrasikan seluruh unsur Marfu'at dan Tawabi'.</li>
+      <li><strong>Presentasi Ta'lil Nahwi:</strong> Mempresentasikan argumentasi logis atas suatu struktur nahwu di depan kelas.</li>
+      <li><strong>Peer Review:</strong> Memberikan umpan balik terhadap analisis teman sejawat berdasarkan rubrik yang ditentukan.</li>
+      <li><strong>Refleksi Metakognitif:</strong> Menulis jurnal refleksi tentang proses belajar nahwu dan tantangan yang dihadapi.</li>
+      <li><strong>Micro Teaching Nahwu:</strong> Simulasi mengajar nahwu di depan kelas sebagai latihan kompetensi pedagogik.</li>
+    </ul>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Sukses Mengikuti Mata Kuliah Ini</h4>
+    <ul>
+      <li><strong>Rutin membaca teks Arab:</strong> Minimal 1 halaman per hari dari kitab/koran/jurnal berbahasa Arab.</li>
+      <li><strong>Catat kaidah dengan ta'lil-nya:</strong> Jangan hanya menghafal, tetapi pahami alasan di balik setiap kaidah.</li>
+      <li><strong>Diskusi dengan teman:</strong> Ta'lil nahwi akan lebih tajam ketika diuji dalam dialog.</li>
+      <li><strong>Manfaatkan e-campus:</strong> Semua materi, tugas, dan pengumuman tersedia di platform digital kampus.</li>
+      <li><strong>Integrasikan dengan nilai lokal:</strong> Cari contoh nahwu dalam teks-teks Minangkabau berbahasa Arab.</li>
+      <li><strong>Siapkan bahan skripsi sejak dini:</strong> Catat temuan menarik dari bacaan Anda sebagai calon topik skripsi di masa depan.</li>
+      <li><strong>Kuasai kosakata nahwu:</strong> Hafalkan istilah-istilah teknis (fa'il, na'ib, mubtada', dll) dalam bahasa Arab, bukan hanya terjemahannya.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title" id="s1-3">1.3 Etika Akademik & <em>Kontrak Perkuliahan</em></h2>
+
+  <p>
+    Integritas akademik adalah jiwa dari proses pendidikan. Dalam tradisi Islam, kejujuran ilmiah bukan sekadar aturan, tetapi manifestasi dari ketakwaan kepada Allah SWT. Oleh karena itu, pertemuan ini menjadi momentum untuk menyepakati kontrak belajar yang akan menjadi pedoman bersama.
+  </p>
+
+  <h3 class="sub-title">1.3.1 Prinsip Integritas Akademik</h3>
+
+  <div class="key-concept">
+    <ul>
+      <li><strong>Kejujuran (Ash-Shidqu):</strong> Tidak menyontek, tidak memalsukan data, tidak mengklaim karya orang lain sebagai karya sendiri.</li>
+      <li><strong>Tanggung Jawab (Al-Amanah):</strong> Menyelesaikan tugas tepat waktu dan dengan usaha sendiri.</li>
+      <li><strong>Hormat pada Ilmu (Ta'zhim al-'Ilm):</strong> Mencantumkan sumber rujukan secara benar; menghargai karya intelektual orang lain.</li>
+      <li><strong>Disiplin (An-Nizham):</strong> Kehadiran minimal 75% dari total pertemuan; tepat waktu dalam setiap aktivitas.</li>
+      <li><strong>Kolaborasi Positif (Ta'awun):</strong> Bekerja sama dalam pembelajaran, tetapi tidak dalam mengerjakan ujian/tugas individual.</li>
+    </ul>
+  </div>
+
+  <div class="warning-box">
+    <h4>⚠ Pelanggaran Akademik</h4>
+    <ul>
+      <li>Plagiarisme (mengutip tanpa menyebutkan sumber) akan mendapat nilai E pada tugas tersebut.</li>
+      <li>Menyontek saat ujian akan berakibat pembatalan nilai ujian dan pemanggilan oleh dosen wali.</li>
+      <li>Ketidakhadiran lebih dari 25% tanpa alasan syar'i menyebabkan mahasiswa tidak dapat mengikuti UAS.</li>
+      <li>Penggunaan AI tanpa atribusi yang jelas dalam tugas akademik dianggap sebagai bentuk plagiarisme.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title">1.3.2 Kontrak Belajar</h3>
+
+  <p>Kesepakatan bersama antara dosen dan mahasiswa selama satu semester:</p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Kesepakatan</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Waktu Perkuliahan</td><td>1×(2×50") tatap muka + 1×(1×50") tugas terstruktur per minggu</td></tr>
+      <tr><td>Platform Digital</td><td>e-campus UIN Bukittinggi untuk materi, tugas, dan pengumuman</td></tr>
+      <tr><td>Kode Berpakaian</td><td>Busana muslim/muslimah rapi sesuai ketentuan kampus</td></tr>
+      <tr><td>Pengumpulan Tugas</td><td>Maksimal 1 minggu setelah tugas diberikan; keterlambatan tanpa alasan syar'i mendapat pengurangan nilai</td></tr>
+      <tr><td>Komunikasi</td><td>Melalui email dosen (ekarizal@uinbukittinggi.ac.id) atau forum e-campus</td></tr>
+      <tr><td>Etika di Kelas</td><td>Menyalakan ponsel dalam mode senyap; aktif bertanya dan berdiskusi; menghargai pendapat teman</td></tr>
+      <tr><td>Etika Digital</td><td>Rekaman/konten kelas tidak disebarluaskan tanpa izin dosen; kutipan harus menyebutkan sumber</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title">1.3.3 Profil Lulusan yang Dituju</h3>
+
+  <p>Mata kuliah ini dirancang untuk menyiapkan mahasiswa menjadi:</p>
+
+  <div class="tips-box">
+    <h4>✦ Empat Profil Lulusan</h4>
+    <ul>
+      <li><strong>Pendidik Bahasa Arab yang Kompeten:</strong> Mampu mengajarkan nahwu dengan metode yang menarik dan kontekstual di madrasah/sekolah.</li>
+      <li><strong>Penerjemah Teks Keislaman yang Presisi:</strong> Mampu menerjemahkan nash-nash keagamaan dengan menjaga keakuratan makna.</li>
+      <li><strong>Peneliti Pemula Bidang Kebahasaan:</strong> Mampu melakukan kajian linguistik Arab yang sistematis sebagai bekal skripsi dan studi lanjut.</li>
+      <li><strong>Pengembang Bahan Ajar yang Inovatif:</strong> Mampu merancang bahan ajar nahwu yang memadukan sains, teknologi, keislaman, dan nilai budaya Minangkabau.</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title" id="s1-4">1.4 I'rab: <em>Jantung Ilmu Nahwu</em></h2>
+
+  <p>
+    Jika ilmu nahwu adalah tubuh, maka i'rab adalah jantungnya. Tanpa i'rab, sebuah kalimat Arab kehilangan ruh dan makna aslinya. Memahami i'rab adalah kunci untuk membaca teks Arab dengan tepat dan memahami pesan yang terkandung di dalamnya.
+  </p>
+
+  <h3 class="sub-title" id="s1-4-1">1.4.1 Konsep Dasar I'rab</h3>
+
+  <div class="key-concept">
+    <ul>
+      <li><strong>Definisi I'rab:</strong> Perubahan akhir kata (lafaz) akibat perbedaan faktor ('awamil) yang memasukinya — baik secara lafaz maupun secara taqdir.</li>
+      <li><strong>Macam-macam I'rab:</strong> (1) Rafa' (ـُ / و); (2) Nashab (ـَ / ى / ا); (3) Khafadh/Jarr (ـِ / ي); (4) Jazm (سكون / حذف حرف).</li>
+      <li><strong>Pembagian Kalimat dari Segi I'rab:</strong> (1) Kalimat yang hanya menerima rafa' (seperti fa'il); (2) Kalimat yang menerima dua atau lebih keadaan i'rab.</li>
+      <li><strong>I'rab Lafzhi vs Taqdiri:</strong> I'rab yang tampak pada akhir kata (lafzhi) dan yang diperkirakan (taqdiri) karena adanya halangan, seperti isim mu'rab yang berakhiran huruf mati.</li>
+      <li><strong>I'rab Mahall:</strong> I'rab yang ditentukan oleh kedudukan kata dalam kalimat, bukan oleh bentuk kata itu sendiri (misalnya jumla fi'liyyah yang berkedudukan nashab sebagai hal).</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s1-4-2">1.4.2 Tanda-tanda I'rab</h3>
+
+  <table>
+    <thead>
+      <tr><th>Keadaan I'rab</th><th>Tanda Asli</th><th>Tanda Cabang (Contoh)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Rafa'</strong></td>
+        <td>Dhommah (ـُ)</td>
+        <td>Wawu (jamak mudzakkar salim), Alif (itsna), Dhommah muqaddarah</td>
+      </tr>
+      <tr>
+        <td><strong>Nashab</strong></td>
+        <td>Fathah (ـَ)</td>
+        <td>Ya (jamak mudzakkar salim), Alif (asmaul khamsah), Kasrah muqaddarah, Yaa (isim mu'rab), Hadzf nun (fi'il khamsah)</td>
+      </tr>
+      <tr>
+        <td><strong>Khafadh</strong></td>
+        <td>Kasrah (ـِ)</td>
+        <td>Ya (jamak mudzakkar salim & muannats salim), Ya (itsna & jamak), Fathah muqaddarah (isim ghairu munsharif)</td>
+      </tr>
+      <tr>
+        <td><strong>Jazm</strong></td>
+        <td>Sukun (ْ)</td>
+        <td>Hadzf (fi'il mudhari' mu'takhir huruf), Hadzf nun (fi'il khamsah)</td>
+      </tr>
+      <tr>
+        <td><strong>Bina'</strong></td>
+        <td>Tidak berubah</td>
+        <td>Isim isyarah, dhamir munfashil, fi'il madhi, fi'il amr</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s1-4-3">1.4.3 Analisis I'rab dalam Teks Otentik</h3>
+
+  <p>
+    I'rab bukan sekadar "bumbu" dalam bahasa Arab — ia adalah <em>penentu makna</em>. Mari kita analisis beberapa contoh nyata dari Al-Qur'an:
+  </p>
+
+  <h4 class="sub-sub-title">Contoh 1: Surah Al-Fatihah Ayat 5</h4>
+
+  <div class="arabic-display">
+    إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ
+    <small>— QS. Al-Fatihah [1]: 5</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِيَّاكَ</span>
+      <span class="detail"><strong>Maf'ul bih muqaddam</strong> (objek yang didahulukan) — berkedudukan nashab. Tanda nashab: fathah. <small>Kata ini didahulukan untuk menunjukkan hasr (pembatasan).</small></span>
+
+      <span class="word">نَعْبُدُ</span>
+      <span class="detail"><strong>Fi'il mudhari'</strong> — berkedudukan marfu'. Tanda rafa': dhommah zhahirah. <small>Fa'il-nya dhamir mustatir taqdiruhu "nahnu" (kami).</small></span>
+
+      <span class="word">وَإِيَّاكَ</span>
+      <span class="detail"><strong>Wawu</strong> = 'athaf nasaq. <strong>إِيَّاكَ</strong> = maf'ul bih muqaddam pada fi'il yang di'athaf-kan.</span>
+
+      <span class="word">نَسْتَعِينُ</span>
+      <span class="detail"><strong>Fi'il mudhari'</strong> — berkedudukan marfu'. Tanda rafa': dhommah zhahirah. <small>Fa'il-nya dhamir mustatir taqdiruhu "nahnu".</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Contoh 2: Surah Al-Ikhlas Ayat 1</h4>
+
+  <div class="arabic-display">
+    قُلْ هُوَ اللَّهُ أَحَدٌ
+    <small>— QS. Al-Ikhlas [112]: 1</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">قُلْ</span>
+      <span class="detail"><strong>Fi'il amr</strong> — berkedudukan mabni 'ala sukun. <small>Fa'il-nya dhamir mustatir taqdiruhu "anta" (engkau, yaitu Nabi Muhammad ﷺ).</small></span>
+
+      <span class="word">هُوَ</span>
+      <span class="detail"><strong>Dhamir sya'n</strong> (kata ganti urusan) — berkedudukan mubtada' 1, marfu'. <small>Berfungsi sebagai pengantar khabar yang akan datang.</small></span>
+
+      <span class="word">اللَّهُ</span>
+      <span class="detail"><strong>Lafzhu jalalah</strong> — berkedudukan mubtada' 2 (badal atau khabar mubtada' 1), marfu'. Tanda rafa': dhommah zhahirah.</span>
+
+      <span class="word">أَحَدٌ</span>
+      <span class="detail"><strong>Khabar</strong> dari mubtada' 2 — berkedudukan marfu'. Tanda rafa': tanwin dhommah. <small>Makna: "Allah Yang Maha Esa".</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Contoh 3: Hadis tentang Niat</h4>
+
+  <div class="arabic-display">
+    إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ
+    <small>— HR. Bukhari & Muslim</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّمَا</span>
+      <span class="detail"><strong>Adat hasr</strong> (partikel pembatasan) — mabni la mahalla lahu. <small>Berfungsi membatasi makna: "hanya".</small></span>
+
+      <span class="word">الأَعْمَالُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — berkedudukan marfu'. Tanda rafa': dhommah zhahirah. <small>Makna: "amal-amal (perbuatan)".</small></span>
+
+      <span class="word">بِالنِّيَّاتِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">بِ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">النِّيَّاتِ</span> = majrur dengan kasrah karena berupa jamak muannats salim. <small>Kedudukan jar-majrur secara taqdir sebagai khabar mubtada'.</small></span>
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s1-4-4">1.4.4 Taksonomi I'rab: Klasifikasi Lengkap</h3>
+
+  <p>
+    Untuk memudahkan analisis, berikut taksonomi i'rab yang disusun secara sistematis:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Kategori</th><th>Sub-kategori</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2"><strong>I'rab Lafzhi</strong></td>
+        <td>Zhahir (tampak jelas)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ</span> — <span class="arab">زَيْدٌ</span> marfu' dengan dhommah zhahirah</td>
+      </tr>
+      <tr>
+        <td>Muqaddar (diperkirakan)</td>
+        <td><span class="arab">جَاءَ قَاضٍ</span> — <span class="arab">قَاضٍ</span> marfu' dengan dhommah muqaddarah (karena huruf akhir ya')</td>
+      </tr>
+      <tr>
+        <td rowspan="2"><strong>I'rab Mahall</strong></td>
+        <td>Jumla (kalimat)</td>
+        <td><span class="arab">رَأَيْتُ زَيْدًا يَقْرَأُ</span> — <span class="arab">يَقْرَأُ</span> (jumla fi'liyyah) berkedudukan hal manshub mahallan</td>
+      </tr>
+      <tr>
+        <td>Shibh Jumla (semi-kalimat)</td>
+        <td><span class="arab">الطَّالِبُ فِي الْفَصْلِ</span> — <span class="arab">فِي الْفَصْلِ</span> (jar-majrur) berkedudukan khabar mahallan</td>
+      </tr>
+      <tr>
+        <td><strong>I'rab Taqdiri</strong></td>
+        <td>Karena halangan</td>
+        <td><span class="arab">هَذَا قَاضٍ عَادِلٌ</span> — <span class="arab">قَاضٍ</span> marfu' muqaddaran (karena bertemu huruf 'illah ya')</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 4: Kesalahan I'rab dalam Terjemahan</h4>
+    <div class="case-content">
+      Seorang penerjemah menerjemahkan ayat <span class="arab" style="font-size:1.2rem">وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ</span> (QS. Al-Baqarah: 196) dengan mengabaikan i'rab <span class="arab" style="font-size:1.2rem">الْعُمْرَةَ</span> yang seharusnya nashab (sebagai maf'ul bih yang di'athaf-kan). Ia menerjemahkannya seolah-olah <span class="arab" style="font-size:1.2rem">الْعُمْرَةُ</span> (rafa') — sehingga maknanya menjadi "sempurnakanlah haji, dan umrah itu untuk Allah" — padahal makna yang benar adalah "sempurnakanlah haji DAN umrah karena Allah".
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Kesalahan i'rab dapat mengubah struktur hukum fiqh. Dalam ayat ini, perbedaan satu harakat dapat memengaruhi pemahaman tentang kewajiban umrah — apakah wajib atau sunnah.
+    </div>
+  </div>
+
+  <h2 class="section-title" id="s1-5">1.5 Pendekatan <em>Pembelajaran Kontekstual</em></h2>
+
+  <p>
+    Mata kuliah ini tidak hanya mengandalkan pendekatan teoretis, tetapi juga memadukan berbagai metode pembelajaran yang relevan dengan tuntutan abad 21 dan konteks lokal Minangkabau.
+  </p>
+
+  <h3 class="sub-title">1.5.1 Case-Based Method (CBM)</h3>
+
+  <p>
+    Mahasiswa akan diajak membedah teks-teks otentik — baik dari Al-Qur'an, hadis, karya ulama klasik, maupun teks kontemporer berbahasa Arab. Melalui analisis kasus, mahasiswa berlatih mengidentifikasi struktur nahwu dan memberikan argumentasi logis (ta'lil nahwi).
+  </p>
+
+  <h3 class="sub-title">1.5.2 Project-Based Learning (PjBL)</h3>
+
+  <p>
+    Di akhir semester, mahasiswa akan menyusun proyek berupa wacana pendek berbahasa Arab yang mengintegrasikan seluruh unsur Marfu'atul Asma dan Tawabi'. Proyek ini bisa berupa:
+  </p>
+
+  <div class="tips-box">
+    <h4>✦ Contoh Proyek Akhir Semester</h4>
+    <ul>
+      <li>Esai berbahasa Arab tentang konsep sains Islam (misalnya: "Peradaban Islam dan Kontribusi Ilmuan").</li>
+      <li>Teks dakwah berbahasa Arab bertema budaya Minangkabau (misalnya: "Filosofi Rumah Gadang dalam Perspektif Islam").</li>
+      <li>Terjemahan kreatif cerpen Minangkabau ke dalam bahasa Arab dengan memperhatikan kaidah nahwu.</li>
+      <li>Video presentasi berbahasa Arab tentang sejarah ulama Minangkabau (Hamka, Syekh Sulaiman Rasuli, dll).</li>
+      <li>Artikel jurnal mini tentang analisis nahwu pada teks tertentu — calon artikel skripsi.</li>
+      <li>Bahan ajar nahwu inovatif untuk siswa MTs/MA.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title">1.5.3 Integrasi Nilai Budaya Minangkabau</h3>
+
+  <p>
+    Salah satu keunikan mata kuliah ini adalah integrasi nilai-nilai budaya Minangkabau dalam pembelajaran nahwu. Pepatah Minang seperti <em>"Adat basandi syarak, syarak basandi Kitabullah"</em> menjadi inspirasi untuk menyusun teks-teks latihan yang kontekstual dan bermakna.
+  </p>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 5: Nahwu dalam Pepatah Minangkabau</h4>
+    <div class="case-content">
+      Pepatah Minang: <span class="arab" style="font-size:1.3rem">عَادَةٌ مُؤَسَّسَةٌ عَلَى الشَّرْعِ وَالشَّرْعُ مُؤَسَّسٌ عَلَى كِتَابِ اللهِ</span> (Adat basandi syarak, syarak basandi Kitabullah).
+    </div>
+    <div class="lesson">
+      <strong>Analisis Nahwu:</strong> Kalimat ini terdiri dari dua jumla ismiyyah. <span class="arab" style="font-size:1.1rem">عَادَةٌ</span> = mubtada', <span class="arab" style="font-size:1.1rem">مُؤَسَّسَةٌ</span> = khabar (na'at). <span class="arab" style="font-size:1.1rem">الشَّرْعُ</span> = mubtada' kedua, <span class="arab" style="font-size:1.1rem">مُؤَسَّسٌ</span> = khabar. Struktur ini menunjukkan hierarki: adat → syarak → Al-Qur'an.
+    </div>
+  </div>
+
+  <h2 class="section-title" id="s1-6">1.6 Peta Konsep: <em>Marfu'atul Asma & Tawabi'</em></h2>
+
+  <p>
+    Untuk memberikan gambaran utuh tentang materi yang akan dipelajari selama satu semester, berikut peta konsep yang menghubungkan seluruh unsur Marfu'atul Asma dan Tawabi':
+  </p>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep Nahwu Mutawassithin</h4>
+    <div class="map-center">
+      <div class="core">NAHWU MUTAWASSITHIN</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Marfu'atul Asma</h5>
+        <p>Unsur-unsur yang berkedudukan rafa'</p>
+        <ul>
+          <li>Fa'il (P.2)</li>
+          <li>Na'ibul Fa'il (P.3)</li>
+          <li>Mubtada' (P.4)</li>
+          <li>Khabar (P.5)</li>
+          <li>Isim Kana (P.6)</li>
+          <li>Isim Kada (P.7)</li>
+          <li>Khabar Inna (P.9)</li>
+          <li>Khabar La Nafiyah lil Jins (P.10)</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Tawabi'</h5>
+        <p>Unsur yang mengikuti matbu'</p>
+        <ul>
+          <li>Taukid (P.11)</li>
+          <li>Badal (P.12)</li>
+          <li>Na'at (P.13)</li>
+          <li>'Athaf Bayan (P.14)</li>
+          <li>'Athaf Nasaq (P.15)</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>🎯 Kompetensi Inti</h5>
+        <ul>
+          <li>Analisis struktur (C4)</li>
+          <li>Validasi bacaan & i'rab (C5)</li>
+          <li>Konstruksi wacana (C6)</li>
+          <li>Ta'lil nahwi logis</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>🌏 Konteks Integratif</h5>
+        <ul>
+          <li>Teks keislaman (Al-Qur'an, hadis)</li>
+          <li>Teks budaya Minangkabau</li>
+          <li>Teks sains kontemporer</li>
+          <li>Linguistik modern</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title" id="s1-7">1.7 Glosarium <em>Istilah Nahwu</em></h2>
+
+  <p>
+    Berikut istilah-istilah teknis yang akan sering digunakan sepanjang semester. Penguasaan kosakata ini adalah kunci untuk memahami penjelasan dosen dan literatur nahwu:
+  </p>
+
+  <div class="glossary">
+    <h4>📖 Istilah Pokok</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>I'rab</strong><span class="arab">إِعْرَاب</span></div>
+        <p>Perubahan akhir kata akibat perbedaan 'awamil yang memasukinya.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Bina'</strong><span class="arab">بِنَاء</span></div>
+        <p>Kebalikan i'rab; keadaan kata yang tidak berubah akhirannya.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>'Amil</strong><span class="arab">عَامِل</span></div>
+        <p>Faktor yang menyebabkan terjadinya i'rab pada kata lain.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ma'mul</strong><span class="arab">مَعْمُول</span></div>
+        <p>Kata yang terkena pengaruh 'awamil (yang di-i'rab-kan).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fa'il</strong><span class="arab">فَاعِل</span></div>
+        <p>Isim marfu' yang disebutkan sebelum fi'il ma'lum, sebagai pelaku.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Na'ibul Fa'il</strong><span class="arab">نَائِبُ الْفَاعِل</span></div>
+        <p>Isim marfu' yang menggantikan posisi fa'il dalam fi'il majhul.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mubtada'</strong><span class="arab">مُبْتَدَأ</span></div>
+        <p>Isim marfu' yang menjadi topik awal dalam jumla ismiyyah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Khabar</strong><span class="arab">خَبَر</span></div>
+        <p>Isim marfu' yang melengkapi makna mubtada'.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Na'at</strong><span class="arab">نَعْت</span></div>
+        <p>Tabi' yang menjelaskan sifat man'ut-nya (yang disifati).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Taukid</strong><span class="arab">تَأْكِيد</span></div>
+        <p>Tabi' yang menguatkan makna mu'akkad-nya (yang ditegaskan).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Badal</strong><span class="arab">بَدَل</span></div>
+        <p>Tabi' yang menggantikan kedudukan mubdal min-hu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>'Athaf</strong><span class="arab">عَطْف</span></div>
+        <p>Tabi' yang menghubungkan ma'thuf dengan ma'thuf 'alaih.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ta'lil Nahwi</strong><span class="arab">تَعْلِيلٌ نَحْوِيّ</span></div>
+        <p>Argumentasi logis untuk memvalidasi kebenaran struktur nahwu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Matbu'</strong><span class="arab">مَتْبُوع</span></div>
+        <p>Kata yang diikuti oleh tabi' dalam hal i'rab.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Tabi'</strong><span class="arab">تَابِع</span></div>
+        <p>Kata yang mengikuti matbu' dalam hal i'rab (Na'at, Taukid, Badal, 'Athaf).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Nawasikh</strong><span class="arab">نَوَاسِخ</span></div>
+        <p>Amil-amil yang mengubah hukum mubtada'-khabar (Kana, Inna, dll).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 1</h4>
+    <p>
+      Hari ini kita telah meletakkan batu pertama dari perjalanan panjang menapaki ilmu nahwu. Ingatlah, setiap kaidah yang kita pelajari bukan sekadar rumus mati — ia adalah warisan intelektual ribuan ulama yang mendedikasikan hidup mereka untuk menjaga kemurnian bahasa Al-Qur'an. Mulailah dengan niat yang ikhlas, belajarlah dengan disiplin, dan percayalah: setiap usaha kecil hari ini akan membuahkan hasil yang besar di masa depan.
+    </p>
+  </div>
+
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 1</h3>
+    <p>
+      Pertemuan pertama ini telah meletakkan fondasi filosofis dan praktis bagi perjalanan satu semester ke depan. Mahasiswa telah memahami peta jalan pembelajaran, menyepakati kontrak belajar dan etika akademik, serta merefleksikan urgensi i'rab dalam tradisi keilmuan Islam.
+    </p>
+    <p>
+      Lebih jauh, mahasiswa juga telah diperkenalkan dengan perspektif linguistik modern terhadap nahwu klasik, sehingga mampu menjembatani warisan intelektual ulama terdahulu dengan pendekatan keilmuan kontemporer. Peta konsep dan glosarium yang disajikan akan menjadi rujukan sepanjang semester.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 2 yang akan membahas <strong>Al-Fa'il</strong> — salah satu unsur Marfu'atul Asma yang paling fundamental. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Ashmawi, Muhammad. <em>Al-Usul fi an-Nahw</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Chomsky, N. (1957). <em>Syntactic Structures</em>. The Hague: Mouton.</li>
+      <li>Halliday, M. A. K. (1994). <em>An Introduction to Functional Grammar</em>. London: Edward Arnold.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+      <li>Al-Samarrai, F. (2003). <em>Ma'ani an-Nahw</em>. Beirut: Mu'assasah ar-Risalah.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="index.html">← Kembali ke Daftar Bab</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="2.html">Pertemuan 2: Al-Fa'il →</a>
+  </div>
+
+</section>
+
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 1</span>
+      <h2>Prolog: <em>Peta Jalan Nahwu Mutawassithin</em></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Peta jalan, etika akademik, urgensi i'rab, CPMK, teori linguistik, dan pendekatan pembelajaran</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>1.</strong> Ilmu yang mempelajari kaidah-kaidah untuk mengetahui keadaan lafaz Arab dari segi i'rab-nya disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Ilmu Nahwu</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Ilmu Sharf</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Ilmu Balaghah</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Ilmu Fiqh Lughah</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>2.</strong> Tokoh yang meletakkan kaidah dasar ilmu nahwu atas instruksi Ali bin Abi Thalib adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Sibawayh</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Abu al-Aswad ad-Duali</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Al-Khalil bin Ahmad</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Ibnu Malik</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>3.</strong> Perubahan akhir kata (harakat atau huruf) akibat perbedaan faktor yang memasukinya disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Bina'</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. I'llal</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. I'rab</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Ta'rif</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Kelompok unsur nahwu yang termasuk <em>Marfu'atul Asma</em> adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Maf'ul Bih, Hal, Tamyiz</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Na'at, Taukid, Badal, 'Athaf</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Jar-Majrur, Idhafah, Isim Isyarah</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Fa'il, Na'ibul Fa'il, Mubtada'-Khabar, Isim Kana</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>5.</strong> Karya monumental Sibawayh yang menjadi rujukan utama ilmu nahwu hingga hari ini berjudul...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Al-Kitab</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Alfiyyah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Mughni al-Labib</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Jami' ad-Durus</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>6.</strong> Bobot penilaian Ujian Tengah Semester (UTS) dalam mata kuliah ini adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. 15%</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. 30%</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. 25%</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. 40%</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>7.</strong> Argumentasi logis yang digunakan untuk memvalidasi kebenaran struktur bahasa Arab disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. I'rab</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Ta'rif</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Ta'lil Nahwi</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Takhrij</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>8.</strong> Pepatah Minangkabau yang menjadi inspirasi integrasi nilai lokal dalam pembelajaran nahwu adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Adat basandi syarak, syarak basandi Kitabullah</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Alam takambang jadi guru</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Sekali air tagang surut, sekali tanjung berubah</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Tak sebak cawan tak sebak tudung</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>9.</strong> Dalam ayat <span class="arab">غَفَرَ اللهُ لَهُ</span>, kata <span class="arab">اللهُ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Maf'ul Bih</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Fa'il</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>10.</strong> Kelompok kata yang mengikuti kata yang didahuluinya dalam hal i'rab disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Marfu'atul Asma</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Tawabi'</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Nawasikh</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Manshubatul Asma</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif sejarah perkembangan ilmu nahwu mulai dari masa Abu al-Aswad ad-Duali hingga era kontemporer! Sebutkan minimal 3 tokoh kunci beserta kontribusinya, dan analisislah bagaimana perbedaan pendekatan antara Mazhab Basrah dan Kufah memperkaya khazanah keilmuan nahwu!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Analisislah mengapa i'rab disebut sebagai "jantung ilmu nahwu"! Berikan contoh konkret dari ayat Al-Qur'an atau hadis yang menunjukkan betapa krusialnya i'rab dalam menentukan makna, dan jelaskan bagaimana kesalahan i'rab dapat berimplikasi pada pemahaman hukum fiqh!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Uraikan tiga CPMK (Capaian Pembelajaran Mata Kuliah) dari An-Nahw lil Mutawassithin dan jelaskan bagaimana masing-masing CPMK tersebut saling berkaitan dalam membentuk kompetensi utuh mahasiswa! Hubungkan dengan Taksonomi Bloom (C4, C5, C6)!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Jelaskan perbedaan antara pendekatan struktural dan fungsional dalam menganalisis teks Arab! Berikan contoh analisis ganda (struktural + fungsional) pada ayat <span style="font-family:var(--arab);color:var(--gold);font-size:1.2rem">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</span>, dan analisislah mengapa integrasi kedua pendekatan ini penting bagi mahasiswa Pendidikan Bahasa Arab!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Berdasarkan prinsip integritas akademik yang telah disepakati, analisislah mengapa plagiarisme dalam penulisan karya ilmiah berbahasa Arab merupakan pelanggaran serius! Berikan solusi praktis untuk menghindarinya, termasuk dalam konteks penggunaan AI (Artificial Intelligence) sebagai alat bantu belajar!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 1
+  An-Nahw lil Mutawassithin
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P1_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P1 - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 1 - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>
