@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 9: Khabar Inna — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 9: Analisis karakteristik Khabar Inna dalam mempertegas makna kalimat pada teks keislaman, saudara-saudara Inna, fungsi retorika, dan analisis khutbah Jumat." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--cream);line-height:1.7;overflow-x:hidden;
+  background-image:radial-gradient(circle at 15% 20%,rgba(201,169,97,.08) 0%,transparent 40%),radial-gradient(circle at 85% 80%,rgba(201,169,97,.06) 0%,transparent 40%);
+}
+.bg-ornament{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(201,169,97,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,.03) 1px,transparent 1px);
+  background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
+}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;border:1px solid var(--gold);border-radius:2px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dark) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+h2.section-title em{font-style:italic;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h3.sub-title{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem}
+.arabic-display{background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{background:rgba(201,169,97,.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box,.warning-box,.insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4,.warning-box h4,.insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul,.warning-box ul,.insight-box ul{list-style:none;padding:0}
+.tips-box li,.warning-box li,.insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{display:inline-block;padding:1rem 2rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:1rem}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{background:linear-gradient(135deg,rgba(100,180,220,.08) 0%,rgba(100,180,220,.02) 100%);border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{display:inline-block;margin-top:1rem;padding:.4rem 1rem;background:rgba(100,180,220,.15);border-radius:4px;font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase}
+.khutbah-text{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:8px;padding:2rem;margin:2rem 0}
+.khutbah-text h5{font-family:var(--serif);color:var(--gold);font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.khutbah-text .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.khutbah-text .source-info{font-size:.85rem;color:var(--muted);font-style:italic;border-top:1px solid var(--line);padding-top:.8rem}
+.env-text{background:linear-gradient(135deg,rgba(80,200,120,.06) 0%,rgba(80,200,120,.02) 100%);border:1px solid rgba(80,200,120,.3);border-radius:8px;padding:2rem;margin:2rem 0}
+.env-text h5{font-family:var(--serif);color:#50c878;font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.env-text .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.env-text .translation{font-family:var(--serif-2);font-style:italic;color:var(--muted);font-size:.95rem;padding:1rem;border-left:2px solid #50c878}
+.quiz-section{background:linear-gradient(180deg,var(--ink-2) 0%,var(--ink) 100%);padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{display:inline-block;padding:.5rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input,.form-group select{padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;display:inline-flex;align-items:center;gap:.6rem}
+.btn-submit{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf,.btn-score,.btn-email,.btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover,.btn-score:hover,.btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{display:none;background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .khutbah-text .arabic-paragraph,.env-text .arabic-paragraph{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 9
+  </div>
+  <span class="chapter-label">Pertemuan 9 · 2 SKS</span>
+  <h1>Khabar Inna: <span class="accent">Penegas Makna dalam Teks Keislaman</span></h1>
+  <div class="hero-arabic">خَبَرُ إِنَّ: تَأْكِيدُ الْمَعْنَى فِي النُّصُوصِ الْإِسْلَامِيَّةِ</div>
+  <p class="subtitle">Analisis karakteristik Khabar Inna dalam mempertegas makna kalimat pada teks keislaman, saudara-saudara Inna, fungsi retorika, dan analisis khutbah Jumat.</p>
+  <div class="hero-actions">
+    <a href="8.html" class="btn btn-outline">← UTS</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 9</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s9-1">9.1 Konsep dan Definisi Inna</a>
+        <ol>
+          <li><a href="#s9-1-1">Pengertian Inna secara Bahasa dan Istilah</a></li>
+          <li><a href="#s9-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s9-1-3">Kedudukan Inna dalam Nawasikh</a></li>
+        </ol>
+      </li>
+      <li><a href="#s9-2">9.2 Saudara-saudara Inna</a>
+        <ol>
+          <li><a href="#s9-2-1">Inna, Anna, Lakinna</a></li>
+          <li><a href="#s9-2-2">Layta, La'alla, Lit</a></li>
+        </ol>
+      </li>
+      <li><a href="#s9-3">9.3 Hukum I'rab Isim dan Khabar Inna</a></li>
+      <li><a href="#s9-4">9.4 Jenis-jenis Khabar Inna</a>
+        <ol>
+          <li><a href="#s9-4-1">Khabar Mufrad</a></li>
+          <li><a href="#s9-4-2">Khabar Jumlah</a></li>
+          <li><a href="#s9-4-3">Khabar Syibh Jumlah</a></li>
+        </ol>
+      </li>
+      <li><a href="#s9-5">9.5 Perbandingan Inna dengan Isim Kana dan Isim Kada</a></li>
+      <li><a href="#s9-6">9.6 Fungsi Retorika Inna dalam Al-Qur'an</a></li>
+      <li><a href="#s9-7">9.7 Analisis Teks Khutbah Jumat</a></li>
+      <li><a href="#s9-8">9.8 Aplikasi: Kalimat Bertema Lingkungan</a></li>
+      <li><a href="#s9-9">9.9 Tugas Pertemuan 9</a></li>
+      <li><a href="#s9-10">9.10 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>Isim Kana</em> memberikan dimensi waktu pada kalimat nominal, dan <em>Isim Kada</em> memberikan nuansa kedekatan/harapan/permulaan, maka <em>Inna</em> dan saudara-saudaranya berfungsi sebagai <strong>alat penegas</strong> — ia menguatkan makna, memberikan tekanan retorika, dan menegaskan kepastian informasi dalam kalimat.
+  </p>
+
+  <p>
+    Setelah melewati Ujian Tengah Semester pada pertemuan kedelapan, kita memasuki fase kedua mata kuliah ini dengan membahas kelompok nawasikh yang unik: <strong>Inna wa akhwatuha</strong> (إنَّ وَأَخَوَاتُهَا). Berbeda dengan Isim Kana dan Isim Kada yang merupakan <em>fi'il naqishah</em> (fi'il yang tidak sempurna), Inna dan saudara-saudaranya adalah <em>huruf nasikhah</em> (huruf yang menashabkan). Inilah perbedaan fundamental yang perlu dipahami oleh mahasiswa PBA.
+  </p>
+
+  <p>
+    Inna dan saudara-saudaranya memiliki pengaruh yang <strong>berlawanan</strong> dengan Isim Kana: jika Isim Kana merafa'kan Mubtada' dan menashabkan Khabar, maka Inna <strong>menashabkan Mubtada'</strong> (yang kemudian disebut Isim Inna) dan <strong>merafa'kan Khabar</strong> (yang kemudian disebut Khabar Inna). Efek ini menjadikan Inna sebagai alat penegas yang sangat kuat dalam retorika bahasa Arab.
+  </p>
+
+  <p>
+    Dalam Al-Qur'an, Inna dan saudara-saudaranya sangat dominan digunakan untuk menegaskan akidah, memberikan peringatan, menyampaikan kabar gembira, dan memperkuat sumpah. Dalam teks khutbah Jumat, Inna sering digunakan untuk memberikan tekanan pada pesan-pesan penting yang ingin disampaikan khatib kepada jamaah. Pada pertemuan ini, kita akan membedah Inna secara komprehensif, menganalisis fungsinya dalam Al-Qur'an, dan mengaplikasikannya dalam analisis teks khutbah Jumat serta konstruksi kalimat bertema lingkungan.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ</div>
+    <div class="translation">"Sesungguhnya Allah dan malaikat-malaikat-Nya bershalawat untuk Nabi."</div>
+    <div class="source">— QS. Al-Ahzab [33]: 56</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal Inna dan Saudara-saudaranya</h4>
+    <p>Simak penjelasan visual tentang bagaimana Inna bekerja dalam struktur kalimat nominal — dari definisi dasar hingga analisis fungsi retorika dalam Al-Qur'an.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 9</h4>
+    <ul>
+      <li><strong>Inna wa akhwatuha (إنَّ وَأَخَوَاتُهَا):</strong> Enam huruf nasikhah yang masuk ke jumla ismiyyah, menashabkan Mubtada' (Isim Inna) dan merafa'kan Khabar (Khabar Inna).</li>
+      <li><strong>Anggota Inna:</strong> Inna (إنَّ), Anna (أَنَّ), Lakinna (لَكِنَّ), Layta (لَيْتَ), La'alla (لَعَلَّ), Lit (لِتَ).</li>
+      <li><strong>Isim Inna (اسْمُ إِنَّ):</strong> Mubtada' setelah masuknya Inna — berkedudukan manshub (nashab).</li>
+      <li><strong>Khabar Inna (خَبَرُ إِنَّ):</strong> Khabar setelah masuknya Inna — tetap berkedudukan marfu' (rafa').</li>
+      <li><strong>Taukid (تَأْكِيد):</strong> Fungsi utama Inna dalam retorika — memberikan penegasan dan penguatan makna.</li>
+      <li><strong>Perbedaan dengan Isim Kana:</strong> Inna adalah huruf (menashabkan Isim, merafa'kan Khabar); Isim Kana adalah fi'il (merafa'kan Isim, menashabkan Khabar).</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Kekuatan Penegasan Inna</h4>
+    <div class="case-content">
+      Bandingkan dua kalimat berikut:<br>
+      (1) <span class="arab" style="font-size:1.3rem">الْجَنَّةُ حَقٌّ</span> — "Surga itu benar."<br>
+      (2) <span class="arab" style="font-size:1.3rem">إِنَّ الْجَنَّةَ حَقٌّ</span> — "<em>Sesungguhnya</em> surga itu benar."<br><br>
+      Kedua kalimat menyampaikan informasi yang sama secara denotatif, tetapi kalimat kedua memiliki <strong>efek retorika</strong> yang jauh lebih kuat. Penggunaan <span class="arab" style="font-size:1.2rem">إِنَّ</span> memberikan penekanan, menghilangkan keraguan, dan menegaskan kepastian informasi. Inilah fungsi utama Inna dalam bahasa Arab.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Inna bukan sekadar "pengubah hukum i'rab" — ia adalah alat retorika yang sangat kuat. Mahasiswa PBA perlu memahami fungsi ini agar mampu menganalisis teks-teks keislaman secara mendalam, di mana penggunaan Inna sering kali memiliki implikasi teologis dan dakwah.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan Inna kepada siswa — mulai dari kalimat sederhana seperti <span class="arab" style="font-size:1.1rem">إِنَّ اللهَ وَاحِدٌ</span> hingga ayat-ayat Al-Qur'an yang kompleks. Pemahaman yang kokoh tentang Inna akan menjadi fondasi bagi siswa untuk memahami bagaimana bahasa Arab menyampaikan kepastian, penegasan, dan tekanan retorika. Bayangkan bagaimana Anda akan menjelaskan konsep ini dengan cara yang menarik — mungkin dengan contoh dari khutbah Jumat, dari ayat-ayat yang sudah dihafal siswa, atau dari pepatah Minangkabau.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 9.1 KONSEP DAN DEFINISI -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-1">9.1 Konsep dan Definisi <em>Inna</em></h2>
+
+  <p>
+    Memahami konsep dan definisi Inna adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat Inna, mahasiswa akan kesulitan dalam membedakan dengan Isim Kana/Kada dan memahami fungsinya dalam retorika bahasa Arab.
+  </p>
+
+  <h3 class="sub-title" id="s9-1-1">9.1.1 Pengertian Inna secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, kata <em>Inna</em> (إِنَّ) adalah huruf mashdariyyah (huruf yang membentuk mashdar) yang bermakna "sesungguhnya" atau "bahwa". Secara <strong>terminologis (istilah nahwu)</strong>, Inna adalah salah satu huruf nasikhah yang masuk ke jumla ismiyyah dan mengubah hukum i'rab Mubtada' dan Khabar.
+  </p>
+
+  <h3 class="sub-title" id="s9-1-2">9.1.2 Definisi Inna Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وإنَّ أَنْ اخْتَصَرَتْ مِنْ أَنَّ *** وَكَذَا لَكِنَّ وَلَيْتَ لَعَلَّا</span></td>
+        <td>"Inna yang merupakan kependekan dari Anna, dan demikian pula Lakinna, Layta, dan La'alla."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">إنَّ وَأَخَوَاتُهَا حُرُوفٌ نَاسِخَةٌ تَنْصِبُ الْمُبْتَدَأَ وَتَرْفَعُ الْخَبَرَ</span></td>
+        <td>"Inna dan saudara-saudaranya adalah huruf-huruf nasikhah yang menashabkan Mubtada' dan merafa'kan Khabar."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">إنَّ وَأَخَوَاتُهَا: حُرُوفٌ نَاسِخَةٌ تَدْخُلُ عَلَى الْجُمْلَةِ الِاسْمِيَّةِ فَتَنْصِبُ الْمُبْتَدَأَ وَيُسَمَّى اسْمَهَا وَتَرْفَعُ الْخَبَرَ وَيُسَمَّى خَبَرَهَا</span></td>
+        <td>"Inna dan saudara-saudaranya: huruf-huruf nasikhah yang masuk ke jumla ismiyyah, lalu menashabkan Mubtada' (disebut Isim-nya) dan merafa'kan Khabar (disebut Khabar-nya)."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">هِيَ حُرُوفٌ تَأْكِيدٌ تَدْخُلُ عَلَى الْجُمَلِ الِاسْمِيَّةِ فَتُغَيِّرُ إِعْرَابَهَا</span></td>
+        <td>"Ia adalah huruf-huruf taukid (penegasan) yang masuk ke jumla ismiyyah dan mengubah i'rab-nya."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Perhatikan bahwa Inna adalah <strong>huruf</strong>, bukan fi'il — ini perbedaan fundamental dengan Isim Kana dan Isim Kada.</li>
+      <li>Karena Inna adalah huruf, ia <strong>mabni</strong> (tidak berubah bentuk) — berbeda dengan Isim Kana yang merupakan fi'il yang berubah sesuai waktu.</li>
+      <li>Fungsi utama Inna adalah <strong>taukid</strong> (penegasan) — memberikan tekanan pada makna kalimat.</li>
+      <li>Pemahaman yang tepat tentang perbedaan antara huruf nasikhah dan fi'il naqishah akan membantu mahasiswa dalam analisis i'rab yang presisi.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s9-1-3">9.1.3 Kedudukan Inna dalam Nawasikh</h3>
+
+  <p>
+    Dalam ilmu nahwu, <strong>Nawasikh</strong> (نَوَاسِخ) adalah amil-amil yang mengubah hukum Mubtada'-Khabar. Nawasikh terbagi menjadi tiga kelompok utama:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Kelompok</th><th>Jenis Amil</th><th>Pengaruh terhadap Mubtada'</th><th>Pengaruh terhadap Khabar</th><th>Anggota</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Isim Kana</strong></td>
+        <td>Fi'il naqishah</td>
+        <td>Tetap marfu' (Isim Kana)</td>
+        <td>Berubah menjadi manshub (Khabar Kana)</td>
+        <td>Kana, Ashbaha, Amsa, Laisa, Mazal, dll.</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Kada</strong></td>
+        <td>Fi'il naqishah</td>
+        <td>Tetap marfu' (Isim Kada)</td>
+        <td>Berubah menjadi manshub (Khabar Kada)</td>
+        <td>Kaada, Haraa, Ja'ala, dll.</td>
+      </tr>
+      <tr>
+        <td><strong>Inna wa akhwatuha</strong></td>
+        <td>Huruf nasikhah</td>
+        <td>Berubah menjadi <strong>manshub</strong> (Isim Inna)</td>
+        <td>Tetap <strong>marfu'</strong> (Khabar Inna)</td>
+        <td>Inna, Anna, Lakinna, Layta, La'alla, Lit</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="key-concept">
+    <h4>✦ Perbedaan Fundamental</h4>
+    <ul>
+      <li><strong>Isim Kana/Kada:</strong> Fi'il → Merafa'kan Isim, Menashabkan Khabar</li>
+      <li><strong>Inna:</strong> Huruf → Menashabkan Isim, Merafa'kan Khabar</li>
+      <li>Efek keduanya <strong>berlawanan</strong> — inilah yang perlu dipahami dengan baik.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 9.2 SAUDARA-SAUDARA INNA -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-2">9.2 Saudara-saudara <em>Inna</em></h2>
+
+  <p>
+    Inna memiliki lima "saudara" yang memiliki hukum yang sama — yaitu menashabkan Mubtada' dan merafa'kan Khabar. Keenam huruf ini disebut <strong>Inna wa akhwatuha</strong> (إنَّ وَأَخَوَاتُهَا). Setiap huruf memiliki makna khusus yang membedakannya dari yang lain.
+  </p>
+
+  <h3 class="sub-title" id="s9-2-1">9.2.1 Inna, Anna, Lakinna</h3>
+
+  <table>
+    <thead>
+      <tr><th>Huruf</th><th>Arti</th><th>Fungsi</th><th>Contoh</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">إنَّ</span></td>
+        <td>Sesungguhnya</td>
+        <td>Penegasan (taukid) — memberikan kepastian</td>
+        <td><span class="arab">إِنَّ اللهَ غَفُورٌ رَحِيمٌ</span></td>
+        <td>"Sesungguhnya Allah Maha Pengampun lagi Maha Penyayang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">أَنَّ</span></td>
+        <td>Bahwa</td>
+        <td>Membentuk mashdar — sering digunakan dalam kalimat yang menjadi maf'ul bih atau mubtada'</td>
+        <td><span class="arab">عَلِمْتُ أَنَّ الْعِلْمَ نُورٌ</span></td>
+        <td>"Aku mengetahui bahwa ilmu itu cahaya."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">لَكِنَّ</span></td>
+        <td>Akan tetapi</td>
+        <td>Menunjukkan pertentangan (istidrak) — digunakan setelah nafy (peniadaan) atau nahy (larangan)</td>
+        <td><span class="arab">الْعِلْمُ كَثِيرٌ لَكِنَّ الْعَمَلَ قَلِيلٌ</span></td>
+        <td>"Ilmu itu banyak, akan tetapi amal itu sedikit."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="arabic-display">
+    إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ
+    <small>"Sesungguhnya Allah Maha Pengampun lagi Maha Penyayang."<br>Isim Inna (manshub) + Khabar Inna (marfu')</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah. <small>Memasuki jumla ismiyyah dan mengubah hukum i'rab-nya.</small></span>
+
+      <span class="word">اللَّهَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah zhahirah. <small>Asalnya Mubtada' yang marfu', berubah menjadi manshub setelah masuknya Inna.</small></span>
+
+      <span class="word">غَفُورٌ</span>
+      <span class="detail"><strong>Khabar Inna pertama</strong> — marfu' dengan tanwin dhommah. <small>Tetap marfu' setelah masuknya Inna.</small></span>
+
+      <span class="word">رَحِيمٌ</span>
+      <span class="detail"><strong>Khabar Inna kedua</strong> — marfu' dengan tanwin dhommah. <small>Atau bisa juga dianggap sebagai Na'at dari <span class="arab" style="font-size:1.1rem">غَفُورٌ</span>.</small></span>
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s9-2-2">9.2.2 Layta, La'alla, Lit</h3>
+
+  <table>
+    <thead>
+      <tr><th>Huruf</th><th>Arti</th><th>Fungsi</th><th>Contoh</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">لَيْتَ</span></td>
+        <td>Sekiranya / Andai</td>
+        <td>Menyatakan harapan yang sulit tercapai (tamanni)</td>
+        <td><span class="arab">لَيْتَ الشَّبَابَ يَعُودُ</span></td>
+        <td>"Sekiranya masa muda bisa kembali."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">لَعَلَّ</span></td>
+        <td>Mudah-mudahan / Semoga</td>
+        <td>Menyatakan harapan yang mungkin tercapai (tarajji)</td>
+        <td><span class="arab">لَعَلَّ الْمَرِيضَ شَافٍ</span></td>
+        <td>"Mudah-mudahan orang sakit itu sembuh."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">لِتَ</span></td>
+        <td>Agar / Supaya</td>
+        <td>Menyunjukkan tujuan (ta'lil) — jarang digunakan dalam bahasa Arab klasik</td>
+        <td><span class="arab">لِتَ الْعِلْمَ يَنْفَعُكَ</span></td>
+        <td>"Agar ilmu itu bermanfaat bagimu."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan Penting tentang Saudara-saudara Inna</h4>
+    <ul>
+      <li><strong>Layta</strong> sering digunakan dalam syair dan sastra untuk mengekspresikan penyesalan atau harapan yang tidak mungkin.</li>
+      <li><strong>La'alla</strong> dalam Al-Qur'an sering digunakan oleh Allah untuk menunjukkan kemungkinan rahmat-Nya — bukan ketidakpastian, tetapi bentuk kasih sayang.</li>
+      <li><strong>Lakinna</strong> hanya bisa masuk ke jumla ismiyyah yang didahului oleh nafy (peniadaan) atau nahy (larangan) — ini adalah syarat khusus.</li>
+      <li><strong>Lit</strong> sangat jarang digunakan dalam bahasa Arab klasik dan modern — lebih sering digantikan oleh <span class="arab" style="font-size:1.1rem">كَيْ</span> atau <span class="arab" style="font-size:1.1rem">لِ</span> + mashdar.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 9.3 HUKUM I'RAB -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-3">9.3 Hukum I'rab <em>Isim dan Khabar Inna</em></h2>
+
+  <p>
+    Setelah memahami konsep dan saudara-saudara Inna, kita masuk ke aspek yang paling penting: hukum i'rab Isim dan Khabar Inna. Pemahaman ini krusial untuk analisis yang presisi.
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Kaidah Dasar I'rab Inna</h4>
+    <ul>
+      <li><strong>Isim Inna (Mubtada'):</strong> Berubah dari marfu' menjadi <strong>manshub</strong> — ini adalah pengaruh utama Inna.</li>
+      <li><strong>Khabar Inna:</strong> Tetap berkedudukan <strong>marfu'</strong> — tidak berubah dari hukum asalnya.</li>
+      <li><strong>Inna sendiri:</strong> Berkedudukan huruf mabni (tidak berubah bentuk) — tidak memiliki i'rab.</li>
+    </ul>
+  </div>
+
+  <div class="arabic-display">
+    إِنَّ الْعِلْمَ نُورٌ
+    <small>"Sesungguhnya ilmu itu cahaya."<br>Isim Inna (manshub) + Khabar Inna (marfu')</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah. <small>Tidak memiliki i'rab karena berupa huruf.</small></span>
+
+      <span class="word">الْعِلْمَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah zhahirah. <small>Asalnya Mubtada' yang marfu', berubah menjadi manshub setelah masuknya Inna.</small></span>
+
+      <span class="word">نُورٌ</span>
+      <span class="detail"><strong>Khabar Inna</strong> — marfu' dengan tanwin dhommah. <small>Tetap marfu' setelah masuknya Inna.</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Perbandingan Sebelum dan Sesudah Masuknya Inna</h4>
+
+  <table>
+    <thead>
+      <tr><th>Unsur</th><th>Sebelum Masuknya Inna</th><th>Sesudah Masuknya Inna</th><th>Perubahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mubtada'/Isim Inna</strong></td>
+        <td><span class="arab">الْعِلْمُ</span> (marfu')</td>
+        <td><span class="arab">الْعِلْمَ</span> (manshub)</td>
+        <td>Berubah dari rafa' ke nashab</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar/Khabar Inna</strong></td>
+        <td><span class="arab">نُورٌ</span> (marfu')</td>
+        <td><span class="arab">نُورٌ</span> (marfu')</td>
+        <td>Tidak berubah</td>
+      </tr>
+      <tr>
+        <td><strong>Makna Kalimat</strong></td>
+        <td>"Ilmu itu cahaya."</td>
+        <td>"<em>Sesungguhnya</em> ilmu itu cahaya."</td>
+        <td>Penegasan (taukid) ditambahkan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="sub-sub-title">Tanda-tanda Nashab pada Isim Inna</h4>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk Isim</th><th>Tanda Nashab</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Isim Mufrad</strong></td>
+        <td>Fathah zhahirah</td>
+        <td><span class="arab">إِنَّ الْعِلْمَ نُورٌ</span></td>
+        <td><span class="arab">الْعِلْمَ</span> manshub dengan fathah zhahirah</td>
+      </tr>
+      <tr>
+        <td><strong>Jamak Mudzakkar Salim</strong></td>
+        <td>Ya'</td>
+        <td><span class="arab">إِنَّ الْمُسْلِمِينَ مُؤْمِنُونَ</span></td>
+        <td><span class="arab">الْمُسْلِمِينَ</span> manshub dengan ya'</td>
+      </tr>
+      <tr>
+        <td><strong>Itsna (Dua)</strong></td>
+        <td>Ya'</td>
+        <td><span class="arab">إِنَّ الطَّالِبَيْنِ مُجْتَهِدَانِ</span></td>
+        <td><span class="arab">الطَّالِبَيْنِ</span> manshub dengan ya'</td>
+      </tr>
+      <tr>
+        <td><strong>Jamak Muannats Salim</strong></td>
+        <td>Kasrah</td>
+        <td><span class="arab">إِنَّ الْمُسْلِمَاتِ مُؤْمِنَاتٌ</span></td>
+        <td><span class="arab">الْمُسْلِمَاتِ</span> manshub dengan kasrah</td>
+      </tr>
+      <tr>
+        <td><strong>Asmaul Khamsah</strong></td>
+        <td>Alif</td>
+        <td><span class="arab">إِنَّ أَخَاكَ مُسَافِرٌ</span></td>
+        <td><span class="arab">أَخَاكَ</span> manshub dengan alif</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Mu'takhir huruf</strong></td>
+        <td>Fathah muqaddarah</td>
+        <td><span class="arab">إِنَّ الْقَاضِيَ عَادِلٌ</span></td>
+        <td><span class="arab">الْقَاضِيَ</span> manshub dengan fathah muqaddarah</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kesalahan Umum Mahasiswa</h4>
+    <ul>
+      <li>Mengira Isim Inna tetap marfu' — padahal seharusnya manshub.</li>
+      <li>Mengira Khabar Inna berubah menjadi manshub — padahal seharusnya tetap marfu'.</li>
+      <li>Menyamakan Inna dengan Isim Kana — padahal keduanya memiliki efek yang berlawanan.</li>
+      <li>Menggunakan Lakinna tanpa didahului nafy atau nahy — ini tidak boleh secara gramatikal.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 9.4 JENIS-JENIS KHABAR INNA -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-4">9.4 Jenis-jenis <em>Khabar Inna</em></h2>
+
+  <p>
+    Khabar Inna, seperti Khabar biasa, dapat berupa tiga jenis utama: mufrad, jumlah, dan syibh jumlah. Pemahaman tentang variasi ini penting untuk analisis yang komprehensif, terutama dalam teks-teks keislaman.
+  </p>
+
+  <h3 class="sub-title" id="s9-4-1">9.4.1 Khabar Mufrad</h3>
+
+  <p>
+    Khabar mufrad adalah Khabar yang berupa <strong>isim mufrad</strong> (kata tunggal). Ini adalah bentuk Khabar Inna yang paling sederhana dan paling sering muncul.
+  </p>
+
+  <div class="arabic-display">
+    إِنَّ اللهَ غَفُورٌ
+    <small>"Sesungguhnya Allah Maha Pengampun."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">اللهَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah zhahirah.</span>
+
+      <span class="word">غَفُورٌ</span>
+      <span class="detail"><strong>Khabar Inna mufrad</strong> — marfu' dengan tanwin dhommah. <small>Isim mufrad yang melengkapi makna Isim Inna.</small></span>
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s9-4-2">9.4.2 Khabar Jumlah</h3>
+
+  <p>
+    Khabar jumlah adalah Khabar yang berupa <strong>jumlah</strong> (kalimat) — baik jumlah fi'liyyah maupun jumlah ismiyyah.
+  </p>
+
+  <h4 class="sub-sub-title">A. Khabar Jumlah Fi'liyyah</h4>
+
+  <div class="arabic-display">
+    إِنَّ الطَّالِبَ يَدْرُسُ
+    <small>"Sesungguhnya pelajar itu sedang belajar."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الطَّالِبَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah zhahirah.</span>
+
+      <span class="word">يَدْرُسُ</span>
+      <span class="detail"><strong>Fi'il mudhari'</strong> — marfu' dengan dhommah. <small>Bersama fa'il-nya (dhamir mustatir taqdiruhu huwa), membentuk <strong>jumla fi'liyyah</strong> yang berkedudukan sebagai Khabar Inna.</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">B. Khabar Jumlah Ismiyyah</h4>
+
+  <div class="arabic-display">
+    إِنَّ الْعِلْمَ نَفْعُهُ عَظِيمٌ
+    <small>"Sesungguhnya ilmu, manfaatnya sangat besar."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الْعِلْمَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah zhahirah.</span>
+
+      <span class="word">نَفْعُهُ</span>
+      <span class="detail"><strong>Mubtada' kedua</strong> — marfu' dengan dhommah. <span class="arab" style="font-size:1.1rem">هُ</span> = dhamir muttashil marfu' fa'il dari isim mashdar <span class="arab" style="font-size:1.1rem">نَفْعٌ</span>.</span>
+
+      <span class="word">عَظِيمٌ</span>
+      <span class="detail"><strong>Khabar kedua</strong> — marfu' dengan tanwin dhommah. <small>Seluruh jumla ismiyyah <span class="arab" style="font-size:1.1rem">نَفْعُهُ عَظِيمٌ</span> berkedudukan sebagai <strong>Khabar Inna</strong> berupa jumlah ismiyyah.</small></span>
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s9-4-3">9.4.3 Khabar Syibh Jumlah</h3>
+
+  <p>
+    Khabar syibh jumlah adalah Khabar yang berupa <strong>semi-kalimat</strong> — yaitu jar-majrur (preposisi + kata benda) atau zharf (keterangan tempat/waktu).
+  </p>
+
+  <h4 class="sub-sub-title">A. Khabar Jar-Majrur</h4>
+
+  <div class="arabic-display">
+    إِنَّ الطَّالِبَ فِي الْفَصْلِ
+    <small>"Sesungguhnya pelajar itu ada di kelas."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الطَّالِبَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah zhahirah.</span>
+
+      <span class="word">فِي</span>
+      <span class="detail"><strong>Huruf jar</strong> — mabni la mahalla lahu.</span>
+
+      <span class="word">الْفَصْلِ</span>
+      <span class="detail"><strong>Majrur</strong> — majrur dengan kasrah karena didahului huruf jar <span class="arab" style="font-size:1.1rem">فِي</span>. <small>Seluruh konstruk <span class="arab" style="font-size:1.1rem">فِي الْفَصْلِ</span> (jar-majrur) berkedudukan <strong>Khabar Inna syibh jumlah</strong> — marfu' secara mahallan (kedudukan).</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">B. Khabar Zharf</h4>
+
+  <div class="arabic-display">
+    إِنَّ الْقِطَّةَ أَمَامَ الْبَيْتِ
+    <small>"Sesungguhnya kucing itu ada di depan rumah."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الْقِطَّةَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah zhahirah.</span>
+
+      <span class="word">أَمَامَ</span>
+      <span class="detail"><strong>Zharf makan</strong> — manshub dengan fathah. <small>Berfungsi sebagai <strong>Khabar Inna syibh jumlah</strong>.</small></span>
+
+      <span class="word">الْبَيْتِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah.</span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Ringkasan Jenis Khabar Inna</h4>
+
+  <table>
+    <thead>
+      <tr><th>Jenis Khabar</th><th>Bentuk</th><th>Contoh</th><th>Ciri Khas</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mufrad</strong></td>
+        <td>Isim mufrad (kata tunggal)</td>
+        <td><span class="arab">إِنَّ اللهَ غَفُورٌ</span></td>
+        <td>Paling sederhana; langsung melengkapi Isim Inna</td>
+      </tr>
+      <tr>
+        <td><strong>Jumlah Fi'liyyah</strong></td>
+        <td>Kalimat verbal (fi'il + fa'il)</td>
+        <td><span class="arab">إِنَّ الطَّالِبَ يَدْرُسُ</span></td>
+        <td>Fi'il harus kembali kepada Isim Inna</td>
+      </tr>
+      <tr>
+        <td><strong>Jumlah Ismiyyah</strong></td>
+        <td>Kalimat nominal (mubtada' + khabar)</td>
+        <td><span class="arab">إِنَّ الْعِلْمَ نَفْعُهُ عَظِيمٌ</span></td>
+        <td>Mubtada' kedua harus memiliki dhamir yang kembali ke Isim Inna</td>
+      </tr>
+      <tr>
+        <td><strong>Syibh Jumlah (Jar-Majrur)</strong></td>
+        <td>Huruf jar + isim majrur</td>
+        <td><span class="arab">إِنَّ الطَّالِبَ فِي الْفَصْلِ</span></td>
+        <td>Menyatakan posisi/keadaan; marfu' secara mahallan</td>
+      </tr>
+      <tr>
+        <td><strong>Syibh Jumlah (Zharf)</strong></td>
+        <td>Keterangan tempat/waktu</td>
+        <td><span class="arab">إِنَّ الْقِطَّةَ أَمَامَ الْبَيْتِ</span></td>
+        <td>Menyatakan posisi/keadaan; manshub lafzhan, marfu' mahallan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ========================================================= -->
+  <!-- 9.5 PERBANDINGAN -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-5">9.5 Perbandingan <em>Inna dengan Isim Kana dan Isim Kada</em></h2>
+
+  <p>
+    Pemahaman yang kokoh tentang perbedaan antara Inna, Isim Kana, dan Isim Kada sangat penting. Meskipun ketiganya sama-sama masuk ke jumla ismiyyah dan mengubah hukum i'rab, cara kerjanya berbeda secara fundamental.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Inna</th><th>Isim Kana</th><th>Isim Kada</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Jenis Amil</strong></td>
+        <td>Huruf nasikhah</td>
+        <td>Fi'il naqishah</td>
+        <td>Fi'il naqishah</td>
+      </tr>
+      <tr>
+        <td><strong>Pengaruh terhadap Mubtada'</strong></td>
+        <td>Menashabkan (Isim Inna)</td>
+        <td>Tetap marfu' (Isim Kana)</td>
+        <td>Tetap marfu' (Isim Kada)</td>
+      </tr>
+      <tr>
+        <td><strong>Pengaruh terhadap Khabar</strong></td>
+        <td>Tetap marfu' (Khabar Inna)</td>
+        <td>Menashabkan (Khabar Kana)</td>
+        <td>Menashabkan (Khabar Kada)</td>
+      </tr>
+      <tr>
+        <td><strong>Bentuk</strong></td>
+        <td>Mabni (tidak berubah)</td>
+        <td>Mu'rab (berubah sesuai waktu)</td>
+        <td>Mu'rab (berubah sesuai waktu)</td>
+      </tr>
+      <tr>
+        <td><strong>Fungsi Utama</strong></td>
+        <td>Penegasan (taukid)</td>
+        <td>Dimensi waktu lampau</td>
+        <td>Kedekatan/harapan/permulaan</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">إِنَّ الْعِلْمَ نُورٌ</span><br>"Sesungguhnya ilmu itu cahaya."</td>
+        <td><span class="arab">كَانَ الْعِلْمُ نُورًا</span><br>"Ilmu itu dulu cahaya."</td>
+        <td><span class="arab">كَادَ الْعِلْمُ أَنْ يَنْدَثِرَ</span><br>"Ilmu itu hampir punah."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Perbandingan dalam Satu Paragraf</h4>
+    <div class="case-content">
+      <span class="arab" style="font-size:1.3rem">إِنَّ الْعِلْمَ نُورٌ. كَانَ الْعِلْمُ مَصْدَرَ التَّقَدُّمِ. كَادَ الْعِلْمُ أَنْ يُهْمَلَ فِي بَعْضِ الْبِلَادِ.</span><br><br>
+      "<em>Sesungguhnya</em> ilmu itu cahaya. Ilmu itu <em>dulu</em> sumber kemajuan. Ilmu itu <em>hampir</em> diabaikan di beberapa negeri."
+    </div>
+    <div class="lesson">
+      <strong>Analisis:</strong> Paragraf ini memadukan tiga nawasikh yang berbeda:<br>
+      • <span class="arab" style="font-size:1.2rem">إِنَّ</span> (huruf nasikhah): menashabkan Isim (<span class="arab" style="font-size:1.2rem">الْعِلْمَ</span>), merafa'kan Khabar (<span class="arab" style="font-size:1.2rem">نُورٌ</span>) — fungsi: penegasan.<br>
+      • <span class="arab" style="font-size:1.2rem">كَانَ</span> (fi'il naqishah): merafa'kan Isim (<span class="arab" style="font-size:1.2rem">الْعِلْمُ</span>), menashabkan Khabar (<span class="arab" style="font-size:1.2rem">مَصْدَرَ</span>) — fungsi: waktu lampau.<br>
+      • <span class="arab" style="font-size:1.2rem">كَادَ</span> (fi'il naqishah): merafa'kan Isim (<span class="arab" style="font-size:1.2rem">الْعِلْمُ</span>), menashabkan Khabar (<span class="arab" style="font-size:1.2rem">أَنْ يُهْمَلَ</span>) — fungsi: kedekatan.<br><br>
+      <strong>Ta'lil Nahwi:</strong> Pemilihan nawasikh yang tepat sangat menentukan makna kalimat. <span class="arab" style="font-size:1.2rem">إِنَّ</span> menegaskan kepastian bahwa ilmu adalah cahaya. <span class="arab" style="font-size:1.2rem">كَانَ</span> menunjukkan bahwa ilmu pernah menjadi sumber kemajuan di masa lalu. <span class="arab" style="font-size:1.2rem">كَادَ</span> menunjukkan bahwa ilmu hampir diabaikan — belum terjadi, tapi hampir.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 9.6 FUNGSI RETORIKA INNA -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-6">9.6 Fungsi Retorika <em>Inna dalam Al-Qur'an</em></h2>
+
+  <p>
+    Inna dan saudara-saudaranya sangat dominan dalam Al-Qur'an. Penggunaannya bukan sekadar variasi gramatikal, melainkan memiliki fungsi retorika yang sangat dalam. Mari kita analisis beberapa fungsi utamanya.
+  </p>
+
+  <div class="arabic-display">
+    إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ لَآيَاتٍ لِقَوْمٍ مُؤْمِنِينَ
+    <small>"Sesungguhnya dalam penciptaan langit dan bumi terdapat tanda-tanda (kebesaran Allah) bagi kaum yang beriman."</small>
+    <small>— QS. Al-Baqarah [2]: 164</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah. <small>Memulai kalimat dengan penegasan.</small></span>
+
+      <span class="word">فِي</span>
+      <span class="detail"><strong>Huruf jar</strong> — mabni 'ala sukun.</span>
+
+      <span class="word">خَلْقِ</span>
+      <span class="detail"><strong>Majrur</strong> — majrur dengan kasrah. <small>Isim majrur karena didahului huruf jar.</small></span>
+
+      <span class="word">السَّمَاوَاتِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah.</span>
+
+      <span class="word">لَآيَاتٍ</span>
+      <span class="detail"><strong>Lam taukid + Khabar Inna</strong> — <span class="arab" style="font-size:1.1rem">لَ</span> = lam taukid (penegas); <span class="arab" style="font-size:1.1rem">آيَاتٍ</span> = khabar Inna manshub dengan kasrah (karena jamak taksir).</span>
+
+      <span class="word">لِقَوْمٍ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar kedua atau takhshish.</span>
+
+      <span class="word">مُؤْمِنِينَ</span>
+      <span class="detail"><strong>Na'at</strong> — majrur dengan ya' (karena jamak mudzakkar salim).</span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Fungsi Retorika Inna dalam Al-Qur'an</h4>
+
+  <table>
+    <thead>
+      <tr><th>Fungsi</th><th>Penjelasan</th><th>Contoh Ayat</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Penegasan Akidah</strong></td>
+        <td>Menegaskan keesaan Allah, kenabian, dan kebenaran wahyu</td>
+        <td><span class="arab">إِنَّ اللهَ لَا إِلَٰهَ إِلَّا هُوَ</span> (QS. Al-Baqarah: 255)</td>
+      </tr>
+      <tr>
+        <td><strong>Peringatan (Tahdzir)</strong></td>
+        <td>Memberikan peringatan tentang azab dan konsekuensi dosa</td>
+        <td><span class="arab">إِنَّ عَذَابَ رَبِّكَ لَوَاقِعٌ</span> (QS. Ath-Thuur: 7)</td>
+      </tr>
+      <tr>
+        <td><strong>Kabar Gembira (Tabsyir)</strong></td>
+        <td>Menyampaikan kabar gembira tentang rahmat dan surga</td>
+        <td><span class="arab">إِنَّ رَحْمَتَ اللهِ قَرِيبٌ مِنَ الْمُحْسِنِينَ</span> (QS. Al-A'raf: 56)</td>
+      </tr>
+      <tr>
+        <td><strong>Sumpah (Qasam)</strong></td>
+        <td>Memperkuat sumpah dengan Inna untuk memberikan kepastian</td>
+        <td><span class="arab">وَالْعَصْرِ إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ</span> (QS. Al-'Ashr: 1-2)</td>
+      </tr>
+      <tr>
+        <td><strong>Penjelasan (Tafsir)</strong></td>
+        <td>Memberikan penjelasan atau tafsir atas ayat sebelumnya</td>
+        <td><span class="arab">وَأَوْحَيْنَا إِلَىٰ أُمِّ مُوسَىٰ أَنْ أَرْضِعِيهِ... إِنَّهُ مِنْ عِبَادِنَا الْمُصْلَحِينَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Harapan (Tarajji)</strong></td>
+        <td>Menggunakan La'alla untuk menunjukkan harapan rahmat Allah</td>
+        <td><span class="arab">لَعَلَّكُمْ تُفْلِحُونَ</span> (QS. Al-Baqarah: 189)</td>
+      </tr>
+      <tr>
+        <td><strong>Penyesalan (Tamanni)</strong></td>
+        <td>Menggunakan Layta untuk mengekspresikan penyesalan di akhirat</td>
+        <td><span class="arab">يَا لَيْتَنِي قَدَّمْتُ لِحَيَاتِي</span> (QS. Al-Fajr: 24)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Penggunaan Inna dalam Al-Qur'an bukan sekadar variasi gramatikal — ia memiliki <strong>implikasi teologis</strong> dan <strong>retorika dakwah</strong>.</li>
+      <li>Pemahaman fungsi retorika Inna akan membantu mahasiswa dalam <strong>menafsirkan ayat</strong> secara lebih mendalam.</li>
+      <li>Dalam pengajaran nahwu, integrasi analisis i'rab dengan analisis fungsi retorika akan membuat pembelajaran lebih <strong>bermakna</strong> dan <strong>kontekstual</strong>.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 9.7 ANALISIS KHUTBAH JUMAT -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-7">9.7 Analisis <em>Teks Khutbah Jumat</em></h2>
+
+  <p>
+    Khutbah Jumat adalah salah satu teks keislaman yang kaya dengan penggunaan Inna dan saudara-saudaranya. Khatib sering menggunakan Inna untuk memberikan penegasan pada pesan-pesan penting yang ingin disampaikan kepada jamaah. Mari kita analisis beberapa contoh.
+  </p>
+
+  <div class="khutbah-text">
+    <h5>🕌 Contoh Khutbah Jumat: Kewajiban Taqwa</h5>
+    <div class="arabic-paragraph">
+      إِنَّ اللهَ أَمَرَ بِالتَّقْوَى. إِنَّ التَّقْوَى نَجَاةٌ فِي الدُّنْيَا وَالْآخِرَةِ. لَكِنَّ النَّاسَ غَافِلُونَ عَنْهَا. لَعَلَّكُمْ تَتَّقُونَ اللهَ حَقَّ تُقَاتِهِ.
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Sesungguhnya Allah memerintahkan taqwa. Sesungguhnya taqwa itu keselamatan di dunia dan akhirat. Akan tetapi manusia lalai darinya. Mudah-mudahan kalian bertakwa kepada Allah dengan sebenar-benar takwa."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab Kalimat 1</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah. <small>Memulai kalimat dengan penegasan.</small></span>
+
+      <span class="word">اللهَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah zhahirah. <small>Asalnya Mubtada', berubah menjadi manshub karena masuknya Inna.</small></span>
+
+      <span class="word">أَمَرَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Bersama fa'il-nya (dhamir mustatir taqdiruhu huwa), membentuk jumla fi'liyyah yang berkedudukan sebagai <strong>Khabar Inna</strong>.</small></span>
+
+      <span class="word">بِالتَّقْوَى</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan maf'ul bih atau hal. <small>"Dengan taqwa".</small></span>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab Kalimat 2</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">التَّقْوَى</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah muqaddarah (karena huruf akhir alif maqshurah). <small>Asalnya Mubtada', berubah menjadi manshub.</small></span>
+
+      <span class="word">نَجَاةٌ</span>
+      <span class="detail"><strong>Khabar Inna mufrad</strong> — marfu' dengan tanwin dhommah. <small>Tetap marfu' setelah masuknya Inna.</small></span>
+
+      <span class="word">فِي الدُّنْيَا وَالْآخِرَةِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar kedua atau takhshish. <small>"Di dunia dan akhirat".</small></span>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab Kalimat 3</h5>
+    <div class="word-analysis">
+      <span class="word">لَكِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah. <small>Menunjukkan pertentangan (istidrak) — hanya bisa masuk setelah nafy atau nahy.</small></span>
+
+      <span class="word">النَّاسَ</span>
+      <span class="detail"><strong>Isim Lakinna</strong> — manshub dengan fathah zhahirah. <small>Asalnya Mubtada', berubah menjadi manshub.</small></span>
+
+      <span class="word">غَافِلُونَ</span>
+      <span class="detail"><strong>Khabar Lakinna</strong> — marfu' dengan wawu (karena jamak mudzakkar salim). <small>Tetap marfu' setelah masuknya Lakinna.</small></span>
+
+      <span class="word">عَنْهَا</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">عَنْ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">هَا</span> = dhamir munfashil majrur. <small>"Darinya".</small></span>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab Kalimat 4</h5>
+    <div class="word-analysis">
+      <span class="word">لَعَلَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah. <small>Menunjukkan harapan (tarajji) — "mudah-mudahan".</small></span>
+
+      <span class="word">كُمْ</span>
+      <span class="detail"><strong>Isim La'alla</strong> — dhamir muttashil manshub. <small>Berfungsi sebagai Isim La'alla yang merujuk kepada jamaah.</small></span>
+
+      <span class="word">تَتَّقُونَ</span>
+      <span class="detail"><strong>Fi'il mudhari'</strong> — marfu' dengan nun (karena fi'il yang bersambung dengan wawu jama'ah). <small>Bersama fa'il-nya (wawu jama'ah), membentuk jumla fi'liyyah yang berkedudukan sebagai <strong>Khabar La'alla</strong>.</small></span>
+
+      <span class="word">اللهَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah zhahirah. <small>Objek dari fi'il <span class="arab" style="font-size:1.1rem">تَتَّقُونَ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Fungsi Retorika Inna dalam Khutbah</h4>
+    <div class="case-content">
+      Dalam khutbah di atas, khatib menggunakan empat nawasikh yang berbeda:<br>
+      • <span class="arab" style="font-size:1.2rem">إِنَّ</span> (2x) — untuk menegaskan perintah Allah dan hakikat taqwa.<br>
+      • <span class="arab" style="font-size:1.2rem">لَكِنَّ</span> — untuk menunjukkan pertentangan antara perintah Allah dan kelalaian manusia.<br>
+      • <span class="arab" style="font-size:1.2rem">لَعَلَّ</span> — untuk menyampaikan harapan agar jamaah bertakwa.<br><br>
+      <strong>Ta'lil Nahwi:</strong> Pemilihan nawasikh yang tepat dalam khutbah sangat penting untuk membangun retorika dakwah yang efektif. <span class="arab" style="font-size:1.2rem">إِنَّ</span> memberikan kepastian, <span class="arab" style="font-size:1.2rem">لَكِنَّ</span> memberikan kontras, dan <span class="arab" style="font-size:1.2rem">لَعَلَّ</span> memberikan harapan. Kombinasi ini menciptakan khutbah yang dinamis dan menyentuh hati jamaah.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Mahasiswa PBA perlu memahami fungsi retorika Inna dalam khutbah agar mampu menganalisis teks dakwah secara mendalam. Kemampuan ini juga akan berguna ketika mereka menjadi khatib atau guru agama di masa depan.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 9.8 APLIKASI: LINGKUNGAN -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-8">9.8 Aplikasi: <em>Kalimat Bertema Lingkungan</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang Inna dan saudara-saudaranya, mari kita konstruksi kalimat-kalimat bertema lingkungan dengan menggunakan berbagai Inna. Tema ini dipilih karena relevan dengan isu global dan sesuai dengan nilai-nilai keislaman tentang tanggung jawab manusia sebagai khalifah di bumi.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Kalimat dengan Inna Bertema Lingkungan</h5>
+    <div class="arabic-paragraph">
+      ١. إِنَّ الْبِيئَةَ أَمَانَةٌ مِنَ اللهِ<br>
+      ٢. إِنَّ التَّلَوُّثَ خَطَرٌ عَلَى الصِّحَّةِ<br>
+      ٣. لَكِنَّ النَّاسَ مُهْمِلُونَ حِفْظَ الْبِيئَةِ<br>
+      ٤. لَعَلَّ الْجِيلَ الْقَادِمَ يَصْحُو<br>
+      ٥. لَيْتَ الْأَشْجَارَ كَثِيرَةٌ كَمَا كَانَتْ
+    </div>
+    <div class="translation">
+      1. Sesungguhnya lingkungan itu amanah dari Allah.<br>
+      2. Sesungguhnya polusi itu bahaya bagi kesehatan.<br>
+      3. Akan tetapi manusia lalai menjaga lingkungan.<br>
+      4. Mudah-mudahan generasi yang akan datang sadar.<br>
+      5. Sekiranya pepohonan itu banyak seperti dulu.
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 1</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah. <small>Memulai kalimat dengan penegasan.</small></span>
+
+      <span class="word">الْبِيئَةَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah zhahirah. <small>Asalnya Mubtada', berubah menjadi manshub.</small></span>
+
+      <span class="word">أَمَانَةٌ</span>
+      <span class="detail"><strong>Khabar Inna mufrad</strong> — marfu' dengan tanwin dhommah. <small>Tetap marfu' setelah masuknya Inna.</small></span>
+
+      <span class="word">مِنَ اللهِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar kedua atau takhshish. <small>"Dari Allah".</small></span>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 3 (dengan Lakinna)</h5>
+    <div class="word-analysis">
+      <span class="word">لَكِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah. <small>Menunjukkan pertentangan — digunakan setelah kalimat sebelumnya yang mengandung nafy atau nahy (tersirat: perintah menjaga lingkungan yang diabaikan).</small></span>
+
+      <span class="word">النَّاسَ</span>
+      <span class="detail"><strong>Isim Lakinna</strong> — manshub dengan fathah zhahirah. <small>Asalnya Mubtada', berubah menjadi manshub.</small></span>
+
+      <span class="word">مُهْمِلُونَ</span>
+      <span class="detail"><strong>Khabar Lakinna</strong> — marfu' dengan wawu (karena jamak mudzakkar salim). <small>Tetap marfu' setelah masuknya Lakinna.</small></span>
+
+      <span class="word">حِفْظَ</span>
+      <span class="detail"><strong>Maf'ul muthlaq</strong> — manshub dengan fathah. <small>Atau bisa juga dianggap sebagai maf'ul bih dari <span class="arab" style="font-size:1.1rem">مُهْمِلُونَ</span> yang bermakna fi'il.</small></span>
+
+      <span class="word">الْبِيئَةِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah. <small>"Lingkungan".</small></span>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Mengonstruksi Kalimat dengan Inna</h4>
+    <ul>
+      <li><strong>Pilih Inna yang sesuai:</strong> Gunakan <span class="arab" style="font-size:1.1rem">إِنَّ</span> untuk penegasan, <span class="arab" style="font-size:1.1rem">لَكِنَّ</span> untuk pertentangan, <span class="arab" style="font-size:1.1rem">لَعَلَّ</span> untuk harapan, <span class="arab" style="font-size:1.1rem">لَيْتَ</span> untuk penyesalan.</li>
+      <li><strong>Perhatikan i'rab:</strong> Isim Inna selalu manshub, Khabar Inna selalu marfu'.</li>
+      <li><strong>Perhatikan syarat Lakinna:</strong> Hanya bisa digunakan setelah nafy atau nahy.</li>
+      <li><strong>Integrasikan nilai-nilai:</strong> Gunakan tema-tema yang relevan dengan kehidupan dan nilai-nilai keislaman.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 9.9 TUGAS PERTEMUAN 9 -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-9">9.9 Tugas <em>Pertemuan 9</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Menganalisis variasi <strong>Khabar Inna</strong> pada <strong>teks khutbah Jumat</strong> dan menentukan <strong>fungsi penegasannya (Taukid)</strong>.</li>
+      <li>Pilih minimal <strong>1 teks khutbah Jumat</strong> (bisa dari kitab khutbah, website masjid, atau rekaman khutbah).</li>
+      <li>Identifikasi minimal <strong>10 penggunaan Inna dan saudara-saudaranya</strong> dalam teks khutbah tersebut.</li>
+      <li>Untuk setiap penggunaan:</li>
+      <li style="padding-left:2.5rem">— Tentukan jenis Inna (Inna, Anna, Lakinna, Layta, La'alla, Lit)</li>
+      <li style="padding-left:2.5rem">— Identifikasi Isim Inna dan Khabar Inna</li>
+      <li style="padding-left:2.5rem">— Klasifikasikan jenis Khabar Inna (mufrad, jumlah, syibh jumlah)</li>
+      <li style="padding-left:2.5rem">— Analisis fungsi retorika (penegasan, pertentangan, harapan, dll)</li>
+      <li style="padding-left:2.5rem">— Berikan analisis i'rab lengkap</li>
+      <li>Susun dalam bentuk tabel yang rapi dan sistematis.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Merangkum materi Pertemuan 9 (Khabar Inna) secara sistematis.</li>
+      <li>Rangkuman harus mencakup:</li>
+      <li style="padding-left:2.5rem">— Definisi dan konsep Inna</li>
+      <li style="padding-left:2.5rem">— Saudara-saudara Inna (6 huruf)</li>
+      <li style="padding-left:2.5rem">— Hukum i'rab Isim dan Khabar Inna</li>
+      <li style="padding-left:2.5rem">— Jenis-jenis Khabar Inna</li>
+      <li style="padding-left:2.5rem">— Fungsi retorika Inna dalam Al-Qur'an dan khutbah</li>
+      <li>Sumber: kitab <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>An-Nahw al-Wadhih</em> (Al-Jarim & Amin).</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Contoh Tabel Tugas Mandiri</h4>
+    <table>
+      <thead>
+        <tr><th>No</th><th>Huruf</th><th>Isim Inna</th><th>Jenis Khabar</th><th>Fungsi Retorika</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><span class="arab">إِنَّ</span></td>
+          <td><span class="arab">اللهَ</span></td>
+          <td>Jumlah Fi'liyyah</td>
+          <td>Penegasan perintah</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><span class="arab">لَكِنَّ</span></td>
+          <td><span class="arab">النَّاسَ</span></td>
+          <td>Mufrad</td>
+          <td>Pertentangan</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><span class="arab">لَعَلَّ</span></td>
+          <td><span class="arab">كُمْ</span></td>
+          <td>Jumlah Fi'liyyah</td>
+          <td>Harapan</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Pembelajaran</h4>
+    <p>
+      Melalui tugas ini, mahasiswa tidak hanya menguji pemahaman teoretis tentang Inna, tetapi juga melatih kemampuan menganalisis teks dakwah secara mendalam. Kemampuan mengidentifikasi variasi Khabar Inna dan fungsi retorika dalam khutbah Jumat akan memperkaya kompetensi mahasiswa dalam memahami teks-teks keislaman secara kontekstual.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 9.10 PETA KONSEP & GLOSARIUM -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s9-10">9.10 Peta Konsep <em>& Glosarium</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep Inna wa Akhwatuha</h4>
+    <div class="map-center">
+      <div class="core">INNA WA AKHWATUHA</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Huruf nasikhah yang menashabkan Mubtada' dan merafa'kan Khabar</p>
+        <ul>
+          <li>Isim Inna: manshub</li>
+          <li>Khabar Inna: marfu'</li>
+          <li>Fungsi: taukid (penegasan)</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Anggota (6 Huruf)</h5>
+        <ul>
+          <li><strong>Inna:</strong> Sesungguhnya</li>
+          <li><strong>Anna:</strong> Bahwa</li>
+          <li><strong>Lakinna:</strong> Akan tetapi</li>
+          <li><strong>Layta:</strong> Sekiranya</li>
+          <li><strong>La'alla:</strong> Mudah-mudahan</li>
+          <li><strong>Lit:</strong> Agar</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Jenis Khabar</h5>
+        <ul>
+          <li>Khabar Mufrad</li>
+          <li>Khabar Jumlah (Fi'liyyah & Ismiyyah)</li>
+          <li>Khabar Syibh Jumlah (Jar-Majrur & Zharf)</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Fungsi Retorika</h5>
+        <ul>
+          <li>Penegasan akidah</li>
+          <li>Peringatan (tahdzir)</li>
+          <li>Kabar gembira (tabsyir)</li>
+          <li>Harapan (tarajji)</li>
+          <li>Penyesalan (tamanni)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📖 Glosarium Istilah Inna</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Inna</strong><span class="arab">إِنَّ</span></div>
+        <p>Huruf nasikhah yang bermakna "sesungguhnya" — menashabkan Mubtada' dan merafa'kan Khabar.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Anna</strong><span class="arab">أَنَّ</span></div>
+        <p>Huruf nasikhah yang bermakna "bahwa" — sering membentuk mashdar.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Lakinna</strong><span class="arab">لَكِنَّ</span></div>
+        <p>Huruf nasikhah yang bermakna "akan tetapi" — menunjukkan pertentangan.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Layta</strong><span class="arab">لَيْتَ</span></div>
+        <p>Huruf nasikhah yang bermakna "sekiranya" — menunjukkan harapan yang sulit tercapai.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>La'alla</strong><span class="arab">لَعَلَّ</span></div>
+        <p>Huruf nasikhah yang bermakna "mudah-mudahan" — menunjukkan harapan yang mungkin tercapai.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Lit</strong><span class="arab">لِتَ</span></div>
+        <p>Huruf nasikhah yang bermakna "agar" — menunjukkan tujuan (jarang digunakan).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Isim Inna</strong><span class="arab">اسْمُ إِنَّ</span></div>
+        <p>Mubtada' setelah masuknya Inna — berkedudukan manshub.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Khabar Inna</strong><span class="arab">خَبَرُ إِنَّ</span></div>
+        <p>Khabar setelah masuknya Inna — tetap berkedudukan marfu'.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Huruf Nasikhah</strong><span class="arab">حُرُوفٌ نَاسِخَة</span></div>
+        <p>Huruf-huruf yang mengubah hukum Mubtada'-Khabar (Inna dan saudara-saudaranya).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Taukid</strong><span class="arab">تَأْكِيد</span></div>
+        <p>Penegasan — fungsi utama Inna dalam retorika bahasa Arab.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Tarajji'</strong><span class="arab">تَرَجٍّ</span></div>
+        <p>Harapan yang mungkin tercapai — fungsi La'alla.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Tamanni</strong><span class="arab">تَمَنٍّ</span></div>
+        <p>Harapan yang sulit tercapai — fungsi Layta.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 9</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep Inna wa akhwatuha — dari definisi dan hakikatnya, enam huruf nasikhah, hukum i'rab Isim dan Khabar Inna, jenis-jenis Khabar Inna, perbandingan dengan Isim Kana dan Isim Kada, fungsi retorika dalam Al-Qur'an, hingga analisis teks khutbah Jumat dan aplikasi dalam kalimat bertema lingkungan. Ingatlah, Inna bukan sekadar "pengubah hukum i'rab" — ia adalah <strong>alat penegas</strong> yang sangat kuat dalam retorika bahasa Arab. Sebagai calon guru bahasa Arab, penguasaan terhadap Inna akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- KESIMPULAN -->
+  <!-- ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 9</h3>
+    <p>
+      Pertemuan kesembilan ini telah membahas secara komprehensif tentang Khabar Inna — kelompok nawasikh yang unik karena berupa huruf (bukan fi'il) dan memiliki efek yang berlawanan dengan Isim Kana. Mahasiswa telah memahami konsep dan definisi Inna, enam huruf nasikhah (Inna, Anna, Lakinna, Layta, La'alla, Lit), hukum i'rab Isim dan Khabar Inna, jenis-jenis Khabar Inna, serta perbandingan dengan Isim Kana dan Isim Kada.
+    </p>
+    <p>
+      Melalui analisis fungsi retorika Inna dalam Al-Qur'an dan analisis teks khutbah Jumat, mahasiswa telah berlatih mengidentifikasi variasi Khabar Inna dalam teks otentik keislaman. Aplikasi melalui konstruksi kalimat bertema lingkungan telah menunjukkan relevansi Inna dalam konteks kontemporer dan kepedulian terhadap isu global.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 10 yang akan membahas <strong>Khabar La Nafiyah lil Jins</strong> — kelompok nawasikh yang memiliki kemiripan dengan Inna tetapi dengan fungsi negasi universal. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- DAFTAR PUSTAKA -->
+  <!-- ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Anbari, Ibnu. <em>Al-Mufrad fi Ushul an-Nahw</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="8.html">← Pertemuan 8: UTS</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="10.html">Pertemuan 10: Khabar La Nafiyah lil Jins →</a>
+  </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- UJI FORMATIF -->
+<!-- ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 9</span>
+      <h2>Khabar Inna: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Penegas Makna dalam Teks Keislaman</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Konsep Inna, saudara-saudara Inna, hukum i'rab, jenis Khabar, fungsi retorika</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">إِنَّ اللهَ غَفُورٌ</span>, kata <span class="arab">اللهَ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Mubtada' (marfu')</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Khabar Inna (marfu')</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Isim Inna (manshub)</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Fa'il (marfu')</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>2.</strong> Pengaruh Inna terhadap hukum i'rab Mubtada' dan Khabar adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Merafa'kan Mubtada' dan menashabkan Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Menashabkan Mubtada' dan merafa'kan Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Menashabkan keduanya</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Merafa'kan keduanya</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Yang termasuk saudara-saudara Inna adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Inna, Anna, Lakinna, Layta, La'alla, Lit</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Kana, Ashbaha, Amsa, Laisa, Mazal</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Kaada, Haraa, Ja'ala, Akhodza</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Zhanantu, Hasibtu, Ra'aitu</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Perbedaan fundamental antara Inna dan Isim Kana adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Keduanya sama-sama fi'il naqishah</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Keduanya memiliki efek yang sama terhadap i'rab</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Inna adalah fi'il, Isim Kana adalah huruf</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Inna adalah huruf (menashabkan Isim, merafa'kan Khabar); Isim Kana adalah fi'il (merafa'kan Isim, menashabkan Khabar) — keduanya memiliki efek yang berlawanan</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Tanda nashab pada Isim Inna yang berupa jamak mudzakkar salim adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Fathah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Ya'</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Alif</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Kasrah</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> Huruf <span class="arab">لَكِنَّ</span> (Lakinna) hanya bisa masuk ke jumla ismiyyah jika...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Didahului oleh isim ma'rifah</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Didahului oleh fi'il mudhari'</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Didahului oleh nafy (peniadaan) atau nahy (larangan)</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. Didahului oleh huruf jar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Fungsi utama Inna dalam retorika bahasa Arab adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Taukid (penegasan)</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Istitsna' (pengecualian)</td></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Syarth (syarat)</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Jazm (penegasan fi'il)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Dalam kalimat <span class="arab">لَعَلَّ الْمَرِيضَ شَافٍ</span>, kata <span class="arab">شَافٍ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Isim La'alla (manshub)</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Maf'ul bih (manshub)</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Fa'il (marfu')</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Khabar La'alla (marfu')</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Huruf <span class="arab">لَيْتَ</span> (Layta) digunakan untuk mengekspresikan...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Harapan yang mungkin tercapai (tarajji')</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Harapan yang sulit tercapai atau penyesalan (tamanni')</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Pertentangan (istidrak)</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Tujuan (ta'lil)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Dalam ayat <span class="arab">إِنَّ فِي خَلْقِ السَّمَاوَاتِ لَآيَاتٍ</span>, kata <span class="arab">لَآيَاتٍ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Isim Inna (manshub)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Maf'ul bih (manshub)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Khabar Inna (manshub) yang didahului lam taukid</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Na'at (marfu')</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat Inna menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda (dalam bahasa Arab), dan analisislah perbedaan fundamental antara Inna (huruf nasikhah) dengan Isim Kana (fi'il naqishah)!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Sebutkan enam saudara-saudara Inna! Berikan contoh konkret penggunaan masing-masing dalam kalimat, dan analisislah fungsi retorika setiap huruf (penegasan, pertentangan, harapan, penyesalan, dll)!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Jelaskan tiga jenis Khabar Inna (mufrad, jumlah, syibh jumlah)! Berikan masing-masing 2 contoh dari Al-Qur'an atau hadis, dan analisislah i'rabnya secara lengkap!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Analisislah fungsi retorika Inna dalam Al-Qur'an! Berikan minimal 5 contoh ayat yang menggunakan Inna dengan fungsi berbeda (penegasan akidah, peringatan, kabar gembira, sumpah, harapan), dan jelaskan implikasi teologis dari setiap penggunaan!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Susunlah sebuah <strong>paragraf</strong> (minimal 100 kata) bertema <strong>"Pelestarian Lingkungan"</strong> yang menggunakan minimal <strong>4 Inna dan saudara-saudaranya</strong> (dari jenis berbeda: Inna, Lakinna, La'alla, Layta)! Sertakan terjemahan Indonesia dan analisis i'rab untuk setiap penggunaan Inna, serta jelaskan fungsi retorika masing-masing!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 9,
+    topik: 'Khabar Inna',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 9
+  An-Nahw lil Mutawassithin
+  Topik: Khabar Inna
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P9_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P9 (Khabar Inna) - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 9 (Khabar Inna) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

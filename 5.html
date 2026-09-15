@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 5: Al-Khabar — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 5: Variasi pola Khabar (Mufrad, Jumlah, Syibh Jumlah), kaidah taqdim & ta'khir, kesesuaian dengan Mubtada', analisis jurnal berbahasa Arab, dan konstruksi kalimat nominal bertema lingkungan." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--ink);color:var(--cream);
+  line-height:1.7;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201,169,97,.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(201,169,97,.06) 0%, transparent 40%);
+}
+.bg-ornament{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(201,169,97,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,97,.03) 1px, transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{
+  min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1;
+}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{
+  display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;
+  border:1px solid var(--gold);border-radius:2px;
+}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{
+  background:linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;
+  font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none;
+}
+.btn-primary{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;
+  color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line);
+}
+h2.section-title em{
+  font-style:italic;
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+h3.sub-title{
+  font-family:var(--serif);font-size:1.5rem;color:var(--gold);
+  margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem;
+}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{
+  font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);
+  font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem;
+}
+.arabic-display{
+  background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;
+  padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);
+  font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2;
+}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{
+  background:rgba(201,169,97,.04);border-left:3px solid var(--gold);
+  padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;
+}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center;
+}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg, transparent, var(--gold), transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;
+}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box, .warning-box, .insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4, .warning-box h4, .insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul, .warning-box ul, .insight-box ul{list-style:none;padding:0}
+.tips-box li, .warning-box li, .insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative;
+}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{
+  display:inline-block;padding:1rem 2rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3);
+}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center;
+}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  flex-wrap:wrap;gap:1rem;
+}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{
+  background:linear-gradient(135deg, rgba(100,180,220,.08) 0%, rgba(100,180,220,.02) 100%);
+  border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0;
+}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{
+  display:inline-block;margin-top:1rem;padding:.4rem 1rem;
+  background:rgba(100,180,220,.15);border-radius:4px;
+  font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase;
+}
+.env-text{
+  background:linear-gradient(135deg, rgba(80,200,120,.06) 0%, rgba(80,200,120,.02) 100%);
+  border:1px solid rgba(80,200,120,.3);border-radius:8px;
+  padding:2rem;margin:2rem 0;
+}
+.env-text h5{
+  font-family:var(--serif);color:#50c878;font-size:1.15rem;
+  margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.env-text .arabic-paragraph{
+  font-family:var(--arab);font-size:1.5rem;color:var(--gold);
+  direction:rtl;line-height:2.4;text-align:right;
+  padding:1.5rem;background:rgba(0,0,0,.25);
+  border-radius:6px;margin-bottom:1rem;
+}
+.env-text .translation{
+  font-family:var(--serif-2);font-style:italic;
+  color:var(--muted);font-size:.95rem;
+  padding:1rem;border-left:2px solid #50c878;
+}
+.journal-text{
+  background:linear-gradient(135deg, rgba(201,169,97,.06) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:8px;
+  padding:2rem;margin:2rem 0;
+}
+.journal-text h5{
+  font-family:var(--serif);color:var(--gold);font-size:1.15rem;
+  margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.journal-text .arabic-paragraph{
+  font-family:var(--arab);font-size:1.4rem;color:var(--gold);
+  direction:rtl;line-height:2.4;text-align:right;
+  padding:1.5rem;background:rgba(0,0,0,.25);
+  border-radius:6px;margin-bottom:1rem;
+}
+.journal-text .source-info{
+  font-size:.85rem;color:var(--muted);
+  font-style:italic;border-top:1px solid var(--line);
+  padding-top:.8rem;
+}
+.quiz-section{
+  background:linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+  padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1;
+}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{
+  display:inline-block;padding:.5rem 1.5rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-size:.75rem;letter-spacing:3px;
+  text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem;
+}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input, .form-group select{
+  padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);
+  border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s;
+}
+.form-group input:focus, .form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{
+  width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);
+  border:1px solid var(--line);border-radius:4px;color:var(--cream);
+  font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s;
+}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{
+  padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+  font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.btn-submit{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf, .btn-score, .btn-email, .btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover, .btn-score:hover, .btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{
+  display:none;
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center;
+}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .env-text .arabic-paragraph, .journal-text .arabic-paragraph{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 5
+  </div>
+  <span class="chapter-label">Pertemuan 5 · 2 SKS</span>
+  <h1>Al-Khabar: <span class="accent">Pelengkap Makna Kalimat Nominal</span></h1>
+  <div class="hero-arabic">الْخَبَرُ: مُتَمِّمُ مَعْنَى الْجُمْلَةِ الِاسْمِيَّةِ</div>
+  <p class="subtitle">Variasi pola Khabar (Mufrad, Jumlah, Syibh Jumlah), kaidah taqdim & ta'khir, kesesuaian dengan Mubtada', analisis jurnal berbahasa Arab, dan konstruksi kalimat nominal bertema lingkungan.</p>
+  <div class="hero-actions">
+    <a href="4.html" class="btn btn-outline">← Pertemuan Sebelumnya</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 5</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s5-1">5.1 Konsep dan Definisi Al-Khabar</a>
+        <ol>
+          <li><a href="#s5-1-1">Pengertian Khabar secara Bahasa dan Istilah</a></li>
+          <li><a href="#s5-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s5-1-3">Kedudukan Khabar dalam Jumlah Ismiyyah</a></li>
+        </ol>
+      </li>
+      <li><a href="#s5-2">5.2 Hukum dan Syarat Al-Khabar</a>
+        <ol>
+          <li><a href="#s5-2-1">Hukum Dasar: Al-Khabar Marfu'</a></li>
+          <li><a href="#s5-2-2">Syarat-syarat Khabar</a></li>
+        </ol>
+      </li>
+      <li><a href="#s5-3">5.3 Klasifikasi Al-Khabar</a>
+        <ol>
+          <li><a href="#s5-3-1">Khabar Mufrad</a></li>
+          <li><a href="#s5-3-2">Khabar Jumlah (Fi'liyyah & Ismiyyah)</a></li>
+          <li><a href="#s5-3-3">Khabar Syibh Jumlah (Jar-Majrur & Zharf)</a></li>
+        </ol>
+      </li>
+      <li><a href="#s5-4">5.4 Kaidah Taqdim dan Ta'khir Khabar</a>
+        <ol>
+          <li><a href="#s5-4-1">Kaidah Asal: Taqdim Mubtada'</a></li>
+          <li><a href="#s5-4-2">Kondisi yang Membolehkan Taqdim Khabar</a></li>
+          <li><a href="#s5-4-3">Kondisi yang Mewajibkan Taqdim Khabar</a></li>
+        </ol>
+      </li>
+      <li><a href="#s5-5">5.5 Kesesuaian Mubtada' dan Khabar</a></li>
+      <li><a href="#s5-6">5.6 Analisis Jurnal Berbahasa Arab</a></li>
+      <li><a href="#s5-7">5.7 Aplikasi: Kalimat Nominal Bertema Lingkungan</a></li>
+      <li><a href="#s5-8">5.8 Tugas Pertemuan 5</a></li>
+      <li><a href="#s5-9">5.9 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>Mubtada'</em> adalah "topik" yang menjadi sandaran pembicaraan, maka <em>Khabar</em> adalah "komentar" yang menyempurnakan makna — tanpa Khabar, kalimat nominal ibarat pertanyaan yang tak terjawab, topik yang tak terungkap rahasianya.
+  </p>
+
+  <p>
+    Setelah pada pertemuan keempat kita menyelami fondasi kalimat nominal melalui <strong>Al-Mubtada'</strong>, pada pertemuan kelima ini kita melengkapi pemahaman dengan unsur pasangannya: <strong>Al-Khabar</strong> (الْخَبَرُ). Sebagai mahasiswa Pendidikan Bahasa Arab (PBA), penguasaan terhadap Khabar bukan sekadar syarat lulus mata kuliah — ia adalah kunci untuk memahami bagaimana bahasa Arab menyampaikan informasi, deskripsi, dan kebenaran secara utuh.
+  </p>
+
+  <p>
+    Khabar memiliki variasi pola yang kaya: dari yang sederhana (mufrad) hingga yang kompleks (jumlah dan syibh jumlah). Setiap jenis memiliki karakteristik, fungsi, dan konteks penggunaan yang berbeda. Dalam Al-Qur'an, variasi Khabar ini digunakan secara strategis untuk memberikan penekanan, deskripsi, atau pembatasan makna. Dalam jurnal ilmiah berbahasa Arab, Khabar menjadi alat utama untuk menyampaikan temuan penelitian secara objektif dan sistematis.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Khabar secara komprehensif: mulai dari konsep dan definisi, hukum dan syarat, klasifikasi jenis-jenisnya (Mufrad, Jumlah, Syibh Jumlah), kaidah taqdim dan ta'khir, kesesuaian dengan Mubtada', analisis jurnal berbahasa Arab, hingga aplikasi praktis dalam konstruksi kalimat nominal bertema lingkungan. Sebagai puncak pembelajaran, mahasiswa akan mengklasifikasikan jenis Khabar dalam jurnal berbahasa Arab — sebuah latihan yang memadukan kompetensi nahwu dengan literasi akademik.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">الْخَبَرُ هُوَ مَا يُتَمِّمُ مَعْنَى الْمُبْتَدَأِ</div>
+    <div class="translation">"Khabar adalah sesuatu yang menyempurnakan makna Mubtada'."</div>
+    <div class="source">— Definisi dalam An-Nahw al-Wadhih (Al-Jarim & Amin)</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal Al-Khabar dalam Kalimat Arab</h4>
+    <p>Simak penjelasan visual tentang bagaimana Khabar bekerja dalam struktur jumlah ismiyyah — dari definisi dasar hingga analisis teks otentik.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 5</h4>
+    <ul>
+      <li><strong>Al-Khabar (الْخَبَرُ):</strong> Isim marfu' yang menyempurnakan makna Mubtada', sehingga kalimat menjadi sempurna secara makna.</li>
+      <li><strong>Khabar Mufrad (مُفْرَد):</strong> Khabar yang berupa isim mufrad (kata tunggal), bukan jumlah atau syibh jumlah.</li>
+      <li><strong>Khabar Jumlah (جُمْلَة):</strong> Khabar yang berupa jumlah fi'liyyah atau ismiyyah.</li>
+      <li><strong>Khabar Syibh Jumlah (شِبْه جُمْلَة):</strong> Khabar yang berupa jar-majrur atau zharf (keterangan tempat/waktu).</li>
+      <li><strong>Taqdim & Ta'khir:</strong> Kaidah pengdahuluhan dan pengakhirkan Khabar berdasarkan kondisi tertentu.</li>
+      <li><strong>Ta'lil Nahwi:</strong> Argumentasi logis yang digunakan untuk memvalidasi kedudukan Khabar dalam kalimat.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Salah Identifikasi Khabar, Salah Pemahaman</h4>
+    <div class="case-content">
+      Seorang siswa membaca kalimat <span class="arab" style="font-size:1.3rem">الْعِلْمُ فِي الصَّدْرِ كَالنُّورِ فِي الْعَيْنِ</span> dan mengira bahwa <span class="arab" style="font-size:1.2rem">الْعِلْمُ</span> adalah Khabar. Padahal, <span class="arab" style="font-size:1.2rem">الْعِلْمُ</span> adalah Mubtada' (topik), dan Khabar-nya adalah <span class="arab" style="font-size:1.2rem">فِي الصَّدْرِ</span> (jar-majrur yang berkedudukan Khabar). Akibatnya, terjemahannya menjadi keliru. Terjemahan yang benar: "Ilmu yang ada di dada itu bagaikan cahaya di mata."
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Kesalahan identifikasi Khabar berakibat pada kesalahan pemahaman makna kalimat secara fundamental. Mahasiswa perlu memahami bahwa Khabar bisa berupa isim mufrad, jumlah, maupun syibh jumlah (jar-majrur atau zharf).
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan konsep Khabar kepada siswa — mulai dari kalimat sederhana seperti <span class="arab" style="font-size:1.1rem">الْبَيْتُ كَبِيرٌ</span> hingga kalimat kompleks dalam jurnal ilmiah. Pemahaman yang kokoh tentang variasi Khabar akan menjadi fondasi bagi siswa untuk memahami struktur bahasa Arab secara utuh. Bayangkan bagaimana Anda akan menjelaskan konsep ini dengan cara yang menarik — mungkin dengan contoh dari jurnal berbahasa Arab, dari pepatah Minangkabau, atau dari ayat-ayat Al-Qur'an.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       5.1 KONSEP DAN DEFINISI
+       ========================================================= -->
+  <h2 class="section-title" id="s5-1">5.1 Konsep dan Definisi <em>Al-Khabar</em></h2>
+
+  <p>
+    Memahami konsep dan definisi Khabar adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat Khabar, mahasiswa akan kesulitan dalam menganalisis struktur jumlah ismiyyah secara utuh.
+  </p>
+
+  <h3 class="sub-title" id="s5-1-1">5.1.1 Pengertian Khabar secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, kata <em>khabar</em> (خَبَرٌ) berasal dari akar kata <em>khabara</em> (خَبَرَ) yang bermakna "memberitahukan", "menginformasikan", atau "menyampaikan berita". Dalam penggunaan bahasa Arab sehari-hari, kata khabar merujuk pada "berita", "informasi", atau "keterangan".
+  </p>
+
+  <p>
+    Secara <strong>terminologis (istilah nahwu)</strong>, para ulama mendefinisikan Khabar dengan berbagai rumusan yang saling melengkapi:
+  </p>
+
+  <h3 class="sub-title" id="s5-1-2">5.1.2 Definisi Khabar Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وَالْخَبَرُ مَا يَتِمُّ بِهِ الْكَلَامُ</span></td>
+        <td>"Khabar adalah sesuatu yang menyempurnakan pembicaraan."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْخَبَرُ: اسْمٌ مَرْفُوعٌ يُتِمُّ مَعْنَى الْمُبْتَدَأِ</span></td>
+        <td>"Khabar adalah isim marfu' yang menyempurnakan makna Mubtada'."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْخَبَرُ: هُوَ مَا يُتَمِّمُ مَعْنَى الْمُبْتَدَأِ</span></td>
+        <td>"Khabar adalah sesuatu yang menyempurnakan makna Mubtada'."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْخَبَرُ: مَا يُخْبِرُ بِهِ عَنْ الْمُبْتَدَأِ</span></td>
+        <td>"Khabar adalah sesuatu yang diberitakan tentang Mubtada'."</td>
+      </tr>
+      <tr>
+        <td><strong>Integrasi Modern</strong></td>
+        <td><span class="arab" style="font-size:1.1rem">الْخَبَرُ: هُوَ الْقِسْمُ الثَّانِي مِنَ التَّرْكِيبِ الْمَوْضُوعِيّ</span></td>
+        <td>"Khabar adalah bagian kedua dari struktur topic-comment." (Padanan dengan linguistik modern)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Perhatikan bahwa definisi-definisi di atas saling melengkapi — ada yang menekankan aspek <strong>status i'rab</strong> (marfu'), ada yang menekankan aspek <strong>fungsional</strong> (menyempurnakan makna), dan ada yang menekankan aspek <strong>struktural</strong> (bagian kedua dari topic-comment).</li>
+      <li>Sebagai calon guru, Anda perlu memahami semua definisi ini agar dapat menjelaskan konsep Khabar dari berbagai sudut pandang kepada siswa.</li>
+      <li>Integrasi dengan teori linguistik modern (Topic-Comment Structure) membuka peluang untuk penelitian skripsi yang inovatif.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s5-1-3">5.1.3 Kedudukan Khabar dalam Jumlah Ismiyyah</h3>
+
+  <p>
+    Khabar merupakan salah satu <strong>unsur inti (rukn)</strong> dalam jumlah ismiyyah (kalimat nominal). Tanpa Khabar, kalimat ismiyyah tidak akan sempurna secara makna.
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Struktur Dasar Jumlah Ismiyyah</h4>
+    <ul>
+      <li><strong>Mubtada' (مُبْتَدَأ):</strong> Isim marfu' yang menjadi topik awal kalimat.</li>
+      <li><strong>Khabar (خَبَر):</strong> Isim marfu' yang melengkapi makna Mubtada'.</li>
+      <li><strong>Keduanya wajib ada:</strong> Jumlah ismiyyah tidak sempurna tanpa salah satunya.</li>
+    </ul>
+  </div>
+
+  <p>Contoh struktur dasar:</p>
+
+  <div class="arabic-display">
+    الْعِلْمُ نُورٌ
+    <small>Mubtada' + Khabar<br>"Ilmu adalah cahaya."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Struktur</h5>
+    <div class="word-analysis">
+      <span class="word">الْعِلْمُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>Topik awal kalimat yang menjadi sandaran pembicaraan.</small></span>
+
+      <span class="word">نُورٌ</span>
+      <span class="detail"><strong>Khabar mufrad</strong> — marfu' dengan tanwin dhommah. <small>Isim marfu' yang melengkapi makna Mubtada', sehingga kalimat menjadi sempurna.</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Hubungan Timbal Balik Mubtada' dan Khabar</h4>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Mubtada'</th><th>Khabar</th><th>Hubungan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fungsi</strong></td>
+        <td>Menyatakan topik (apa yang dibicarakan)</td>
+        <td>Menyatakan informasi (apa yang diberitakan)</td>
+        <td>Topik tidak bermakna utuh tanpa informasi; informasi tidak relevan tanpa topik</td>
+      </tr>
+      <tr>
+        <td><strong>Status I'rab</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td>Keduanya selalu marfu' — tidak pernah nashab atau khafadh</td>
+      </tr>
+      <tr>
+        <td><strong>Kesesuaian</strong></td>
+        <td>Harus sesuai dengan Khabar dalam jenis dan jumlah</td>
+        <td>Harus sesuai dengan Mubtada' dalam jenis dan jumlah</td>
+        <td>Al-Muthabaqah (kesesuaian) antara keduanya</td>
+      </tr>
+      <tr>
+        <td><strong>Posisi</strong></td>
+        <td>Pada asalnya mendahului Khabar</td>
+        <td>Pada asalnya mengiringi Mubtada'</td>
+        <td>Urutan standar: Mubtada' → Khabar</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- =========================================================
+       5.2 HUKUM DAN SYARAT
+       ========================================================= -->
+  <h2 class="section-title" id="s5-2">5.2 Hukum dan Syarat <em>Al-Khabar</em></h2>
+
+  <p>
+    Setelah memahami konsep dan definisi, kita masuk ke aspek hukum dan syarat Khabar. Pemahaman ini penting untuk analisis yang presisi.
+  </p>
+
+  <h3 class="sub-title" id="s5-2-1">5.2.1 Hukum Dasar: Al-Khabar Marfu'</h3>
+
+  <div class="key-concept">
+    <h4>✦ Hukum Dasar Khabar</h4>
+    <ul>
+      <li><strong>الْخَبَرُ مَرْفُوعٌ:</strong> "Khabar itu marfu' (rafa')." — ini adalah hukum dasar yang disepakati seluruh ulama nahwu.</li>
+      <li>Khabar <strong>tidak pernah</strong> berkedudukan nashab, khafadh, atau jazm — selalu marfu'.</li>
+      <li>Tanda rafa'-nya bisa berupa dhommah (tanda asli) atau wawu, alif, dhommah muqaddarah (tanda cabang).</li>
+      <li>Khabar syibh jumlah (jar-majrur atau zharf) berkedudukan marfu' <strong>secara taqdir (mahallan)</strong>, bukan secara lafaz.</li>
+    </ul>
+  </div>
+
+  <div class="quote-box">
+    <div class="arabic">وَالْخَبَرُ مَرْفُوعٌ أَبَدًا</div>
+    <div class="translation">"Khabar itu selalu marfu' (rafa')."</div>
+    <div class="source">— Kaidah Dasar dalam Ilmu Nahwu</div>
+  </div>
+
+  <h3 class="sub-title" id="s5-2-2">5.2.2 Syarat-syarat Khabar</h3>
+
+  <p>
+    Para ulama nahwu sepakat bahwa Khabar harus memenuhi beberapa syarat:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Syarat</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Berupa Isim</strong></td>
+        <td>Khabar harus berupa isim (kata benda), bukan fi'il atau huruf.</td>
+        <td><span class="arab">الْعِلْمُ نُورٌ</span> — <span class="arab">نُورٌ</span> adalah isim</td>
+      </tr>
+      <tr>
+        <td><strong>Marfu'</strong></td>
+        <td>Khabar selalu berkedudukan marfu' (rafa'), baik secara lafaz maupun mahallan.</td>
+        <td><span class="arab">الطَّالِبُ مُجْتَهِدٌ</span> — <span class="arab">مُجْتَهِدٌ</span> marfu' dengan tanwin dhommah</td>
+      </tr>
+      <tr>
+        <td><strong>Tidak Dimasuki 'Awamil Lafdziyyah</strong></td>
+        <td>Khabar tidak boleh dimasuki oleh 'awamil lafdziyyah (faktor-faktor lahir seperti fi'il, huruf jar, dll) — kecuali dalam bentuk syibh jumlah.</td>
+        <td><span class="arab">مُجْتَهِدٌ</span> ✓ — tidak ada 'awamil<br><span class="arab">فِي الْفَصْلِ</span> ✓ — ini syibh jumlah (jar-majrur)</td>
+      </tr>
+      <tr>
+        <td><strong>Menyempurnakan Makna Mubtada'</strong></td>
+        <td>Khabar harus dapat memberikan informasi yang relevan tentang Mubtada'.</td>
+        <td><span class="arab">اللهُ</span> (Mubtada') + <span class="arab">أَكْبَرُ</span> (Khabar) = makna lengkap</td>
+      </tr>
+      <tr>
+        <td><strong>Sesuai dengan Mubtada' dalam Jenis dan Jumlah</strong></td>
+        <td>Khabar harus sesuai dengan Mubtada' dalam hal jenis (mudzakkar/muannats) dan jumlah (mufrad/mutsanna/jamak).</td>
+        <td><span class="arab">الطَّالِبُ مُجْتَهِدٌ</span> (mudzakkar)<br><span class="arab">الطَّالِبَةُ مُجْتَهِدَةٌ</span> (muannats)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- =========================================================
+       5.3 KLASIFIKASI AL-KHABAR
+       ========================================================= -->
+  <h2 class="section-title" id="s5-3">5.3 Klasifikasi <em>Al-Khabar</em></h2>
+
+  <p>
+    Khabar dapat diklasifikasikan menjadi tiga jenis utama berdasarkan bentuknya. Pemahaman klasifikasi ini penting untuk analisis yang komprehensif, terutama dalam konteks jurnal berbahasa Arab yang menjadi fokus tugas pertemuan ini.
+  </p>
+
+  <h3 class="sub-title" id="s5-3-1">5.3.1 Khabar Mufrad</h3>
+
+  <p>
+    Khabar mufrad adalah Khabar yang berupa <strong>isim mufrad</strong> (kata tunggal) — bukan jumlah (kalimat) dan bukan syibh jumlah (semi-kalimat). Ini adalah bentuk Khabar yang paling sederhana dan paling sering muncul dalam kalimat dasar.
+  </p>
+
+  <div class="arabic-display">
+    اللهُ أَكْبَرُ
+    <small>"Allah Maha Besar."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">اللهُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>Topik awal kalimat.</small></span>
+
+      <span class="word">أَكْبَرُ</span>
+      <span class="detail"><strong>Khabar mufrad</strong> — marfu' dengan dhommah zhahirah. <small>Isim mufrad yang melengkapi makna Mubtada'.</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Ciri-ciri Khabar Mufrad</h4>
+
+  <table>
+    <thead>
+      <tr><th>Ciri</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Berupa Isim Mufrad</strong></td>
+        <td>Kata tunggal, bukan jumlah (kalimat) dan bukan syibh jumlah (jar-majrur/zharf).</td>
+        <td><span class="arab">الْعِلْمُ نُورٌ</span> — <span class="arab">نُورٌ</span> adalah isim mufrad</td>
+      </tr>
+      <tr>
+        <td><strong>Selalu Marfu'</strong></td>
+        <td>Khabar mufrad selalu berkedudukan marfu' dengan tanda rafa' yang sesuai.</td>
+        <td><span class="arab">الطَّالِبَانِ مُجْتَهِدَانِ</span> — <span class="arab">مُجْتَهِدَانِ</span> marfu' dengan alif</td>
+      </tr>
+      <tr>
+        <td><strong>Sesuai dengan Mubtada'</strong></td>
+        <td>Khabar mufrad harus sesuai dengan Mubtada' dalam jenis dan jumlah.</td>
+        <td><span class="arab">الْمُسْلِمَاتُ مُؤْمِنَاتٌ</span> (muannats jamak)</td>
+      </tr>
+      <tr>
+        <td><strong>Bisa Berupa Sifat, Isim Fa'il, atau Isim Maf'ul</strong></td>
+        <td>Khabar mufrad bisa berupa berbagai jenis isim.</td>
+        <td><span class="arab">الْمَدِينَةُ جَمِيلَةٌ</span> (sifat)<br><span class="arab">الطَّالِبُ ذَاهِبٌ</span> (isim fa'il)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s5-3-2">5.3.2 Khabar Jumlah (Fi'liyyah & Ismiyyah)</h3>
+
+  <p>
+    Khabar jumlah adalah Khabar yang berupa <strong>jumlah (kalimat)</strong> — baik jumlah fi'liyyah (kalimat verbal) maupun jumlah ismiyyah (kalimat nominal). Jenis Khabar ini lebih kompleks dan sering muncul dalam teks-teks akademik.
+  </p>
+
+  <h4 class="sub-sub-title">A. Khabar Jumlah Fi'liyyah</h4>
+
+  <div class="arabic-display">
+    الطَّالِبُ يَدْرُسُ فِي الْمَكْتَبَةِ
+    <small>"Sang pelajar belajar di perpustakaan."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">الطَّالِبُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah.</span>
+
+      <span class="word">يَدْرُسُ</span>
+      <span class="detail"><strong>Fi'il mudhari'</strong> — marfu' dengan dhommah. <small>Bersama fa'il-nya (<span class="arab" style="font-size:1.1rem">dhamir mustatir taqdiruhu huwa</span>) dan objeknya, membentuk <strong>jumla fi'liyyah</strong> yang berkedudukan sebagai Khabar.</small></span>
+
+      <span class="word">فِي الْمَكْتَبَةِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan zharf makan (keterangan tempat) dalam jumla fi'liyyah.</span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">B. Khabar Jumlah Ismiyyah</h4>
+
+  <div class="arabic-display">
+    الْعِلْمُ نَفْعُهُ عَظِيمٌ
+    <small>"Ilmu, manfaatnya sangat besar."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">الْعِلْمُ</span>
+      <span class="detail"><strong>Mubtada' 1</strong> — marfu' dengan dhommah zhahirah.</span>
+
+      <span class="word">نَفْعُهُ</span>
+      <span class="detail"><strong>Mubtada' 2</strong> — marfu' dengan dhommah. <span class="arab" style="font-size:1.1rem">هُ</span> = dhamir muttashil marfu' fa'il dari isim mashdar <span class="arab" style="font-size:1.1rem">نَفْعٌ</span>.</span>
+
+      <span class="word">عَظِيمٌ</span>
+      <span class="detail"><strong>Khabar 2</strong> — marfu' dengan tanwin dhommah. <small>Seluruh jumla ismiyyah <span class="arab" style="font-size:1.1rem">نَفْعُهُ عَظِيمٌ</span> berkedudukan sebagai Khabar 1 dari Mubtada' <span class="arab" style="font-size:1.1rem">الْعِلْمُ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Catatan Penting tentang Khabar Jumlah</h4>
+    <ul>
+      <li>Khabar jumlah <strong>tidak boleh langsung</strong> menjadi Khabar bagi Mubtada' nakirah (kata tak tentu) — harus ada dhamir (kata ganti) yang kembali ke Mubtada'.</li>
+      <li>Contoh: <span class="arab" style="font-size:1.1rem">رَجُلٌ قَائِمٌ</span> ✗ (salah) — seharusnya <span class="arab" style="font-size:1.1rem">رَجُلٌ يَقُومُ</span> ✓ atau <span class="arab" style="font-size:1.1rem">رَجُلٌ هُوَ قَائِمٌ</span> ✓</li>
+      <li>Dhamir yang kembali ke Mubtada' disebut <strong>dhamir sya'n</strong> atau <strong>dhamir qishshah</strong>.</li>
+      <li>Khabar jumlah sering muncul dalam jurnal ilmiah untuk menyampaikan temuan penelitian.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s5-3-3">5.3.3 Khabar Syibh Jumlah (Jar-Majrur & Zharf)</h3>
+
+  <p>
+    Khabar syibh jumlah adalah Khabar yang berupa <strong>semi-kalimat</strong> — yaitu jar-majrur (preposisi + kata benda) atau zharf (keterangan tempat/waktu). Jenis Khabar ini sangat umum dalam bahasa Arab dan sering digunakan untuk menyatakan posisi atau keadaan.
+  </p>
+
+  <h4 class="sub-sub-title">A. Khabar Jar-Majrur</h4>
+
+  <div class="arabic-display">
+    الطَّالِبُ فِي الْفَصْلِ
+    <small>"Sang pelajar ada di kelas."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">الطَّالِبُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah.</span>
+
+      <span class="word">فِي</span>
+      <span class="detail"><strong>Huruf jar</strong> — mabni la mahalla lahu.</span>
+
+      <span class="word">الْفَصْلِ</span>
+      <span class="detail"><strong>Majrur</strong> — majrur dengan kasrah karena didahului huruf jar <span class="arab" style="font-size:1.1rem">فِي</span>. <small>Seluruh konstruk <span class="arab" style="font-size:1.1rem">فِي الْفَصْلِ</span> (jar-majrur) berkedudukan <strong>Khabar syibh jumlah</strong> — marfu' secara mahallan (kedudukan).</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">B. Khabar Zharf (Keterangan Tempat/Waktu)</h4>
+
+  <div class="arabic-display">
+    الْقِطَّةُ أَمَامَ الْبَيْتِ
+    <small>"Kucing itu ada di depan rumah."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">الْقِطَّةُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah.</span>
+
+      <span class="word">أَمَامَ</span>
+      <span class="detail"><strong>Zharf makan</strong> — manshub dengan fathah. <small>Berfungsi sebagai <strong>Khabar syibh jumlah</strong>.</small></span>
+
+      <span class="word">الْبَيْتِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah.</span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Ringkasan Klasifikasi Khabar</h4>
+
+  <table>
+    <thead>
+      <tr><th>Jenis Khabar</th><th>Bentuk</th><th>Contoh</th><th>Ciri Khas</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mufrad</strong></td>
+        <td>Isim mufrad (kata tunggal)</td>
+        <td><span class="arab">الْعِلْمُ نُورٌ</span></td>
+        <td>Paling sederhana; langsung melengkapi Mubtada'</td>
+      </tr>
+      <tr>
+        <td><strong>Jumlah Fi'liyyah</strong></td>
+        <td>Kalimat verbal (fi'il + fa'il)</td>
+        <td><span class="arab">الطَّالِبُ يَدْرُسُ</span></td>
+        <td>Memerlukan dhamir yang kembali ke Mubtada'</td>
+      </tr>
+      <tr>
+        <td><strong>Jumlah Ismiyyah</strong></td>
+        <td>Kalimat nominal (mubtada' + khabar)</td>
+        <td><span class="arab">الْعِلْمُ نَفْعُهُ عَظِيمٌ</span></td>
+        <td>Memerlukan dhamir yang kembali ke Mubtada'</td>
+      </tr>
+      <tr>
+        <td><strong>Syibh Jumlah (Jar-Majrur)</strong></td>
+        <td>Huruf jar + isim majrur</td>
+        <td><span class="arab">الطَّالِبُ فِي الْفَصْلِ</span></td>
+        <td>Menyatakan posisi/keadaan; marfu' secara mahallan</td>
+      </tr>
+      <tr>
+        <td><strong>Syibh Jumlah (Zharf)</strong></td>
+        <td>Keterangan tempat/waktu</td>
+        <td><span class="arab">الْقِطَّةُ أَمَامَ الْبَيْتِ</span></td>
+        <td>Menyatakan posisi/keadaan; manshub lafzhan, marfu' mahallan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- =========================================================
+       5.4 TAQDIM DAN TA'KHIR
+       ========================================================= -->
+  <h2 class="section-title" id="s5-4">5.4 Kaidah Taqdim dan Ta'khir <em>Khabar</em></h2>
+
+  <p>
+    Kaidah taqdim (pengdahuluhan) dan ta'khir (pengakhirkan) Khabar merupakan aspek penting dalam nahwu. Secara asalnya, Mubtada' mendahului Khabar, tetapi ada kondisi-kondisi tertentu yang membolehkan atau mewajibkan perubahan urutan.
+  </p>
+
+  <h3 class="sub-title" id="s5-4-1">5.4.1 Kaidah Asal: Taqdim Mubtada'</h3>
+
+  <div class="key-concept">
+    <h4>✦ Kaidah Asal</h4>
+    <ul>
+      <li><strong>Secara asal, Mubtada' mendahului Khabar:</strong> <span class="arab" style="font-size:1.1rem">الطَّالِبُ مُجْتَهِدٌ</span> ✓</li>
+      <li><strong>Taqdim Khabar boleh</strong> dalam kondisi tertentu, dengan syarat Mubtada' tetap dikenali.</li>
+      <li><strong>Taqdim Khabar wajib</strong> dalam beberapa kondisi khusus.</li>
+      <li><strong>Taqdim Khabar haram</strong> dalam beberapa kondisi yang merusak makna.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s5-4-2">5.4.2 Kondisi yang Membolehkan Taqdim Khabar</h3>
+
+  <table>
+    <thead>
+      <tr><th>Kondisi</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mubtada' berupa nakirah</strong> dan Khabar berupa ma'rifah</td>
+        <td><span class="arab">فِي الْبَيْتِ رَجُلٌ</span></td>
+        <td>Khabar (<span class="arab">فِي الْبَيْتِ</span>) didahulukan karena Mubtada'-nya nakirah.</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar berupa pertanyaan</strong></td>
+        <td><span class="arab">أَفِي قُلُوبِهِمْ مَرَضٌ؟</span></td>
+        <td>Khabar pertanyaan didahulukan.</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar berupa istifham</strong></td>
+        <td><span class="arab">أَمْتَعَةٌ هَذِهِ؟</span></td>
+        <td>Khabar istifham didahulukan untuk penekanan.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s5-4-3">5.4.3 Kondisi yang Mewajibkan Taqdim Khabar</h3>
+
+  <p>
+    Ada beberapa kondisi di mana Khabar <strong>wajib</strong> didahulukan dari Mubtada':
+  </p>
+
+  <div class="tips-box">
+    <h4>✦ Kondisi yang Mewajibkan Taqdim Khabar</h4>
+    <ul>
+      <li><strong>Mubtada' berupa nakirah</strong> dan Khabar berupa ma'rifah: <span class="arab" style="font-size:1.1rem">فِي الْفَصْلِ الطَّالِبُ</span> ✓ (bukan <span class="arab" style="font-size:1.1rem">الطَّالِبُ فِي الْفَصْلِ</span> yang bermakna berbeda)</li>
+      <li><strong>Khabar berupa dhamir yang kembali ke Mubtada'</strong>: <span class="arab" style="font-size:1.1rem">مَنْ يَقُمْ أُكْرِمْهُ</span> — <span class="arab" style="font-size:1.1rem">أُكْرِمْهُ</span> adalah Khabar yang didahulukan</li>
+      <li><strong>Khabar berupa syarat dan jawabnya</strong>: <span class="arab" style="font-size:1.1rem">مَنْ يَجْتَهِدْ يَنْجَحْ</span> — <span class="arab" style="font-size:1.1rem">يَنْجَحْ</span> adalah Khabar dari Mubtada' <span class="arab" style="font-size:1.1rem">مَنْ</span></li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Taqdim dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Firman Allah: <span class="arab" style="font-size:1.5rem">فِي الْأَرْضِ آيَاتٌ لِلْمُوقِنِينَ</span> (QS. Adz-Dzariyat: 20)<br>
+      Perhatikan bahwa <span class="arab" style="font-size:1.2rem">فِي الْأَرْضِ</span> (Khabar syibh jumlah) didahulukan dari <span class="arab" style="font-size:1.2rem">آيَاتٌ</span> (Mubtada' nakirah). Ini adalah contoh taqdim Khabar yang wajib karena Mubtada'-nya nakirah.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Taqdim Khabar dalam Al-Qur'an sering kali memiliki fungsi retorika — untuk memberikan penekanan (taukid) atau menunjukkan hasr (pembatasan). Mahasiswa perlu memahami fungsi ini agar mampu menganalisis teks keislaman secara mendalam.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       5.5 KESESUAIAN MUBTADA' DAN KHABAR
+       ========================================================= -->
+  <h2 class="section-title" id="s5-5">5.5 Kesesuaian <em>Mubtada' dan Khabar</em></h2>
+
+  <p>
+    Salah satu kaidah fundamental dalam nahwu adalah <strong>al-muthabaqah</strong> — kesesuaian antara Mubtada' dan Khabar dalam hal jenis (tadzkiir/ta'nits) dan jumlah (mufrad/mutsanna/jamak).
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Kaidah</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Jenis (Mudzakkar/Muannats)</strong></td>
+        <td>Mubtada' mudzakkar → Khabar mudzakkar<br>Mubtada' muannats → Khabar muannats</td>
+        <td><span class="arab">الطَّالِبُ مُجْتَهِدٌ</span> (mudzakkar)<br><span class="arab">الطَّالِبَةُ مُجْتَهِدَةٌ</span> (muannats)</td>
+      </tr>
+      <tr>
+        <td><strong>Jumlah (Mufrad/Mutsanna/Jamak)</strong></td>
+        <td>Mubtada' mufrad → Khabar mufrad<br>Mubtada' mutsanna → Khabar mutsanna<br>Mubtada' jamak → Khabar jamak</td>
+        <td><span class="arab">الطَّالِبَانِ مُجْتَهِدَانِ</span> (mutsanna)<br><span class="arab">الطُّلَّابُ مُجْتَهِدُونَ</span> (jamak)</td>
+      </tr>
+      <tr>
+        <td><strong>Pengecualian</strong></td>
+        <td>Jamak taksir muannats boleh diikuti Khabar mufrad muannats</td>
+        <td><span class="arab">النِّسَاءُ حَامِلَةٌ الْأَمَانَةَ</span><br>(Para perempuan adalah pembawa amanat)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kesalahan Umum Mahasiswa</h4>
+    <ul>
+      <li>Tidak memperhatikan kesesuaian jenis: <span class="arab" style="font-size:1.1rem">الطَّالِبَةُ مُجْتَهِدٌ</span> ✗ (seharusnya <span class="arab" style="font-size:1.1rem">مُجْتَهِدَةٌ</span>)</li>
+      <li>Tidak memperhatikan kesesuaian jumlah: <span class="arab" style="font-size:1.1rem">الطُّلَّابُ مُجْتَهِدٌ</span> ✗ (seharusnya <span class="arab" style="font-size:1.1rem">مُجْتَهِدُونَ</span>)</li>
+      <li>Lupa bahwa jamak taksir dianggap mufrad dalam beberapa konteks</li>
+      <li>Khabar jumlah tidak memiliki dhamir yang kembali ke Mubtada'</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       5.6 ANALISIS JURNAL
+       ========================================================= -->
+  <h2 class="section-title" id="s5-6">5.6 Analisis <em>Jurnal Berbahasa Arab</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang Khabar dalam konteks akademik, mari kita analisis beberapa contoh dari jurnal berbahasa Arab. Latihan ini akan melatih kepekaan mahasiswa dalam mengidentifikasi variasi Khabar dalam teks otentik.
+  </p>
+
+  <div class="journal-text">
+    <h5>📰 Contoh 1: Jurnal Pendidikan</h5>
+    <div class="arabic-paragraph">
+      التَّعْلِيمُ الْإِلِكْتُرُونِيُّ وَسِيلَةٌ حَدِيثَةٌ فِي التَّعْلِيمِ. الْمَدَارِسُ تُطَوِّرُ مَنَاهِجَهَا بِاسْتِمْرَارٍ. الْمُعَلِّمُونَ فِي الْفُصُولِ يُشَارِكُونَ الطُّلَّابَ فِي التَّعَلُّمِ.
+    </div>
+    <div class="source-info">
+      <strong>Sumber:</strong> Jurnal Pendidikan Bahasa Arab, Vol. 5, 2024
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Khabar</h5>
+    <div class="word-analysis">
+      <span class="word">Kalimat 1</span>
+      <span class="detail"><span class="arab" style="font-size:1.1rem">التَّعْلِيمُ</span> = Mubtada'; <span class="arab" style="font-size:1.1rem">وَسِيلَةٌ</span> = <strong>Khabar mufrad</strong>. <small>"Pembelajaran elektronik adalah sarana modern dalam pendidikan."</small></span>
+
+      <span class="word">Kalimat 2</span>
+      <span class="detail"><span class="arab" style="font-size:1.1rem">الْمَدَارِسُ</span> = Mubtada'; <span class="arab" style="font-size:1.1rem">تُطَوِّرُ مَنَاهِجَهَا</span> = <strong>Khabar jumlah fi'liyyah</strong>. <small>"Sekolah-sekolah mengembangkan kurikulum mereka secara berkelanjutan."</small></span>
+
+      <span class="word">Kalimat 3</span>
+      <span class="detail"><span class="arab" style="font-size:1.1rem">الْمُعَلِّمُونَ</span> = Mubtada'; <span class="arab" style="font-size:1.1rem">فِي الْفُصُولِ</span> = <strong>Khabar syibh jumlah (jar-majrur)</strong>. <small>"Para guru ada di kelas-kelas..."</small></span>
+    </div>
+  </div>
+
+  <div class="journal-text">
+    <h5>📰 Contoh 2: Jurnal Lingkungan</h5>
+    <div class="arabic-paragraph">
+      الْبِيئَةُ أَمَانَةٌ فِي أَعْنَاقِنَا. التَّلَوُّثُ مُشْكِلَةٌ تُؤَرِّقُ الْبَشَرِيَّةَ. الْحُلُولُ عِنْدَنَا إِنْ تَعَاوَنَّا.
+    </div>
+    <div class="source-info">
+      <strong>Sumber:</strong> Jurnal Studi Lingkungan Islam, Vol. 3, 2025
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Khabar</h5>
+    <div class="word-analysis">
+      <span class="word">Kalimat 1</span>
+      <span class="detail"><span class="arab" style="font-size:1.1rem">الْبِيئَةُ</span> = Mubtada'; <span class="arab" style="font-size:1.1rem">أَمَانَةٌ</span> = <strong>Khabar mufrad</strong>. <small>"Lingkungan adalah amanah di pundak kita."</small></span>
+
+      <span class="word">Kalimat 2</span>
+      <span class="detail"><span class="arab" style="font-size:1.1rem">التَّلَوُّثُ</span> = Mubtada'; <span class="arab" style="font-size:1.1rem">مُشْكِلَةٌ</span> = <strong>Khabar mufrad</strong> (yang diikuti jumlah fi'liyyah sebagai na'at). <small>"Polusi adalah masalah yang meresahkan umat manusia."</small></span>
+
+      <span class="word">Kalimat 3</span>
+      <span class="detail"><span class="arab" style="font-size:1.1rem">الْحُلُولُ</span> = Mubtada'; <span class="arab" style="font-size:1.1rem">عِنْدَنَا</span> = <strong>Khabar syibh jumlah (zharf)</strong>. <small>"Solusi-solusi itu ada pada kita jika kita bekerja sama."</small></span>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Pola Khabar dalam Jurnal Ilmiah</h4>
+    <ul>
+      <li><strong>Khabar mufrad</strong> sering digunakan untuk definisi dan pernyataan umum.</li>
+      <li><strong>Khabar jumlah fi'liyyah</strong> sering digunakan untuk menyampaikan temuan atau proses.</li>
+      <li><strong>Khabar syibh jumlah</strong> sering digunakan untuk menyatakan posisi, keadaan, atau konteks.</li>
+      <li>Mahasiswa PBA perlu mengenal pola-pola ini agar mampu membaca jurnal berbahasa Arab dengan lancar.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       5.7 APLIKASI: LINGKUNGAN
+       ========================================================= -->
+  <h2 class="section-title" id="s5-7">5.7 Aplikasi: <em>Kalimat Nominal Bertema Lingkungan</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang variasi Khabar, mari kita konstruksi kalimat-kalimat nominal bertema lingkungan. Tema ini dipilih karena relevan dengan isu global dan sesuai dengan nilai-nilai keislaman tentang tanggung jawab manusia sebagai khalifah di bumi.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Kalimat Nominal Bertema Lingkungan dengan Berbagai Jenis Khabar</h5>
+    <div class="arabic-paragraph">
+      ١. الْمَاءُ حَيَاةٌ (Khabar Mufrad)<br>
+      ٢. الْأَشْجَارُ تُنَقِّي الْهَوَاءَ (Khabar Jumlah Fi'liyyah)<br>
+      ٣. التَّلَوُّثُ خَطَرٌ عَلَى الصِّحَّةِ (Khabar Mufrad + Jar-Majrur)<br>
+      ٤. الْحَيَوَانَاتُ فِي الْغَابَةِ (Khabar Syibh Jumlah Jar-Majrur)<br>
+      ٥. الْبِيئَةُ نَظِيفَةٌ نِعْمَةُ اللهِ لَنَا (Khabar Mufrad + Jumlah Ismiyyah)
+    </div>
+    <div class="translation">
+      1. Air adalah kehidupan.<br>
+      2. Pepohonan membersihkan udara.<br>
+      3. Polusi adalah bahaya bagi kesehatan.<br>
+      4. Hewan-hewan ada di hutan.<br>
+      5. Lingkungan yang bersih adalah nikmat Allah bagi kita.
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 5 (Khabar Kompleks)</h5>
+    <div class="word-analysis">
+      <span class="word">الْبِيئَةُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah.</span>
+
+      <span class="word">نَظِيفَةٌ</span>
+      <span class="detail"><strong>Na'at (sifat)</strong> — marfu' dengan tanwin dhommah. <small>Menerangkan <span class="arab" style="font-size:1.1rem">الْبِيئَةُ</span>.</small></span>
+
+      <span class="word">نِعْمَةُ</span>
+      <span class="detail"><strong>Khabar mufrad</strong> — marfu' dengan dhommah. <small>Isim mufrad yang menjadi Khabar utama.</small></span>
+
+      <span class="word">اللهِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah.</span>
+
+      <span class="word">لَنَا</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar kedua atau takhshish. <small>"Bagi kita".</small></span>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Mengonstruksi Kalimat Nominal</h4>
+    <ul>
+      <li><strong>Pilih Mubtada' yang tepat:</strong> Pastikan Mubtada' berupa isim marfu' yang dapat menjadi topik pembicaraan.</li>
+      <li><strong>Pilih jenis Khabar sesuai konteks:</strong> Gunakan Khabar mufrad untuk definisi, Khabar jumlah untuk proses/temuan, Khabar syibh jumlah untuk posisi/keadaan.</li>
+      <li><strong>Perhatikan kesesuaian:</strong> Mubtada' dan Khabar harus sesuai dalam jenis (mudzakkar/muannats) dan jumlah (mufrad/mutsanna/jamak).</li>
+      <li><strong>Integrasikan nilai-nilai:</strong> Gunakan tema-tema yang relevan dengan kehidupan dan nilai-nilai keislaman.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       5.8 TUGAS PERTEMUAN 5
+       ========================================================= -->
+  <h2 class="section-title" id="s5-8">5.8 Tugas <em>Pertemuan 5</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Mengklasifikasikan <strong>jenis Khabar</strong> (Mufrad, Jumlah Fi'liyyah, Jumlah Ismiyyah, Syibh Jumlah Jar-Majrur, Syibh Jumlah Zharf) yang terdapat dalam <strong>jurnal berbahasa Arab</strong>.</li>
+      <li>Pilih minimal <strong>1 artikel jurnal</strong> berbahasa Arab dari portal seperti:</li>
+      <li style="padding-left:2.5rem">— <em>Majallah at-Ta'lim</em> (Jurnal Pendidikan)</li>
+      <li style="padding-left:2.5rem">— <em>Majallah al-Buhuts al-'Ilmiyyah</em> (Jurnal Penelitian)</li>
+      <li style="padding-left:2.5rem">— Portal <em>Dirasat</em> atau <em>Shamela</em></li>
+      <li>Identifikasi minimal <strong>10 kalimat nominal</strong> dalam artikel tersebut.</li>
+      <li>Untuk setiap kalimat:</li>
+      <li style="padding-left:2.5rem">— Tentukan Mubtada' dan Khabar</li>
+      <li style="padding-left:2.5rem">— Klasifikasikan jenis Khabar (Mufrad/Jumlah/Syibh Jumlah)</li>
+      <li style="padding-left:2.5rem">— Berikan analisis i'rab singkat</li>
+      <li style="padding-left:2.5rem">— Terjemahkan ke dalam bahasa Indonesia</li>
+      <li>Susun dalam bentuk tabel yang rapi dan sistematis.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Merangkum materi Pertemuan 5 (Al-Khabar) secara sistematis.</li>
+      <li>Rangkuman harus mencakup:</li>
+      <li style="padding-left:2.5rem">— Definisi dan konsep Khabar</li>
+      <li style="padding-left:2.5rem">— Hukum dan syarat Khabar</li>
+      <li style="padding-left:2.5rem">— Klasifikasi Khabar (Mufrad, Jumlah, Syibh Jumlah)</li>
+      <li style="padding-left:2.5rem">— Kaidah taqdim dan ta'khir</li>
+      <li style="padding-left:2.5rem">— Kesesuaian Mubtada' dan Khabar</li>
+      <li>Sumber: kitab <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>An-Nahw al-Wadhih</em> (Al-Jarim & Amin), <em>Al-Nahw al-Wafi</em> (Abbas Hasan).</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Contoh Tabel Tugas Mandiri</h4>
+    <table>
+      <thead>
+        <tr><th>No</th><th>Kalimat Arab</th><th>Mubtada'</th><th>Jenis Khabar</th><th>Terjemahan</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><span class="arab">الْعِلْمُ نُورٌ</span></td>
+          <td><span class="arab">الْعِلْمُ</span></td>
+          <td>Mufrad</td>
+          <td>Ilmu adalah cahaya</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><span class="arab">الطَّالِبُ يَدْرُسُ</span></td>
+          <td><span class="arab">الطَّالِبُ</span></td>
+          <td>Jumlah Fi'liyyah</td>
+          <td>Pelajar sedang belajar</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><span class="arab">الْقِطَّةُ أَمَامَ الْبَيْتِ</span></td>
+          <td><span class="arab">الْقِطَّةُ</span></td>
+          <td>Syibh Jumlah (Zharf)</td>
+          <td>Kucing di depan rumah</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Pembelajaran</h4>
+    <p>
+      Melalui tugas ini, mahasiswa tidak hanya menguji pemahaman teoretis tentang Khabar, tetapi juga melatih kemampuan membaca jurnal ilmiah berbahasa Arab — keterampilan yang sangat penting bagi calon peneliti dan akademisi. Kemampuan mengidentifikasi variasi Khabar dalam teks otentik akan memperkaya kompetensi mahasiswa dalam menganalisis dan memproduksi teks Arab akademik.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       5.9 PETA KONSEP & GLOSARIUM
+       ========================================================= -->
+  <h2 class="section-title" id="s5-9">5.9 Peta Konsep <em>& Glosarium</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep Al-Khabar</h4>
+    <div class="map-center">
+      <div class="core">AL-KHABAR</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Isim marfu' yang menyempurnakan makna Mubtada'</p>
+        <ul>
+          <li>Selalu marfu'</li>
+          <li>Berupa isim</li>
+          <li>Menyempurnakan makna</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Klasifikasi</h5>
+        <ul>
+          <li>Khabar Mufrad</li>
+          <li>Khabar Jumlah (Fi'liyyah & Ismiyyah)</li>
+          <li>Khabar Syibh Jumlah (Jar-Majrur & Zharf)</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Kaidah Taqdim</h5>
+        <ul>
+          <li>Wajib taqdim: Mubtada' nakirah + Khabar ma'rifah</li>
+          <li>Boleh taqdim: untuk penekanan</li>
+          <li>Haram taqdim: merusak makna</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Kesesuaian</h5>
+        <ul>
+          <li>Jenis (mudzakkar/muannats)</li>
+          <li>Jumlah (mufrad/mutsanna/jamak)</li>
+          <li>Pengecualian: jamak taksir</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📖 Glosarium Istilah Khabar</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Khabar</strong><span class="arab">خَبَر</span></div>
+        <p>Isim marfu' yang menyempurnakan makna Mubtada'.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Khabar Mufrad</strong><span class="arab">خَبَرٌ مُفْرَد</span></div>
+        <p>Khabar yang berupa isim mufrad (kata tunggal).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Khabar Jumlah</strong><span class="arab">خَبَرٌ جُمْلَة</span></div>
+        <p>Khabar yang berupa jumlah (kalimat) — fi'liyyah atau ismiyyah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Khabar Syibh Jumlah</strong><span class="arab">خَبَرٌ شِبْه جُمْلَة</span></div>
+        <p>Khabar yang berupa jar-majrur atau zharf (semi-kalimat).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Jar-Majrur</strong><span class="arab">جَرٌّ مَجْرُور</span></div>
+        <p>Konstruk huruf jar + isim majrur; bisa menjadi Khabar syibh jumlah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Zharf</strong><span class="arab">ظَرْف</span></div>
+        <p>Keterangan tempat (zharf makan) atau waktu (zharf zaman); bisa menjadi Khabar syibh jumlah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Taqdim</strong><span class="arab">تَقْدِيم</span></div>
+        <p>Pengdahuluhan — mendahulukan Khabar dari Mubtada' dalam kondisi tertentu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ta'khir</strong><span class="arab">تَأْخِير</span></div>
+        <p>Pengakhirkan — mengakhirkan Mubtada' dari Khabar dalam kondisi tertentu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Al-Muthabaqah</strong><span class="arab">الْمُطَابَقَة</span></div>
+        <p>Kesesuaian antara Mubtada' dan Khabar dalam jenis dan jumlah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ma'rifah</strong><span class="arab">مَعْرِفَة</span></div>
+        <p>Isim tertentu (dengan alif-lam, dhamir, isim isyarah, dll).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Nakirah</strong><span class="arab">نَكِرَة</span></div>
+        <p>Isim tak tentu (tanpa alif-lam, bukan dhamir, dll).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Dhamir Sya'n</strong><span class="arab">ضَمِير شَأْن</span></div>
+        <p>Dhamir yang kembali ke Mubtada' dalam Khabar jumlah.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 5</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep Al-Khabar — dari definisi dan hakikatnya, hukum dan syaratnya, klasifikasi jenis-jenisnya (Mufrad, Jumlah, Syibh Jumlah), kaidah taqdim dan ta'khir, kesesuaian dengan Mubtada', hingga analisis jurnal berbahasa Arab. Ingatlah, Khabar bukan sekadar unsur gramatikal — ia adalah "komentar" yang menyempurnakan makna setiap kalimat nominal. Sebagai calon guru bahasa Arab, penguasaan terhadap variasi Khabar akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       KESIMPULAN
+       ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 5</h3>
+    <p>
+      Pertemuan kelima ini telah membahas secara komprehensif tentang Al-Khabar — unsur Marfu'atul Asma yang melengkapi makna Mubtada' dalam jumlah ismiyyah. Mahasiswa telah memahami konsep dan definisi Khabar menurut berbagai ulama nahwu, hukum dan syaratnya, klasifikasi jenis-jenisnya (Mufrad, Jumlah Fi'liyyah, Jumlah Ismiyyah, Syibh Jumlah Jar-Majrur, Syibh Jumlah Zharf), kaidah taqdim dan ta'khir, serta kesesuaian dengan Mubtada'.
+    </p>
+    <p>
+      Melalui analisis jurnal berbahasa Arab, mahasiswa telah berlatih mengidentifikasi variasi Khabar dalam teks otentik akademik. Aplikasi melalui konstruksi kalimat nominal bertema lingkungan telah menunjukkan relevansi Khabar dalam konteks kontemporer dan kepedulian terhadap isu global.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 6 yang akan membahas <strong>Isim Kana</strong> — salah satu nawasikh yang mengubah hukum Mubtada'-Khabar. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       DAFTAR PUSTAKA
+       ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Anbari, Ibnu. <em>Al-Mufrad fi Ushul an-Nahw</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Chomsky, N. (1981). <em>Lectures on Government and Binding</em>. Dordrecht: Foris.</li>
+      <li>Halliday, M. A. K. (1994). <em>An Introduction to Functional Grammar</em>. London: Edward Arnold.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="4.html">← Pertemuan 4: Al-Mubtada'</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="6.html">Pertemuan 6: Isim Kana →</a>
+  </div>
+
+</section>
+
+<!-- =========================================================
+     UJI FORMATIF
+     ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 5</span>
+      <h2>Al-Khabar: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Pelengkap Makna Kalimat Nominal</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Konsep, klasifikasi, taqdim, kesesuaian, dan analisis jurnal berbahasa Arab</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">الْعِلْمُ نُورٌ</span>, kata <span class="arab">نُورٌ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Khabar mufrad</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Na'at</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>2.</strong> Tanda i'rab Khabar pada isim mufrad (kata tunggal) adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Fathah</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Kasrah</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Sukun</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>3.</strong> Dalam kalimat <span class="arab">الطَّالِبُ فِي الْفَصْلِ</span>, kata <span class="arab">فِي الْفَصْلِ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Khabar mufrad</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Khabar jumlah</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Khabar syibh jumlah (jar-majrur)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>4.</strong> Dalam kalimat <span class="arab">الطَّالِبُ يَدْرُسُ</span>, kata <span class="arab">يَدْرُسُ</span> bersama fa'il-nya berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Khabar jumlah fi'liyyah</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Khabar mufrad</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Khabar syibh jumlah</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Mubtada'</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>5.</strong> Khabar wajib didahulukan dari Mubtada' jika...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Mubtada' berupa ma'rifah dan Khabar berupa nakirah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Keduanya ma'rifah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Mubtada' berupa nakirah dan Khabar berupa ma'rifah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Keduanya nakirah</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>6.</strong> Kesesuaian antara Mubtada' dan Khabar dalam hal jenis (mudzakkar/muannats) dan jumlah (mufrad/mutsanna/jamak) disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Taqdim</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Al-Muthabaqah</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Ta'lil</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. I'rab</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>7.</strong> Dalam kalimat <span class="arab">الْقِطَّةُ أَمَامَ الْبَيْتِ</span>, kata <span class="arab">أَمَامَ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Khabar mufrad</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Khabar jumlah</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Khabar syibh jumlah (zharf)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>8.</strong> Khabar jumlah fi'liyyah atau ismiyyah yang langsung menjadi Khabar bagi Mubtada' nakirah tanpa dhamir yang kembali ke Mubtada' adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Salah secara gramatikal</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Diperbolehkan menurut semua ulama</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Wajib menurut Mazhab Kufah</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Diperbolehkan hanya dalam syair</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>9.</strong> Dhamir yang kembali ke Mubtada' dalam Khabar jumlah disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Dhamir mustatir</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Dhamir munfashil</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Dhamir sya'n atau qishshah</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Dhamir muttashil</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>10.</strong> Dalam ayat <span class="arab">فِي الْأَرْضِ آيَاتٌ</span>, kata <span class="arab">فِي الْأَرْضِ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Mubtada' muqaddam</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Khabar muqaddam (syibh jumlah jar-majrur)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Maf'ul bih</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat Al-Khabar menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda (dalam bahasa Arab), dan analisislah persamaan serta perbedaan di antara definisi-definisi tersebut!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Jelaskan tiga jenis Khabar (Mufrad, Jumlah, Syibh Jumlah)! Berikan masing-masing 2 contoh konkret dari Al-Qur'an atau hadis, dan analisislah i'rabnya!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Analisislah kaidah taqdim dan ta'khir Khabar! Berikan contoh dari Al-Qur'an yang menunjukkan kondisi yang mewajibkan taqdim Khabar dan kondisi yang membolehkan taqdim Khabar! Jelaskan fungsi retorika dari taqdim tersebut!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Pilihlah satu artikel jurnal berbahasa Arab (dari portal akademik), identifikasi minimal 5 kalimat nominal, tentukan Mubtada' dan Khabar-nya, klasifikasikan jenis Khabar, dan berikan terjemahan Indonesia! Sertakan sumber jurnal yang Anda gunakan!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Susunlah <strong>5 kalimat nominal</strong> bertema <strong>"Pelestarian Lingkungan"</strong> dengan menggunakan <strong>berbagai jenis Khabar</strong> (minimal 1 mufrad, 1 jumlah fi'liyyah, 1 jumlah ismiyyah, 1 syibh jumlah jar-majrur, 1 syibh jumlah zharf)! Sertakan terjemahan Indonesia dan analisis i'rab untuk setiap Khabar!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 5,
+    topik: 'Al-Khabar',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 5
+  An-Nahw lil Mutawassithin
+  Topik: Al-Khabar
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P5_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P5 (Al-Khabar) - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 5 (Al-Khabar) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

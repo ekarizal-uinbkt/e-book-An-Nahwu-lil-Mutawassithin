@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 12: Al-Badal — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 12: Analisis penggunaan Badal sebagai substitusi informasi dalam teks bertema budaya Minangkabau, jenis-jenis Badal (Mutabiq, Ba'dh, Isytimal), analisis hadis dan Al-Qur'an, serta konstruksi paragraf bertema lingkungan." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--cream);line-height:1.7;overflow-x:hidden;
+  background-image:radial-gradient(circle at 15% 20%,rgba(201,169,97,.08) 0%,transparent 40%),radial-gradient(circle at 85% 80%,rgba(201,169,97,.06) 0%,transparent 40%);
+}
+.bg-ornament{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(201,169,97,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,.03) 1px,transparent 1px);
+  background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
+}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;border:1px solid var(--gold);border-radius:2px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dark) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+h2.section-title em{font-style:italic;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h3.sub-title{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem}
+.arabic-display{background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{background:rgba(201,169,97,.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box,.warning-box,.insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4,.warning-box h4,.insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul,.warning-box ul,.insight-box ul{list-style:none;padding:0}
+.tips-box li,.warning-box li,.insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{display:inline-block;padding:1rem 2rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:1rem}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{background:linear-gradient(135deg,rgba(100,180,220,.08) 0%,rgba(100,180,220,.02) 100%);border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{display:inline-block;margin-top:1rem;padding:.4rem 1rem;background:rgba(100,180,220,.15);border-radius:4px;font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase}
+.env-text{background:linear-gradient(135deg,rgba(80,200,120,.06) 0%,rgba(80,200,120,.02) 100%);border:1px solid rgba(80,200,120,.3);border-radius:8px;padding:2rem;margin:2rem 0}
+.env-text h5{font-family:var(--serif);color:#50c878;font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.env-text .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.env-text .translation{font-family:var(--serif-2);font-style:italic;color:var(--muted);font-size:.95rem;padding:1rem;border-left:2px solid #50c878}
+.quran-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:8px;padding:2rem;margin:2rem 0}
+.quran-box h5{font-family:var(--serif);color:var(--gold);font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.quran-box .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.quran-box .source-info{font-size:.85rem;color:var(--muted);font-style:italic;border-top:1px solid var(--line);padding-top:.8rem}
+.quiz-section{background:linear-gradient(180deg,var(--ink-2) 0%,var(--ink) 100%);padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{display:inline-block;padding:.5rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input,.form-group select{padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;display:inline-flex;align-items:center;gap:.6rem}
+.btn-submit{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf,.btn-score,.btn-email,.btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover,.btn-score:hover,.btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{display:none;background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .env-text .arabic-paragraph,.quran-box .arabic-paragraph{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 12
+  </div>
+  <span class="chapter-label">Pertemuan 12 · 2 SKS</span>
+  <h1>Al-Badal: <span class="accent">Substitusi Informasi dalam Kalimat</span></h1>
+  <div class="hero-arabic">الْبَدَلُ: اسْتِبْدَالُ الْمَعْلُومَاتِ فِي الْجُمْلَةِ</div>
+  <p class="subtitle">Analisis penggunaan Badal sebagai substitusi informasi dalam teks bertema budaya Minangkabau, jenis-jenis Badal (Mutabiq, Ba'dh, Isytimal), analisis hadis dan Al-Qur'an, serta konstruksi paragraf bertema lingkungan.</p>
+  <div class="hero-actions">
+    <a href="11.html" class="btn btn-outline">← Pertemuan 11</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 12</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s12-1">12.1 Konsep dan Definisi Al-Badal</a>
+        <ol>
+          <li><a href="#s12-1-1">Pengertian secara Bahasa dan Istilah</a></li>
+          <li><a href="#s12-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s12-1-3">Kedudukan Badal dalam Tawabi'</a></li>
+        </ol>
+      </li>
+      <li><a href="#s12-2">12.2 Jenis-jenis Al-Badal</a>
+        <ol>
+          <li><a href="#s12-2-1">Badal Mutabiq (Badal Kul)</a></li>
+          <li><a href="#s12-2-2">Badal Ba'dh (Sebagian)</a></li>
+          <li><a href="#s12-2-3">Badal Isytimal (Mengandung)</a></li>
+        </ol>
+      </li>
+      <li><a href="#s12-3">12.3 Syarat-syarat Badal</a></li>
+      <li><a href="#s12-4">12.4 Hukum I'rab Badal</a></li>
+      <li><a href="#s12-5">12.5 Perbedaan Badal dengan Na'at dan Taukid</a></li>
+      <li><a href="#s12-6">12.6 Analisis Teks Otentik (Al-Qur'an & Hadis)</a></li>
+      <li><a href="#s12-7">12.7 Badal dalam Teks Budaya Minangkabau</a></li>
+      <li><a href="#s12-8">12.8 Aplikasi: Kalimat Bertema Lingkungan</a></li>
+      <li><a href="#s12-9">12.9 Tugas Pertemuan 12</a></li>
+      <li><a href="#s12-10">12.10 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>Na'at</em> berfungsi menjelaskan sifat, dan <em>Taukid</em> berfungsi menguatkan, maka <em>Badal</em> berfungsi <strong>menggantikan</strong> — ia adalah tabi' yang menggantikan kedudukan matbu' (mubdal minhu) secara keseluruhan, sebagian, atau dalam makna yang terkandung di dalamnya.
+  </p>
+
+  <p>
+    Setelah pada pertemuan kesebelas kita mempelajari <strong>At-Taukid</strong> sebagai alat penegasan, pada pertemuan keduabelas ini kita memasuki jenis tabi' ketiga: <strong>Al-Badal</strong> (الْبَدَلُ). Badal adalah tabi' yang berfungsi menggantikan matbu' (yang diganti) dengan tujuan memberikan penjelasan lebih rinci, memberikan informasi tambahan, atau mengklarifikasi makna.
+  </p>
+
+  <p>
+    Dalam Al-Qur'an, Badal sangat sering digunakan untuk memberikan penjelasan yang lebih spesifik tentang sesuatu yang telah disebutkan sebelumnya. Contoh paling terkenal adalah firman Allah: <span class="arab" style="font-size:1.1rem">أَهْلَكَتْهُمْ حَاقَّةٌ بَاغِيَةٌ</span> — di mana <span class="arab" style="font-size:1.1rem">حَاقَّةٌ بَاغِيَةٌ</span> berfungsi sebagai Badal dari <span class="arab" style="font-size:1.1rem">هُمْ</span> yang menjelaskan bahwa yang membinasakan mereka adalah peristiwa yang hakiki lagi melampaui batas.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Badal secara komprehensif: mulai dari konsep dan definisi, tiga jenis utamanya (Mutabiq, Ba'dh, Isytimal), syarat-syaratnya, hukum i'rab, perbedaan dengan Na'at dan Taukid, analisis ayat-ayat Al-Qur'an dan hadis, hingga aplikasi dalam teks bertema budaya Minangkabau dan lingkungan. Sebagai puncak pembelajaran, mahasiswa akan menganalisis teks sejarah Islam dan mengidentifikasi Badal Mutabiq, Ba'dh, dan Isytimal — sebuah latihan yang melatih kepekaan linguistik dalam membaca teks-teks klasik.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">أَهْلَكَتْهُمْ حَاقَّةٌ بَاغِيَةٌ</div>
+    <div class="translation">"Yang membinasakan mereka adalah peristiwa yang hakiki lagi melampaui batas."</div>
+    <div class="source">— QS. Al-Haqqah [69]: 6</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal Al-Badal dalam Kalimat Arab</h4>
+    <p>Simak penjelasan visual tentang bagaimana Badal bekerja dalam struktur kalimat Arab — dari definisi dasar hingga analisis tiga jenis Badal.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 12</h4>
+    <ul>
+      <li><strong>Al-Badal (الْبَدَلُ):</strong> Tabi' yang menggantikan kedudukan matbu' (mubdal minhu) untuk memberikan penjelasan lebih rinci.</li>
+      <li><strong>Mubdal Minhu (مُبْدَلٌ مِنْهُ):</strong> Kata yang diganti oleh Badal — biasanya berupa isim ma'rifah.</li>
+      <li><strong>Badal Mutabiq (Badal Kul):</strong> Badal yang menggantikan matbu' secara keseluruhan — keduanya merujuk pada hal yang sama.</li>
+      <li><strong>Badal Ba'dh:</strong> Badal yang menggantikan sebagian dari matbu' — biasanya ditandai dengan huruf jar <span class="arab" style="font-size:1.1rem">مِنْ</span>.</li>
+      <li><strong>Badal Isytimal:</strong> Badal yang menggantikan sesuatu yang "terkandung" dalam matbu' — biasanya ditandai dengan huruf jar <span class="arab" style="font-size:1.1rem">مِنْ</span> + dhamir yang kembali ke matbu'.</li>
+      <li><strong>I'rab Badal:</strong> Selalu mengikuti i'rab matbu'-nya (jika matbu' marfu', badal marfu'; jika manshub, badal manshub).</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Mengapa Badal Penting dalam Al-Qur'an?</h4>
+    <div class="case-content">
+      Bandingkan dua cara menyampaikan informasi berikut:<br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ الْمُدِيرُ</span> — "Pak direktur datang."<br>
+      (2) <span class="arab" style="font-size:1.3rem">جَاءَ الْمُدِيرُ صَاحِبُ الْمَكْتَبِ</span> — "Pak direktur datang, pemilik kantor itu."<br><br>
+      Pada kalimat (2), <span class="arab" style="font-size:1.2rem">صَاحِبُ الْمَكْتَبِ</span> berfungsi sebagai <strong>Badal Mutabiq</strong> yang menggantikan <span class="arab" style="font-size:1.2rem">الْمُدِيرُ</span> secara keseluruhan. Keduanya merujuk pada orang yang sama. Fungsi Badal di sini adalah memberikan informasi tambahan yang lebih spesifik tentang siapa "pak direktur" tersebut.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Badal bukan sekadar "pengulangan" — ia adalah alat retorika yang memberikan penjelasan lebih rinci tentang sesuatu yang telah disebutkan. Dalam Al-Qur'an, Badal sering digunakan untuk memberikan penjelasan teologis yang lebih dalam tentang konsep yang telah disebutkan sebelumnya.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan Badal kepada siswa — baik dalam konteks nahwu maupun dalam konteks terjemahan Al-Qur'an dan hadis. Pemahaman yang kokoh tentang Badal akan menjadi fondasi bagi siswa untuk memahami bagaimana bahasa Arab memberikan penjelasan lebih rinci dan spesifik. Bayangkan bagaimana Anda akan menjelaskan konsep ini dengan cara yang menarik — mungkin dengan contoh dari bahasa Indonesia ("Pak Budi, guru saya, datang" — "guru saya" adalah Badal dari "Pak Budi"), atau dari ayat-ayat Al-Qur'an yang sudah dihafal siswa.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 12.1 KONSEP DAN DEFINISI -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s12-1">12.1 Konsep dan Definisi <em>Al-Badal</em></h2>
+
+  <p>
+    Memahami konsep dan definisi Badal adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat Badal, mahasiswa akan kesulitan dalam membedakannya dengan tabi' lainnya (seperti Na'at dan Taukid) dan memahami fungsinya dalam retorika bahasa Arab.
+  </p>
+
+  <h3 class="sub-title" id="s12-1-1">12.1.1 Pengertian Badal secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, kata <em>badal</em> (بَدَل) berasal dari akar kata <em>badala</span> (بَدَلَ) yang berarti "menggantikan", "menukar", atau "mengganti posisi". Secara harfiah, badal berarti "pengganti" atau "ganti".
+  </p>
+
+  <p>
+    Secara <strong>terminologis (istilah nahwu)</strong>, Badal adalah tabi' yang menggantikan matbu' (mubdal minhu) untuk memberikan penjelasan lebih rinci, memberikan informasi tambahan, atau mengklarifikasi makna. Badal selalu mengikuti i'rab matbu'-nya.
+  </p>
+
+  <h3 class="sub-title" id="s12-1-2">12.1.2 Definisi Badal Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وَالْبَدَلُ مَا يُتْرَكُ اسْمُهُ وَيُذْكَرُ غَيْرُهُ</span></td>
+        <td>"Badal adalah apa yang ditinggalkan namanya dan disebutkan selainnya."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْبَدَلُ: تَابِعٌ يُذْكَرُ بَعْدَ الْمُبْدَلِ مِنْهُ لِيُؤَدِّيَ مَعْنَاهُ وَيُغْنِيَ عَنْهُ</span></td>
+        <td>"Badal adalah tabi' yang disebutkan setelah mubdal minhu untuk menyampaikan maknanya dan mencukupinya."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْبَدَلُ: تَابِعٌ يَتَبَعُ مَا قَبْلَهُ لِيُفِيدَ تَفْصِيلًا أَوْ تَوْضِيحًا</span></td>
+        <td>"Badal adalah tabi' yang mengikuti kata sebelumnya untuk memberikan perincian atau penjelasan."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْبَدَلُ: مَا يُذْكَرُ بَدَلًا مِنْ شَيْءٍ قَدْ ذُكِرَ قَبْلَهُ</span></td>
+        <td>"Badal adalah apa yang disebutkan sebagai pengganti sesuatu yang telah disebutkan sebelumnya."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Badal adalah <strong>tabi'</strong> — artinya ia selalu mengikuti matbu'-nya dalam hal i'rab (marfu', manshub, majrur, atau majzum).</li>
+      <li>Fungsi utama Badal adalah <strong>memberikan penjelasan lebih rinci</strong> — bukan menjelaskan sifat (seperti Na'at) atau menguatkan (seperti Taukid).</li>
+      <li>Badal memiliki tiga jenis utama: <strong>Mutabiq</strong> (menggantikan keseluruhan), <strong>Ba'dh</strong> (menggantikan sebagian), dan <strong>Isytimal</strong> (menggantikan sesuatu yang terkandung).</li>
+      <li>Dalam Al-Qur'an, Badal sangat dominan digunakan untuk memberikan penjelasan teologis yang lebih dalam tentang konsep yang telah disebutkan sebelumnya.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s12-1-3">12.1.3 Kedudukan Badal dalam Tawabi'</h3>
+
+  <p>
+    Badal merupakan salah satu dari empat <strong>Tawabi'</strong> (kata-kata yang mengikuti) dalam nahwu. Keempat tabi' tersebut adalah:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Tabi'</th><th>Fungsi</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Na'at (النَّعْت)</strong></td>
+        <td>Menjelaskan sifat matbu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ الْمُجْتَهِدُ</span><br>"Datang pelajar yang rajin."</td>
+      </tr>
+      <tr>
+        <td><strong>Taukid (التَّأْكِيد)</strong></td>
+        <td>Menguatkan makna matbu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ نَفْسُهُ</span><br>"Pelajar itu sendiri yang datang."</td>
+      </tr>
+      <tr>
+        <td><strong>Badal (الْبَدَل)</strong></td>
+        <td>Menggantikan matbu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ أَخُُ</span><br>"Datang pelajar, yaitu saudaranya."</td>
+      </tr>
+      <tr>
+        <td><strong>'Athaf (الْعَطْف)</strong></td>
+        <td>Menghubungkan ma'thuf dengan ma'thuf 'alaih</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ وَالْمُدِيرُ</span><br>"Datang pelajar dan direktur."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="key-concept">
+    <h4>✦ Perbedaan Badal dengan Tabi' Lainnya</h4>
+    <ul>
+      <li><strong>Badal vs Na'at:</strong> Na'at menjelaskan sifat matbu' (seperti "pelajar yang rajin"), sedangkan Badal menggantikan matbu' (seperti "pelajar, yaitu saudaranya").</li>
+      <li><strong>Badal vs Taukid:</strong> Taukid menguatkan matbu' tanpa menggantikannya (seperti "pelajar itu sendiri"), sedangkan Badal menggantikan matbu' dengan kata lain.</li>
+      <li><strong>Badal vs 'Athaf:</strong> 'Athaf menghubungkan dua unsur yang berbeda (seperti "pelajar dan direktur"), sedangkan Badal menggantikan unsur yang sama dengan penjelasan lebih rinci.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 12.2 JENIS-JENIS BADAL -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s12-2">12.2 Jenis-jenis <em>Al-Badal</em></h2>
+
+  <p>
+    Badal terbagi menjadi tiga jenis utama berdasarkan hubungannya dengan matbu' (mubdal minhu). Pemahaman tentang ketiga jenis ini sangat penting untuk analisis yang akurat.
+  </p>
+
+  <h3 class="sub-title" id="s12-2-1">12.2.1 Badal Mutabiq (Badal Kul)</h3>
+
+  <p>
+    <strong>Badal Mutabiq</strong> (بدل مطابق) — juga disebut <strong>Badal Kul</strong> (بدل كل) — adalah Badal yang menggantikan matbu' secara <strong>keseluruhan</strong>. Both matbu' dan badal merujuk pada hal yang sama persis, tidak ada perbedaan makna.
+  </p>
+
+  <div class="arabic-display">
+    جَاءَ الطَّالِبُ أَخُُ
+    <small>"Datang pelajar, yaitu saudaranya."<br>Badal Mutabiq: أَخُُ menggantikan الطَّالِبُ secara keseluruhan</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">جَاءَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الطَّالِبُ</span>
+      <span class="detail"><strong>Fa'il</strong> — marfu' dengan dhommah zhahirah. <small>Mubdal minhu (yang diganti).</small></span>
+
+      <span class="word">أَخُُ</span>
+      <span class="detail"><strong>Badal Mutabiq</strong> — marfu' dengan dhommah zhahirah (mengikuti matbu' yang marfu'). <small>Menggantikan <span class="arab" style="font-size:1.1rem">الطَّالِبُ</span> secara keseluruhan. Keduanya merujuk pada orang yang sama.</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Ciri-ciri Badal Mutabiq</h4>
+
+  <table>
+    <thead>
+      <tr><th>Ciri</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Merujuk pada hal yang sama</strong></td>
+        <td>Matbu' dan badal merujuk pada orang/benda yang sama persis.</td>
+        <td><span class="arab">جَاءَ الْمُدِيرُ صَاحِبُ الْمَكْتَبِ</span><br>"Datang direktur, pemilik kantor itu."</td>
+      </tr>
+      <tr>
+        <td><strong>Tidak ada huruf jar</strong></td>
+        <td>Tidak ada huruf <span class="arab" style="font-size:1.1rem">مِنْ</span> atau dhamir yang menghubungkan.</td>
+        <td><span class="arab">جَاءَ زَيْدٌ أَخُُ</span> ✓<br><span class="arab">جَاءَ زَيْدٌ مِنْهُ</span> ✗ (ini Badal Ba'dh)</td>
+      </tr>
+      <tr>
+        <td><strong>Mengikuti i'rab matbu'</strong></td>
+        <td>Badal selalu mengikuti i'rab matbu'-nya.</td>
+        <td><span class="arab">رَأَيْتُ الطَّالِبَ أَخَاهُ</span><br><span class="arab">أَخَاهُ</span> manshub mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Bisa berupa isim ma'rifah atau nakirah</strong></td>
+        <td>Matbu' biasanya ma'rifah, badal bisa ma'rifah atau nakirah.</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ رَجُلٌ</span><br>"Datang pelajar, seorang laki-laki."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s12-2-2">12.2.2 Badal Ba'dh (Sebagian)</h3>
+
+  <p>
+    <strong>Badal Ba'dh</strong> (بدل بعض) adalah Badal yang menggantikan <strong>sebagian</strong> dari matbu'. Badal ini ditandai dengan huruf jar <span class="arab" style="font-size:1.1rem">مِنْ</span> yang menghubungkan matbu' dengan badal.
+  </p>
+
+  <div class="arabic-display">
+    أَكَلَ الطَّالِبُ التُّفَّاحَةَ نِصْفَهَا
+    <small>"Pelajar itu memakan apel, setengahnya."<br>Badal Ba'dh: نِصْفَهَا menggantikan sebagian من التُّفَّاحَةَ</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">أَكَلَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الطَّالِبُ</span>
+      <span class="detail"><strong>Fa'il</strong> — marfu' dengan dhommah zhahirah.</span>
+
+      <span class="word">التُّفَّاحَةَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Mubdal minhu (yang diganti sebagian).</small></span>
+
+      <span class="word">نِصْفَهَا</span>
+      <span class="detail"><strong>Badal Ba'dh</strong> — manshub dengan fathah (mengikuti matbu' yang manshub). <span class="arab" style="font-size:1.1rem">هَا</span> = dhamir muttashil manshub yang kembali ke <span class="arab" style="font-size:1.1rem">التُّفَّاحَةَ</span>. <small>Menggantikan sebagian dari apel (yaitu setengahnya).</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Ciri-ciri Badal Ba'dh</h4>
+
+  <table>
+    <thead>
+      <tr><th>Ciri</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Menggantikan sebagian</strong></td>
+        <td>Badal merujuk pada sebagian dari matbu', bukan keseluruhan.</td>
+        <td><span class="arab">شَرِبْتُ الْمَاءَ نِصْفَهُ</span><br>"Aku minum air itu, setengahnya."</td>
+      </tr>
+      <tr>
+        <td><strong>Ada dhamir yang kembali ke matbu'</strong></td>
+        <td>Badal biasanya diikuti dhamir yang kembali ke matbu'.</td>
+        <td><span class="arab">نِصْفَهَا</span> — <span class="arab" style="font-size:1.1rem">هَا</span> kembali ke <span class="arab" style="font-size:1.1rem">التُّفَّاحَةَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Matbu' biasanya berupa nakirah atau ma'rifah</strong></td>
+        <td>Matbu' bisa berupa apa saja, tetapi badal merujuk pada sebagian.</td>
+        <td><span class="arab">أَكَلْتُ التُّفَّاحَةَ نِصْفَهَا</span><br>"Aku memakan apel itu, setengahnya."</td>
+      </tr>
+      <tr>
+        <td><strong>Mengikuti i'rab matbu'</strong></td>
+        <td>Badal selalu mengikuti i'rab matbu'-nya.</td>
+        <td><span class="arab">رَأَيْتُ الطَّالِبَ نِصْفَهُ</span><br><span class="arab">نِصْفَهُ</span> manshub mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبَ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s12-2-3">12.2.3 Badal Isytimal (Mengandung)</h3>
+
+  <p>
+    <strong>Badal Isytimal</strong> (بدل اشتمال) adalah Badal yang menggantikan sesuatu yang <strong>"terkandung"</strong> dalam matbu'. Badal ini ditandai dengan huruf jar <span class="arab" style="font-size:1.1rem">مِنْ</span> + dhamir yang kembali ke matbu'.
+  </p>
+
+  <div class="arabic-display">
+    أَعْجَبَنِي الطَّالِبُ خُلُقُهُ
+    <small>"Aku kagum pada pelajar itu, akhlaknya."<br>Badal Isytimal: خُلُقُهُ terkandung dalam الطَّالِبُ</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">أَعْجَبَنِي</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>dhamir nashab</strong> — <span class="arab" style="font-size:1.1rem">أَعْجَبَ</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">نِي</span> = dhamir munfashil manshub, berkedudukan maf'ul bih.</span>
+
+      <span class="word">الطَّالِبُ</span>
+      <span class="detail"><strong>Fa'il</strong> — marfu' dengan dhommah zhahirah. <small>Mubdal minhu (yang mengandung badal).</small></span>
+
+      <span class="word">خُلُقُهُ</span>
+      <span class="detail"><strong>Badal Isytimal</strong> — marfu' dengan dhommah zhahirah (mengikuti matbu' yang marfu'). <span class="arab" style="font-size:1.1rem">هُ</span> = dhamir muttashil marfu' mudhaf ilaih. <small>Menggantikan sesuatu yang "terkandung" dalam <span class="arab" style="font-size:1.1rem">الطَّالِبُ</span> (yaitu akhlaknya).</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Ciri-ciri Badal Isytimal</h4>
+
+  <table>
+    <thead>
+      <tr><th>Ciri</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Menggantikan sesuatu yang terkandung</strong></td>
+        <td>Badal merujuk pada sesuatu yang "ada di dalam" matbu', bukan bagian fisik.</td>
+        <td><span class="arab">أَعْجَبَنِي الطَّالِبُ خُلُقُهُ</span><br>"Aku kagum pada pelajar itu, akhlaknya."</td>
+      </tr>
+      <tr>
+        <td><strong>Ada dhamir yang kembali ke matbu'</strong></td>
+        <td>Badal diikuti dhamir yang kembali ke matbu' (bisa dhamir muttashil atau munfashil).</td>
+        <td><span class="arab">خُلُقُهُ</span> — <span class="arab" style="font-size:1.1rem">هُ</span> kembali ke <span class="arab" style="font-size:1.1rem">الطَّالِبُ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Tidak ada huruf jar <span class="arab" style="font-size:1.1rem">مِنْ</span></strong></td>
+        <td>Berbeda dengan Badal Ba'dh, Badal Isytimal tidak menggunakan huruf jar <span class="arab" style="font-size:1.1rem">مِنْ</span>.</td>
+        <td><span class="arab">خُلُقُهُ</span> ✓<br><span class="arab">مِنْ خُلُقِهِ</span> ✗ (ini bukan Badal Isytimal)</td>
+      </tr>
+      <tr>
+        <td><strong>Mengikuti i'rab matbu'</strong></td>
+        <td>Badal selalu mengikuti i'rab matbu'-nya.</td>
+        <td><span class="arab">رَأَيْتُ الطَّالِبَ خُلُقُهُ</span><br><span class="arab">خُلُقُهُ</span> marfu' (karena sebagai mubtada' dari jumla ismiyyah yang berkedudukan badal)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Perbedaan Badal Ba'dh dan Badal Isytimal</h4>
+    <ul>
+      <li><strong>Badal Ba'dh:</strong> Mengganti bagian <em>fisik</em> dari matbu' — ditandai dengan dhamir yang kembali ke matbu' (tanpa huruf jar).</li>
+      <li><strong>Badal Isytimal:</strong> Mengganti sesuatu yang <em>terkandung</em> dalam matbu' (bukan bagian fisik) — ditandai dengan dhamir yang kembali ke matbu' (tanpa huruf jar).</li>
+      <li><strong>Cara membedakan:</strong> Jika badal merujuk pada bagian fisik (seperti "setengah apel"), itu Badal Ba'dh. Jika badal merujuk pada sesuatu yang "ada di dalam" (seperti "akhlak pelajar"), itu Badal Isytimal.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 12.3 SYARAT-SYARAT BADAL -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s12-3">12.3 Syarat-syarat <em>Badal</em></h2>
+
+  <p>
+    Badal tidak sembarangan masuk ke kalimat. Ada syarat-syarat tertentu yang harus dipenuhi agar Badal dapat berfungsi dengan benar.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Syarat</th><th>Penjelasan</th><th>Contoh Benar</th><th>Contoh Salah</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mubdal minhu harus ma'rifah</strong></td>
+        <td>Kata yang diganti oleh Badal harus berupa isim ma'rifah (tentu), bukan nakirah (tak tentu).</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ أَخُُ</span> ✓<br>(<span class="arab" style="font-size:1.1rem">الطَّالِبُ</span> ma'rifah)</td>
+        <td><span class="arab">جَاءَ طَالِبٌ أَخُُ</span> ✗<br>(<span class="arab" style="font-size:1.1rem">طَالِبٌ</span> nakirah)</td>
+      </tr>
+      <tr>
+        <td><strong>Badal harus mengikuti i'rab matbu'</strong></td>
+        <td>Badal selalu mengikuti i'rab matbu'-nya (marfu', manshub, majrur).</td>
+        <td><span class="arab">رَأَيْتُ الطَّالِبَ أَخَاهُ</span> ✓<br>(<span class="arab" style="font-size:1.1rem">أَخَاهُ</span> manshub)</td>
+        <td><span class="arab">رَأَيْتُ الطَّالِبَ أَخُوهُ</span> ✗<br>(<span class="arab" style="font-size:1.1rem">أَخُوهُ</span> marfu')</td>
+      </tr>
+      <tr>
+        <td><strong>Badal harus langsung setelah matbu'</strong></td>
+        <td>Tidak boleh ada unsur lain yang memisahkan Badal dari matbu'-nya.</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ أَخُُ</span> ✓</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ فِي الْفَصْلِ أَخُُ</span> ✗<br>(ada pemisah)</td>
+      </tr>
+      <tr>
+        <td><strong>Badal harus merujuk pada matbu'</strong></td>
+        <td>Badal harus memiliki hubungan makna dengan matbu' (baik keseluruhan, sebagian, atau terkandung).</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ أَخُُ</span> ✓<br>(saudara = pelajar)</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ الْكِتَابُ</span> ✗<br>(buku ≠ pelajar)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kesalahan Umum Mahasiswa</h4>
+    <ul>
+      <li>Mengira semua kata yang mengikuti matbu' adalah Badal — padahal bisa juga Na'at atau Taukid.</li>
+      <li>Tidak memperhatikan syarat ma'rifah — menggunakan Badal dengan matbu' nakirah.</li>
+      <li>Salah membedakan Badal Ba'dh dan Badal Isytimal — keduanya menggunakan dhamir yang kembali ke matbu', tetapi maknanya berbeda.</li>
+      <li>Tidak memperhatikan i'rab Badal — mengira Badal selalu marfu', padahal harus mengikuti matbu'.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 12.4 HUKUM I'RAB BADAL -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s12-4">12.4 Hukum I'rab <em>Badal</em></h2>
+
+  <p>
+    Sebagai tabi', Badal <strong>selalu mengikuti i'rab matbu'-nya</strong>. Inilah kaidah fundamental yang harus dikuasai oleh mahasiswa.
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Kaidah Dasar I'rab Badal</h4>
+    <ul>
+      <li><strong>Jika matbu' marfu', maka Badal marfu'.</li>
+      <li><strong>Jika matbu' manshub, maka Badal manshub.</li>
+      <li><strong>Jika matbu' majrur, maka Badal majrur.</li>
+      <li><strong>Jika matbu' majzum, maka Badal majzum.</li>
+      <li>Badal tidak memiliki i'rab sendiri — ia selalu mengikuti matbu'.</li>
+    </ul>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Posisi Matbu'</th><th>I'rab Matbu'</th><th>I'rab Badal</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fa'il</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ أَخُُ</span><br><span class="arab">أَخُُ</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبُ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mubtada'</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td><span class="arab">الْمُدِيرُ صَاحِبُ الْمَكْتَبِ قَائِمٌ</span><br><span class="arab">صَاحِبُ</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">الْمُدِيرُ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Maf'ul Bih</strong></td>
+        <td>Manshub</td>
+        <td>Manshub</td>
+        <td><span class="arab">رَأَيْتُ الطَّالِبَ أَخَاهُ</span><br><span class="arab">أَخَاهُ</span> manshub mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Majrur (jar)</strong></td>
+        <td>Majrur</td>
+        <td>Majrur</td>
+        <td><span class="arab">مَرَرْتُ بِالطَّالِبِ أَخِيهِ</span><br><span class="arab">أَخِيهِ</span> majrur mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبِ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Isim Inna</strong></td>
+        <td>Manshub</td>
+        <td>Manshub</td>
+        <td><span class="arab">إِنَّ الطَّالِبَ أَخَاهُ قَائِمٌ</span><br><span class="arab">أَخَاهُ</span> manshub mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Isim Kana</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td><span class="arab">كَانَ الطَّالِبُ أَخَاهُ قَائِمًا</span><br><span class="arab">أَخَاهُ</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبُ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Badal dalam Berbagai Posisi I'rab</h4>
+    <div class="case-content">
+      Bandingkan tiga kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ الطَّالِبُ أَخُُ</span> — "Pelajar itu, saudaranya, datang."<br>
+      → <span class="arab" style="font-size:1.2rem">أَخُُ</span> = Badal Mutabiq marfu' (mengikuti Fa'il <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span>)<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">رَأَيْتُ الطَّالِبَ أَخَاهُ</span> — "Aku melihat pelajar itu, saudaranya."<br>
+      → <span class="arab" style="font-size:1.2rem">أَخَاهُ</span> = Badal Mutabiq manshub (mengikuti Maf'ul Bih <span class="arab" style="font-size:1.2rem">الطَّالِبَ</span>)<br><br>
+      (3) <span class="arab" style="font-size:1.3rem">مَرَرْتُ بِالطَّالِبِ أَخِيهِ</span> — "Aku berpapasan dengan pelajar itu, saudaranya."<br>
+      → <span class="arab" style="font-size:1.2rem">أَخِيهِ</span> = Badal Mutabiq majrur (mengikuti majrur <span class="arab" style="font-size:1.2rem">الطَّالِبِ</span>)
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Badal selalu mengikuti i'rab matbu'-nya, tidak peduli apakah matbu' itu marfu', manshub, atau majrur. Inilah yang membedakan Badal dari Na'at (yang juga mengikuti matbu', tetapi memiliki fungsi berbeda).
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 12.5 PERBEDAAN BADAL DENGAN NA'AT DAN TAUKID -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s12-5">12.5 Perbedaan <em>Badal dengan Na'at dan Taukid</em></h2>
+
+  <p>
+    Pemahaman yang kokoh tentang perbedaan antara Badal, Na'at, dan Taukid sangat penting. Meskipun ketiganya sama-sama tabi' (mengikuti matbu'), fungsi dan maknanya sangat berbeda.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Na'at</th><th>Taukid</th><th>Badal</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fungsi</strong></td>
+        <td>Menjelaskan sifat matbu'</td>
+        <td>Menguatkan makna matbu'</td>
+        <td>Menggantikan matbu'</td>
+      </tr>
+      <tr>
+        <td><strong>Hubungan dengan matbu'</strong></td>
+        <td>Menjelaskan kualitas/sifat</td>
+        <td>Menegaskan keberadaan</td>
+        <td>Menggantikan (secara keseluruhan/sebagian/terkandung)</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">جَاءَ الطَّالِبُ الْمُجْتَهِدُ</span><br>"Datang pelajar yang rajin."</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ نَفْسُهُ</span><br>"Pelajar itu sendiri yang datang."</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ أَخُُ</span><br>"Datang pelajar, yaitu saudaranya."</td>
+      </tr>
+      <tr>
+        <td><strong>Apakah bisa dihapus?</strong></td>
+        <td>Ya, kalimat tetap bermakna</td>
+        <td>Ya, kalimat tetap bermakna</td>
+        <td>Ya, kalimat tetap bermakna</td>
+      </tr>
+      <tr>
+        <td><strong>Apakah merujuk pada hal yang sama?</strong></td>
+        <td>Tidak — Na'at menjelaskan sifat</td>
+        <td>Ya — Taukid menegaskan</td>
+        <td>Ya — Badal menggantikan</td>
+      </tr>
+      <tr>
+        <td><strong>Apakah ada dhamir yang kembali ke matbu'?</strong></td>
+        <td>Tidak</td>
+        <td>Ya (untuk isim taukid)</td>
+        <td>Ya (untuk Badal Ba'dh dan Isytimal)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Analisis Perbandingan</h4>
+    <div class="case-content">
+      Bandingkan tiga kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ الطَّالِبُ الْمُجْتَهِدُ</span> — "Datang pelajar yang rajin."<br>
+      → <span class="arab" style="font-size:1.2rem">الْمُجْتَهِدُ</span> = Na'at (menjelaskan sifat <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span>)<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">جَاءَ الطَّالِبُ نَفْسُهُ</span> — "Pelajar itu sendiri yang datang."<br>
+      → <span class="arab" style="font-size:1.2rem">نَفْسُهُ</span> = Taukid Ma'nawi (menguatkan <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span>)<br><br>
+      (3) <span class="arab" style="font-size:1.3rem">جَاءَ الطَّالِبُ أَخُُ</span> — "Datang pelajar, yaitu saudaranya."<br>
+      → <span class="arab" style="font-size:1.2rem">أَخُُ</span> = Badal Mutabiq (menggantikan <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span>)
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Meskipun ketiga kalimat tersebut memiliki struktur yang mirip (fi'il + matbu' + tabi'), fungsi tabi'-nya berbeda. Na'at menjelaskan sifat, Taukid menguatkan, dan Badal menggantikan. Mahasiswa harus mampu membedakan ketiganya berdasarkan konteks dan makna.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 12.6 ANALISIS TEKS OTENTIK -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s12-6">12.6 Analisis <em>Teks Otentik (Al-Qur'an & Hadis)</em></h2>
+
+  <p>
+    Badal sangat dominan dalam Al-Qur'an dan hadis. Allah SWT menggunakan Badal untuk memberikan penjelasan yang lebih rinci tentang konsep yang telah disebutkan sebelumnya. Mari kita analisis beberapa contoh.
+  </p>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 1: QS. Al-Haqqah [69]: 6-7</h5>
+    <div class="arabic-paragraph">
+      وَأَهْلَكَتْهُمْ حَاقَّةٌ بَاغِيَةٌ *** سَخَّرَهَا عَلَيْهِمْ سَبْعَ لَيَالٍ وَثَمَانِيَةَ أَيَّامٍ حُسُومًا
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Dan yang membinasakan mereka adalah peristiwa yang hakiki lagi melampaui batas. Allah menimpakan angin itu terhadap mereka selama tujuh malam dan delapan hari yang terus-menerus."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "حَاقَّةٌ بَاغِيَةٌ"</h5>
+    <div class="word-analysis">
+      <span class="word">وَأَهْلَكَتْ</span>
+      <span class="detail"><strong>Wawu 'athaf</strong> + <strong>fi'il madhi</strong> + <strong>ta' ta'nits</strong> — <span class="arab" style="font-size:1.1rem">أَهْلَكَ</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">ت</span> = ta' ta'nits.</span>
+
+      <span class="word">هُمْ</span>
+      <span class="detail"><strong>Dhamir muttashil</strong> — manshub sebagai maf'ul bih. <small>Mubdal minhu (yang diganti).</small></span>
+
+      <span class="word">حَاقَّةٌ</span>
+      <span class="detail"><strong>Badal Mutabiq</strong> — marfu' dengan tanwin dhommah. <small>Menggantikan <span class="arab" style="font-size:1.1rem">هُمْ</span> secara keseluruhan. Makna: "peristiwa yang hakiki".</small></span>
+
+      <span class="word">بَاغِيَةٌ</span>
+      <span class="detail"><strong>Na'at</strong> — marfu' dengan tanwin dhommah. <small>Menjelaskan sifat <span class="arab" style="font-size:1.1rem">حَاقَّةٌ</span>. Makna: "lagi melampaui batas".</small></span>
+    </div>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 2: QS. Yusuf [12]: 10</div>
+    <div class="arabic-paragraph">
+      فَأَكَلَهُ السَّعَفَةُ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Maka memakannya (serigala)."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">فَ</span>
+      <span class="detail"><strong>Fa' 'athaf'</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">أَكَلَهُ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>dhamir nashab</strong> — <span class="arab" style="font-size:1.1rem">أَكَلَ</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">هُ</span> = dhamir muttashil manshub maf'ul bih.</span>
+
+      <span class="word">السَّعَفَةُ</span>
+      <span class="detail"><strong>Fa'il</strong> — marfu' dengan dhommah zhahirah. <small>Mubdal minhu (yang diganti).</small></span>
+
+      <span class="word">(Badal)</span>
+      <span class="detail">Dalam beberapa qira'at, <span class="arab" style="font-size:1.1rem">السَّعَفَةُ</span> dianggap sebagai Badal dari <span class="arab" style="font-size:1.1rem">الذِّئْبُ</span> (serigala) yang disebutkan sebelumnya. Namun, dalam analisis standar, <span class="arab" style="font-size:1.1rem">السَّعَفَةُ</span> adalah Fa'il dari fi'il <span class="arab" style="font-size:1.1rem">أَكَلَ</span>.</span>
+    </div>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 3: QS. Al-Baqarah [2]: 185</div>
+    <div class="arabic-paragraph">
+      شَهْرُ رَمَضَانَ الَّذِي أُنْزِلَ فِيهِ الْقُرْآنُ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Bulan Ramadhan, yang di dalamnya diturunkan Al-Qur'an."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "رَمَضَانَ"</h5>
+    <div class="word-analysis">
+      <span class="word">شَهْرُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>Mubdal minhu (yang diganti).</small></span>
+
+      <span class="word">رَمَضَانَ</span>
+      <span class="detail"><strong>Badal Mutabiq</strong> — manshub dengan fathah zhahirah. <small>Menggantikan <span class="arab" style="font-size:1.1rem">شَهْرُ</span> secara keseluruhan. Perhatikan: meskipun <span class="arab" style="font-size:1.1rem">شَهْرُ</span> marfu', <span class="arab" style="font-size:1.1rem">رَمَضَانَ</span> manshub karena merupakan Badal yang mengikuti i'rab matbu' dalam beberapa pendapat, atau karena merupakan Badal yang memiliki i'rab khusus.</small></span>
+
+      <span class="word">الَّذِي</span>
+      <span class="detail"><strong>Isim maushul</strong> — marfu' dengan dhommah muqaddarah. <small>Berkedudukan Na'at dari <span class="arab" style="font-size:1.1rem">رَمَضَانَ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 4: Pola Umum Badal dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Dalam Al-Qur'an, Badal sering muncul dalam pola-pola berikut:<br><br>
+      (1) <strong>Pola penjelasan spesifik:</strong><br>
+      <span class="arab" style="font-size:1.2rem">شَهْرُ رَمَضَانَ</span> — "Bulan Ramadhan" (menjelaskan bulan apa)<br><br>
+      (2) <strong>Pola penjelasan teologis:</strong><br>
+      <span class="arab" style="font-size:1.2rem">أَهْلَكَتْهُمْ حَاقَّةٌ بَاغِيَةٌ</span> — "Yang membinasakan mereka adalah peristiwa yang hakiki" (menjelaskan apa yang membinasakan)<br><br>
+      (3) <strong>Pola penjelasan sebagian:</strong><br>
+      <span class="arab" style="font-size:1.2rem">أَكَلْتُ التُّفَّاحَةَ نِصْفَهَا</span> — "Aku memakan apel itu, setengahnya" (menjelaskan bagian yang dimakan)<br><br>
+      <strong>Ta'lil Nahwi:</strong> Penggunaan Badal dalam Al-Qur'an bukan sekadar variasi gramatikal — ia memiliki implikasi semantis yang dalam. Badal memberikan penjelasan yang lebih rinci dan spesifik tentang konsep yang telah disebutkan, sehingga memperjelas makna ayat.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Mahasiswa PBA perlu memahami pola-pola umum Badal dalam Al-Qur'an agar mampu menafsirkan ayat-ayat secara tepat. Kemampuan ini juga akan berguna dalam mengajarkan nahwu kepada siswa dengan contoh-contoh yang relevan.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 12.7 BADAL DALAM TEKS BUDAYA MINANGKABAU -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s12-7">12.7 Badal dalam <em>Teks Budaya Minangkabau</em></h2>
+
+  <p>
+    Salah satu keunikan pembelajaran nahwu di UIN Bukittinggi adalah integrasi nilai-nilai budaya Minangkabau. Badal juga dapat ditemukan dalam teks-teks berbahasa Arab yang bertema budaya Minangkabau.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Kalimat dengan Badal Bertema Minangkabau</h5>
+    <div class="arabic-paragraph">
+      ١. جَاءَ الرَّجُلُ الْمِنَنْكَارِيّ

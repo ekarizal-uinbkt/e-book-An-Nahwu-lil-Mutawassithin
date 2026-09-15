@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 6: Isim Kana — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 6: Pengaruh Isim Kana terhadap perubahan hukum i'rab, saudara-saudara Kana (Wasilah Kana), analisis Hadis Arbain Nawawi, dan konstruksi kalimat nominal bertema lingkungan." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--ink);color:var(--cream);
+  line-height:1.7;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201,169,97,.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(201,169,97,.06) 0%, transparent 40%);
+}
+.bg-ornament{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(201,169,97,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,97,.03) 1px, transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{
+  min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1;
+}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{
+  display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;
+  border:1px solid var(--gold);border-radius:2px;
+}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{
+  background:linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;
+  font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none;
+}
+.btn-primary{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;
+  color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line);
+}
+h2.section-title em{
+  font-style:italic;
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+h3.sub-title{
+  font-family:var(--serif);font-size:1.5rem;color:var(--gold);
+  margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem;
+}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{
+  font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);
+  font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem;
+}
+.arabic-display{
+  background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;
+  padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);
+  font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2;
+}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{
+  background:rgba(201,169,97,.04);border-left:3px solid var(--gold);
+  padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;
+}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center;
+}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg, transparent, var(--gold), transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;
+}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box, .warning-box, .insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4, .warning-box h4, .insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul, .warning-box ul, .insight-box ul{list-style:none;padding:0}
+.tips-box li, .warning-box li, .insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative;
+}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{
+  display:inline-block;padding:1rem 2rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3);
+}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center;
+}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  flex-wrap:wrap;gap:1rem;
+}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{
+  background:linear-gradient(135deg, rgba(100,180,220,.08) 0%, rgba(100,180,220,.02) 100%);
+  border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0;
+}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{
+  display:inline-block;margin-top:1rem;padding:.4rem 1rem;
+  background:rgba(100,180,220,.15);border-radius:4px;
+  font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase;
+}
+.env-text{
+  background:linear-gradient(135deg, rgba(80,200,120,.06) 0%, rgba(80,200,120,.02) 100%);
+  border:1px solid rgba(80,200,120,.3);border-radius:8px;
+  padding:2rem;margin:2rem 0;
+}
+.env-text h5{
+  font-family:var(--serif);color:#50c878;font-size:1.15rem;
+  margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.env-text .arabic-paragraph{
+  font-family:var(--arab);font-size:1.5rem;color:var(--gold);
+  direction:rtl;line-height:2.4;text-align:right;
+  padding:1.5rem;background:rgba(0,0,0,.25);
+  border-radius:6px;margin-bottom:1rem;
+}
+.env-text .translation{
+  font-family:var(--serif-2);font-style:italic;
+  color:var(--muted);font-size:.95rem;
+  padding:1rem;border-left:2px solid #50c878;
+}
+.hadith-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:8px;
+  padding:2rem;margin:2rem 0;
+}
+.hadith-box h5{
+  font-family:var(--serif);color:var(--gold);font-size:1.15rem;
+  margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.hadith-box .arabic-paragraph{
+  font-family:var(--arab);font-size:1.5rem;color:var(--gold);
+  direction:rtl;line-height:2.4;text-align:right;
+  padding:1.5rem;background:rgba(0,0,0,.25);
+  border-radius:6px;margin-bottom:1rem;
+}
+.hadith-box .source-info{
+  font-size:.85rem;color:var(--muted);
+  font-style:italic;border-top:1px solid var(--line);
+  padding-top:.8rem;
+}
+.quiz-section{
+  background:linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+  padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1;
+}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{
+  display:inline-block;padding:.5rem 1.5rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-size:.75rem;letter-spacing:3px;
+  text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem;
+}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input, .form-group select{
+  padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);
+  border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s;
+}
+.form-group input:focus, .form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{
+  width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);
+  border:1px solid var(--line);border-radius:4px;color:var(--cream);
+  font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s;
+}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{
+  padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+  font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.btn-submit{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf, .btn-score, .btn-email, .btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover, .btn-score:hover, .btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{
+  display:none;
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center;
+}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .env-text .arabic-paragraph, .hadith-box .arabic-paragraph{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 6
+  </div>
+  <span class="chapter-label">Pertemuan 6 · 2 SKS</span>
+  <h1>Isim Kana: <span class="accent">Nawasikh yang Mengubah Hukum Khabar</span></h1>
+  <div class="hero-arabic">اسْمُ كَانَ: النَّوَاسِخُ الَّتِي تُغَيِّرُ حُكْمَ الْخَبَرِ</div>
+  <p class="subtitle">Pengaruh Isim Kana terhadap perubahan hukum i'rab, saudara-saudara Kana (Wasilah Kana), analisis Hadis Arbain Nawawi, dan konstruksi kalimat nominal bertema lingkungan.</p>
+  <div class="hero-actions">
+    <a href="5.html" class="btn btn-outline">← Pertemuan Sebelumnya</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 6</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s6-1">6.1 Konsep dan Definisi Isim Kana</a>
+        <ol>
+          <li><a href="#s6-1-1">Pengertian Isim Kana secara Bahasa dan Istilah</a></li>
+          <li><a href="#s6-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s6-1-3">Kedudukan Isim Kana dalam Nawasikh</a></li>
+        </ol>
+      </li>
+      <li><a href="#s6-2">6.2 Saudara-saudara Kana (Wasilah Kana)</a>
+        <ol>
+          <li><a href="#s6-2-1">Kana dan Makna-maknanya</a></li>
+          <li><a href="#s6-2-2">Kelompok Ashbaha, Amsa, Laita, Lana</a></li>
+          <li><a href="#s6-2-3">Kelompok Zala, Laisa, Mazal, Fatih</a></li>
+          <li><a href="#s6-2-4">Kelompok Infakha, Infaka, Dama, Thal</a></li>
+          <li><a href="#s6-2-5">Kelompok Qaada, Ta'ala, Laa, In</a></li>
+        </ol>
+      </li>
+      <li><a href="#s6-3">6.3 Pengaruh Isim Kana terhadap Hukum i'rab</a>
+        <ol>
+          <li><a href="#s6-3-1">Kaidah Dasar: Isim Tetap Marfu', Khabar Menjadi Manshub</a></li>
+          <li><a href="#s6-3-2">Syarat-syarat Amal Kana</a></li>
+          <li><a href="#s6-3-3">Pengecualian dan Kaidah Khusus</a></li>
+        </ol>
+      </li>
+      <li><a href="#s6-4">6.4 Tanda-tanda i'rab Khabar Kana</a></li>
+      <li><a href="#s6-5">6.5 Analisis Hadis Arbain Nawawi</a></li>
+      <li><a href="#s6-6">6.6 Analisis Teks Klasik dan Kontemporer</a></li>
+      <li><a href="#s6-7">6.7 Aplikasi: Kalimat dengan Isim Kana Bertema Lingkungan</a></li>
+      <li><a href="#s6-8">6.8 Tugas Pertemuan 6</a></li>
+      <li><a href="#s6-9">6.9 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>Mubtada'</em> dan <em>Khabar</em> adalah dua unsur yang membentuk bangunan kalimat nominal, maka <em>Isim Kana</em> adalah "arsitek" yang mampu mengubah struktur bangunan tersebut — ia mengubah hukum Khabar dari marfu' menjadi manshub, sehingga kalimat memperoleh dimensi waktu dan makna baru.
+  </p>
+
+  <p>
+    Setelah pada pertemuan keempat dan kelima kita mempelajari fondasi kalimat nominal melalui <strong>Al-Mubtada'</strong> dan <strong>Al-Khabar</strong>, pada pertemuan keenam ini kita melangkah ke konsep yang lebih dinamis: <strong>Isim Kana</strong> (اسْمُ كَانَ) — salah satu <em>Nawasikh</em> (nawasikh al-mubtada' wal khabar) yang paling fundamental dalam nahwu. Sebagai mahasiswa Pendidikan Bahasa Arab (PBA), penguasaan terhadap Isim Kana bukan sekadar syarat lulus mata kuliah — ia adalah kunci untuk memahami bagaimana bahasa Arab mengekspresikan waktu, keadaan, dan perubahan dalam kalimat nominal.
+  </p>
+
+  <p>
+    Isim Kana memiliki keunikan karena ia bekerja dalam <em>jumla ismiyyah</em> seperti Inna yang bekerja pada Mubtada'-Khabar, tetapi dengan efek yang berbeda: Isim Kana <strong>tidak mengubah hukum Mubtada'</strong> (tetap marfu'), tetapi <strong>mengubah hukum Khabar</strong> (dari marfu' menjadi manshub). Inilah yang membedakannya dari Inna yang justru mengubah hukum Mubtada' (dari marfu' menjadi manshub) dan membiarkan Khabar tetap marfu'.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Isim Kana secara komprehensif: mulai dari konsep dan definisi, saudara-saudara Kana (Wasilah Kana) yang berjumlah lebih dari belasan kata, pengaruhnya terhadap hukum i'rab, syarat-syarat amal, analisis Hadis Arbain Nawawi, analisis teks klasik dan kontemporer, hingga aplikasi praktis dalam konstruksi kalimat bertema lingkungan. Sebagai puncak pembelajaran, mahasiswa akan mencari contoh penggunaan Isim Kana dalam Hadis Arbain Nawawi — sebuah latihan yang memadukan kompetensi nahwu dengan literasi hadis.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">وَاسْمُ كَانَ وَخَبَرُهُ بِرَفْعٍ *** وَنَصْبُ الْخَبَرِ الْمُعْتَمِدِ</div>
+    <div class="translation">"Isim Kana dan Khabar-nya berkedudukan rafa', sedangkan Khabar-nya (yang kedua) berkedudukan nashab."</div>
+    <div class="source">— Alfiyyah Ibnu Malik, bait 343</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal Isim Kana dan Saudara-saudaranya</h4>
+    <p>Simak penjelasan visual tentang bagaimana Isim Kana bekerja dalam struktur kalimat nominal — dari definisi dasar hingga analisis teks otentik.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 6</h4>
+    <ul>
+      <li><strong>Isim Kana (اسْمُ كَانَ):</strong> Fi'il yang masuk ke dalam jumla ismiyyah, merafa'kan Mubtada' (yang kemudian disebut Isim-nya) dan menashabkan Khabar (yang kemudian disebut Khabar-nya).</li>
+      <li><strong>Wasilah Kana (أَخَوَاتُ كَانَ):</strong> Saudara-saudara Kana yang memiliki hukum yang sama, seperti Ashbaha, Amsa, Laita, Lana, Zala, Laisa, Mazal, Fatih, Barah, dll.</li>
+      <li><strong>Nawasikh (نَوَاسِخ):</strong> Amil-amil yang mengubah hukum Mubtada'-Khabar, terbagi dua: (1) yang merafa'kan Mubtada' dan menashabkan Khabar (Kana dan saudara-saudaranya); (2) yang menashabkan Mubtada' dan merafa'kan Khabar (Inna dan saudara-saudaranya).</li>
+      <li><strong>Isim Kana (اسْمُ كَانَ):</strong> Mubtada' setelah masuknya Kana — tetap berkedudukan marfu'.</li>
+      <li><strong>Khabar Kana (خَبَرُ كَانَ):</strong> Khabar setelah masuknya Kana — berubah menjadi manshub.</li>
+      <li><strong>Ta'lil Nahwi:</strong> Argumentasi logis yang digunakan untuk memvalidasi kedudukan Isim dan Khabar Kana dalam kalimat.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Mengapa Isim Kana Penting?</h4>
+    <div class="case-content">
+      Perhatikan dua kalimat berikut:<br>
+      <span class="arab" style="font-size:1.3rem">الْجَوُّ صَافٍ</span> — "Udara itu jernih." (keadaan saat ini)<br>
+      <span class="arab" style="font-size:1.3rem">كَانَ الْجَوُّ صَافِيًا</span> — "Udara itu dulu jernih." (keadaan di masa lalu)<br>
+      Dengan masuknya <span class="arab" style="font-size:1.2rem">كَانَ</span>, makna kalimat berubah dari keadaan saat ini menjadi keadaan di masa lalu. Khabar <span class="arab" style="font-size:1.2rem">صَافٍ</span> yang semula marfu' berubah menjadi manshub <span class="arab" style="font-size:1.2rem">صَافِيًا</span>. Inilah kekuatan Isim Kana — ia memberikan dimensi waktu pada kalimat nominal.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Isim Kana bukan sekadar "pengubah hukum i'rab" — ia adalah alat linguistik yang memberikan dimensi waktu, keadaan, dan nuansa makna baru pada kalimat nominal. Pemahaman yang kokoh tentang Isim Kana akan memperkaya kompetensi mahasiswa dalam menganalisis dan memproduksi teks Arab.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan Isim Kana kepada siswa — mulai dari kalimat sederhana seperti <span class="arab" style="font-size:1.1rem">كَانَ الْجَوُّ بَارِدًا</span> hingga kalimat kompleks dalam hadis dan teks sastra. Pemahaman yang kokoh tentang Isim Kana dan saudara-saudaranya akan menjadi fondasi bagi siswa untuk memahami bagaimana bahasa Arab mengekspresikan waktu dan keadaan. Bayangkan bagaimana Anda akan menjelaskan konsep ini dengan cara yang menarik — mungkin dengan contoh dari kehidupan sehari-hari, dari hadis yang sudah dihafal siswa, atau dari pepatah Minangkabau.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       6.1 KONSEP DAN DEFINISI
+       ========================================================= -->
+  <h2 class="section-title" id="s6-1">6.1 Konsep dan Definisi <em>Isim Kana</em></h2>
+
+  <p>
+    Memahami konsep dan definisi Isim Kana adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat Isim Kana, mahasiswa akan kesulitan dalam menganalisis struktur kalimat nominal yang dimasuki oleh nawasikh.
+  </p>
+
+  <h3 class="sub-title" id="s6-1-1">6.1.1 Pengertian Isim Kana secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, istilah <em>Isim Kana</em> terdiri dari dua kata: <em>ism</em> (اسْم) yang berarti "nama" atau "kata benda", dan <em>Kana</em> (كَانَ) yang merupakan fi'il yang berarti "adalah" atau "menjadi". Secara harfiah, Isim Kana berarti "isim yang masuk kepadanya fi'il Kana".
+  </p>
+
+  <p>
+    Secara <strong>terminologis (istilah nahwu)</strong>, Isim Kana memiliki dua makna yang perlu dibedakan:
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Dua Makna Isim Kana</h4>
+    <ul>
+      <li><strong>Makna Pertama (umum):</strong> Kelompok fi'il-fi'il yang masuk ke jumla ismiyyah, merafa'kan Mubtada' dan menashabkan Khabar. Termasuk di dalamnya Kana dan seluruh saudara-saudaranya (Wasilah Kana).</li>
+      <li><strong>Makna Kedua (khusus):</strong> Mubtada' setelah masuknya Kana (atau saudara-saudaranya). Mubtada' ini disebut "Isim Kana" karena ia menjadi "isim" bagi fi'il Kana.</li>
+    </ul>
+  </div>
+
+  <p>
+    Dalam pembahasan ini, kita akan menggunakan istilah <strong>Isim Kana</strong> dalam makna pertama — yaitu kelompok fi'il-fi'il nawasikh yang mencakup Kana dan seluruh saudara-saudaranya.
+  </p>
+
+  <h3 class="sub-title" id="s6-1-2">6.1.2 Definisi Isim Kana Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وَاسْمُ كَانَ وَخَبَرُهُ بِرَفْعٍ *** وَنَصْبُ الْخَبَرِ الْمُعْتَمِدِ</span></td>
+        <td>"Isim Kana dan Khabar-nya berkedudukan rafa', sedangkan Khabar-nya (yang kedua) berkedudukan nashab."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">كَانَ وَأَخَوَاتُهَا أَفْعَالٌ نَاسِخَةٌ تَرْفَعُ الْمُبْتَدَأَ وَتَنْصِبُ الْخَبَرَ</span></td>
+        <td>"Kana dan saudara-saudaranya adalah fi'il-fi'il nasikh yang merafa'kan Mubtada' dan menashabkan Khabar."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">كَانَ وَأَخَوَاتُهَا: أَفْعَالٌ نَاسِخَةٌ تَدْخُلُ عَلَى الْجُمْلَةِ الِاسْمِيَّةِ فَتَرْفَعُ الْمُبْتَدَأَ وَيُسَمَّى اسْمَهَا وَتَنْصِبُ الْخَبَرَ وَيُسَمَّى خَبَرَهَا</span></td>
+        <td>"Kana dan saudara-saudaranya: fi'il-fi'il nasikh yang masuk ke jumla ismiyyah, lalu merafa'kan Mubtada' (yang disebut Isim-nya) dan menashabkan Khabar (yang disebut Khabar-nya)."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">هِيَ أَفْعَالٌ نَاسِخَةٌ لِلْمُبْتَدَأِ وَالْخَبَرِ، تَرْفَعُ الْأَوَّلَ وَتَنْصِبُ الثَّانِيَ</span></td>
+        <td>"Ia adalah fi'il-fi'il nasikh bagi Mubtada' dan Khabar, yang merafa'kan yang pertama dan menashabkan yang kedua."</td>
+      </tr>
+      <tr>
+        <td><strong>Integrasi Modern</strong></td>
+        <td><span class="arab" style="font-size:1.1rem">أَفْعَالٌ نَاسِخَةٌ تُدْخِلُ بُعْدَ الزَّمَنِ عَلَى الْجُمْلَةِ الِاسْمِيَّةِ</span></td>
+        <td>"Fi'il-fi'il nasikh yang memberikan dimensi waktu pada jumla ismiyyah." (Padanan dengan linguistik modern)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Perhatikan bahwa definisi-definisi di atas saling melengkapi — ada yang menekankan aspek <strong>status i'rab</strong> (rafa'-nashab), ada yang menekankan aspek <strong>fungsional</strong> (nasikh), dan ada yang menekankan aspek <strong>semantik</strong> (dimensi waktu).</li>
+      <li>Sebagai calon guru, Anda perlu memahami semua definisi ini agar dapat menjelaskan konsep Isim Kana dari berbagai sudut pandang kepada siswa.</li>
+      <li>Integrasi dengan teori linguistik modern membuka peluang untuk penelitian skripsi yang inovatif tentang dimensi waktu dalam kalimat nominal bahasa Arab.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s6-1-3">6.1.3 Kedudukan Isim Kana dalam Nawasikh</h3>
+
+  <p>
+    Dalam ilmu nahwu, <strong>Nawasikh</strong> (نَوَاسِخ) adalah amil-amil yang mengubah hukum Mubtada'-Khabar. Nawasikh terbagi menjadi dua kelompok utama:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Kelompok</th><th>Anggota</th><th>Pengaruh terhadap Mubtada'</th><th>Pengaruh terhadap Khabar</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Isim Kana (Nawasikh Mubtada')</strong></td>
+        <td>Kana, Ashbaha, Amsa, Laita, Lana, Zala, Laisa, Mazal, Fatih, Barah, Infakha, Infaka, Dama, Thal, Qaada, Ta'ala, Laa, In, dll.</td>
+        <td>Tetap marfu' (disebut <strong>Isim Kana</strong>)</td>
+        <td>Berubah menjadi manshub (disebut <strong>Khabar Kana</strong>)</td>
+      </tr>
+      <tr>
+        <td><strong>Inna (Nawasikh Khabar)</strong></td>
+        <td>Inna, Anna, Lakinna, Layta, La'alla, Lit</td>
+        <td>Berubah menjadi manshub (disebut <strong>Isim Inna</strong>)</td>
+        <td>Tetap marfu' (disebut <strong>Khabar Inna</strong>)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="key-concept">
+    <h4>✦ Perbedaan Isim Kana dan Inna</h4>
+    <ul>
+      <li><strong>Isim Kana:</strong> Merafa'kan Mubtada', Menashabkan Khabar → <span class="arab" style="font-size:1.1rem">كَانَ الْجَوُّ صَافِيًا</span></li>
+      <li><strong>Inna:</strong> Menashabkan Mubtada', Merafa'kan Khabar → <span class="arab" style="font-size:1.1rem">إِنَّ الْجَوَّ صَافٍ</span></li>
+      <li>Keduanya masuk ke jumla ismiyyah, tetapi dengan efek yang berlawanan.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       6.2 SAUDARA-SAUDARA KANA
+       ========================================================= -->
+  <h2 class="section-title" id="s6-2">6.2 Saudara-saudara Kana <em>(Wasilah Kana)</em></h2>
+
+  <p>
+    Kana memiliki banyak "saudara" yang memiliki hukum yang sama — yaitu merafa'kan Mubtada' dan menashabkan Khabar. Saudara-saudara ini disebut <strong>Wasilah Kana</strong> (أَخَوَاتُ كَانَ). Pemahaman tentang saudara-saudara Kana penting untuk analisis yang komprehensif.
+  </p>
+
+  <h3 class="sub-title" id="s6-2-1">6.2.1 Kana dan Makna-maknanya</h3>
+
+  <p>
+    <strong>Kana (كَانَ)</strong> adalah fi'il yang paling umum dalam kelompok ini. Ia memiliki beberapa makna tergantung konteks:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Makna</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Makna Dahru (waktu lampau)</strong></td>
+        <td>Menyatakan bahwa Khabar terjadi di masa lalu.</td>
+        <td><span class="arab">كَانَ الْجَوُّ صَافِيًا</span><br>"Udara itu dulu jernih."</td>
+      </tr>
+      <tr>
+        <td><strong>Makna Shiruulah (menjadi)</strong></td>
+        <td>Menyatakan perubahan keadaan.</td>
+        <td><span class="arab">كَانَ الطَّالِبُ مُجْتَهِدًا</span><br>"Sang pelajar menjadi rajin."</td>
+      </tr>
+      <tr>
+        <td><strong>Makna Laisa (bukan)</strong></td>
+        <td>Dalam konteks tertentu, Kana bisa bermakna "bukan".</td>
+        <td><span class="arab">كَانَ زَيْدٌ شُجَاعًا</span><br>"Zaid itu (dulu) pemberani."</td>
+      </tr>
+      <tr>
+        <td><strong>Makna Qarib (hampir)</strong></td>
+        <td>Dalam beberapa konteks, Kana bermakna "hampir".</td>
+        <td><span class="arab">كَادَ الْأَمْرُ أَنْ يَفْشَلَ</span><br>"Perkara itu hampir gagal."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s6-2-2">6.2.2 Kelompok Ashbaha, Amsa, Laita, Lana</h3>
+
+  <p>
+    Kelompok ini memiliki kesamaan dalam hal makna dan penggunaan:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fi'il</th><th>Arti</th><th>Makna Khusus</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">أَصْبَحَ</span></td>
+        <td>Menjadi di waktu pagi</td>
+        <td>Menyatakan keadaan di waktu pagi</td>
+        <td><span class="arab">أَصْبَحَ الْجَوُّ صَافِيًا</span><br>"Udara menjadi jernih di waktu pagi."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">أَمْسَى</span></td>
+        <td>Menjadi di waktu sore</td>
+        <td>Menyatakan keadaan di waktu sore</td>
+        <td><span class="arab">أَمْسَى الطَّالِبُ مَرِيضًا</span><br>"Pelajar itu sakit di waktu sore."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">لَيْتَ</span></td>
+        <td>Sekiranya (harapan)</td>
+        <td>Menyatakan harapan yang sulit tercapai</td>
+        <td><span class="arab">لَيْتَ الشَّبَابَ يَعْدُ</span><br>"Sekiranya masa muda bisa kembali."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">لَانَ</span></td>
+        <td>Menjadi lunak</td>
+        <td>Menyatakan perubahan menjadi lunak/lemah</td>
+        <td><span class="arab">لَانَ الْحَدِيدُ سَهْلًا</span><br>"Besi itu menjadi lunak/mudah."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s6-2-3">6.2.3 Kelompok Zala, Laisa, Mazal, Fatih</h3>
+
+  <p>
+    Kelompok ini memiliki kesamaan dalam hal makna "keberlanjutan" atau "peniadaan":
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fi'il</th><th>Arti</th><th>Makna Khusus</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">زَالَ</span></td>
+        <td>Hilang/berhenti</td>
+        <td>Menyatakan berhentinya keadaan (biasanya dalam kalimat negatif)</td>
+        <td><span class="arab">مَا زَالَ الطَّالِبُ مُجْتَهِدًا</span><br>"Pelajar itu tetap rajin (tidak berhenti rajin)."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">لَيْسَ</span></td>
+        <td>Tidak/bukan</td>
+        <td>Menyatakan peniadaan (negasi)</td>
+        <td><span class="arab">لَيْسَ الْجَوُّ صَافِيًا</span><br>"Udara itu tidak jernih."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">مَا زَالَ</span></td>
+        <td>Tetap/tidak berhenti</td>
+        <td>Menyatakan keberlanjutan keadaan</td>
+        <td><span class="arab">مَا زَالَتِ الْحَقِيقَةُ وَاضِحَةً</span><br>"Kebenaran tetap jelas."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">فَتِئَ</span></td>
+        <td>Baru saja/masih</td>
+        <td>Menyatakan keadaan yang baru terjadi</td>
+        <td><span class="arab">فَتِئَ الطَّالِبُ قَادِمًا</span><br>"Pelajar itu baru saja datang."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s6-2-4">6.2.4 Kelompok Infakha, Infaka, Dama, Thal</h3>
+
+  <p>
+    Kelompok ini memiliki kesamaan dalam hal makna "keberlanjutan" atau "kebiasaan":
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fi'il</th><th>Arti</th><th>Makna Khusus</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">انْفَكَّ</span></td>
+        <td>Tidak berhenti</td>
+        <td>Menyatakan keberlanjutan (biasanya dalam kalimat negatif)</td>
+        <td><span class="arab">مَا انْفَكَّ الطَّالِبُ مُجْتَهِدًا</span><br>"Pelajar itu tidak berhenti rajin."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">انْفَكَ</span></td>
+        <td>Tidak berhenti (variasi)</td>
+        <td>Sama dengan Infakka</td>
+        <td><span class="arab">مَا انْفَكَ الْعِلْمُ نُورًا</span><br>"Ilmu tidak berhenti menjadi cahaya."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">دَامَ</span></td>
+        <td>Tetap/berlangsung</td>
+        <td>Menyatakan keberlanjutan keadaan</td>
+        <td><span class="arab">دَامَ الْحَالُ جَمِيلًا</span><br>"Keadaan tetap indah."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">طَال</span></td>
+        <td>Lama/berlangsung lama</td>
+        <td>Menyatakan keadaan yang berlangsung lama</td>
+        <td><span class="arab">طَالَتِ الْحَيَاةُ سَعِيدَةً</span><br>"Hidup berlangsung lama dengan bahagia."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s6-2-5">6.2.5 Kelompok Qaada, Ta'ala, Laa, In</h3>
+
+  <p>
+    Kelompok ini memiliki kesamaan dalam hal makna "kebiasaan" atau "penekanan":
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fi'il</th><th>Arti</th><th>Makna Khusus</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">قَعَدَ</span></td>
+        <td>Tetap/berada dalam keadaan</td>
+        <td>Menyatakan kebiasaan atau keadaan tetap</td>
+        <td><span class="arab">قَعَدَ الطَّالِبُ مُجْتَهِدًا</span><br>"Pelajar itu tetap rajin."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">تَعَلَ</span></td>
+        <td>Menjadi tinggi/tinggi</td>
+        <td>Menyatakan keadaan yang meningkat</td>
+        <td><span class="arab">تَعَلَ الْجَوُّ حَارًّا</span><br>"Udara menjadi semakin panas."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">لَا</span></td>
+        <td>Tidak (negasi)</td>
+        <td>Menyatakan peniadaan dalam sumpah</td>
+        <td><span class="arab">لَا أَبَاكَ مُجْتَهِدًا</span><br>"Demi ayahmu, ia tidak rajin."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">إنْ</span></td>
+        <td>Tidak (negasi dengan syarat)</td>
+        <td>Menyatakan peniadaan dalam konteks syarat</td>
+        <td><span class="arab">إنْ كَانَ الطَّالِبُ مُجْتَهِدًا</span><br>"Jika pelajar itu rajin..."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan Penting tentang Wasilah Kana</h4>
+    <ul>
+      <li>Tidak semua ulama sepakat tentang jumlah pasti Wasilah Kana — ada yang menyebutkan 13, 15, atau bahkan lebih.</li>
+      <li>Yang terpenting adalah memahami <strong>hukum yang sama</strong> — yaitu merafa'kan Mubtada' dan menashabkan Khabar.</li>
+      <li>Beberapa fi'il (seperti Laisa, Laita, Laa) memiliki kekhususan yang perlu dipelajari lebih lanjut.</li>
+      <li>Dalam pengajaran di madrasah/sekolah, fokuskan pada Kana dan saudara-saudaranya yang paling umum: Ashbaha, Amsa, Laisa, Mazal, Laita.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       6.3 PENGARUH ISIM KANA
+       ========================================================= -->
+  <h2 class="section-title" id="s6-3">6.3 Pengaruh Isim Kana <em>terhadap Hukum i'rab</em></h2>
+
+  <p>
+    Setelah memahami konsep dan saudara-saudara Kana, kita masuk ke aspek yang paling penting: pengaruh Isim Kana terhadap hukum i'rab. Pemahaman ini krusial untuk analisis yang presisi.
+  </p>
+
+  <h3 class="sub-title" id="s6-3-1">6.3.1 Kaidah Dasar: Isim Tetap Marfu', Khabar Menjadi Manshub</h3>
+
+  <div class="key-concept">
+    <h4>✦ Kaidah Dasar Isim Kana</h4>
+    <ul>
+      <li><strong>Isim Kana (Mubtada'):</strong> Tetap berkedudukan <strong>marfu'</strong> (rafa') — tidak berubah dari hukum asalnya.</li>
+      <li><strong>Khabar Kana:</strong> Berubah dari marfu' menjadi <strong>manshub</strong> (nashab) — ini adalah pengaruh utama Isim Kana.</li>
+      <li><strong>Fi'il Kana:</strong> Berkedudukan fi'il ma'lum (aktif) yang membutuhkan Fa'il (biasanya dhamir mustatir).</li>
+    </ul>
+  </div>
+
+  <div class="arabic-display">
+    كَانَ الْجَوُّ صَافِيًا
+    <small>"Udara itu dulu jernih."<br>Isim Kana (marfu') + Khabar Kana (manshub)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">كَانَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Fi'il nasikh yang masuk ke jumla ismiyyah.</small></span>
+
+      <span class="word">(Fa'il Mustatir)</span>
+      <span class="detail"><strong>Fa'il mustatir wajib</strong> — taqdiruhu <span class="arab" style="font-size:1.1rem">هُوَ</span>. <small>Dhamir ini kembali kepada Isim Kana.</small></span>
+
+      <span class="word">الْجَوُّ</span>
+      <span class="detail"><strong>Isim Kana</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya adalah Mubtada', tetap marfu' setelah masuknya Kana.</small></span>
+
+      <span class="word">صَافِيًا</span>
+      <span class="detail"><strong>Khabar Kana</strong> — manshub dengan fathah. <small>Asalnya adalah Khabar yang marfu', berubah menjadi manshub setelah masuknya Kana.</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Perbandingan Sebelum dan Sesudah Masuknya Kana</h4>
+
+  <table>
+    <thead>
+      <tr><th>Unsur</th><th>Sebelum Masuknya Kana</th><th>Sesudah Masuknya Kana</th><th>Perubahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mubtada'/Isim Kana</strong></td>
+        <td><span class="arab">الْجَوُّ</span> (marfu')</td>
+        <td><span class="arab">الْجَوُّ</span> (marfu')</td>
+        <td>Tidak berubah</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar/Khabar Kana</strong></td>
+        <td><span class="arab">صَافٍ</span> (marfu')</td>
+        <td><span class="arab">صَافِيًا</span> (manshub)</td>
+        <td>Berubah dari rafa' ke nashab</td>
+      </tr>
+      <tr>
+        <td><strong>Makna Kalimat</strong></td>
+        <td>"Udara itu jernih" (saat ini)</td>
+        <td>"Udara itu dulu jernih" (masa lalu)</td>
+        <td>Dimensi waktu ditambahkan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s6-3-2">6.3.2 Syarat-syarat Amal Kana</h3>
+
+  <p>
+    Isim Kana tidak sembarangan masuk ke jumla ismiyyah. Ada syarat-syarat tertentu yang harus dipenuhi agar Kana dapat "beramal" (mengubah hukum Khabar):
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Syarat</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Jumla Ismiyyah</strong></td>
+        <td>Kana hanya masuk ke jumla ismiyyah (kalimat nominal), bukan jumla fi'liyyah.</td>
+        <td><span class="arab">كَانَ الْجَوُّ صَافِيًا</span> ✓<br><span class="arab">كَانَ يَدْرُسُ</span> ✗ (ini Kana tammah)</td>
+      </tr>
+      <tr>
+        <td><strong>Mubtada' dan Khabar berupa Isim Zhahir atau Dhamir</strong></td>
+        <td>Kedua unsur harus berupa isim, bukan jumlah atau syibh jumlah.</td>
+        <td><span class="arab">كَانَ الطَّالِبُ مُجْتَهِدًا</span> ✓</td>
+      </tr>
+      <tr>
+        <td><strong>Tidak Ada 'Amil Lain yang Mencegah</strong></td>
+        <td>Tidak boleh ada 'awamil lain yang mengubah hukum Mubtada' atau Khabar.</td>
+        <td>Tidak boleh ada huruf jar, fi'il lain, dll.</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar bukan Jumlah</strong></td>
+        <td>Khabar harus berupa isim mufrad, bukan jumlah fi'liyyah atau ismiyyah.</td>
+        <td><span class="arab">كَانَ الطَّالِبُ مُجْتَهِدًا</span> ✓<br><span class="arab">كَانَ الطَّالِبُ يَدْرُسُ</span> ✗</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar bukan Syibh Jumlah</strong></td>
+        <td>Khabar harus berupa isim mufrad, bukan jar-majrur atau zharf.</td>
+        <td><span class="arab">كَانَ الطَّالِبُ فِي الْفَصْلِ</span> ✗ (dalam beberapa pendapat)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kana Tammah vs Kana Naqishah</h4>
+    <ul>
+      <li><strong>Kana Tammah (sempurna):</strong> Kana yang berdiri sendiri sebagai fi'il, tidak masuk ke jumla ismiyyah. Contoh: <span class="arab" style="font-size:1.1rem">كَانَ مُحَمَّدٌ</span> ("Muhammad telah ada/terjadi").</li>
+      <li><strong>Kana Naqishah (tidak sempurna):</strong> Kana yang masuk ke jumla ismiyyah dan mengubah hukum Khabar. Contoh: <span class="arab" style="font-size:1.1rem">كَانَ مُحَمَّدٌ مُجْتَهِدًا</span> ("Muhammad dulu rajin").</li>
+      <li>Yang dibahas dalam pertemuan ini adalah <strong>Kana Naqishah</strong> — yang berfungsi sebagai Isim Kana (nawasikh).</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s6-3-3">6.3.3 Pengecualian dan Kaidah Khusus</h3>
+
+  <p>
+    Ada beberapa pengecualian dan kaidah khusus yang perlu dipahami:
+  </p>
+
+  <div class="tips-box">
+    <h4>✦ Pengecualian dan Kaidah Khusus</h4>
+    <ul>
+      <li><strong>Laisa (لَيْسَ):</strong> Memiliki kekhususan karena bisa masuk ke jumla ismiyyah yang Khabar-nya berupa jar-majrur atau zharf. Contoh: <span class="arab" style="font-size:1.1rem">لَيْسَ الطَّالِبُ فِي الْفَصْلِ</span> ✓</li>
+      <li><strong>Laita (لَيْتَ):</strong> Memiliki makna "sekiranya" dan sering digunakan untuk harapan yang sulit tercapai. Contoh: <span class="arab" style="font-size:1.1rem">لَيْتَ الشَّبَابَ يَعْدُ</span></li>
+      <li><strong>Kana dengan Khabar Jumlah:</strong> Dalam beberapa pendapat (Mazhab Kufah), Kana boleh masuk ke jumla ismiyyah yang Khabar-nya berupa jumlah, dengan syarat ada dhamir yang kembali ke Isim Kana.</li>
+      <li><strong>Kana dengan Fa'il Zhahir:</strong> Kana boleh memiliki Fa'il zhahir (bukan hanya dhamir mustatir). Contoh: <span class="arab" style="font-size:1.1rem">كَانَ الْجَوُّ صَافِيًا</span> — <span class="arab" style="font-size:1.1rem">الْجَوُّ</span> adalah Isim Kana, bukan Fa'il zhahir.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Perbedaan Pendapat tentang Laisa</h4>
+    <div class="case-content">
+      Kalimat: <span class="arab" style="font-size:1.3rem">لَيْسَ الطَّالِبُ فِي الْفَصْلِ</span><br>
+      <strong>Mazhab Basrah:</strong> <span class="arab" style="font-size:1.2rem">فِي الْفَصْلِ</span> adalah Khabar Laisa yang berupa syibh jumlah (jar-majrur) — Laisa memiliki kekhususan yang membolehkannya.<br>
+      <strong>Mazhab Kufah:</strong> <span class="arab" style="font-size:1.2rem">فِي الْفَصْلِ</span> adalah Khabar muqaddam, dan <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span> adalah Mubtada' mu'akkhar — Laisa tidak masuk sebagai nasikh.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Perbedaan pendapat antar mazhab menunjukkan kekayaan intelektual dalam tradisi nahwu. Mahasiswa PBA perlu memahami kedua pendapat agar mampu menganalisis teks secara komprehensif.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       6.4 TANDA I'RAB KHABAR KANA
+       ========================================================= -->
+  <h2 class="section-title" id="s6-4">6.4 Tanda-tanda i'rab <em>Khabar Kana</em></h2>
+
+  <p>
+    Khabar Kana berkedudukan manshub (nashab). Tanda nashab ini bisa berupa <strong>tanda asli</strong> (fathah) atau <strong>tanda cabang</strong> (ya', alif, kasrah muqaddarah) tergantung pada bentuk isimnya.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk Isim</th><th>Tanda Nashab</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Isim Mufrad</strong></td>
+        <td>Fathah zhahirah</td>
+        <td><span class="arab">كَانَ الْجَوُّ صَافِيًا</span></td>
+        <td><span class="arab">صَافِيًا</span> manshub dengan fathah zhahirah</td>
+      </tr>
+      <tr>
+        <td><strong>Jamak Mudzakkar Salim</strong></td>
+        <td>Ya'</td>
+        <td><span class="arab">كَانَ الطُّلَّابُ مُجْتَهِدِينَ</span></td>
+        <td><span class="arab">مُجْتَهِدِينَ</span> manshub dengan ya' (karena jamak mudzakkar salim)</td>
+      </tr>
+      <tr>
+        <td><strong>Itsna (Dua)</strong></td>
+        <td>Ya'</td>
+        <td><span class="arab">كَانَ الطَّالِبَانِ مُجْتَهِدَيْنِ</span></td>
+        <td><span class="arab">مُجْتَهِدَيْنِ</span> manshub dengan ya' (karena itsna)</td>
+      </tr>
+      <tr>
+        <td><strong>Jamak Muannats Salim</strong></td>
+        <td>Fathah zhahirah</td>
+        <td><span class="arab">كَانَ الطَّالِبَاتُ مُجْتَهِدَاتٍ</span></td>
+        <td><span class="arab">مُجْتَهِدَاتٍ</span> manshub dengan fathah (karena jamak muannats salim)</td>
+      </tr>
+      <tr>
+        <td><strong>Asmaul Khamsah</strong></td>
+        <td>Alif</td>
+        <td><span class="arab">كَانَ أَخُوكَ مُسَافِرًا</span></td>
+        <td><span class="arab">أَخُوكَ</span> Isim Kana marfu' dengan wawu; <span class="arab">مُسَافِرًا</span> Khabar Kana manshub dengan fathah</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Mu'takhir huruf</strong></td>
+        <td>Fathah muqaddarah</td>
+        <td><span class="arab">كَانَ الْقَاضِي عَادِلًا</span></td>
+        <td><span class="arab">عَادِلًا</span> manshub dengan fathah zhahirah (bukan muqaddarah, karena ini Khabar bukan Isim)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan tentang Isim Kana</h4>
+    <ul>
+      <li>Isim Kana <strong>selalu marfu'</strong> dengan tanda rafa' yang sesuai bentuknya — seperti Mubtada' biasa.</li>
+      <li>Khabar Kana <strong>selalu manshub</strong> dengan tanda nashab yang sesuai bentuknya — seperti Maf'ul Bih.</li>
+      <li>Perhatikan perbedaan antara Isim Kana (marfu') dan Khabar Kana (manshub) — ini adalah kunci analisis yang benar.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       6.5 ANALISIS HADIS ARBAIN NAWAWI
+       ========================================================= -->
+  <h2 class="section-title" id="s6-5">6.5 Analisis <em>Hadis Arbain Nawawi</em></h2>
+
+  <p>
+    Hadis Arbain Nawawi adalah kumpulan 42 hadis pilihan yang disusun oleh Imam An-Nawawi. Kumpulan hadis ini sangat kaya dengan struktur nahwu, termasuk penggunaan Isim Kana. Mari kita analisis beberapa hadis yang mengandung Isim Kana.
+  </p>
+
+  <div class="hadith-box">
+    <h5>📜 Hadis 1: Niat (عن أمير المؤمنين)</h5>
+    <div class="arabic-paragraph">
+      إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى
+    </div>
+    <div class="source-info">
+      <strong>Sumber:</strong> HR. Bukhari & Muslim | Hadis ke-1 Arbain Nawawi
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّمَا</span>
+      <span class="detail"><strong>Adat hasr</strong> — mabni la mahalla lahu. <small>Partikel pembatasan: "hanya".</small></span>
+
+      <span class="word">الْأَعْمَالُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>Tidak ada Isim Kana di sini karena tidak ada fi'il nasikh.</small></span>
+
+      <span class="word">بِالنِّيَّاتِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar. <small>"Dengan niat-niat".</small></span>
+    </div>
+  </div>
+
+  <div class="hadith-box">
+    <h5>📜 Hadis 2: Islam, Iman, Ihsan</h5>
+    <div class="arabic-paragraph">
+      أَنْ تَعْبُدَ اللهَ كَأَنَّكَ تَرَاهُ فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ
+    </div>
+    <div class="source-info">
+      <strong>Sumber:</strong> HR. Muslim | Hadis ke-2 Arbain Nawawi
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "تَكُنْ"</h5>
+    <div class="word-analysis">
+      <span class="word">تَكُنْ</span>
+      <span class="detail"><strong>Fi'il mudhari' dari كَانَ</strong> — manshub dengan sukun (karena didahului fa' syarthiyyah <span class="arab" style="font-size:1.1rem">إنْ</span>). <small>Ini adalah bentuk mudhari' dari Kana yang masuk ke jumla ismiyyah.</small></span>
+
+      <span class="word">(Fa'il Mustatir)</span>
+      <span class="detail"><strong>Fa'il mustatir wajib</strong> — taqdiruhu <span class="arab" style="font-size:1.1rem">أَنْتَ</span>. <small>Mengikuti konteks mukhathab.</small></span>
+
+      <span class="word">تَرَاهُ</span>
+      <span class="detail"><strong>Jumla fi'liyyah</strong> — berkedudukan Khabar Takun (manshub mahallan). <small>"Engkau melihat-Nya".</small></span>
+    </div>
+  </div>
+
+  <div class="hadith-box">
+    <h5>📜 Hadis 5: Bid'ah</h5>
+    <div class="arabic-paragraph">
+      مَنْ أَحْدَثَ فِي أَمْرِنَا هَذَا مَا لَيْسَ مِنْهُ فَهُوَ رَدٌّ
+    </div>
+    <div class="source-info">
+      <strong>Sumber:</strong> HR. Bukhari & Muslim | Hadis ke-5 Arbain Nawawi
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "لَيْسَ"</h5>
+    <div class="word-analysis">
+      <span class="word">لَيْسَ</span>
+      <span class="detail"><strong>Fi'il nasikh (dari Isim Kana)</strong> — mabni 'ala fathah. <small>Laisa masuk ke jumla ismiyyah.</small></span>
+
+      <span class="word">(Fa'il Mustatir)</span>
+      <span class="detail"><strong>Fa'il mustatir wajib</strong> — taqdiruhu <span class="arab" style="font-size:1.1rem">هُوَ</span>. <small>Mengikuti maushul <span class="arab" style="font-size:1.1rem">مَا</span>.</small></span>
+
+      <span class="word">مِنْهُ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan Khabar Laisa (manshub mahallan). <small>"Dari-Nya" — Laisa memiliki kekhususan yang membolehkan Khabar berupa syibh jumlah.</small></span>
+    </div>
+  </div>
+
+  <div class="hadith-box">
+    <h5>📜 Hadis 6: Halal dan Haram</h5>
+    <div class="arabic-paragraph">
+      إِنَّ الْحَلَالَ بَيِّنٌ وَإِنَّ الْحَرَامَ بَيِّنٌ
+    </div>
+    <div class="source-info">
+      <strong>Sumber:</strong> HR. Bukhari & Muslim | Hadis ke-6 Arbain Nawawi
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "إنَّ" (sebagai pembanding)</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh (dari Inna)</strong> — mabni 'ala fathah. <small>Berbeda dengan Isim Kana, Inna menashabkan Mubtada' dan merafa'kan Khabar.</small></span>
+
+      <span class="word">الْحَلَالَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah. <small>Asalnya Mubtada' yang marfu', berubah menjadi manshub setelah masuknya Inna.</small></span>
+
+      <span class="word">بَيِّنٌ</span>
+      <span class="detail"><strong>Khabar Inna</strong> — marfu' dengan tanwin dhommah. <small>Tetap marfu' setelah masuknya Inna.</small></span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Perbandingan Isim Kana dan Inna dalam Hadis</h4>
+    <div class="case-content">
+      <strong>Isim Kana:</strong> <span class="arab" style="font-size:1.2rem">تَكُنْ تَرَاهُ</span> (dari Hadis 2) — Merafa'kan Mubtada' (dhamir mustatir), Menashabkan Khabar (jumla fi'liyyah <span class="arab" style="font-size:1.2rem">تَرَاهُ</span>).<br><br>
+      <strong>Inna:</strong> <span class="arab" style="font-size:1.2rem">إنَّ الْحَلَالَ بَيِّنٌ</span> (dari Hadis 6) — Menashabkan Mubtada' (<span class="arab" style="font-size:1.2rem">الْحَلَالَ</span>), Merafa'kan Khabar (<span class="arab" style="font-size:1.2rem">بَيِّنٌ</span>).<br><br>
+      <strong>Laisa:</strong> <span class="arab" style="font-size:1.2rem">لَيْسَ مِنْهُ</span> (dari Hadis 5) — Merafa'kan Mubtada' (dhamir mustatir), Menashabkan Khabar (jar-majrur <span class="arab" style="font-size:1.2rem">مِنْهُ</span> — ini kekhususan Laisa).
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Hadis Arbain Nawawi kaya dengan berbagai struktur nawasikh. Mahasiswa PBA perlu memahami perbedaan antara Isim Kana dan Inna agar mampu menganalisis hadis secara akurat.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       6.6 ANALISIS TEKS KLASIK DAN KONTEMPORER
+       ========================================================= -->
+  <h2 class="section-title" id="s6-6">6.6 Analisis <em>Teks Klasik dan Kontemporer</em></h2>
+
+  <p>
+    Isim Kana tidak hanya muncul dalam hadis, tetapi juga dalam teks-teks klasik (karya ulama) dan kontemporer (berita, artikel). Mari kita analisis beberapa contoh.
+  </p>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 4: Isim Kana dalam Teks Klasik</h4>
+    <div class="case-content">
+      Kutipan dari <em>Muqaddimah</em> Ibnu Khaldun:<br>
+      <span class="arab" style="font-size:1.3rem">كَانَتِ الْعُمْرَانُ الْبَشَرِيّ مُتَنَوِّعَةً بِاخْتِلَافِ الْأَحْوَالِ</span><br>
+      "Peradaban manusia itu (dulu) beragam karena perbedaan keadaan."
+    </div>
+    <div class="lesson">
+      <strong>Analisis:</strong> <span class="arab" style="font-size:1.2rem">كَانَتِ</span> = fi'il madhi + ta' ta'nits (karena Isim-nya muannats). <span class="arab" style="font-size:1.2rem">الْعُمْرَانُ</span> = Isim Kana marfu' dengan dhommah. <span class="arab" style="font-size:1.2rem">مُتَنَوِّعَةً</span> = Khabar Kana manshub dengan fathah.<br><br>
+      <strong>Pembelajaran:</strong> Dalam teks klasik, Isim Kana sering digunakan untuk menyampaikan narasi sejarah dan analisis sosial. Kesesuaian antara fi'il dan Isim Kana dalam hal jenis (mudzakkar/muannats) harus diperhatikan.
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 5: Isim Kana dalam Teks Kontemporer</h4>
+    <div class="case-content">
+      Kutipan dari berita Arab kontemporer:<br>
+      <span class="arab" style="font-size:1.3rem">كَانَ الِاجْتِمَاعُ نَاجِحًا بِحَمْدِ اللهِ</span><br>
+      "Rapat itu (tadi) berhasil berkat Allah."
+    </div>
+    <div class="lesson">
+      <strong>Analisis:</strong> <span class="arab" style="font-size:1.2rem">كَانَ</span> = fi'il madhi. <span class="arab" style="font-size:1.2rem">الِاجْتِمَاعُ</span> = Isim Kana marfu' dengan dhommah. <span class="arab" style="font-size:1.2rem">نَاجِحًا</span> = Khabar Kana manshub dengan fathah.<br><br>
+      <strong>Pembelajaran:</strong> Dalam teks berita, Isim Kana sering digunakan untuk melaporkan peristiwa yang telah terjadi. Mahasiswa PBA perlu memahami pola ini agar mampu membaca berita berbahasa Arab dengan lancar.
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Pola Penggunaan Isim Kana dalam Berbagai Teks</h4>
+    <ul>
+      <li><strong>Teks Klasik (sejarah, tafsir, hadis):</strong> Isim Kana digunakan untuk narasi masa lalu dan analisis keadaan.</li>
+      <li><strong>Teks Kontemporer (berita, artikel):</strong> Isim Kana digunakan untuk melaporkan peristiwa yang telah terjadi.</li>
+      <li><strong>Teks Sastra (syair, prosa):</strong> Isim Kana digunakan untuk memberikan efek dramatis dan dimensi waktu.</li>
+      <li><strong>Teks Akademik (jurnal, skripsi):</strong> Isim Kana digunakan untuk menyampaikan temuan penelitian yang telah dilakukan.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       6.7 APLIKASI: LINGKUNGAN
+       ========================================================= -->
+  <h2 class="section-title" id="s6-7">6.7 Aplikasi: <em>Kalimat dengan Isim Kana Bertema Lingkungan</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang Isim Kana, mari kita konstruksi kalimat-kalimat bertema lingkungan dengan menggunakan berbagai Isim Kana. Tema ini dipilih karena relevan dengan isu global dan sesuai dengan nilai-nilai keislaman tentang tanggung jawab manusia sebagai khalifah di bumi.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Kalimat dengan Isim Kana Bertema Lingkungan</h5>
+    <div class="arabic-paragraph">
+      ١. كَانَ الْبِيئَةُ نَظِيفَةً فِي الْمَاضِي<br>
+      ٢. أَصْبَحَ الْهَوَاءُ مُلَوَّثًا فِي الْمُدُنِ الْكَبِيرَةِ<br>
+      ٣. لَيْسَ الْمَاءُ وَافِرًا كَمَا كَانَ<br>
+      ٤. مَا زَالَتِ الْأَشْجَارُ مُهِمَّةً لِلْبِيئَةِ<br>
+      ٥. لَيْتَ النَّاسَ يَحْفَظُونَ الْبِيئَةَ
+    </div>
+    <div class="translation">
+      1. Lingkungan itu dulu bersih di masa lalu.<br>
+      2. Udara menjadi tercemar di kota-kota besar.<br>
+      3. Air tidak melimpah seperti dulu.<br>
+      4. Pepohonan tetap penting bagi lingkungan.<br>
+      5. Sekiranya manusia menjaga lingkungan.
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 1</h5>
+    <div class="word-analysis">
+      <span class="word">كَانَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Isim Kana (nasikh) yang masuk ke jumla ismiyyah.</small></span>
+
+      <span class="word">الْبِيئَةُ</span>
+      <span class="detail"><strong>Isim Kana</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya Mubtada', tetap marfu' setelah masuknya Kana.</small></span>
+
+      <span class="word">نَظِيفَةً</span>
+      <span class="detail"><strong>Khabar Kana</strong> — manshub dengan fathah. <small>Asalnya Khabar yang marfu', berubah menjadi manshub setelah masuknya Kana.</small></span>
+
+      <span class="word">فِي الْمَاضِي</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan zharf zaman (keterangan waktu). <small>"Di masa lalu".</small></span>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 4 (dengan Mazal)</h5>
+    <div class="word-analysis">
+      <span class="word">مَا</span>
+      <span class="detail"><strong>Huruf nafi</strong> — mabni 'ala sukun. <small>Menafikan fi'il Mazal.</small></span>
+
+      <span class="word">زَالَتِ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah + ta' ta'nits (karena Isim-nya muannats). <small>Mazal dari kelompok Isim Kana.</small></span>
+
+      <span class="word">الْأَشْجَارُ</span>
+      <span class="detail"><strong>Isim Mazal</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya Mubtada', tetap marfu'.</small></span>
+
+      <span class="word">مُهِمَّةً</span>
+      <span class="detail"><strong>Khabar Mazal</strong> — manshub dengan fathah. <small>Asalnya Khabar yang marfu', berubah menjadi manshub.</small></span>
+
+      <span class="word">لِلْبِيئَةِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan takhshish atau khabar kedua. <small>"Bagi lingkungan".</small></span>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Mengonstruksi Kalimat dengan Isim Kana</h4>
+    <ul>
+      <li><strong>Pilih Isim Kana yang sesuai:</strong> Gunakan Kana untuk masa lalu, Ashbaha/Amsa untuk waktu tertentu, Laisa untuk negasi, Mazal untuk keberlanjutan, Laita untuk harapan.</li>
+      <li><strong>Pastikan kesesuaian:</strong> Isim Kana (marfu') harus sesuai dengan fi'il dalam hal jenis (mudzakkar/muannats) dan jumlah.</li>
+      <li><strong>Perhatikan tanda i'rab:</strong> Khabar Kana selalu manshub dengan tanda nashab yang sesuai bentuknya.</li>
+      <li><strong>Integrasikan nilai-nilai:</strong> Gunakan tema-tema yang relevan dengan kehidupan dan nilai-nilai keislaman.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       6.8 TUGAS PERTEMUAN 6
+       ========================================================= -->
+  <h2 class="section-title" id="s6-8">6.8 Tugas <em>Pertemuan 6</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Mencari <strong>minimal 5 contoh</strong> penggunaan Isim Kana (Kana dan saudara-saudaranya) dalam <strong>Hadis Arbain Nawawi</strong>.</li>
+      <li>Sumber: kitab <em>Al-Arba'in an-Nawawiyyah</em> karya Imam An-Nawawi.</li>
+      <li>Untuk setiap contoh:</li>
+      <li style="padding-left:2.5rem">— Tuliskan teks hadis lengkap (Arab + terjemahan)</li>
+      <li style="padding-left:2.5rem">— Identifikasi fi'il nasikh (Kana, Laisa, Mazal, dll)</li>
+      <li style="padding-left:2.5rem">— Tentukan Isim nasikh (marfu') dan Khabar nasikh (manshub)</li>
+      <li style="padding-left:2.5rem">— Berikan analisis i'rab lengkap</li>
+      <li style="padding-left:2.5rem">— Jelaskan makna yang ditambahkan oleh Isim Kana</li>
+      <li>Susun dalam bentuk tabel yang rapi dan sistematis.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Merangkum materi Pertemuan 6 (Isim Kana) secara sistematis.</li>
+      <li>Rangkuman harus mencakup:</li>
+      <li style="padding-left:2.5rem">— Definisi dan konsep Isim Kana</li>
+      <li style="padding-left:2.5rem">— Saudara-saudara Kana (Wasilah Kana)</li>
+      <li style="padding-left:2.5rem">— Pengaruh Isim Kana terhadap hukum i'rab</li>
+      <li style="padding-left:2.5rem">— Syarat-syarat amal Kana</li>
+      <li style="padding-left:2.5rem">— Tanda-tanda i'rab Khabar Kana</li>
+      <li>Sumber: kitab <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>An-Nahw al-Wadhih</em> (Al-Jarim & Amin).</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Contoh Tabel Tugas Mandiri</h4>
+    <table>
+      <thead>
+        <tr><th>No</th><th>Teks Hadis</th><th>Fi'il Nasikh</th><th>Isim (Marfu')</th><th>Khabar (Manshub)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><span class="arab">فَإنْ لَمْ تَكُنْ تَرَاهُ</span></td>
+          <td><span class="arab">تَكُنْ</span> (mudhari' Kana)</td>
+          <td>Dhamir mustatir <span class="arab">أَنْتَ</span></td>
+          <td><span class="arab">تَرَاهُ</span> (jumla fi'liyyah)</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><span class="arab">مَا لَيْسَ مِنْهُ</span></td>
+          <td><span class="arab">لَيْسَ</span></td>
+          <td>Dhamir mustatir <span class="arab">هُوَ</span></td>
+          <td><span class="arab">مِنْهُ</span> (jar-majrur)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Pembelajaran</h4>
+    <p>
+      Melalui tugas ini, mahasiswa tidak hanya menguji pemahaman teoretis tentang Isim Kana, tetapi juga melatih kemampuan membaca hadis dengan analisis nahwu yang presisi. Kemampuan mengidentifikasi Isim Kana dalam Hadis Arbain Nawawi akan memperkaya kompetensi mahasiswa dalam memahami teks-teks keislaman secara mendalam.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       6.9 PETA KONSEP & GLOSARIUM
+       ========================================================= -->
+  <h2 class="section-title" id="s6-9">6.9 Peta Konsep <em>& Glosarium</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep Isim Kana</h4>
+    <div class="map-center">
+      <div class="core">ISIM KANA</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Fi'il nasikh yang merafa'kan Mubtada' dan menashabkan Khabar</p>
+        <ul>
+          <li>Isim tetap marfu'</li>
+          <li>Khabar menjadi manshub</li>
+          <li>Memberikan dimensi waktu</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Saudara-saudara (Wasilah)</h5>
+        <ul>
+          <li>Kana, Ashbaha, Amsa</li>
+          <li>Laita, Lana, Zala</li>
+          <li>Laisa, Mazal, Fatih</li>
+          <li>Infakha, Infaka, Dama, Thal</li>
+          <li>Qaada, Ta'ala, Laa, In</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Syarat Amal</h5>
+        <ul>
+          <li>Jumla ismiyyah</li>
+          <li>Mubtada' & Khabar berupa isim</li>
+          <li>Tidak ada 'amil lain</li>
+          <li>Khabar bukan jumlah/syibh jumlah</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Tanda I'rab</h5>
+        <ul>
+          <li>Isim Kana: marfu' (dhommah/wawu/alif)</li>
+          <li>Khabar Kana: manshub (fathah/ya'/alif)</li>
+          <li>Kana Tammah vs Naqishah</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📖 Glosarium Istilah Isim Kana</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Isim Kana</strong><span class="arab">اسْمُ كَانَ</span></div>
+        <p>Fi'il nasikh yang merafa'kan Mubtada' dan menashabkan Khabar; atau Mubtada' setelah masuknya Kana.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Wasilah Kana</strong><span class="arab">أَخَوَاتُ كَانَ</span></div>
+        <p>Saudara-saudara Kana yang memiliki hukum yang sama.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Nawasikh</strong><span class="arab">نَوَاسِخ</span></div>
+        <p>Amil-amil yang mengubah hukum Mubtada'-Khabar.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Kana Tammah</strong><span class="arab">كَانَ التَّامَّة</span></div>
+        <p>Kana yang berdiri sendiri sebagai fi'il, tidak masuk ke jumla ismiyyah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Kana Naqishah</strong><span class="arab">كَانَ النَّاقِصَة</span></div>
+        <p>Kana yang masuk ke jumla ismiyyah dan mengubah hukum Khabar.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Isim Kana (Mubtada')</strong><span class="arab">اسْمُ كَانَ</span></div>
+        <p>Mubtada' setelah masuknya Kana — tetap marfu'.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Khabar Kana</strong><span class="arab">خَبَرُ كَانَ</span></div>
+        <p>Khabar setelah masuknya Kana — berubah menjadi manshub.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Laisa</strong><span class="arab">لَيْسَ</span></div>
+        <p>Salah satu saudara Kana yang bermakna "tidak/bukan" — memiliki kekhususan.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mazal</strong><span class="arab">مَا زَالَ</span></div>
+        <p>Salah satu saudara Kana yang bermakna "tetap/tidak berhenti".</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Laita</strong><span class="arab">لَيْتَ</span></div>
+        <p>Salah satu saudara Kana yang bermakna "sekiranya" (harapan).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Amal (العمل)</strong><span class="arab">عَمَل</span></div>
+        <p>Pengaruh fi'il nasikh terhadap hukum i'rab Mubtada' dan Khabar.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Jumla Ismiyyah</strong><span class="arab">جُمْلَةٌ اسْمِيَّة</span></div>
+        <p>Kalimat yang dimulai dengan isim (Mubtada' + Khabar).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 6</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep Isim Kana — dari definisi dan hakikatnya, saudara-saudaranya (Wasilah Kana), pengaruhnya terhadap hukum i'rab, syarat-syarat amal, analisis Hadis Arbain Nawawi, analisis teks klasik dan kontemporer, hingga aplikasi praktis dalam konstruksi kalimat bertema lingkungan. Ingatlah, Isim Kana bukan sekadar "pengubah hukum i'rab" — ia adalah "arsitek" yang memberikan dimensi waktu dan nuansa makna baru pada kalimat nominal. Sebagai calon guru bahasa Arab, penguasaan terhadap Isim Kana akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       KESIMPULAN
+       ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 6</h3>
+    <p>
+      Pertemuan keenam ini telah membahas secara komprehensif tentang Isim Kana — salah satu Nawasikh yang paling fundamental dalam nahwu. Mahasiswa telah memahami konsep dan definisi Isim Kana menurut berbagai ulama nahwu, saudara-saudara Kana (Wasilah Kana), pengaruhnya terhadap hukum i'rab (Isim tetap marfu', Khabar menjadi manshub), syarat-syarat amal, serta tanda-tanda i'rab Khabar Kana.
+    </p>
+    <p>
+      Melalui analisis Hadis Arbain Nawawi, mahasiswa telah berlatih mengidentifikasi Isim Kana dalam teks otentik keislaman. Analisis teks klasik dan kontemporer telah memperkaya perspektif mahasiswa tentang penggunaan Isim Kana dalam berbagai konteks. Aplikasi melalui konstruksi kalimat bertema lingkungan telah menunjukkan relevansi Isim Kana dalam konteks kontemporer dan kepedulian terhadap isu global.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 7 yang akan membahas <strong>Isim Kada</strong> — kelompok nawasikh yang memiliki kemiripan dengan Isim Kana tetapi dengan makna dan fungsi yang berbeda (Muqarabah, Raja', Syuru'). Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       DAFTAR PUSTAKA
+       ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>An-Nawawi, Imam. <em>Al-Arba'in an-Nawawiyyah</em>. Beirut: Dar Ibn Kathir.</li>
+      <li>Ibnu Khaldun. <em>Al-Muqaddimah</em>. Beirut: Dar al-Fikr.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="5.html">← Pertemuan 5: Al-Khabar</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="7.html">Pertemuan 7: Isim Kada →</a>
+  </div>
+
+</section>
+
+<!-- =========================================================
+     UJI FORMATIF
+     ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 6</span>
+      <h2>Isim Kana: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Nawasikh yang Mengubah Hukum Khabar</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Konsep, saudara-saudara Kana, pengaruh terhadap i'rab, analisis Hadis Arbain Nawawi</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">كَانَ الْجَوُّ صَافِيًا</span>, kata <span class="arab">صَافِيًا</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Isim Kana</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Khabar Kana (manshub)</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Maf'ul bih</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Hal</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>2.</strong> Pengaruh Isim Kana terhadap hukum i'rab Mubtada' dan Khabar adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Menashabkan keduanya</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Merafa'kan keduanya</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Merafa'kan Mubtada' dan menashabkan Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Menashabkan Mubtada' dan merafa'kan Khabar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Yang termasuk saudara-saudara Kana (Wasilah Kana) adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Ashbaha, Amsa, Laisa, Mazal</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Inna, Anna, Lakinna, Layta</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Zhanantu, Hasibtu, Ra'aitu</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Kalla, La'alla, Lit</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Perbedaan antara Isim Kana dan Inna adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Keduanya menashabkan Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Keduanya merafa'kan Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Isim Kana menashabkan Mubtada', Inna menashabkan Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Isim Kana merafa'kan Mubtada' dan menashabkan Khabar, Inna menashabkan Mubtada' dan merafa'kan Khabar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Tanda nashab pada Khabar Kana yang berupa jamak mudzakkar salim adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Fathah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Ya'</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Alif</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Kasrah</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> Dalam Hadis Arbain Nawawi, kalimat <span class="arab">فَإنْ لَمْ تَكُنْ تَرَاهُ</span> mengandung fi'il...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Kana tammah</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Laisa</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Takun (mudhari' dari Kana) yang berfungsi sebagai Isim Kana</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. Inna</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Syarat utama agar Isim Kana dapat "beramal" (mengubah hukum Khabar) adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Masuk ke jumla ismiyyah</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Masuk ke jumla fi'liyyah</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Didahului oleh huruf jar</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Memiliki Fa'il zhahir</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Fi'il <span class="arab">لَيْسَ</span> (Laisa) memiliki kekhususan dibandingkan saudara-saudara Kana lainnya, yaitu...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Menashabkan Isim dan merafa'kan Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Tidak memiliki Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Hanya masuk ke jumla fi'liyyah</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Boleh masuk ke jumla ismiyyah yang Khabar-nya berupa jar-majrur atau zharf</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Dalam kalimat <span class="arab">مَا زَالَتِ الْحَقِيقَةُ وَاضِحَةً</span>, kata <span class="arab">الْحَقِيقَةُ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Khabar Mazal</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Isim Mazal (marfu')</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Mubtada' mu'akkhar</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Fa'il zhahir</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Makna yang ditambahkan oleh Isim Kana pada kalimat nominal adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Penegasan (taukid)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Pembatasan (hasr)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Dimensi waktu (masa lalu, pagi, sore, keberlanjutan, dll)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Peniadaan (nafy)</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat Isim Kana menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda (dalam bahasa Arab), dan analisislah perbedaan antara Isim Kana dan Inna!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Sebutkan minimal 10 saudara-saudara Kana (Wasilah Kana)! Berikan contoh konkret penggunaan masing-masing dalam kalimat, dan analisislah i'rab Isim dan Khabar-nya!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Analisislah syarat-syarat amal Isim Kana! Berikan contoh kalimat yang memenuhi syarat dan contoh kalimat yang tidak memenuhi syarat, serta jelaskan alasannya!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Identifikasi minimal 3 contoh penggunaan Isim Kana dalam Hadis Arbain Nawawi! Berikan analisis i'rab lengkap untuk setiap contoh, dan jelaskan makna yang ditambahkan oleh Isim Kana dalam konteks hadis tersebut!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Susunlah <strong>5 kalimat</strong> bertema <strong>"Pelestarian Lingkungan"</strong> dengan menggunakan <strong>berbagai Isim Kana</strong> (minimal 1 Kana, 1 Laisa, 1 Mazal, 1 Ashbaha, 1 Laita)! Sertakan terjemahan Indonesia dan analisis i'rab untuk setiap kalimat!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 6,
+    topik: 'Isim Kana',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 6
+  An-Nahw lil Mutawassithin
+  Topik: Isim Kana
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P6_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P6 (Isim Kana) - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 6 (Isim Kana) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

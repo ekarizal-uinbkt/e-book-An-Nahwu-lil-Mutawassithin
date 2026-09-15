@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 13: An-Na'at — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 13: Analisis fungsi Na'at Hakiki & Sababi sebagai penjelas sifat isim marfu' dalam wacana, syarat-syarat kesesuaian, analisis Al-Qur'an dan hadis, serta konstruksi paragraf bertema lingkungan." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--cream);line-height:1.7;overflow-x:hidden;
+  background-image:radial-gradient(circle at 15% 20%,rgba(201,169,97,.08) 0%,transparent 40%),radial-gradient(circle at 85% 80%,rgba(201,169,97,.06) 0%,transparent 40%);
+}
+.bg-ornament{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(201,169,97,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,.03) 1px,transparent 1px);
+  background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
+}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;border:1px solid var(--gold);border-radius:2px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dark) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+h2.section-title em{font-style:italic;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h3.sub-title{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem}
+.arabic-display{background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{background:rgba(201,169,97,.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box,.warning-box,.insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4,.warning-box h4,.insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul,.warning-box ul,.insight-box ul{list-style:none;padding:0}
+.tips-box li,.warning-box li,.insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{display:inline-block;padding:1rem 2rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:1rem}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{background:linear-gradient(135deg,rgba(100,180,220,.08) 0%,rgba(100,180,220,.02) 100%);border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{display:inline-block;margin-top:1rem;padding:.4rem 1rem;background:rgba(100,180,220,.15);border-radius:4px;font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase}
+.env-text{background:linear-gradient(135deg,rgba(80,200,120,.06) 0%,rgba(80,200,120,.02) 100%);border:1px solid rgba(80,200,120,.3);border-radius:8px;padding:2rem;margin:2rem 0}
+.env-text h5{font-family:var(--serif);color:#50c878;font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.env-text .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.env-text .translation{font-family:var(--serif-2);font-style:italic;color:var(--muted);font-size:.95rem;padding:1rem;border-left:2px solid #50c878}
+.quran-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:8px;padding:2rem;margin:2rem 0}
+.quran-box h5{font-family:var(--serif);color:var(--gold);font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.quran-box .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.quran-box .source-info{font-size:.85rem;color:var(--muted);font-style:italic;border-top:1px solid var(--line);padding-top:.8rem}
+.quiz-section{background:linear-gradient(180deg,var(--ink-2) 0%,var(--ink) 100%);padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{display:inline-block;padding:.5rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input,.form-group select{padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;display:inline-flex;align-items:center;gap:.6rem}
+.btn-submit{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf,.btn-score,.btn-email,.btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover,.btn-score:hover,.btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{display:none;background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .env-text .arabic-paragraph,.quran-box .arabic-paragraph{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 13
+  </div>
+  <span class="chapter-label">Pertemuan 13 · 2 SKS</span>
+  <h1>An-Na'at: <span class="accent">Penjelas Sifat Hakiki & Sababi</span></h1>
+  <div class="hero-arabic">النَّعْتُ: صِفَةُ الْحَقِيقِيِّ وَالسَّبَبِيِّ</div>
+  <p class="subtitle">Analisis fungsi Na'at Hakiki & Sababi sebagai penjelas sifat isim marfu' dalam wacana, syarat-syarat kesesuaian, analisis Al-Qur'an dan hadis, serta konstruksi paragraf bertema lingkungan.</p>
+  <div class="hero-actions">
+    <a href="12.html" class="btn btn-outline">← Pertemuan 12</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 13</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s13-1">13.1 Konsep dan Definisi An-Na'at</a>
+        <ol>
+          <li><a href="#s13-1-1">Pengertian secara Bahasa dan Istilah</a></li>
+          <li><a href="#s13-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s13-1-3">Kedudukan Na'at dalam Tawabi'</a></li>
+        </ol>
+      </li>
+      <li><a href="#s13-2">13.2 Syarat-syarat Kesesuaian Na'at dengan Man'ut</a></li>
+      <li><a href="#s13-3">13.3 Na'at Hakiki (النعْت الْحَقِيْقِي)</a>
+        <ol>
+          <li><a href="#s13-3-1">Definisi dan Karakteristik</a></li>
+          <li><a href="#s13-3-2">Contoh dan Analisis I'rab</a></li>
+        </ol>
+      </li>
+      <li><a href="#s13-4">13.4 Na'at Sababi (النعْت السَّبَبِي)</a>
+        <ol>
+          <li><a href="#s13-4-1">Definisi dan Karakteristik</a></li>
+          <li><a href="#s13-4-2">Contoh dan Analisis I'rab</a></li>
+        </ol>
+      </li>
+      <li><a href="#s13-5">13.5 Perbedaan Na'at Hakiki dan Sababi</a></li>
+      <li><a href="#s13-6">13.6 Analisis Teks Otentik (Al-Qur'an & Hadis)</a></li>
+      <li><a href="#s13-7">13.7 Aplikasi: Kalimat Bertema Lingkungan</a></li>
+      <li><a href="#s13-8">13.8 Tugas Pertemuan 13</a></li>
+      <li><a href="#s13-9">13.9 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>Badal</em> berfungsi menggantikan, dan <em>Taukid</em> berfungsi menguatkan, maka <em>Na'at</em> berfungsi <strong>menggambarkan</strong> — ia adalah tabi' yang memberikan warna, karakter, dan identitas pada man'ut (yang disifati), sehingga informasi yang disampaikan menjadi lebih hidup, spesifik, dan bermakna.
+  </p>
+
+  <p>
+    Setelah pada pertemuan keduabelas kita mempelajari <strong>Al-Badal</strong> sebagai alat substitusi informasi, pada pertemuan ketigabelas ini kita memasuki jenis tabi' keempat: <strong>An-Na'at</strong> (النَّعْتُ). Na'at adalah tabi' yang berfungsi menjelaskan sifat man'ut (yang disifati) sehingga pendengar dapat membayangkan dengan lebih jelas siapa atau apa yang dimaksud.
+  </p>
+
+  <p>
+    Dalam Al-Qur'an, Na'at sangat dominan digunakan untuk menggambarkan sifat-sifat Allah, sifat-sifat orang beriman, sifat-sifat orang kafir, dan sifat-sifat makhluk ciptaan-Nya. Contoh paling indah adalah firman Allah: <span class="arab" style="font-size:1.1rem">وَالضُّحَىٰ وَاللَّيْلِ إِذَا سَجَىٰ</span> — di mana <span class="arab" style="font-size:1.1rem">سَجَىٰ</span> berfungsi sebagai Na'at yang menggambarkan keadaan malam.
+  </p>
+
+  <p>
+    Na'at terbagi menjadi dua jenis utama: <strong>Na'at Hakiki</strong> (sifat yang kembali kepada dzat yang disifati) dan <strong>Na'at Sababi</strong> (sifat yang kembali kepada sebab, bukan dzat). Pemahaman tentang kedua jenis ini sangat penting untuk analisis yang akurat, terutama dalam teks-teks keislaman yang kaya dengan deskripsi.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Na'at secara komprehensif: mulai dari konsep dan definisi, syarat-syarat kesesuaian dengan man'ut, dua jenis Na'at (Hakiki dan Sababi), analisis ayat-ayat Al-Qur'an dan hadis, hingga aplikasi dalam kalimat bertema lingkungan. Sebagai puncak pembelajaran, mahasiswa akan mengidentifikasi Na'at Hakiki dan Sababi dalam teks keislaman — sebuah latihan yang melatih kepekaan linguistik dalam membaca deskripsi yang kaya dalam bahasa Arab.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">خُذِ الْعَفْوَ وَأْمُرْ بِالْعُرْفِ وَأَعْرِضْ عَنِ الْجَاهِلِينَ</div>
+    <div class="translation">"Jadilah pemaaf dan suruhlah orang mengerjakan yang ma'ruf, serta berpalinglah dari orang-orang jahil."</div>
+    <div class="source">— QS. Al-A'raf [7]: 199</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal An-Na'at dalam Kalimat Arab</h4>
+    <p>Simak penjelasan visual tentang bagaimana Na'at bekerja dalam struktur kalimat Arab — dari definisi dasar hingga analisis Na'at Hakiki dan Sababi.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 13</h4>
+    <ul>
+      <li><strong>An-Na'at (النَّعْتُ):</strong> Tabi' yang menjelaskan sifat man'ut (yang disifati) sehingga memberikan gambaran yang lebih jelas.</li>
+      <li><strong>Al-Man'ut (الْمَنْعُوت):</strong> Kata yang disifati oleh Na'at — biasanya berupa isim ma'rifah atau nakirah.</li>
+      <li><strong>Na'at Hakiki (النعْت الْحَقِيْقِي):</strong> Na'at yang sifatnya kembali kepada dzat man'ut itu sendiri.</li>
+      <li><strong>Na'at Sababi (النعْت السَّبَبِي):</strong> Na'at yang sifatnya kembali kepada sebab (bukan dzat man'ut), tetapi sebab tersebut terhubung dengan man'ut.</li>
+      <li><strong>Syarat Kesesuaian:</strong> Na'at harus sesuai dengan man'ut dalam 4 hal: jenis (mudzakkar/muannats), jumlah (mufrad/mutsanna/jamak), definisi (ma'rifah/nakirah), dan i'rab.</li>
+      <li><strong>I'rab Na'at:</strong> Selalu mengikuti i'rab man'ut-nya (jika man'ut marfu', na'at marfu'; jika manshub, na'at manshub).</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Mengapa Na'at Penting dalam Al-Qur'an?</h4>
+    <div class="case-content">
+      Bandingkan dua cara menyampaikan informasi berikut:<br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ رَجُلٌ</span> — "Datang seorang laki-laki."<br>
+      (2) <span class="arab" style="font-size:1.3rem">جَاءَ رَجُلٌ صَالِحٌ</span> — "Datang seorang laki-laki yang saleh."<br><br>
+      Pada kalimat (2), <span class="arab" style="font-size:1.2rem">صَالِحٌ</span> berfungsi sebagai <strong>Na'at</strong> yang memberikan informasi tambahan tentang "laki-laki" tersebut. Na'at membuat gambaran menjadi lebih spesifik — bukan sembarang laki-laki, tetapi laki-laki yang saleh. Inilah kekuatan Na'at dalam memberikan warna dan identitas pada man'ut.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Na'at bukan sekadar "hiasan" kalimat — ia adalah alat deskriptif yang sangat kuat. Dalam Al-Qur'an, penggunaan Na'at untuk sifat-sifat Allah (seperti <span class="arab" style="font-size:1.1rem">الْغَفُورُ الرَّحِيمُ</span>) memiliki implikasi teologis yang dalam — menegaskan sifat-sifat Ilahi secara berulang dan penuh penekanan.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan Na'at kepada siswa — baik dalam konteks nahwu maupun dalam konteks terjemahan Al-Qur'an dan hadis. Pemahaman yang kokoh tentang Na'at akan menjadi fondasi bagi siswa untuk memahami bagaimana bahasa Arab memberikan deskripsi yang kaya dan bermakna. Bayangkan bagaimana Anda akan menjelaskan konsep ini dengan cara yang menarik — mungkin dengan contoh dari bahasa Indonesia ("pelajar yang rajin", "bunga yang indah"), atau dari ayat-ayat Al-Qur'an yang sudah dihafal siswa.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 13.1 KONSEP DAN DEFINISI -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s13-1">13.1 Konsep dan Definisi <em>An-Na'at</em></h2>
+
+  <p>
+    Memahami konsep dan definisi Na'at adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat Na'at, mahasiswa akan kesulitan dalam membedakannya dengan tabi' lainnya (seperti Badal dan Taukid) dan memahami fungsinya dalam retorika bahasa Arab.
+  </p>
+
+  <h3 class="sub-title" id="s13-1-1">13.1.1 Pengertian Na'at secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, kata <em>na'at</em> (نَعْت) berasal dari akar kata <em>na'ata</span> (نَعَتَ) yang berarti "menggambarkan", "menjelaskan", atau "menyifati". Secara harfiah, na'at berarti "sifat" atau "deskripsi".
+  </p>
+
+  <p>
+    Secara <strong>terminologis (istilah nahwu)</strong>, Na'at adalah tabi' yang menjelaskan sifat man'ut (yang disifati) sehingga memberikan informasi tambahan yang lebih spesifik tentang man'ut tersebut.
+  </p>
+
+  <h3 class="sub-title" id="s13-1-2">13.1.2 Definisi Na'at Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وَالنَّعْتُ تَابِعٌ لِلْمَنْعُوتِ فِي إِعْرَابِهِ وَتَعْرِيفِهِ وَتَثْنِيَتِهِ وَجَمْعِهِ وَتَأْنِيثِهِ</span></td>
+        <td>"Na'at adalah tabi' yang mengikuti man'ut dalam i'rab, definisi, tatsniyah, jamak, dan ta'nits-nya."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">النَّعْتُ: صِفَةٌ تَابِعَةٌ لِمَوْصُوفِهَا</span></td>
+        <td>"Na'at adalah sifat yang mengikuti yang disifati."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">النَّعْتُ: تَابِعٌ يُرَادُ بِهِ تَحْسِينُ الْمَنْعُوتِ أَوْ تَقْبِيحُهُ</span></td>
+        <td>"Na'at adalah tabi' yang bertujuan untuk memperindah atau memperjelek man'ut."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">النَّعْتُ: مَا يُذْكَرُ لِبَيَانِ صِفَةِ الْمَوْصُوفِ</span></td>
+        <td>"Na'at adalah apa yang disebutkan untuk menjelaskan sifat dari yang disifati."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Na'at adalah <strong>tabi'</strong> — artinya ia selalu mengikuti man'ut-nya dalam berbagai aspek (i'rab, jenis, jumlah, definisi).</li>
+      <li>Fungsi utama Na'at adalah <strong>memberikan deskripsi</strong> — bukan menggantikan (seperti Badal) atau menguatkan (seperti Taukid).</li>
+      <li>Na'at dapat berupa <strong>sifat positif</strong> (seperti <span class="arab" style="font-size:1.1rem">صَالِحٌ</span> "saleh") atau <strong>sifat negatif</strong> (seperti <span class="arab" style="font-size:1.1rem">جَاهِلٌ</span> "bodoh").</li>
+      <li>Dalam Al-Qur'an, Na'at sangat dominan digunakan untuk menggambarkan sifat-sifat Allah, orang beriman, orang kafir, dan makhluk ciptaan-Nya.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s13-1-3">13.1.3 Kedudukan Na'at dalam Tawabi'</h3>
+
+  <p>
+    Na'at merupakan salah satu dari empat <strong>Tawabi'</strong> (kata-kata yang mengikuti) dalam nahwu. Keempat tabi' tersebut adalah:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Tabi'</th><th>Fungsi</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Na'at (النَّعْت)</strong></td>
+        <td>Menjelaskan sifat matbu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ الْمُجْتَهِدُ</span><br>"Datang pelajar yang rajin."</td>
+      </tr>
+      <tr>
+        <td><strong>Taukid (التَّأْكِيد)</strong></td>
+        <td>Menguatkan makna matbu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ نَفْسُهُ</span><br>"Pelajar itu sendiri yang datang."</td>
+      </tr>
+      <tr>
+        <td><strong>Badal (الْبَدَل)</strong></td>
+        <td>Menggantikan matbu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ أَخُُ</span><br>"Datang pelajar, yaitu saudaranya."</td>
+      </tr>
+      <tr>
+        <td><strong>'Athaf (الْعَطْف)</strong></td>
+        <td>Menghubungkan ma'thuf dengan ma'thuf 'alaih</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ وَالْمُدِيرُ</span><br>"Datang pelajar dan direktur."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="key-concept">
+    <h4>✦ Perbedaan Na'at dengan Tabi' Lainnya</h4>
+    <ul>
+      <li><strong>Na'at vs Taukid:</strong> Na'at menjelaskan sifat (seperti "pelajar yang rajin"), sedangkan Taukid menguatkan (seperti "pelajar itu sendiri").</li>
+      <li><strong>Na'at vs Badal:</strong> Na'at memberikan deskripsi (seperti "pelajar yang rajin"), sedangkan Badal menggantikan (seperti "pelajar, yaitu saudaranya").</li>
+      <li><strong>Na'at vs 'Athaf:</strong> Na'at menjelaskan sifat satu unsur, sedangkan 'Athaf menghubungkan dua unsur yang berbeda.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 13.2 SYARAT-SYARAT KESUAIAN -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s13-2">13.2 Syarat-syarat <em>Kesesuaian Na'at dengan Man'ut</em></h2>
+
+  <p>
+    Na'at harus memenuhi beberapa syarat kesesuaian dengan man'ut-nya. Kesesuaian ini mencakup empat aspek fundamental yang harus dipenuhi agar Na'at dapat berfungsi dengan benar.
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Empat Syarat Kesesuaian Na'at dengan Man'ut</h4>
+    <ul>
+      <li><strong>Jenis (الْجِنْس):</strong> Na'at harus sesuai dengan man'ut dalam hal mudzakkar (laki-laki) atau muannats (perempuan).</li>
+      <li><strong>Jumlah (الْعَدَد):</strong> Na'at harus sesuai dengan man'ut dalam hal mufrad (tunggal), mutsanna (dua), atau jamak (lebih dari dua).</li>
+      <li><strong>Definisi (التَّعْرِيف):</strong> Na'at harus sesuai dengan man'ut dalam hal ma'rifah (tentu) atau nakirah (tak tentu).</li>
+      <li><strong>I'rab (الْإِعْرَاب):</strong> Na'at harus mengikuti i'rab man'ut-nya (marfu', manshub, majrur, atau majzum).</li>
+    </ul>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Penjelasan</th><th>Contoh Benar</th><th>Contoh Salah</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Jenis</strong></td>
+        <td>Na'at mudzakkar mengikuti man'ut mudzakkar; Na'at muannats mengikuti man'ut muannats.</td>
+        <td><span class="arab">الطَّالِبُ الْمُجْتَهِدُ</span> ✓<br>(mudzakkar)</td>
+        <td><span class="arab">الطَّالِبُ الْمُجْتَهِدَةُ</span> ✗<br>(tidak sesuai jenis)</td>
+      </tr>
+      <tr>
+        <td><strong>Jumlah</strong></td>
+        <td>Na'at mufrad mengikuti man'ut mufrad; Na'at mutsanna mengikuti man'ut mutsanna; Na'at jamak mengikuti man'ut jamak.</td>
+        <td><span class="arab">الطُّلَّابُ الْمُجْتَهِدُونَ</span> ✓<br>(jamak)</td>
+        <td><span class="arab">الطُّلَّابُ الْمُجْتَهِدُ</span> ✗<br>(tidak sesuai jumlah)</td>
+      </tr>
+      <tr>
+        <td><strong>Definisi</strong></td>
+        <td>Na'at ma'rifah mengikuti man'ut ma'rifah; Na'at nakirah mengikuti man'ut nakirah.</td>
+        <td><span class="arab">الطَّالِبُ الْمُجْتَهِدُ</span> ✓<br>(keduanya ma'rifah)</td>
+        <td><span class="arab">الطَّالِبُ مُجْتَهِدٌ</span> ✗<br>(man'ut ma'rifah, na'at nakirah)</td>
+      </tr>
+      <tr>
+        <td><strong>I'rab</strong></td>
+        <td>Na'at selalu mengikuti i'rab man'ut-nya.</td>
+        <td><span class="arab">رَأَيْتُ الطَّالِبَ الْمُجْتَهِدَ</span> ✓<br>(keduanya manshub)</td>
+        <td><span class="arab">رَأَيْتُ الطَّالِبَ الْمُجْتَهِدُ</span> ✗<br>(man'ut manshub, na'at marfu')</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kesalahan Umum Mahasiswa</h4>
+    <ul>
+      <li>Tidak memperhatikan kesesuaian jenis — menggunakan Na'at mudzakkar untuk man'ut muannats, atau sebaliknya.</li>
+      <li>Tidak memperhatikan kesesuaian jumlah — menggunakan Na'at mufrad untuk man'ut jamak, atau sebaliknya.</li>
+      <li>Tidak memperhatikan kesesuaian definisi — menggunakan Na'at ma'rifah untuk man'ut nakirah, atau sebaliknya.</li>
+      <li>Tidak memperhatikan i'rab — mengira Na'at selalu marfu', padahal harus mengikuti man'ut.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 13.3 NA'AT HAKIKI -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s13-3">13.3 Na'at Hakiki <em>(النعْت الْحَقِيْقِي)</em></h2>
+
+  <p>
+    Na'at Hakiki adalah jenis Na'at yang paling umum dan mudah diidentifikasi. Na'at ini memberikan sifat yang <strong>langsung kembali kepada dzat man'ut</strong> itu sendiri.
+  </p>
+
+  <h3 class="sub-title" id="s13-3-1">13.3.1 Definisi dan Karakteristik Na'at Hakiki</h3>
+
+  <div class="key-concept">
+    <h4>✦ Definisi Na'at Hakiki</h4>
+    <ul>
+      <li><strong>Definisi:</strong> Na'at yang sifatnya kembali kepada dzat man'ut itu sendiri — bukan kepada sebab atau hal lain.</li>
+      <li><strong>Karakteristik:</strong> Sifat yang dijelaskan oleh Na'at Hakiki adalah sifat yang memang dimiliki oleh man'ut secara langsung.</li>
+      <li><strong>Contoh:</strong> <span class="arab" style="font-size:1.1rem">جَاءَ الطَّالِبُ الْمُجْتَهِدُ</span> — "Datang pelajar yang rajin." Sifat "rajin" kembali kepada dzat "pelajar" itu sendiri.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s13-3-2">13.3.2 Contoh dan Analisis I'rab Na'at Hakiki</h3>
+
+  <div class="arabic-display">
+    جَاءَ الطَّالِبُ الْمُجْتَهِدُ
+    <small>"Datang pelajar yang rajin."<br>Na'at Hakiki: الْمُجْتَهِدُ menjelaskan sifat الطَّالِبُ</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">جَاءَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الطَّالِبُ</span>
+      <span class="detail"><strong>Fa'il</strong> — marfu' dengan dhommah zhahirah. <small>Man'ut (yang disifati).</small></span>
+
+      <span class="word">الْمُجْتَهِدُ</span>
+      <span class="detail"><strong>Na'at Hakiki</strong> — marfu' dengan dhommah zhahirah (mengikuti man'ut yang marfu'). <small>Sifat "raj" kembali kepada dzat "pelajar" itu sendiri.</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    رَأَيْتُ الطَّالِبَةَ الْمُجْتَهِدَةَ
+    <small>"Aku melihat pelajar perempuan yang rajin."<br>Na'at Hakiki: الْمُجْتَهِدَةَ menjelaskan sifat الطَّالِبَةَ</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">رَأَيْتُ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>dhamir nashab</strong> — <span class="arab" style="font-size:1.1rem">رَأَيْ</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">تُ</span> = dhamir muttashil marfu' fa'il.</span>
+
+      <span class="word">الطَّالِبَةَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Man'ut (yang disifati).</small></span>
+
+      <span class="word">الْمُجْتَهِدَةَ</span>
+      <span class="detail"><strong>Na'at Hakiki</strong> — manshub dengan fathah (mengikuti man'ut yang manshub). <small>Sifat "raj" kembali kepada dzat "pelajar perempuan" itu sendiri. Perhatikan kesesuaian jenis (muannats) dan i'rab (manshub).</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    مَرَرْتُ بِالطُّلَّابِ الْمُجْتَهِدِينَ
+    <small>"Aku berpapasan dengan para pelajar yang rajin."<br>Na'at Hakiki: الْمُجْتَهِدِينَ menjelaskan sifat الطُّلَّابِ</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">مَرَرْتُ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>dhamir marfu'</strong> — <span class="arab" style="font-size:1.1rem">مَرَر</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">تُ</span> = dhamir muttashil marfu' fa'il.</span>
+
+      <span class="word">بِالط</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">بِ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">الطُّلَّابِ</span> = majrur dengan kasrah. <small>Man'ut (yang disifati).</small></span>
+
+      <span class="word">الْمُجْتَهِدِينَ</span>
+      <span class="detail"><strong>Na'at Hakiki</strong> — majrur dengan ya' (mengikuti man'ut yang majrur). <small>Sifat "raj" kembali kepada dzat "para pelajar" itu sendiri. Perhatikan kesesuaian jumlah (jamak mudzakkar salim) dan i'rab (majrur).</small></span>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 13.4 NA'AT SABABI -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s13-4">13.4 Na'at Sababi <em>(النعْت السَّبَبِي)</em></h2>
+
+  <p>
+    Na'at Sababi adalah jenis Na'at yang lebih kompleks. Na'at ini memberikan sifat yang <strong>tidak kembali kepada dzat man'ut</strong>, tetapi kembali kepada <strong>sebab</strong> yang terhubung dengan man'ut.
+  </p>
+
+  <h3 class="sub-title" id="s13-4-1">13.4.1 Definisi dan Karakteristik Na'at Sababi</h3>
+
+  <div class="key-concept">
+    <h4>✦ Definisi Na'at Sababi</h4>
+    <ul>
+      <li><strong>Definisi:</strong> Na'at yang sifatnya kembali kepada sebab (bukan dzat man'ut), tetapi sebab tersebut terhubung dengan man'ut melalui hubungan kepemilikan atau hubungan lainnya.</li>
+      <li><strong>Karakteristik:</strong> Sifat yang dijelaskan oleh Na'at Sababi bukan sifat yang dimiliki oleh man'ut secara langsung, tetapi sifat yang dimiliki oleh sesuatu yang terhubung dengan man'ut.</li>
+      <li><strong>Contoh:</strong> <span class="arab" style="font-size:1.1rem">مَرَرْتُ بِطَالِبٍ أَخُوهُ مُجْتَهِدٌ</span> — "Aku berpapasan dengan seorang pelajar yang saudaranya rajin." Sifat "raj" tidak kembali kepada dzat "pelajar", tetapi kepada "saudara" yang terhubung dengan "pelajar".</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s13-4-2">13.4.2 Contoh dan Analisis I'rab Na'at Sababi</h3>
+
+  <div class="arabic-display">
+    مَرَرْتُ بِطَالِبٍ أَخُوهُ مُجْتَهِدٌ
+    <small>"Aku berpapasan dengan seorang pelajar yang saudaranya rajin."<br>Na'at Sababi: مُجْتَهِدٌ menjelaskan sifat أَخُوهُ (sebab yang terhubung dengan طَالِبٍ)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">مَرَرْتُ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>dhamir marfu'</strong> — <span class="arab" style="font-size:1.1rem">مَرَر</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">تُ</span> = dhamir muttashil marfu' fa'il.</span>
+
+      <span class="word">بِطَالِبٍ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">بِ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">طَالِبٍ</span> = majrur dengan kasrah. <small>Man'ut (yang disifati).</small></span>
+
+      <span class="word">أَخُوهُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan wawu (karena termasuk asmaul khamsah). <span class="arab" style="font-size:1.1rem">هُ</span> = dhamir muttashil marfu' mudhaf ilaih. <small>Sebab yang terhubung dengan man'ut.</small></span>
+
+      <span class="word">مُجْتَهِدٌ</span>
+      <span class="detail"><strong>Na'at Sababi</strong> — marfu' dengan tanwin dhommah. <small>Sifat "raj" kembali kepada "saudara" (أَخُوهُ), bukan kepada "pelajar" (طَالِبٍ). Perhatikan: Na'at Sababi mengikuti i'rab sebab (أَخُوهُ yang marfu'), bukan i'rab man'ut (طَالِبٍ yang majrur).</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    رَأَيْتُ امْرَأَةً ابْنُهَا طَالِبٌ
+    <small>"Aku melihat seorang perempuan yang anaknya pelajar."<br>Na'at Sababi: طَالِبٌ menjelaskan sifat ابْنُهَا (sebab yang terhubung dengan امْرَأَةً)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">رَأَيْتُ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>dhamir marfu'</strong> — <span class="arab" style="font-size:1.1rem">رَأَيْ</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">تُ</span> = dhamir muttashil marfu' fa'il.</span>
+
+      <span class="word">امْرَأَةً</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Man'ut (yang disifati).</small></span>
+
+      <span class="word">ابْنُهَا</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah. <span class="arab" style="font-size:1.1rem">هَا</span> = dhamir muttashil marfu' mudhaf ilaih. <small>Sebab yang terhubung dengan man'ut.</small></span>
+
+      <span class="word">طَالِبٌ</span>
+      <span class="detail"><strong>Na'at Sababi</strong> — marfu' dengan tanwin dhommah. <small>Sifat "pelajar" kembali kepada "anak" (ابْنُهَا), bukan kepada "perempuan" (امْرَأَةً). Perhatikan: Na'at Sababi mengikuti i'rab sebab (ابْنُهَا yang marfu'), bukan i'rab man'ut (امْرَأَةً yang manshub).</small></span>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 13.5 PERBEDAAN NA'AT HAKIKI DAN SABABI -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s13-5">13.5 Perbedaan <em>Na'at Hakiki dan Sababi</em></h2>
+
+  <p>
+    Pemahaman yang kokoh tentang perbedaan antara Na'at Hakiki dan Na'at Sababi sangat penting untuk analisis yang akurat. Meskipun keduanya sama-sama Na'at, cara kerja dan implikasi i'rabnya sangat berbeda.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Na'at Hakiki</th><th>Na'at Sababi</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Definisi</strong></td>
+        <td>Sifat yang kembali kepada dzat man'ut</td>
+        <td>Sifat yang kembali kepada sebab (bukan dzat man'ut)</td>
+      </tr>
+      <tr>
+        <td><strong>Hubungan dengan man'ut</strong></td>
+        <td>Langsung — sifat dimiliki oleh man'ut</td>
+        <td>Tidak langsung — sifat dimiliki oleh sesuatu yang terhubung dengan man'ut</td>
+      </tr>
+      <tr>
+        <td><strong>I'rab Na'at</strong></td>
+        <td>Mengikuti i'rab man'ut</td>
+        <td>Mengikuti i'rab sebab (bukan man'ut)</td>
+      </tr>
+      <tr>
+        <td><strong>Kesesuaian dengan man'ut</strong></td>
+        <td>Sesuai dalam 4 hal: jenis, jumlah, definisi, i'rab</td>
+        <td>Sesuai dengan man'ut dalam 3 hal: jenis, jumlah, definisi; tetapi i'rab mengikuti sebab</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">جَاءَ الطَّالِبُ الْمُجْتَهِدُ</span><br>"Datang pelajar yang rajin."</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ أَخُوهُ مُجْتَهِدٌ</span><br>"Datang pelajar yang saudaranya rajin."</td>
+      </tr>
+      <tr>
+        <td><strong>Analisis</strong></td>
+        <td><span class="arab">الْمُجْتَهِدُ</span> = Na'at Hakiki<br>Sifat "raj" kembali kepada "pelajar"</td>
+        <td><span class="arab">مُجْتَهِدٌ</span> = Na'at Sababi<br>Sifat "raj" kembali kepada "saudara" (أَخُوهُ)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Analisis Perbandingan</h4>
+    <div class="case-content">
+      Bandingkan dua kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">رَأَيْتُ امْرَأَةً جَمِيلَةً</span> — "Aku melihat seorang perempuan yang cantik."<br>
+      → <span class="arab" style="font-size:1.2rem">جَمِيلَةً</span> = Na'at Hakiki (manshub mengikuti <span class="arab" style="font-size:1.2rem">امْرَأَةً</span>)<br>
+      → Sifat "cantik" kembali kepada dzat "perempuan" itu sendiri<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">رَأَيْتُ امْرَأَةً ابْنُهَا جَمِيلٌ</span> — "Aku melihat seorang perempuan yang anaknya cantik."<br>
+      → <span class="arab" style="font-size:1.2rem">جَمِيلٌ</span> = Na'at Sababi (marfu' mengikuti <span class="arab" style="font-size:1.2rem">ابْنُهَا</span>)<br>
+      → Sifat "cantik" kembali kepada "anak" (ابْنُهَا), bukan kepada "perempuan" (امْرَأَةً)
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Meskipun kedua kalimat menggunakan kata yang sama (<span class="arab" style="font-size:1.2rem">جَمِيل</span>), fungsi dan i'rabnya berbeda. Pada kalimat (1), Na'at Hakiki manshub karena mengikuti man'ut manshub. Pada kalimat (2), Na'at Sababi marfu' karena mengikuti sebab (ابْنُهَا) yang marfu'. Mahasiswa harus mampu membedakan kedua jenis Na'at ini berdasarkan konteks dan hubungan makna.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 13.6 ANALISIS TEKS OTENTIK -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s13-6">13.6 Analisis <em>Teks Otentik (Al-Qur'an & Hadis)</em></h2>
+
+  <p>
+    Na'at sangat dominan dalam Al-Qur'an dan hadis. Allah SWT menggunakan Na'at untuk menggambarkan sifat-sifat-Nya, sifat-sifat orang beriman, sifat-sifat orang kafir, dan sifat-sifat makhluk ciptaan-Nya. Mari kita analisis beberapa contoh.
+  </p>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 1: QS. Al-Fatihah [1]: 2</h5>
+    <div class="arabic-paragraph">
+      الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Segala puji bagi Allah, Tuhan semesta alam."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "رَبِّ الْعَالَمِينَ"</h5>
+    <div class="word-analysis">
+      <span class="word">الْحَمْدُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah.</span>
+
+      <span class="word">لِلَّهِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">لِ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">اللَّهِ</span> = majrur dengan kasrah. <small>Berkedudukan Khabar.</small></span>
+
+      <span class="word">رَبِّ</span>
+      <span class="detail"><strong>Na'at Hakiki</strong> — majrur dengan kasrah (mengikuti man'ut <span class="arab" style="font-size:1.1rem">اللَّهِ</span> yang majrur). <small>Sifat "Tuhan" kembali kepada dzat "Allah" itu sendiri.</small></span>
+
+      <span class="word">الْعَالَمِينَ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan ya' (karena jamak mudzakkar salim).</span>
+    </div>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 2: QS. Al-Baqarah [2]: 177</h5>
+    <div class="arabic-paragraph">
+      لَيْسَ الْبِرَّ أَنْ تُوَلُّوا وُجُوهَكُمْ قِبَلَ الْمَشْرِقِ وَالْمَغْرِبِ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Bukanlah kebajikan itu menghadapkan wajah kalian ke arah timur dan barat."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">لَيْسَ</span>
+      <span class="detail"><strong>Fi'il naqishah</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الْبِرَّ</span>
+      <span class="detail"><strong>Isim Laisa</strong> — manshub dengan fathah.</span>
+
+      <span class="word">أَنْ تُوَلُّوا</span>
+      <span class="detail"><strong>Mashdar mu'awwal</strong> — <span class="arab" style="font-size:1.1rem">أَنْ</span> + <span class="arab" style="font-size:1.1rem">تُوَلُّوا</span> ditakwil menjadi mashdar. <small>Berkedudukan Khabar Laisa.</small></span>
+
+      <span class="word">وُجُوهَكُمْ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <span class="arab" style="font-size:1.1rem">كُمْ</span> = dhamir muttashil manshub mudhaf ilaih.</span>
+
+      <span class="word">قِبَلَ</span>
+      <span class="detail"><strong>Zharf makan</strong> — manshub dengan fathah.</span>
+
+      <span class="word">الْمَشْرِقِ وَالْمَغْرِبِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah. <span class="arab" style="font-size:1.1rem">الْ</span> = wawu 'athaf; <span class="arab" style="font-size:1.1rem">الْمَغْرِبِ</span> = ma'thuf majrur.</span>
+    </div>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 3: QS. Al-Baqarah [2]: 255 (Ayat Kursi)</h5>
+    <div class="arabic-paragraph">
+      اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Allah, tidak ada tuhan selain Dia Yang Maha Hidup lagi Maha Berdiri sendiri."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "الْحَيُّ الْقَيُّومُ"</h5>
+    <div class="word-analysis">
+      <span class="word">اللَّهُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah.</span>
+
+      <span class="word">لَا</span>
+      <span class="detail"><strong>La Nafiyah lil Jins</strong> — mabni 'ala sukun.</span>
+
+      <span class="word">إِلَٰهَ</span>
+      <span class="detail"><strong>Isim La</strong> — manshub dengan fathah.</span>
+
+      <span class="word">إِلَّا</span>
+      <span class="detail"><strong>Adat istitsna'</strong> — mabni la mahalla lahu.</span>
+
+      <span class="word">هُوَ</span>
+      <span class="detail"><strong>Dhamir munfashil</strong> — marfu' dengan dhommah. <small>Berkedudukan Taukid Ma'nawi.</small></span>
+
+      <span class="word">الْحَيُّ</span>
+      <span class="detail"><strong>Na'at Hakiki</strong> — marfu' dengan dhommah (mengikuti man'ut <span class="arab" style="font-size:1.1rem">هُوَ</span> yang marfu'). <small>Sifat "Maha Hidup" kembali kepada dzat "Dia" (Allah) itu sendiri.</small></span>
+
+      <span class="word">الْقَيُّومُ</span>
+      <span class="detail"><strong>Na'at Hakiki kedua</strong> — marfu' dengan dhommah. <small>Sifat "Maha Berdiri sendiri" juga kembali kepada dzat "Dia" (Allah). Perhatikan: dalam ayat ini terdapat dua Na'at yang berurutan, keduanya mengikuti man'ut yang sama.</small></span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Pola Umum Na'at dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Dalam Al-Qur'an, Na'at sering muncul dalam pola-pola berikut:<br><br>
+      (1) <strong>Pola sifat-sifat Allah:</strong><br>
+      <span class="arab" style="font-size:1.2rem">الْغَفُورُ الرَّحِيمُ</span> — "Yang Maha Pengampun lagi Maha Penyayang"<br>
+      <span class="arab" style="font-size:1.2rem">الْعَزِيزُ الْحَكِيمُ</span> — "Yang Maha Perkasa lagi Maha Bijaksana"<br><br>
+      (2) <strong>Pola sifat-sifat orang beriman:</strong><br>
+      <span class="arab" style="font-size:1.2rem">الْمُؤْمِنُونَ الصَّادِقُونَ</span> — "Orang-orang beriman yang jujur"<br><br>
+      (3) <strong>Pola sifat-sifat orang kafir:</strong><br>
+      <span class="arab" style="font-size:1.2rem">الْكَافِرُونَ الْفَاسِقُونَ</span> — "Orang-orang kafir yang fasik"<br><br>
+      <strong>Ta'lil Nahwi:</strong> Penggunaan Na'at dalam Al-Qur'an bukan sekadar variasi gramatikal — ia memiliki implikasi teologis yang dalam. Na'at digunakan untuk menegaskan sifat-sifat Ilahi secara berulang dan penuh penekanan, sehingga pembaca dapat membayangkan keagungan Allah dengan lebih jelas.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Mahasiswa PBA perlu memahami pola-pola umum Na'at dalam Al-Qur'an agar mampu menafsirkan ayat-ayat secara tepat. Kemampuan ini juga akan berguna dalam mengajarkan nahwu kepada siswa dengan contoh-contoh yang relevan.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 13.7 APLIKASI: LINGKUNGAN -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s13-7">13.7 Aplikasi: <em>Kalimat Bertema Lingkungan</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang Na'at, mari kita konstruksi kalimat-kalimat bertema lingkungan dengan menggunakan Na'at Hakiki dan Sababi. Tema ini dipilih karena relevan dengan isu global dan sesuai dengan nilai-nilai keislaman tentang tanggung jawab manusia sebagai khalifah di bumi.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Kalimat dengan Na'at Bertema Lingkungan</h5>
+    <div class="arabic-paragraph">
+      ١. جَاءَ الرَّجُلُ الصَّالِحُ لِيَنْظُفَ الْبِيئَةَ<br>
+      ٢. رَأَيْتُ امْرَأَةً ابْنُهَا مُجْتَهِدٌ فِي حِفْظِ الْبِيئَةِ<br>
+      ٣. مَرَرْتُ بِالْأَشْجَارِ الْخَضْرَاءِ<br>
+      ٤. فِي الْمَدِينَةِ بَيْتٌ نَظِيفٌ صَاحِبُهُ مُهْتَمٌّ بِالْبِيئَةِ<br>
+      ٥. جَاءَ الطُّلَّابُ الْمُجْتَهِدُونَ لِنَظَافَةِ الْمَدْرَسَةِ
+    </div>
+    <div class="translation">
+      1. Datang laki-laki saleh untuk membersihkan lingkungan.<br>
+      2. Aku melihat seorang perempuan yang anaknya rajin dalam menjaga lingkungan.<br>
+      3. Aku berpapasan dengan pepohonan yang hijau.<br>
+      4. Di kota ada sebuah rumah yang bersih yang pemiliknya peduli terhadap lingkungan.<br>
+      5. Datang para pelajar yang rajin untuk kebersihan sekolah.
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 1 (Na'at Hakiki)</h5>
+    <div class="word-analysis">
+      <span class="word">جَاءَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الرَّجُلُ</span>
+      <span class="detail"><strong>Fa'il</strong> — marfu' dengan dhommah zhahirah. <small>Man'ut (yang disifati).</small></span>
+
+      <span class="word">الصَّالِحُ</span>
+      <span class="detail"><strong>Na'at Hakiki</strong> — marfu' dengan dhommah zhahirah (mengikuti man'ut yang marfu'). <small>Sifat "saleh" kembali kepada dzat "laki-laki" itu sendiri.</small></span>
+
+      <span class="word">لِيَنْظُفَ</span>
+      <span class="detail"><strong>Lam ta'lil</strong> + <strong>fi'il mudhari' manshub</strong> — manshub dengan fathah.</span>
+
+      <span class="word">الْبِيئَةَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah.</span>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 2 (Na'at Sababi)</h5>
+    <div class="word-analysis">
+      <span class="word">رَأَيْتُ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>dhamir marfu'</strong> — <span class="arab" style="font-size:1.1rem">رَأَيْ</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">تُ</span> = dhamir muttashil marfu' fa'il.</span>
+
+      <span class="word">امْرَأَةً</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Man'ut (yang disifati).</small></span>
+
+      <span class="word">ابْنُهَا</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah. <span class="arab" style="font-size:1.1rem">هَا</span> = dhamir muttashil marfu' mudhaf ilaih. <small>Sebab yang terhubung dengan man'ut.</small></span>
+
+      <span class="word">مُجْتَهِدٌ</span>
+      <span class="detail"><strong>Na'at Sababi</strong> — marfu' dengan tanwin dhommah (mengikuti sebab <span class="arab" style="font-size:1.1rem">ابْنُهَا</span> yang marfu'). <small>Sifat "raj" kembali kepada "anak" (ابْنُهَا), bukan kepada "perempuan" (امْرَأَةً).</small></span>
+
+      <span class="word">فِي حِفْظِ الْبِيئَةِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">فِي</span> = huruf jar; <span class="arab" style="font-size:1.1rem">حِفْظِ</span> = majrur dengan kasrah. <small>Keterangan tempat/keadaan.</small></span>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Mengonstruksi Kalimat dengan Na'at</h4>
+    <ul>
+      <li><strong>Pastikan kesesuaian 4 hal:</strong> Na'at harus sesuai dengan man'ut dalam jenis, jumlah, definisi, dan i'rab (untuk Na'at Hakiki).</li>
+      <li><strong>Perhatikan jenis Na'at:</strong> Na'at Hakiki mengikuti i'rab man'ut; Na'at Sababi mengikuti i'rab sebab.</li>
+      <li><strong>Gunakan Na'at yang tepat:</strong> Pilih sifat yang memang dimiliki oleh man'ut (Hakiki) atau oleh sesuatu yang terhubung dengan man'ut (Sababi).</li>
+      <li><strong>Integrasikan nilai-nilai:</strong> Gunakan tema-tema yang relevan dengan kehidupan dan nilai-nilai keislaman.</li>
+      <li><strong>Perhatikan konteks:</strong> Na'at cocok digunakan untuk memberikan deskripsi yang kaya dan bermakna — misalnya, dalam deskripsi lingkungan, orang, atau benda.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 13.8 TUGAS PERTEMUAN 13 -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s13-8">13.8 Tugas <em>Pertemuan 13</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Mengidentifikasi <strong>Na'at Hakiki dan Sababi</strong> dalam <strong>teks keislaman</strong>.</li>
+      <li>Pilih minimal <strong>1 teks keislaman</strong> (bisa berupa ayat Al-Qur'an, hadis, atau kutipan kitab).</li>
+      <li>Identifikasi minimal <strong>10 Na'at</strong> dalam teks tersebut.</li>
+      <li>Untuk setiap Na'at:</li>
+      <li style="padding-left:2.5rem">— Tentukan jenis Na'at (Hakiki atau Sababi)</li>
+      <li style="padding-left:2.5rem">— Identifikasi Man'ut (yang disifati)</li>
+      <li style="padding-left:2.5rem">— Berikan analisis i'rab lengkap</li>
+      <li style="padding-left:2.5rem">— Jelaskan alasan mengapa Na'at tersebut termasuk Hakiki atau Sababi</li>
+      <li>Susun dalam bentuk tabel yang rapi dan sistematis.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Merangkum materi Pertemuan 13 (An-Na'at) secara sistematis.</li>
+      <li>Rangkuman harus mencakup:</li>
+      <li style="padding-left:2.5rem">— Definisi dan konsep Na'at</li>
+      <li style="padding-left:2.5rem">— Syarat-syarat kesesuaian Na'at dengan man'ut</li>
+      <li style="padding-left:2.5rem">— Na'at Hakiki dan Na'at Sababi</li>
+      <li style="padding-left:2.5rem">— Perbedaan Na'at Hakiki dan Sababi</li>
+      <li style="padding-left:2.5rem">— Analisis i'rab Na'at</li>
+      <li>Sumber: kitab <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>An-Nahw al-Wadhih</em> (Al-Jarim & Amin).</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Contoh Tabel Tugas Mandiri</h4>
+    <table>
+      <thead>
+        <tr><th>No</th><th>Teks</th><th>Jenis Na'at</th><th>Man'ut</th><th>Analisis I'rab</th><th>Alasan</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><span class="arab">الْحَيُّ</span> (QS. Al-Baqarah: 255)</td>
+          <td>Na'at Hakiki</td>
+          <td><span class="arab">هُوَ</span></td>
+          <td><span class="arab">الْحَيُّ</span> marfu' mengikuti <span class="arab">هُوَ</span></td>
+          <td>Sifat "Maha Hidup" kembali kepada dzat "Dia" (Allah)</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><span class="arab">الْقَيُّومُ</span> (QS. Al-Baqarah: 255)</td>
+          <td>Na'at Hakiki</td>
+          <td><span class="arab">هُوَ</span></td>
+          <td><span class="arab">الْقَيُّومُ</span> marfu' mengikuti <span class="arab">هُوَ</span></td>
+          <td>Sifat "Maha Berdiri sendiri" kembali kepada dzat "Dia" (Allah)</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><span class="arab">رَبِّ</span> (QS. Al-Fatihah: 2)</td>
+          <td>Na'at Hakiki</td>
+          <td><span class="arab">اللَّهِ</span></td>
+          <td><span class="arab">رَبِّ</span> majrur mengikuti <span class="arab">اللَّهِ</span></td>
+          <td>Sifat "Tuhan" kembali kepada dzat "Allah"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Pembelajaran</h4>
+    <p>
+      Melalui tugas ini, mahasiswa tidak hanya menguji pemahaman teoretis tentang Na'at, tetapi juga melatih kemampuan menganalisis teks keislaman secara mendalam. Kemampuan mengidentifikasi Na'at Hakiki dan Sababi dalam teks keislaman akan memperkaya kompetensi mahasiswa dalam memahami deskripsi yang kaya dalam bahasa Arab.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 13.9 PETA KONSEP & GLOSARIUM -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s13-9">13.9 Peta Konsep <em>& Glosarium</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep An-Na'at</h4>
+    <div class="map-center">
+      <div class="core">AN-NA'AT</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Tabi' yang menjelaskan sifat man'ut</p>
+        <ul>
+          <li>Memberikan deskripsi</li>
+          <li>Mengikuti man'ut</li>
+          <li>4 syarat kesesuaian</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Syarat Kesesuaian</h5>
+        <ul>
+          <li>Jenis (mudzakkar/muannats)</li>
+          <li>Jumlah (mufrad/mutsanna/jamak)</li>
+          <li>Definisi (ma'rifah/nakirah)</li>
+          <li>I'rab (marfu'/manshub/majrur)</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Jenis-jenis</h5>
+        <ul>
+          <li><strong>Na'at Hakiki:</strong>
+            <ul>
+              <li>Sifat kembali kepada dzat man'ut</li>
+              <li>Mengikuti i'rab man'ut</li>
+            </ul>
+          </li>
+          <li><strong>Na'at Sababi:</strong>
+            <ul>
+              <li>Sifat kembali kepada sebab</li>
+              <li>Mengikuti i'rab sebab</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 I'rab Na'at</h5>
+        <ul>
+          <li>Na'at Hakiki: mengikuti i'rab man'ut</li>
+          <li>Na'at Sababi: mengikuti i'rab sebab</li>
+          <li>Selalu sesuai dengan man'ut dalam jenis, jumlah, definisi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📖 Glosarium Istilah Na'at</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Na'at</strong><span class="arab">نَعْت</span></div>
+        <p>Tabi' yang menjelaskan sifat man'ut (yang disifati).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Man'ut</strong><span class="arab">مَنْعُوت</span></div>
+        <p>Kata yang disifati oleh Na'at — biasanya berupa isim ma'rifah atau nakirah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Na'at Hakiki</strong><span class="arab">النَّعْتُ الْحَقِيْقِي</span></div>
+        <p>Na'at yang sifatnya kembali kepada dzat man'ut itu sendiri.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Na'at Sababi</strong><span class="arab">النَّعْتُ السَّبَبِي</span></div>
+        <p>Na'at yang sifatnya kembali kepada sebab (bukan dzat man'ut).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Sebab</strong><span class="arab">سَبَب</span></div>
+        <p>Sesuatu yang terhubung dengan man'ut melalui hubungan kepemilikan atau hubungan lainnya.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mudzakkar</strong><span class="arab">مُذَكَّر</span></div>
+        <p>Isim yang menunjukkan jenis laki-laki.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Muannats</strong><span class="arab">مُؤَنَّث</span></div>
+        <p>Isim yang menunjukkan jenis perempuan.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mufrad</strong><span class="arab">مُفْرَد</span></div>
+        <p>Isim tunggal (satu).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mutsanna</strong><span class="arab">مُثَنّٰى</span></div>
+        <p>Isim ganda (dua).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Jamak</strong><span class="arab">جَمْع</span></div>
+        <p>Isim jamak (lebih dari dua).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ma'rifah</strong><span class="arab">مَعْرِفَة</span></div>
+        <p>Isim tertentu (dengan alif-lam, dhamir, isim isyarah, dll).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Nakirah</strong><span class="arab">نَكِرَة</span></div>
+        <p>Isim tak tentu (tanpa alif-lam, bukan dhamir, dll).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 13</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep An-Na'at — dari definisi dan hakikatnya, syarat-syarat kesesuaian dengan man'ut, dua jenis Na'at (Hakiki dan Sababi), perbedaan keduanya, analisis ayat-ayat Al-Qur'an dan hadis, hingga aplikasi dalam kalimat bertema lingkungan. Ingatlah, Na'at bukan sekadar "hiasan" kalimat — ia adalah <strong>alat deskriptif</strong> yang sangat kuat untuk memberikan warna, karakter, dan identitas pada man'ut. Sebagai calon guru bahasa Arab, penguasaan terhadap Na'at akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- KESIMPULAN -->
+  <!-- ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 13</h3>
+    <p>
+      Pertemuan ketigabelas ini telah membahas secara komprehensif tentang An-Na'at — tabi' yang berfungsi menjelaskan sifat man'ut. Mahasiswa telah memahami konsep dan definisi Na'at, syarat-syarat kesesuaian dengan man'ut (jenis, jumlah, definisi, i'rab), dua jenis Na'at (Hakiki dan Sababi), perbedaan keduanya, serta analisis i'rab Na'at dalam berbagai konteks.
+    </p>
+    <p>
+      Melalui analisis ayat-ayat Al-Qur'an dan hadis, mahasiswa telah berlatih mengidentifikasi Na'at dalam teks otentik keislaman. Aplikasi melalui konstruksi kalimat bertema lingkungan dan tugas mengidentifikasi Na'at Hakiki dan Sababi dalam teks keislaman telah menunjukkan relevansi Na'at dalam konteks kontemporer dan kepedulian terhadap isu global.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 14 yang akan membahas <strong>Athaf Bayan</strong> — tabi' yang berfungsi memberikan penjelasan lebih rinci tentang man'ut. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- DAFTAR PUSTAKA -->
+  <!-- ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Anbari, Ibnu. <em>Al-Mufrad fi Ushul an-Nahw</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="12.html">← Pertemuan 12: Al-Badal</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="14.html">Pertemuan 14: Athaf Bayan →</a>
+  </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- UJI FORMATIF -->
+<!-- ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 13</span>
+      <h2>An-Na'at: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Penjelas Sifat Hakiki & Sababi</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Konsep Na'at, syarat kesesuaian, Na'at Hakiki & Sababi, analisis Al-Qur'an</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">جَاءَ الطَّالِبُ الْمُجْتَهِدُ</span>, kata <span class="arab">الْمُجْتَهِدُ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Badal</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Na'at Hakiki</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Taukid</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Khabar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>2.</strong> Fungsi utama Na'at dalam kalimat adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Menggantikan man'ut</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Menguatkan makna man'ut</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Menjelaskan sifat man'ut</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Menghubungkan dua unsur kalimat</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Syarat kesesuaian Na'at dengan man'ut mencakup...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Jenis, jumlah, definisi, dan i'rab</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Hanya jenis dan jumlah</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Hanya i'rab</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Tidak ada syarat khusus</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Perbedaan utama antara Na'at Hakiki dan Na'at Sababi adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Na'at Hakiki mengikuti i'rab sebab, Na'at Sababi mengikuti i'rab man'ut</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Na'at Hakiki untuk mufrad, Na'at Sababi untuk jamak</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Na'at Hakiki untuk ma'rifah, Na'at Sababi untuk nakirah</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Na'at Hakiki sifatnya kembali kepada dzat man'ut, Na'at Sababi sifatnya kembali kepada sebab</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Dalam kalimat <span class="arab">رَأَيْتُ امْرَأَةً ابْنُهَا جَمِيلٌ</span>, kata <span class="arab">جَمِيلٌ</span> berfungsi sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Na'at Hakiki</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Na'at Sababi</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Badal</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> I'rab Na'at Hakiki adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Selalu marfu'</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Selalu manshub</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Mengikuti i'rab man'ut</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. Mengikuti i'rab sebab</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Dalam ayat <span class="arab">الْحَيُّ الْقَيُّومُ</span> (QS. Al-Baqarah: 255), kata <span class="arab">الْحَيُّ</span> dan <span class="arab">الْقَيُّومُ</span> berfungsi sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Na'at Hakiki (dua Na'at berurutan)</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Na'at Sababi</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Badal</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Taukid</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Na'at Sababi mengikuti i'rab...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Man'ut</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Fi'il</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Maf'ul bih</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Sebab (bukan man'ut)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Dalam kalimat <span class="arab">مَرَرْتُ بِالطُّلَّابِ الْمُجْتَهِدِينَ</span>, kata <span class="arab">الْمُجْتَهِدِينَ</span> berkedudukan...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Marfu' dengan dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Majrur dengan ya' (mengikuti man'ut yang majrur)</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Manshub dengan fathah</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Marfu' dengan wawu</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Kesalahan umum yang sering dilakukan mahasiswa dalam menganalisis Na'at adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Tidak memperhatikan kesesuaian jenis</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Tidak memperhatikan kesesuaian jumlah</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Tidak memperhatikan kesesuaian i'rab (terutama untuk Na'at Sababi)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Semua jawaban benar</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat An-Na'at menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda (dalam bahasa Arab), dan analisislah perbedaan antara Na'at dengan tabi' lainnya (Badal, Taukid, 'Athaf)!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Jelaskan empat syarat kesesuaian Na'at dengan man'ut (jenis, jumlah, definisi, i'rab)! Berikan contoh kalimat yang memenuhi setiap syarat dan contoh kalimat yang melanggar setiap syarat, serta analisislah mengapa kalimat tersebut memenuhi atau melanggar syarat!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Jelaskan perbedaan antara Na'at Hakiki dan Na'at Sababi! Berikan minimal 3 contoh dari Al-Qur'an atau hadis untuk masing-masing jenis, dan analisislah i'rab setiap Na'at secara lengkap!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Analisislah pola-pola umum Na'at dalam Al-Qur'an! Berikan minimal 5 contoh ayat yang menggunakan Na'at untuk menggambarkan sifat-sifat Allah, orang beriman, atau orang kafir, dan jelaskan implikasi teologis dari penggunaan Na'at dalam ayat-ayat tersebut!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Susunlah sebuah <strong>paragraf</strong> (minimal 100 kata) bertema <strong>"Pelestarian Lingkungan"</strong> yang menggunakan minimal <strong>3 Na'at Hakiki</strong> dan <strong>2 Na'at Sababi</strong>! Sertakan terjemahan Indonesia dan analisis i'rab untuk setiap Na'at yang Anda gunakan, serta jelaskan alasan mengapa Na'at tersebut termasuk Hakiki atau Sababi!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 13,
+    topik: 'An-Na\'at',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 13
+  An-Nahw lil Mutawassithin
+  Topik: An-Na'at
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P13_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P13 (An-Na'at) - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 13 (An-Na'at) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

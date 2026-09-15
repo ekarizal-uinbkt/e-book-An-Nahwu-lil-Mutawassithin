@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 4: Al-Mubtada' — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 4: Konsep, hukum, syarat, dan bentuk-bentuk Mubtada', hubungan dengan Khabar, taqdim & ta'khir, Mubtada' Mu'awwal, serta konstruksi kalimat nominal bertema lingkungan." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--ink);color:var(--cream);
+  line-height:1.7;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201,169,97,.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(201,169,97,.06) 0%, transparent 40%);
+}
+.bg-ornament{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(201,169,97,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,97,.03) 1px, transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{
+  min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1;
+}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{
+  display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;
+  border:1px solid var(--gold);border-radius:2px;
+}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{
+  background:linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;
+  font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none;
+}
+.btn-primary{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;
+  color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line);
+}
+h2.section-title em{
+  font-style:italic;
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+h3.sub-title{
+  font-family:var(--serif);font-size:1.5rem;color:var(--gold);
+  margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem;
+}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{
+  font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);
+  font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem;
+}
+.arabic-display{
+  background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;
+  padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);
+  font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2;
+}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{
+  background:rgba(201,169,97,.04);border-left:3px solid var(--gold);
+  padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;
+}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center;
+}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg, transparent, var(--gold), transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;
+}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box, .warning-box, .insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4, .warning-box h4, .insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul, .warning-box ul, .insight-box ul{list-style:none;padding:0}
+.tips-box li, .warning-box li, .insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative;
+}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{
+  display:inline-block;padding:1rem 2rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3);
+}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center;
+}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  flex-wrap:wrap;gap:1rem;
+}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{
+  background:linear-gradient(135deg, rgba(100,180,220,.08) 0%, rgba(100,180,220,.02) 100%);
+  border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0;
+}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{
+  display:inline-block;margin-top:1rem;padding:.4rem 1rem;
+  background:rgba(100,180,220,.15);border-radius:4px;
+  font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase;
+}
+.env-text{
+  background:linear-gradient(135deg, rgba(80,200,120,.06) 0%, rgba(80,200,120,.02) 100%);
+  border:1px solid rgba(80,200,120,.3);border-radius:8px;
+  padding:2rem;margin:2rem 0;
+}
+.env-text h5{
+  font-family:var(--serif);color:#50c878;font-size:1.15rem;
+  margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.env-text .arabic-paragraph{
+  font-family:var(--arab);font-size:1.5rem;color:var(--gold);
+  direction:rtl;line-height:2.4;text-align:right;
+  padding:1.5rem;background:rgba(0,0,0,.25);
+  border-radius:6px;margin-bottom:1rem;
+}
+.env-text .translation{
+  font-family:var(--serif-2);font-style:italic;
+  color:var(--muted);font-size:.95rem;
+  padding:1rem;border-left:2px solid #50c878;
+}
+.quiz-section{
+  background:linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+  padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1;
+}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{
+  display:inline-block;padding:.5rem 1.5rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-size:.75rem;letter-spacing:3px;
+  text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem;
+}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input, .form-group select{
+  padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);
+  border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s;
+}
+.form-group input:focus, .form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{
+  width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);
+  border:1px solid var(--line);border-radius:4px;color:var(--cream);
+  font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s;
+}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{
+  padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+  font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.btn-submit{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf, .btn-score, .btn-email, .btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover, .btn-score:hover, .btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{
+  display:none;
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center;
+}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .env-text .arabic-paragraph{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 4
+  </div>
+  <span class="chapter-label">Pertemuan 4 · 2 SKS</span>
+  <h1>Al-Mubtada': <span class="accent">Fondasi Kalimat Nominal</span></h1>
+  <div class="hero-arabic">الْمُبْتَدَأُ: أَسَاسُ الْجُمْلَةِ الِاسْمِيَّةِ</div>
+  <p class="subtitle">Konsep, hukum, syarat, dan bentuk-bentuk Mubtada', hubungan dengan Khabar, taqdim & ta'khir, Mubtada' Mu'awwal, serta konstruksi kalimat nominal bertema lingkungan.</p>
+  <div class="hero-actions">
+    <a href="3.html" class="btn btn-outline">← Pertemuan Sebelumnya</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 4</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s4-1">4.1 Konsep dan Definisi Al-Mubtada'</a>
+        <ol>
+          <li><a href="#s4-1-1">Pengertian Mubtada' secara Bahasa dan Istilah</a></li>
+          <li><a href="#s4-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s4-1-3">Kedudukan Mubtada' dalam Jumlah Ismiyyah</a></li>
+        </ol>
+      </li>
+      <li><a href="#s4-2">4.2 Hukum dan Syarat Al-Mubtada'</a>
+        <ol>
+          <li><a href="#s4-2-1">Hukum Dasar: Al-Mubtada' Marfu'</a></li>
+          <li><a href="#s4-2-2">Syarat-syarat Mubtada'</a></li>
+          <li><a href="#s4-2-3">Tanda-tanda Rafa' pada Mubtada'</a></li>
+        </ol>
+      </li>
+      <li><a href="#s4-3">4.3 Bentuk-bentuk Al-Mubtada'</a>
+        <ol>
+          <li><a href="#s4-3-1">Mubtada' Isim Zhahir</a></li>
+          <li><a href="#s4-3-2">Mubtada' Dhamir</a></li>
+          <li><a href="#s4-3-3">Mubtada' Mu'awwal</a></li>
+        </ol>
+      </li>
+      <li><a href="#s4-4">4.4 Hubungan Mubtada' dan Khabar</a>
+        <ol>
+          <li><a href="#s4-4-1">Konsep Dasar Hubungan Keduanya</a></li>
+          <li><a href="#s4-4-2">Kesesuaian Mubtada' dan Khabar</a></li>
+          <li><a href="#s4-4-3">Khabar Mufrad, Jumlah, dan Syibh Jumlah</a></li>
+        </ol>
+      </li>
+      <li><a href="#s4-5">4.5 Taqdim dan Ta'khir Mubtada'/Khabar</a>
+        <ol>
+          <li><a href="#s4-5-1">Kaidah Dasar Taqdim</a></li>
+          <li><a href="#s4-5-2">Kondisi yang Membolehkan Taqdim Khabar</a></li>
+          <li><a href="#s4-5-3">Kondisi yang Mewajibkan Taqdim Mubtada'</a></li>
+        </ol>
+      </li>
+      <li><a href="#s4-6">4.6 Mubtada' dalam Al-Qur'an dan Hadis</a></li>
+      <li><a href="#s4-7">4.7 Aplikasi: Kalimat Nominal Bertema Lingkungan</a></li>
+      <li><a href="#s4-8">4.8 Tugas Pertemuan 4</a></li>
+      <li><a href="#s4-9">4.9 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>jumlah fi'liyyah</em> adalah kalimat yang mengisahkan peristiwa, maka <em>jumlah ismiyyah</em> adalah kalimat yang mengabadikan kenyataan — dan <em>Mubtada'</em> adalah fondasi yang menopang seluruh bangunan kalimat tersebut.
+  </p>
+
+  <p>
+    Setelah pada pertemuan kedua dan ketiga kita menyelami dinamika <strong>Al-Fa'il</strong> dan <strong>Na'ibul Fa'il</strong> dalam kalimat verbal, pada pertemuan keempat ini kita melangkah ke unsur <strong>Marfu'atul Asma</strong> yang menjadi fondasi kalimat nominal: <strong>Al-Mubtada'</strong> (الْمُبْتَدَأُ). Sebagai mahasiswa Pendidikan Bahasa Arab (PBA), penguasaan terhadap Mubtada' bukan sekadar syarat lulus mata kuliah — ia adalah kunci untuk memahami bagaimana bahasa Arab mengekspresikan kebenaran yang bersifat tetap, universal, dan timeless.
+  </p>
+
+  <p>
+    Mubtada' adalah unsur pertama dalam <em>jumla ismiyyah</em> (kalimat nominal) yang bersama Khabar-nya membentuk makna utuh. Berbeda dengan Fa'il yang bergantung pada fi'il, Mubtada' berdiri mandiri — ia "memulai" pembicaraan, dan Khabar "menyempurnakan"-nya. Dalam Al-Qur'an, jumlah ismiyyah sangat dominan karena berfungsi menyampaikan kebenaran teologis yang abadi: <span class="arab" style="font-size:1.1rem">اللهُ لَا إِلَٰهَ إِلَّا هُوَ</span> — bukan <span class="arab" style="font-size:1.1rem">كانَ اللهُ</span>, karena keesaan Allah bukan peristiwa yang terjadi pada waktu tertentu, melainkan kenyataan yang tetap.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Mubtada' secara komprehensif: mulai dari konsep dan definisi, hukum dan syarat, bentuk-bentuknya (zhahir, dhamir, mu'awwal), hubungan dengan Khabar, kaidah taqdim dan ta'khir, analisis ayat-ayat Al-Qur'an, hingga aplikasi praktis dalam konstruksi kalimat nominal bertema lingkungan. Sebagai puncak pembelajaran, mahasiswa akan menyusun kalimat-kalimat menggunakan Mubtada' Mu'awwal bertema "Menjaga Lingkungan" — sebuah latihan yang memadukan kompetensi nahwu dengan kepedulian terhadap isu global.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">الْمُبْتَدَأُ هُوَ الاسْمُ الْمَرْفُوعُ الَّذِي لَا يَدْخُلُ عَلَيْهِ عَامِلٌ مِنَ الْعَوَامِلِ اللَّفْظِيَّةِ</div>
+    <div class="translation">"Mubtada' adalah isim marfu' yang tidak dimasuki oleh 'awamil lafdziyyah (faktor-faktor lahir) dari berbagai 'awamil."</div>
+    <div class="source">— Definisi dalam Alfiyyah Ibnu Malik</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal Al-Mubtada' dalam Kalimat Arab</h4>
+    <p>Simak penjelasan visual tentang bagaimana Mubtada' bekerja dalam struktur jumlah ismiyyah — dari definisi dasar hingga analisis teks otentik.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 4</h4>
+    <ul>
+      <li><strong>Al-Mubtada' (الْمُبْتَدَأُ):</strong> Isim marfu' yang menjadi topik awal dalam jumlah ismiyyah (kalimat nominal), tidak dimasuki oleh 'awamil lafdziyyah.</li>
+      <li><strong>Al-Khabar (الْخَبَرُ):</strong> Isim marfu' yang melengkapi makna Mubtada', sehingga kalimat menjadi sempurna secara makna.</li>
+      <li><strong>Jumlah Ismiyyah (جُمْلَةٌ اسْمِيَّةٌ):</strong> Kalimat yang dimulai dengan isim (Mubtada'), berbeda dengan jumlah fi'liyyah yang dimulai dengan fi'il.</li>
+      <li><strong>Mubtada' Mu'awwal (مُبْتَدَأٌ مُؤَوَّلٌ):</strong> Mubtada' yang berupa jumlah (kalimat) atau syibh jumlah yang ditakwilkan menjadi isim mufrad.</li>
+      <li><strong>Taqdim & Ta'khir:</strong> Kaidah pengdahuluhan dan pengakhirkan Mubtada'/Khabar berdasarkan kondisi tertentu.</li>
+      <li><strong>Ta'lil Nahwi:</strong> Argumentasi logis yang digunakan untuk memvalidasi kedudukan Mubtada' dan Khabar dalam kalimat.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Mengapa Jumlah Ismiyyah Penting dalam Al-Qur'an?</h4>
+    <div class="case-content">
+      Perhatikan dua kalimat berikut:<br>
+      <span class="arab" style="font-size:1.3rem">خَلَقَ اللهُ الْإِنْسَانَ</span> (Fi'liyyah) — "Allah telah menciptakan manusia"<br>
+      <span class="arab" style="font-size:1.3rem">اللهُ خَالِقُ الْإِنْسَانِ</span> (Ismiyyah) — "Allah adalah Pencipta manusia"<br>
+      Kalimat pertama menceritakan <em>peristiwa</em> penciptaan pada waktu tertentu. Kalimat kedua menyatakan <em>kebenaran tetap</em> bahwa Allah adalah Pencipta — kebenaran yang berlaku sepanjang masa. Inilah mengapa Al-Qur'an lebih sering menggunakan jumlah ismiyyah untuk menyampaikan akidah.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Pilihan antara jumlah fi'liyyah dan ismiyyah bukan sekadar variasi gramatikal — ia mencerminkan makna dan fungsi komunikatif. Mahasiswa PBA perlu memahami perbedaan ini agar mampu menganalisis teks keislaman secara mendalam.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan jumlah ismiyyah kepada siswa — mulai dari kalimat sederhana seperti <span class="arab" style="font-size:1.1rem">الْبَيْتُ كَبِيرٌ</span> hingga kalimat kompleks dalam teks Al-Qur'an. Pemahaman yang kokoh tentang Mubtada' akan menjadi fondasi bagi siswa untuk memahami struktur bahasa Arab secara utuh. Bayangkan bagaimana Anda akan menjelaskan konsep ini dengan cara yang menarik — mungkin dengan contoh dari kehidupan sehari-hari, dari pepatah Minangkabau, atau dari ayat-ayat yang sudah dihafal siswa.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       4.1 KONSEP DAN DEFINISI
+       ========================================================= -->
+  <h2 class="section-title" id="s4-1">4.1 Konsep dan Definisi <em>Al-Mubtada'</em></h2>
+
+  <p>
+    Memahami konsep dan definisi Mubtada' adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat Mubtada', mahasiswa akan kesulitan dalam menganalisis struktur jumlah ismiyyah secara utuh.
+  </p>
+
+  <h3 class="sub-title" id="s4-1-1">4.1.1 Pengertian Mubtada' secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, kata <em>mubtada'</em> (مُبْتَدَأٌ) berasal dari akar kata <em>ibtada'a</em> (اِبْتَدَأَ) yang bermakna "memulai", "mengawali", atau "memulai sesuatu". Dalam penggunaan bahasa Arab sehari-hari, kata mubtada' merujuk pada "sesuatu yang dimulai" atau "permulaan".
+  </p>
+
+  <p>
+    Secara <strong>terminologis (istilah nahwu)</strong>, para ulama mendefinisikan Mubtada' dengan berbagai rumusan yang saling melengkapi:
+  </p>
+
+  <h3 class="sub-title" id="s4-1-2">4.1.2 Definisi Mubtada' Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وَالْمُبْتَدَأُ مَا عَلَيْهِ يَعْتمدُ الْكَلَامُ</span></td>
+        <td>"Mubtada' adalah sesuatu yang menjadi sandaran pembicaraan."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْمُبْتَدَأُ: اسْمٌ مَرْفُوعٌ لَا يَدْخُلُ عَلَيْهِ عَامِلٌ لَفْظِيّ</span></td>
+        <td>"Mubtada' adalah isim marfu' yang tidak dimasuki oleh 'awamil lafdziyyah."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْمُبْتَدَأُ: اسْمٌ مَرْفُوعٌ يَسْبِقُ الْخَبَرَ</span></td>
+        <td>"Mubtada' adalah isim marfu' yang mendahului Khabar."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْمُبْتَدَأُ: هُوَ مَا نَبْتَدِئُ بِهِ الْكَلَامَ مِنَ الْأَسْمَاءِ</span></td>
+        <td>"Mubtada' adalah isim yang kita awali dengannya pembicaraan."</td>
+      </tr>
+      <tr>
+        <td><strong>Integrasi Modern</strong></td>
+        <td><span class="arab" style="font-size:1.1rem">الْمُبْتَدَأُ: هُوَ الْمَوْضُوعُ فِي تَحْلِيلِ الْمَوْضُوعِ وَالْخَبَرِ</span></td>
+        <td>"Mubtada' adalah 'tema' (topic) dalam analisis topic-comment." (Padanan dengan linguistik modern)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Perhatikan bahwa definisi-definisi di atas saling melengkapi — ada yang menekankan aspek <strong>status i'rab</strong> (marfu'), ada yang menekankan aspek <strong>posisi</strong> (mendahului Khabar), dan ada yang menekankan aspek <strong>fungsional</strong> (sandaran pembicaraan).</li>
+      <li>Sebagai calon guru, Anda perlu memahami semua definisi ini agar dapat menjelaskan konsep Mubtada' dari berbagai sudut pandang kepada siswa.</li>
+      <li>Integrasi dengan teori linguistik modern (Topic-Comment Structure) membuka peluang untuk penelitian skripsi yang inovatif.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s4-1-3">4.1.3 Kedudukan Mubtada' dalam Jumlah Ismiyyah</h3>
+
+  <p>
+    Mubtada' merupakan salah satu <strong>unsur inti (rukn)</strong> dalam jumlah ismiyyah (kalimat nominal). Tanpa Mubtada', kalimat ismiyyah tidak akan sempurna secara gramatikal.
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Struktur Dasar Jumlah Ismiyyah</h4>
+    <ul>
+      <li><strong>Mubtada' (مُبْتَدَأ):</strong> Isim marfu' yang menjadi topik awal kalimat.</li>
+      <li><strong>Khabar (خَبَر):</strong> Isim marfu' yang melengkapi makna Mubtada'.</li>
+    </ul>
+  </div>
+
+  <p>Contoh struktur dasar:</p>
+
+  <div class="arabic-display">
+    الطَّالِبُ مُجْتَهِدٌ
+    <small>Mubtada' + Khabar<br>"Sang pelajar itu rajin."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Struktur</h5>
+    <div class="word-analysis">
+      <span class="word">الطَّالِبُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>Topik awal kalimat yang menjadi sandaran pembicaraan.</small></span>
+
+      <span class="word">مُجْتَهِدٌ</span>
+      <span class="detail"><strong>Khabar</strong> — marfu' dengan tanwin dhommah. <small>Isim marfu' yang melengkapi makna Mubtada', sehingga kalimat menjadi sempurna.</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Perbedaan Jumlah Ismiyyah dan Jumlah Fi'liyyah</h4>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Jumlah Ismiyyah</th><th>Jumlah Fi'liyyah</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Unsur Awal</strong></td>
+        <td>Dimulai dengan isim (Mubtada')</td>
+        <td>Dimulai dengan fi'il</td>
+      </tr>
+      <tr>
+        <td><strong>Unsur Inti</strong></td>
+        <td>Mubtada' + Khabar</td>
+        <td>Fi'il + Fa'il (+ Maf'ul Bih)</td>
+      </tr>
+      <tr>
+        <td><strong>Fungsi Makna</strong></td>
+        <td>Menyatakan kebenaran tetap, keadaan, identitas</td>
+        <td>Menyatakan peristiwa pada waktu tertentu</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">الْعِلْمُ نُورٌ</span><br>(Ilmu adalah cahaya)</td>
+        <td><span class="arab">يَطْلُبُ الطَّالِبُ الْعِلْمَ</span><br>(Pelajar menuntut ilmu)</td>
+      </tr>
+      <tr>
+        <td><strong>Dominasi dalam Al-Qur'an</strong></td>
+        <td>Sangat dominan untuk akidah dan kebenaran teologis</td>
+        <td>Dominan untuk kisah dan peristiwa</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- =========================================================
+       4.2 HUKUM DAN SYARAT
+       ========================================================= -->
+  <h2 class="section-title" id="s4-2">4.2 Hukum dan Syarat <em>Al-Mubtada'</em></h2>
+
+  <p>
+    Setelah memahami konsep dan definisi, kita masuk ke aspek hukum dan syarat Mubtada'. Pemahaman ini penting untuk analisis yang presisi.
+  </p>
+
+  <h3 class="sub-title" id="s4-2-1">4.2.1 Hukum Dasar: Al-Mubtada' Marfu'</h3>
+
+  <div class="key-concept">
+    <h4>✦ Hukum Dasar Mubtada'</h4>
+    <ul>
+      <li><strong>الْمُبْتَدَأُ مَرْفُوعٌ:</strong> "Mubtada' itu marfu' (rafa')." — ini adalah hukum dasar yang disepakati seluruh ulama nahwu.</li>
+      <li>Mubtada' <strong>tidak pernah</strong> berkedudukan nashab, khafadh, atau jazm — selalu marfu'.</li>
+      <li>Tanda rafa'-nya bisa berupa dhommah (tanda asli) atau wawu, alif, dhommah muqaddarah (tanda cabang).</li>
+    </ul>
+  </div>
+
+  <div class="quote-box">
+    <div class="arabic">وَالْمُبْتَدَأُ مَرْفُوعٌ أَبَدًا</div>
+    <div class="translation">"Mubtada' itu selalu marfu' (rafa')."</div>
+    <div class="source">— Kaidah Dasar dalam Ilmu Nahwu</div>
+  </div>
+
+  <h3 class="sub-title" id="s4-2-2">4.2.2 Syarat-syarat Mubtada'</h3>
+
+  <p>
+    Para ulama nahwu sepakat bahwa Mubtada' harus memenuhi beberapa syarat:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Syarat</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Berupa Isim</strong></td>
+        <td>Mubtada' harus berupa isim (kata benda), bukan fi'il atau huruf.</td>
+        <td><span class="arab">الْعِلْمُ نُورٌ</span> — <span class="arab">الْعِلْمُ</span> adalah isim</td>
+      </tr>
+      <tr>
+        <td><strong>Marfu'</strong></td>
+        <td>Mubtada' selalu berkedudukan marfu' (rafa'), baik secara lafaz maupun taqdir.</td>
+        <td><span class="arab">الطَّالِبُ مُجْتَهِدٌ</span> — <span class="arab">الطَّالِبُ</span> marfu' dengan dhommah</td>
+      </tr>
+      <tr>
+        <td><strong>Tidak Dimasuki 'Awamil Lafdziyyah</strong></td>
+        <td>Mubtada' tidak boleh dimasuki oleh 'awamil lafdziyyah (faktor-faktor lahir seperti fi'il, huruf jar, dll).</td>
+        <td><span class="arab">الطَّالِبُ</span> ✓ — tidak ada 'awamil<br><span class="arab">فِي الْبَيْتِ</span> ✗ — dimasuki huruf jar</td>
+      </tr>
+      <tr>
+        <td><strong>Mengandung Makna yang Lengkap dengan Khabar</strong></td>
+        <td>Mubtada' harus dapat disempurnakan maknanya oleh Khabar.</td>
+        <td><span class="arab">اللهُ</span> (Mubtada') + <span class="arab">أَكْبَرُ</span> (Khabar) = makna lengkap</td>
+      </tr>
+      <tr>
+        <td><strong>Bisa Berupa Mufrad atau Mu'awwal</strong></td>
+        <td>Mubtada' bisa berupa isim mufrad, dhamir, atau jumlah yang ditakwilkan.</td>
+        <td><span class="arab">أَنْ تَصُومَ خَيْرٌ لَكَ</span> — <span class="arab">أَنْ تَصُومَ</span> = Mubtada' mu'awwal</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s4-2-3">4.2.3 Tanda-tanda Rafa' pada Mubtada'</h3>
+
+  <p>
+    Tanda rafa' pada Mubtada' bisa berupa <strong>tanda asli</strong> (dhommah) atau <strong>tanda cabang</strong> (wawu, alif, dhommah muqaddarah) tergantung pada bentuk isimnya.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk Isim</th><th>Tanda Rafa'</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Isim Mufrad</strong></td>
+        <td>Dhommah zhahirah</td>
+        <td><span class="arab">الْعِلْمُ نُورٌ</span></td>
+        <td><span class="arab">الْعِلْمُ</span> marfu' dengan dhommah zhahirah</td>
+      </tr>
+      <tr>
+        <td><strong>Itsna (Dua)</strong></td>
+        <td>Alif</td>
+        <td><span class="arab">الطَّالِبَانِ مُجْتَهِدَانِ</span></td>
+        <td><span class="arab">الطَّالِبَانِ</span> marfu' dengan alif</td>
+      </tr>
+      <tr>
+        <td><strong>Jamak Mudzakkar Salim</strong></td>
+        <td>Wawu</td>
+        <td><span class="arab">الْمُسْلِمُونَ مُؤْمِنُونَ</span></td>
+        <td><span class="arab">الْمُسْلِمُونَ</span> marfu' dengan wawu</td>
+      </tr>
+      <tr>
+        <td><strong>Jamak Taksir</strong></td>
+        <td>Dhommah zhahirah</td>
+        <td><span class="arab">الْعُلَمَاءُ وَرَثَةُ الْأَنْبِيَاءِ</span></td>
+        <td><span class="arab">الْعُلَمَاءُ</span> marfu' dengan dhommah</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Mu'takhir huruf</strong></td>
+        <td>Dhommah muqaddarah</td>
+        <td><span class="arab">الْقَاضِي عَادِلٌ</span></td>
+        <td><span class="arab">الْقَاضِي</span> marfu' dengan dhommah muqaddarah (karena ya')</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Ghairu Munsharif</strong></td>
+        <td>Dhommah zhahirah (tanpa tanwin)</td>
+        <td><span class="arab">أَحْمَدُ مُجْتَهِدٌ</span></td>
+        <td><span class="arab">أَحْمَدُ</span> marfu' dengan dhommah, tanpa tanwin</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- =========================================================
+       4.3 BENTUK-BENTUK MUBTADA'
+       ========================================================= -->
+  <h2 class="section-title" id="s4-3">4.3 Bentuk-bentuk <em>Al-Mubtada'</em></h2>
+
+  <p>
+    Mubtada' dapat muncul dalam tiga bentuk utama. Pemahaman tentang bentuk-bentuk Mubtada' penting untuk analisis yang komprehensif, terutama Mubtada' Mu'awwal yang menjadi fokus tugas pertemuan ini.
+  </p>
+
+  <h3 class="sub-title" id="s4-3-1">4.3.1 Mubtada' Isim Zhahir</h3>
+
+  <p>
+    Mubtada' zhahir adalah Mubtada' yang berupa <strong>isim zhahir</strong> — kata benda nyata yang disebutkan secara eksplisit dalam kalimat. Ini adalah bentuk Mubtada' yang paling mudah diidentifikasi.
+  </p>
+
+  <div class="arabic-display">
+    الْعِلْمُ نُورٌ
+    <small>"Ilmu adalah cahaya."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">الْعِلْمُ</span>
+      <span class="detail"><strong>Mubtada' zhahir</strong> — marfu' dengan dhommah zhahirah. <small>Isim zhahir yang menjadi topik awal kalimat.</small></span>
+
+      <span class="word">نُورٌ</span>
+      <span class="detail"><strong>Khabar</strong> — marfu' dengan tanwin dhommah. <small>Isim marfu' yang melengkapi makna Mubtada'.</small></span>
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s4-3-2">4.3.2 Mubtada' Dhamir</h3>
+
+  <p>
+    Mubtada' dhamir adalah Mubtada' yang berupa <strong>dhamir (kata ganti)</strong> — baik dhamir munfashil (terpisah) maupun dhamir yang tersembunyi.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Jenis Dhamir</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Dhamir Ghaib (lk)</strong></td>
+        <td><span class="arab">هُوَ مُسْلِمٌ</span></td>
+        <td><span class="arab">هُوَ</span> = Mubtada' dhamir munfashil, marfu' dengan dhommah zhahirah.</td>
+      </tr>
+      <tr>
+        <td><strong>Dhamir Ghaib (pr)</strong></td>
+        <td><span class="arab">هِيَ مُسْلِمَةٌ</span></td>
+        <td><span class="arab">هِيَ</span> = Mubtada' dhamir munfashil, marfu' dengan fathah.</td>
+      </tr>
+      <tr>
+        <td><strong>Dhamir Mukhathab</strong></td>
+        <td><span class="arab">أَنْتَ مُجْتَهِدٌ</span></td>
+        <td><span class="arab">أَنْتَ</span> = Mubtada' dhamir munfashil, marfu' dengan fathah.</td>
+      </tr>
+      <tr>
+        <td><strong>Dhamir Mutakallim</strong></td>
+        <td><span class="arab">أَنَا طَالِبٌ</span></td>
+        <td><span class="arab">أَنَا</span> = Mubtada' dhamir munfashil, marfu' dengan fathah.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s4-3-3">4.3.3 Mubtada' Mu'awwal</h3>
+
+  <p>
+    Mubtada' mu'awwal adalah Mubtada' yang berupa <strong>jumlah (kalimat) atau syibh jumlah</strong> yang ditakwilkan menjadi isim mufrad. Jenis Mubtada' ini lebih kompleks dan memerlukan pemahaman mendalam tentang konsep takwil. <strong>Inilah bentuk Mubtada' yang menjadi fokus tugas pertemuan ini.</strong>
+  </p>
+
+  <div class="arabic-display">
+    أَنْ تَصُومَ خَيْرٌ لَكَ
+    <small>"Bahwa engkau berpuasa itu lebih baik bagimu."</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">أَنْ تَصُومَ</span>
+      <span class="detail"><strong>Mubtada' mu'awwal</strong> — ditakwil menjadi <span class="arab" style="font-size:1.1rem">صِيَامُكَ</span> ("puasamu"). <small>Menurut Mazhab Basrah, harus ditakwil; menurut Kufah, langsung menjadi Mubtada'.</small></span>
+
+      <span class="word">خَيْرٌ</span>
+      <span class="detail"><strong>Khabar</strong> — marfu' dengan tanwin dhommah. <small>Isim marfu' yang melengkapi makna Mubtada'.</small></span>
+
+      <span class="word">لَكَ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar kedua atau hal. <small>"Bagimu".</small></span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Bentuk-bentuk Mubtada' Mu'awwal</h4>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk</th><th>Struktur</th><th>Contoh</th><th>Takwil</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mashdar + Fa'il-nya</strong></td>
+        <td><span class="arab">أَنْ</span> + fi'il mudhari'</td>
+        <td><span class="arab">أَنْ تَصُومَ خَيْرٌ</span></td>
+        <td><span class="arab">صِيَامُكَ</span> (puasa-mu)</td>
+      </tr>
+      <tr>
+        <td><strong>Mashdar + Fa'il-nya</strong></td>
+        <td><span class="arab">مَا</span> + fi'il madhi</td>
+        <td><span class="arab">مَا قَدَّمَ مُحَمَّدٌ خَيْرٌ</span></td>
+        <td><span class="arab">تَقْدِيمُ مُحَمَّدٍ</span> (pemberian Muhammad)</td>
+      </tr>
+      <tr>
+        <td><strong>Jumla Ismiyyah</strong></td>
+        <td>Mubtada' + Khabar</td>
+        <td><span class="arab">الْعِلْمُ نَافِعٌ خَيْرٌ</span></td>
+        <td><span class="arab">نَفْعُ الْعِلْمِ</span> (manfaat ilmu)</td>
+      </tr>
+      <tr>
+        <td><strong>Jumla Syarthiyyah</strong></td>
+        <td>Syarat + Jawab</td>
+        <td><span class="arab">مَنْ يَقُمْ يُكْرَمْ فَضْلٌ</span></td>
+        <td><span class="arab">قِيَامُهُ وَإِكْرَامُهُ</span> (berdirinya dan pemuliaannya)</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Isyarah + Jumla</strong></td>
+        <td>Isyarah + kalimat</td>
+        <td><span class="arab">ذَلِكَ أَنَّكَ مُجْتَهِدٌ حَقِيقَةٌ</span></td>
+        <td><span class="arab">أَمْرُكَ</span> (urusan-mu)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Konsep Takwil dalam Nahwu</h4>
+    <ul>
+      <li><strong>Takwil</strong> adalah proses mengubah suatu konstruk (jumlah, syibh jumlah) menjadi isim mufrad yang setara maknanya.</li>
+      <li>Takwil diperlukan karena Mubtada' harus berupa isim mufrad menurut Mazhab Basrah.</li>
+      <li>Contoh: <span class="arab" style="font-size:1.1rem">أَنْ تَصُومَ</span> ditakwil menjadi <span class="arab" style="font-size:1.1rem">صِيَامُكَ</span> — dari "bahwa engkau berpuasa" menjadi "puasa-mu".</li>
+      <li>Mazhab Kufah tidak memerlukan takwil — mereka menganggap jumlah bisa langsung menjadi Mubtada'.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       4.4 HUBUNGAN MUBTADA' DAN KHABAR
+       ========================================================= -->
+  <h2 class="section-title" id="s4-4">4.4 Hubungan <em>Mubtada' dan Khabar</em></h2>
+
+  <p>
+    Mubtada' dan Khabar adalah dua unsur yang tidak terpisahkan dalam jumlah ismiyyah. Keduanya memiliki hubungan timbal balik yang sangat erat.
+  </p>
+
+  <h3 class="sub-title" id="s4-4-1">4.4.1 Konsep Dasar Hubungan Keduanya</h3>
+
+  <div class="key-concept">
+    <h4>✦ Hubungan Timbal Balik</h4>
+    <ul>
+      <li><strong>Mubtada'</strong> adalah topik (topic) — sesuatu yang dibicarakan.</li>
+      <li><strong>Khabar</strong> adalah komentar (comment) — informasi tentang topik tersebut.</li>
+      <li>Keduanya harus <strong>saling melengkapi</strong> sehingga kalimat menjadi sempurna secara makna.</li>
+      <li>Keduanya <strong>selalu marfu'</strong> — tidak pernah nashab atau khafadh.</li>
+      <li>Keduanya harus <strong>sesuai</strong> dalam hal jenis (mudzakkar/muannats) dan jumlah (mufrad/mutsanna/jamak) — kecuali dalam kondisi tertentu.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s4-4-2">4.4.2 Kesesuaian Mubtada' dan Khabar</h3>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Kaidah</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Jenis (Mudzakkar/Muannats)</strong></td>
+        <td>Mubtada' mudzakkar → Khabar mudzakkar<br>Mubtada' muannats → Khabar muannats</td>
+        <td><span class="arab">الطَّالِبُ مُجْتَهِدٌ</span> (mudzakkar)<br><span class="arab">الطَّالِبَةُ مُجْتَهِدَةٌ</span> (muannats)</td>
+      </tr>
+      <tr>
+        <td><strong>Jumlah (Mufrad/Mutsanna/Jamak)</strong></td>
+        <td>Mubtada' mufrad → Khabar mufrad<br>Mubtada' mutsanna → Khabar mutsanna<br>Mubtada' jamak → Khabar jamak</td>
+        <td><span class="arab">الطَّالِبَانِ مُجْتَهِدَانِ</span> (mutsanna)<br><span class="arab">الطُّلَّابُ مُجْتَهِدُونَ</span> (jamak)</td>
+      </tr>
+      <tr>
+        <td><strong>Pengecualian</strong></td>
+        <td>Jamak taksir muannats boleh diikuti Khabar mufrad muannats</td>
+        <td><span class="arab">النِّسَاءُ حَامِلَةٌ الْأَمَانَةَ</span><br>(Para perempuan adalah pembawa amanat)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s4-4-3">4.4.3 Khabar Mufrad, Jumlah, dan Syibh Jumlah</h3>
+
+  <p>
+    Khabar dapat berupa tiga bentuk utama:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Jenis Khabar</th><th>Definisi</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Khabar Mufrad</strong></td>
+        <td>Khabar yang berupa isim mufrad (kata tunggal), bukan jumlah atau syibh jumlah.</td>
+        <td><span class="arab">الْعِلْمُ نُورٌ</span><br><span class="arab">نُورٌ</span> = Khabar mufrad</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar Jumlah</strong></td>
+        <td>Khabar yang berupa jumlah fi'liyyah atau ismiyyah.</td>
+        <td><span class="arab">الطَّالِبُ يَدْرُسُ</span> (jumlah fi'liyyah)<br><span class="arab">الْبَابُ مِفْتَاحُهُ كَبِيرٌ</span> (jumlah ismiyyah)</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar Syibh Jumlah</strong></td>
+        <td>Khabar yang berupa jar-majrur atau zharf.</td>
+        <td><span class="arab">الطَّالِبُ فِي الْفَصْلِ</span> (jar-majrur)<br><span class="arab">الْقِطَّةُ أَمَامَ الْبَيْتِ</span> (zharf)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Khabar Jumlah dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Firman Allah: <span class="arab" style="font-size:1.5rem">وَاللَّهُ غَفُورٌ رَحِيمٌ</span> (QS. Al-Baqarah: 173)<br>
+      <span class="arab" style="font-size:1.5rem">الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ طُوبَىٰ لَهُمْ</span> (QS. Ar-Ra'd: 29)
+    </div>
+    <div class="lesson">
+      <strong>Analisis:</strong> Pada ayat pertama, Khabar berupa <strong>mufrad</strong> (<span class="arab" style="font-size:1.2rem">غَفُورٌ رَحِيمٌ</span>). Pada ayat kedua, Khabar berupa <strong>syibh jumlah</strong> (<span class="arab" style="font-size:1.2rem">طُوبَىٰ لَهُمْ</span>). Keduanya berfungsi melengkapi makna Mubtada' dengan cara yang berbeda — Khabar mufrad memberikan sifat langsung, sementara Khabar syibh jumlah memberikan informasi tentang keadaan atau posisi.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       4.5 TAQDIM DAN TA'KHIR
+       ========================================================= -->
+  <h2 class="section-title" id="s4-5">4.5 Taqdim dan Ta'khir <em>Mubtada'/Khabar</em></h2>
+
+  <p>
+    Kaidah taqdim (pengdahuluhan) dan ta'khir (pengakhirkan) Mubtada' dan Khabar merupakan aspek penting dalam nahwu. Secara asalnya, Mubtada' mendahului Khabar, tetapi ada kondisi-kondisi tertentu yang membolehkan atau mewajibkan perubahan urutan.
+  </p>
+
+  <h3 class="sub-title" id="s4-5-1">4.5.1 Kaidah Dasar Taqdim</h3>
+
+  <div class="key-concept">
+    <h4>✦ Kaidah Asal</h4>
+    <ul>
+      <li><strong>Secara asal, Mubtada' mendahului Khabar:</strong> <span class="arab" style="font-size:1.1rem">الطَّالِبُ مُجْتَهِدٌ</span> ✓</li>
+      <li><strong>Taqdim Khabar boleh</strong> dalam kondisi tertentu, dengan syarat Mubtada' tetap dikenali.</li>
+      <li><strong>Taqdim Khabar wajib</strong> dalam beberapa kondisi khusus.</li>
+      <li><strong>Taqdim Khabar haram</strong> dalam beberapa kondisi yang merusak makna.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s4-5-2">4.5.2 Kondisi yang Membolehkan Taqdim Khabar</h3>
+
+  <table>
+    <thead>
+      <tr><th>Kondisi</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Mubtada' berupa nakirah (kata tak tentu)</strong> dan Khabar berupa ma'rifah (kata tentu)</td>
+        <td><span class="arab">شَيْءٌ فِي الْيَدِ خَيْرٌ مِنْ أَلْفٍ فِي الشَّجَرِ</span></td>
+        <td>Khabar (<span class="arab">خَيْرٌ</span>) didahulukan karena Mubtada'-nya nakirah.</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar berupa pertanyaan</strong></td>
+        <td><span class="arab">أَفِي قُلُوبِهِمْ مَرَضٌ؟</span></td>
+        <td>Khabar pertanyaan (<span class="arab">مَرَضٌ</span>) didahulukan.</td>
+      </tr>
+      <tr>
+        <td><strong>Khabar berupa istifham</strong></td>
+        <td><span class="arab">أَمْتَعَةٌ هَذِهِ؟</span></td>
+        <td>Khabar istifham didahulukan untuk penekanan.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s4-5-3">4.5.3 Kondisi yang Mewajibkan Taqdim Mubtada'</h3>
+
+  <p>
+    Ada beberapa kondisi di mana Mubtada' <strong>wajib</strong> didahulukan dari Khabar:
+  </p>
+
+  <div class="tips-box">
+    <h4>✦ Kondisi yang Mewajibkan Taqdim Mubtada'</h4>
+    <ul>
+      <li><strong>Mubtada' berupa ma'rifah</strong> dan Khabar berupa nakirah: <span class="arab" style="font-size:1.1rem">الْعِلْمُ نَافِعٌ</span> ✓ (bukan <span class="arab" style="font-size:1.1rem">نَافِعٌ الْعِلْمُ</span>)</li>
+      <li><strong>Kedua-duanya ma'rifah</strong> — Mubtada' didahulukan: <span class="arab" style="font-size:1.1rem">زَيْدٌ أَعْلَمُ النَّاسِ</span> ✓</li>
+      <li><strong>Kedua-duanya nakirah</strong> — Mubtada' didahulukan: <span class="arab" style="font-size:1.1rem">رَجُلٌ فِي الْبَيْتِ</span> ✓</li>
+      <li><strong>Khabar didahului oleh 'awamil</strong> yang mengubah kedudukannya: <span class="arab" style="font-size:1.1rem">مَا زَالَ الطَّالِبُ مُجْتَهِدًا</span> — <span class="arab" style="font-size:1.1rem">مُجْتَهِدًا</span> adalah Khabar "ما زال", bukan Khabar Mubtada'</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Taqdim dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Firman Allah: <span class="arab" style="font-size:1.5rem">إِلَٰهُكُمْ إِلَٰهٌ وَاحِدٌ</span> (QS. Al-Baqarah: 163)<br>
+      Perhatikan bahwa <span class="arab" style="font-size:1.2rem">إِلَٰهٌ وَاحِدٌ</span> (Khabar) didahulukan dari <span class="arab" style="font-size:1.2rem">إِلَٰهُكُمْ</span> (Mubtada') — ini adalah bentuk taqdim Khabar yang diperbolehkan karena Mubtada'-nya ma'rifah dan Khabarnya juga ma'rifah (dengan tujuan penekanan tauhid).
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Taqdim Khabar dalam Al-Qur'an sering kali memiliki fungsi retorika — untuk memberikan penekanan (taukid) atau menunjukkan hasr (pembatasan). Mahasiswa perlu memahami fungsi ini agar mampu menganalisis teks keislaman secara mendalam.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       4.6 MUBTADA' DALAM AL-QUR'AN DAN HADIS
+       ========================================================= -->
+  <h2 class="section-title" id="s4-6">4.6 Mubtada' dalam <em>Al-Qur'an dan Hadis</em></h2>
+
+  <p>
+    Al-Qur'an dan hadis adalah sumber teks otentik yang kaya dengan berbagai struktur Mubtada'. Mari kita analisis beberapa contoh:
+  </p>
+
+  <div class="arabic-display">
+    اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
+    <small>— QS. Al-Baqarah [2]: 255 (Ayat Kursi)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">اللَّهُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>Topik awal kalimat yang menjadi sandaran pembicaraan tentang keesaan Allah.</small></span>
+
+      <span class="word">لَا إِلَٰهَ إِلَّا هُوَ</span>
+      <span class="detail"><strong>Jumlah istitsna'</strong> — berkedudukan khabar (menurut sebagian ulama) atau khabar kedua. <small>"Tidak ada tuhan selain Dia".</small></span>
+
+      <span class="word">الْحَيُّ الْقَيُّومُ</span>
+      <span class="detail"><strong>Khabar kedua / Na'at</strong> — marfu' dengan dhommah. <small>Sifat-sifat Allah yang melengkapi makna Mubtada'.</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
+    <small>— QS. Al-Fatihah [1]: 2</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">الْحَمْدُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>"Segala puji" — topik awal kalimat.</small></span>
+
+      <span class="word">لِلَّهِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar. <small>"Bagi Allah" — melengkapi makna Mubtada'.</small></span>
+
+      <span class="word">رَبِّ</span>
+      <span class="detail"><strong>Na'at / Badal</strong> — majrur dengan kasrah. <small>"Tuhan" — menerangkan <span class="arab" style="font-size:1.1rem">اللَّهِ</span>.</small></span>
+
+      <span class="word">الْعَالَمِينَ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan ya'. <small>"Semesta alam" — menerangkan <span class="arab" style="font-size:1.1rem">رَبِّ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ
+    <small>— HR. Bukhari & Muslim (Hadis tentang Niat)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّمَا</span>
+      <span class="detail"><strong>Adat hasr</strong> — mabni la mahalla lahu. <small>Partikel pembatasan: "hanya".</small></span>
+
+      <span class="word">الْأَعْمَالُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>"Amal-amal (perbuatan)" — topik yang dibatasi.</small></span>
+
+      <span class="word">بِالنِّيَّاتِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar. <small>"Dengan niat-niat" — melengkapi makna Mubtada'.</small></span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 4: Mubtada' Mu'awwal dalam Hadis</h4>
+    <div class="case-content">
+      Hadis: <span class="arab" style="font-size:1.4rem">مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ</span><br>
+      (HR. Bukhari & Muslim)
+    </div>
+    <div class="lesson">
+      <strong>Analisis:</strong> <span class="arab" style="font-size:1.2rem">مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ</span> adalah <strong>Mubtada' mu'awwal</strong> — berupa jumlah fi'liyyah syarthiyyah yang ditakwil menjadi <span class="arab" style="font-size:1.2rem">إِيمَانُهُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ</span> ("keimanan seseorang kepada Allah dan hari akhir").<br><br>
+      <strong>Pembelajaran:</strong> Hadis ini menunjukkan bahwa Mubtada' mu'awwal sering digunakan dalam teks-teks keislaman untuk menyampaikan pesan yang kompleks secara ringkas. Mahasiswa PBA perlu memahami konsep ini agar mampu mengajarkan nahwu kepada siswa dengan contoh-contoh yang relevan.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       4.7 APLIKASI: LINGKUNGAN
+       ========================================================= -->
+  <h2 class="section-title" id="s4-7">4.7 Aplikasi: <em>Kalimat Nominal Bertema Lingkungan</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang Mubtada', mari kita konstruksi kalimat-kalimat nominal bertema lingkungan. Tema ini dipilih karena relevan dengan isu global dan sesuai dengan nilai-nilai keislaman tentang tanggung jawab manusia sebagai khalifah di bumi.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Kalimat Nominal Bertema Lingkungan</h5>
+    <div class="arabic-paragraph">
+      ١. الْبِيئَةُ أَمَانَةٌ مِنَ اللهِ<br>
+      ٢. الْمَاءُ حَيَاةٌ لِلْكَائِنَاتِ<br>
+      ٣. التَّلَوُّثُ خَطَرٌ عَلَى الصِّحَّةِ<br>
+      ٤. الْأَشْجَارُ رِئَةٌ لِلْأَرْضِ<br>
+      ٥. أَنْ نَحْفَظَ الْبِيئَةَ وَاجِبٌ عَلَى كُلِّ مُسْلِمٍ
+    </div>
+    <div class="translation">
+      1. Lingkungan adalah amanah dari Allah.<br>
+      2. Air adalah kehidupan bagi makhluk.<br>
+      3. Polusi adalah bahaya bagi kesehatan.<br>
+      4. Pepohonan adalah paru-paru bumi.<br>
+      5. Bahwa kita menjaga lingkungan adalah kewajiban bagi setiap muslim.
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 5 (Mubtada' Mu'awwal)</h5>
+    <div class="word-analysis">
+      <span class="word">أَنْ نَحْفَظَ</span>
+      <span class="detail"><strong>Mubtada' mu'awwal</strong> — ditakwil menjadi <span class="arab" style="font-size:1.1rem">حِفْظُنَا</span> ("penjagaan kami"). <small>Berupa mashdar + fa'il-nya.</small></span>
+
+      <span class="word">الْبِيئَةَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Objek dari fi'il <span class="arab" style="font-size:1.1rem">نَحْفَظَ</span>.</small></span>
+
+      <span class="word">وَاجِبٌ</span>
+      <span class="detail"><strong>Khabar</strong> — marfu' dengan tanwin dhommah. <small>Isim marfu' yang melengkapi makna Mubtada'.</small></span>
+
+      <span class="word">عَلَى كُلِّ مُسْلِمٍ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar kedua atau takhshish. <small>"Bagi setiap muslim".</small></span>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Mengonstruksi Kalimat Nominal</h4>
+    <ul>
+      <li><strong>Pilih Mubtada' yang tepat:</strong> Pastikan Mubtada' berupa isim marfu' yang dapat menjadi topik pembicaraan.</li>
+      <li><strong>Lengkapi dengan Khabar:</strong> Khabar harus memberikan informasi yang relevan tentang Mubtada'.</li>
+      <li><strong>Perhatikan kesesuaian:</strong> Mubtada' dan Khabar harus sesuai dalam jenis (mudzakkar/muannats) dan jumlah (mufrad/mutsanna/jamak).</li>
+      <li><strong>Gunakan Mubtada' Mu'awwal untuk variasi:</strong> Untuk kalimat yang lebih kompleks, gunakan Mubtada' berupa jumlah yang ditakwilkan.</li>
+      <li><strong>Integrasikan nilai-nilai:</strong> Gunakan tema-tema yang relevan dengan kehidupan dan nilai-nilai keislaman.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       4.8 TUGAS PERTEMUAN 4
+       ========================================================= -->
+  <h2 class="section-title" id="s4-8">4.8 Tugas <em>Pertemuan 4</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Menyusun <strong>5 kalimat</strong> menggunakan <strong>Mubtada' Mu'awwal</strong> berdasarkan tema <strong>"Menjaga Lingkungan"</strong> (حِفْظُ الْبِيئَةِ).</li>
+      <li>Setiap kalimat harus:</li>
+      <li style="padding-left:2.5rem">— Memiliki Mubtada' Mu'awwal (berupa <span class="arab" style="font-size:1.1rem">أَنْ + fi'il mudhari'</span>, <span class="arab" style="font-size:1.1rem">مَا + fi'il madhi</span>, atau jumlah lainnya)</li>
+      <li style="padding-left:2.5rem">— Memiliki Khabar yang sesuai (mufrad, jumlah, atau syibh jumlah)</li>
+      <li style="padding-left:2.5rem">— Bertema lingkungan (pelestarian, polusi, air bersih, penghijauan, dll)</li>
+      <li>Sertakan terjemahan Indonesia di bawah setiap kalimat Arab.</li>
+      <li>Berikan analisis i'rab untuk setiap Mubtada' Mu'awwal dan Khabar (dalam bentuk tabel).</li>
+      <li>Sertakan takwil untuk setiap Mubtada' Mu'awwal.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Merangkum materi Pertemuan 4 (Al-Mubtada') secara sistematis.</li>
+      <li>Rangkuman harus mencakup:</li>
+      <li style="padding-left:2.5rem">— Definisi dan konsep Mubtada'</li>
+      <li style="padding-left:2.5rem">— Hukum dan syarat Mubtada'</li>
+      <li style="padding-left:2.5rem">— Bentuk-bentuk Mubtada' (zhahir, dhamir, mu'awwal)</li>
+      <li style="padding-left:2.5rem">— Hubungan Mubtada' dan Khabar</li>
+      <li style="padding-left:2.5rem">— Kaidah taqdim dan ta'khir</li>
+      <li>Sumber: kitab <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>An-Nahw al-Wadhih</em> (Al-Jarim & Amin), <em>Al-Nahw al-Wafi</em> (Abbas Hasan).</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Contoh Tugas Mandiri (Sebagai Inspirasi)</h4>
+    <ul>
+      <li><strong>Kalimat 1:</strong> <span class="arab" style="font-size:1.1rem">أَنْ نُحَافِظَ عَلَى الْمَاءِ وَاجِبٌ دِينِيّ</span><br>
+      <em>"Bahwa kita menjaga air adalah kewajiban agama."</em><br>
+      Takwil: <span class="arab" style="font-size:1.1rem">حِفَاظُنَا عَلَى الْمَاءِ</span> (penjagaan kita terhadap air)</li>
+      <li><strong>Kalimat 2:</strong> <span class="arab" style="font-size:1.1rem">مَا يَفْعَلُهُ الْإِنْسَانُ مِنْ تَلْوِيثٍ إِثْمٌ عَظِيمٌ</span><br>
+      <em>"Apa yang dilakukan manusia berupa pencemaran adalah dosa besar."</em><br>
+      Takwil: <span class="arab" style="font-size:1.1rem">تَلْوِيثُ الْإِنْسَانِ</span> (pencemaran yang dilakukan manusia)</li>
+      <li><strong>Kalimat 3:</strong> <span class="arab" style="font-size:1.1rem">أَنْ نَغْرِسَ الْأَشْجَارَ صَدَقَةٌ جَارِيَةٌ</span><br>
+      <em>"Bahwa kita menanam pepohonan adalah sedekah jariyah."</em><br>
+      Takwil: <span class="arab" style="font-size:1.1rem">غَرْسُنَا الْأَشْجَارَ</span> (penanaman kita terhadap pepohonan)</li>
+    </ul>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Pembelajaran</h4>
+    <p>
+      Melalui tugas ini, mahasiswa tidak hanya menguji pemahaman teoretis tentang Mubtada', tetapi juga melatih kreativitas dalam mengonstruksi kalimat Arab yang bermakna. Tema "Menjaga Lingkungan" dipilih karena relevan dengan isu global dan sesuai dengan nilai-nilai keislaman tentang tanggung jawab manusia sebagai khalifah di bumi. Pepatah Minangkabau <em>"Alam Takambang Jadi Guru"</em> mengajarkan kita untuk menghormati alam — dan bahasa Arab memberikan kita alat untuk mengekspresikan penghormatan tersebut secara presisi.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       4.9 PETA KONSEP & GLOSARIUM
+       ========================================================= -->
+  <h2 class="section-title" id="s4-9">4.9 Peta Konsep <em>& Glosarium</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep Al-Mubtada'</h4>
+    <div class="map-center">
+      <div class="core">AL-MUBTADA'</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Isim marfu' yang menjadi topik awal dalam jumlah ismiyyah</p>
+        <ul>
+          <li>Selalu marfu'</li>
+          <li>Berupa isim</li>
+          <li>Tidak dimasuki 'awamil lafdziyyah</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Bentuk</h5>
+        <ul>
+          <li>Mubtada' Isim Zhahir</li>
+          <li>Mubtada' Dhamir</li>
+          <li>Mubtada' Mu'awwal</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Hubungan dengan Khabar</h5>
+        <ul>
+          <li>Khabar Mufrad</li>
+          <li>Khabar Jumlah</li>
+          <li>Khabar Syibh Jumlah</li>
+          <li>Kesesuaian jenis & jumlah</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Taqdim & Ta'khir</h5>
+        <ul>
+          <li>Wajib taqdim Mubtada'</li>
+          <li>Boleh taqdim Khabar</li>
+          <li>Fungsi retorika</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📖 Glosarium Istilah Mubtada'</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Mubtada'</strong><span class="arab">مُبْتَدَأ</span></div>
+        <p>Isim marfu' yang menjadi topik awal dalam jumlah ismiyyah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Khabar</strong><span class="arab">خَبَر</span></div>
+        <p>Isim marfu' yang melengkapi makna Mubtada'.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Jumlah Ismiyyah</strong><span class="arab">جُمْلَةٌ اسْمِيَّة</span></div>
+        <p>Kalimat yang dimulai dengan isim (Mubtada' + Khabar).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Jumlah Fi'liyyah</strong><span class="arab">جُمْلَةٌ فِعْلِيَّة</span></div>
+        <p>Kalimat yang dimulai dengan fi'il (Fi'il + Fa'il).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mubtada' Mu'awwal</strong><span class="arab">مُبْتَدَأٌ مُؤَوَّل</span></div>
+        <p>Mubtada' yang berupa jumlah atau syibh jumlah yang ditakwilkan menjadi isim mufrad.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Takwil</strong><span class="arab">تَأْوِيل</span></div>
+        <p>Proses mengubah jumlah/syibh jumlah menjadi isim mufrad yang setara maknanya.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Taqdim</strong><span class="arab">تَقْدِيم</span></div>
+        <p>Pengdahuluhan — mendahulukan Khabar dari Mubtada' dalam kondisi tertentu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ta'khir</strong><span class="arab">تَأْخِير</span></div>
+        <p>Pengakhirkan — mengakhirkan Mubtada' dari Khabar dalam kondisi tertentu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ma'rifah</strong><span class="arab">مَعْرِفَة</span></div>
+        <p>Isim tertentu (dengan alif-lam, dhamir, isim isyarah, dll).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Nakirah</strong><span class="arab">نَكِرَة</span></div>
+        <p>Isim tak tentu (tanpa alif-lam, bukan dhamir, dll).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>'Awamil Lafdziyyah</strong><span class="arab">عَوَامِلُ لَفْظِيَّة</span></div>
+        <p>Faktor-faktor lahir yang mengubah i'rab kata (fi'il, huruf jar, dll).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Khabar Mufrad</strong><span class="arab">خَبَرٌ مُفْرَد</span></div>
+        <p>Khabar yang berupa isim mufrad, bukan jumlah atau syibh jumlah.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 4</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep Al-Mubtada' — dari definisi dan hakikatnya, hukum dan syaratnya, bentuk-bentuknya (zhahir, dhamir, mu'awwal), hubungan dengan Khabar, kaidah taqdim dan ta'khir, hingga analisis mendalam dalam ayat-ayat Al-Qur'an dan hadis. Ingatlah, Mubtada' bukan sekadar unsur gramatikal — ia adalah "fondasi" dari setiap kalimat nominal yang mengabadikan kebenaran dan kenyataan. Sebagai calon guru bahasa Arab, penguasaan terhadap Mubtada' akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       KESIMPULAN
+       ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 4</h3>
+    <p>
+      Pertemuan keempat ini telah membahas secara komprehensif tentang Al-Mubtada' — unsur Marfu'atul Asma yang menjadi fondasi kalimat nominal. Mahasiswa telah memahami konsep dan definisi Mubtada' menurut berbagai ulama nahwu, hukum dan syaratnya, bentuk-bentuknya (zhahir, dhamir, mu'awwal), serta hubungan dengan Khabar dalam hal kesesuaian jenis dan jumlah.
+    </p>
+    <p>
+      Melalui analisis ayat-ayat Al-Qur'an dan hadis, mahasiswa telah berlatih mengidentifikasi Mubtada' dalam teks otentik. Kaidah taqdim dan ta'khir telah memperkaya perspektif mahasiswa tentang fungsi retorika dalam jumlah ismiyyah. Aplikasi melalui konstruksi kalimat nominal bertema lingkungan dan tugas membuat kalimat dengan Mubtada' Mu'awwal telah menunjukkan relevansi Mubtada' dalam konteks kontemporer dan kepedulian terhadap isu global.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 5 yang akan membahas <strong>Al-Khabar</strong> — unsur yang melengkapi makna Mubtada' dalam jumlah ismiyyah. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       DAFTAR PUSTAKA
+       ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Anbari, Ibnu. <em>Al-Mufrad fi Ushul an-Nahw</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Chomsky, N. (1981). <em>Lectures on Government and Binding</em>. Dordrecht: Foris.</li>
+      <li>Halliday, M. A. K. (1994). <em>An Introduction to Functional Grammar</em>. London: Edward Arnold.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="3.html">← Pertemuan 3: Na'ibul Fa'il</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="5.html">Pertemuan 5: Al-Khabar →</a>
+  </div>
+
+</section>
+
+<!-- =========================================================
+     UJI FORMATIF
+     ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 4</span>
+      <h2>Al-Mubtada': <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Fondasi Kalimat Nominal</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Konsep, hukum, bentuk, hubungan dengan Khabar, taqdim, dan Mubtada' Mu'awwal</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">الْعِلْمُ نُورٌ</span>, kata <span class="arab">الْعِلْمُ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Maf'ul bih</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>2.</strong> Tanda i'rab Mubtada' pada isim mufrad (kata tunggal) adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Fathah</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Kasrah</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Sukun</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Mubtada' yang berupa jumlah (kalimat) yang ditakwilkan menjadi isim mufrad disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Mubtada' mu'awwal</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Mubtada' zhahir</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Mubtada' dhamir</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Mubtada' muqaddar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Dalam kalimat <span class="arab">أَنْ تَصُومَ خَيْرٌ لَكَ</span>, Mubtada'-nya adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. خَيْرٌ (Khabar)</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. لَكَ (Khabar kedua)</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Tidak ada Mubtada' (ini jumlah fi'liyyah)</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. أَنْ تَصُومَ (Mubtada' mu'awwal)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Tanda i'rab Mubtada' pada jamak mudzakkar salim adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Wawu</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Alif</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Ya'</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> Syarat utama Mubtada' adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Berupa fi'il</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Dimasuki 'awamil lafdziyyah</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Berupa isim marfu' yang tidak dimasuki 'awamil lafdziyyah</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. Berupa huruf jar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Khabar yang berupa jar-majrur atau zharf disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Khabar syibh jumlah</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Khabar mufrad</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Khabar jumlah</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Khabar mu'awwal</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Taqdim Khabar (pengdahuluhan Khabar dari Mubtada') diperbolehkan jika...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Mubtada' berupa ma'rifah dan Khabar berupa nakirah</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Keduanya ma'rifah tanpa tujuan tertentu</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Mubtada' didahului oleh 'amil</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Mubtada' berupa nakirah dan Khabar berupa ma'rifah</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Proses mengubah jumlah menjadi isim mufrad yang setara maknanya disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. I'rab</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Takwil</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Ta'lil</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Takhrij</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Dalam ayat <span class="arab">الْحَمْدُ لِلَّهِ</span>, kata <span class="arab">لِلَّهِ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Khabar (berupa jar-majrur)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Maf'ul bih</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat Al-Mubtada' menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda (dalam bahasa Arab), dan analisislah persamaan serta perbedaan di antara definisi-definisi tersebut!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Jelaskan tiga bentuk Mubtada' (isim zhahir, dhamir, dan mu'awwal)! Berikan contoh konkret untuk masing-masing bentuk dari Al-Qur'an atau hadis, dan analisislah i'rabnya!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Analisislah kaidah taqdim dan ta'khir Mubtada'/Khabar! Berikan contoh dari Al-Qur'an yang menunjukkan kondisi yang membolehkan taqdim Khabar dan kondisi yang mewajibkan taqdim Mubtada'! Jelaskan fungsi retorika dari taqdim tersebut!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Jelaskan perbedaan antara Khabar Mufrad, Khabar Jumlah, dan Khabar Syibh Jumlah! Berikan masing-masing 2 contoh dari Al-Qur'an atau hadis, dan analisislah i'rabnya!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Susunlah <strong>5 kalimat</strong> menggunakan <strong>Mubtada' Mu'awwal</strong> bertema <strong>"Menjaga Lingkungan"</strong> (حِفْظُ الْبِيئَةِ)! Untuk setiap kalimat, sertakan: (a) kalimat Arab, (b) terjemahan Indonesia, (c) takwil Mubtada' Mu'awwal, dan (d) analisis i'rab Mubtada' dan Khabar!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 4,
+    topik: 'Al-Mubtada\'',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 4
+  An-Nahw lil Mutawassithin
+  Topik: Al-Mubtada'
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P4_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P4 (Al-Mubtada') - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 4 (Al-Mubtada') - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

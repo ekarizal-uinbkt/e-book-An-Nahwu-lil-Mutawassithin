@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 14: Athaf Bayan — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 14: Validasi perbedaan fungsi antara Athaf Bayan dan Na'at melalui argumentasi kaidah yang logis, analisis Al-Qur'an dan hadis, bedah ayat untuk membedakan Athaf Bayan dan Na'at, serta konstruksi paragraf bertema keislaman." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--cream);line-height:1.7;overflow-x:hidden;
+  background-image:radial-gradient(circle at 15% 20%,rgba(201,169,97,.08) 0%,transparent 40%),radial-gradient(circle at 85% 80%,rgba(201,169,97,.06) 0%,transparent 40%);
+}
+.bg-ornament{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(201,169,97,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,.03) 1px,transparent 1px);
+  background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
+}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;border:1px solid var(--gold);border-radius:2px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dark) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+h2.section-title em{font-style:italic;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h3.sub-title{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem}
+.arabic-display{background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{background:rgba(201,169,97,.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box,.warning-box,.insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4,.warning-box h4,.insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul,.warning-box ul,.insight-box ul{list-style:none;padding:0}
+.tips-box li,.warning-box li,.insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{display:inline-block;padding:1rem 2rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:1rem}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{background:linear-gradient(135deg,rgba(100,180,220,.08) 0%,rgba(100,180,220,.02) 100%);border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{display:inline-block;margin-top:1rem;padding:.4rem 1rem;background:rgba(100,180,220,.15);border-radius:4px;font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase}
+.env-text{background:linear-gradient(135deg,rgba(80,200,120,.06) 0%,rgba(80,200,120,.02) 100%);border:1px solid rgba(80,200,120,.3);border-radius:8px;padding:2rem;margin:2rem 0}
+.env-text h5{font-family:var(--serif);color:#50c878;font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.env-text .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.env-text .translation{font-family:var(--serif-2);font-style:italic;color:var(--muted);font-size:.95rem;padding:1rem;border-left:2px solid #50c878}
+.quran-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:8px;padding:2rem;margin:2rem 0}
+.quran-box h5{font-family:var(--serif);color:var(--gold);font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.quran-box .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.quran-box .source-info{font-size:.85rem;color:var(--muted);font-style:italic;border-top:1px solid var(--line);padding-top:.8rem}
+.quiz-section{background:linear-gradient(180deg,var(--ink-2) 0%,var(--ink) 100%);padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{display:inline-block;padding:.5rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input,.form-group select{padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;display:inline-flex;align-items:center;gap:.6rem}
+.btn-submit{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf,.btn-score,.btn-email,.btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover,.btn-score:hover,.btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{display:none;background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .env-text .arabic-paragraph,.quran-box .arabic-paragraph{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 14
+  </div>
+  <span class="chapter-label">Pertemuan 14 · 2 SKS</span>
+  <h1>Athaf Bayan: <span class="accent">Penjelasan Identitas & Hakikat</span></h1>
+  <div class="hero-arabic">عَطْفُ الْبَيَانِ: إِيضَاحُ الْهُوِيَّةِ وَالْحَقِيقَةِ</div>
+  <p class="subtitle">Validasi perbedaan fungsi antara Athaf Bayan dan Na'at melalui argumentasi kaidah yang logis, analisis Al-Qur'an dan hadis, bedah ayat untuk membedakan Athaf Bayan dan Na'at, serta konstruksi paragraf bertema keislaman.</p>
+  <div class="hero-actions">
+    <a href="13.html" class="btn btn-outline">← Pertemuan 13</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 14</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s14-1">14.1 Konsep dan Definisi Athaf Bayan</a>
+        <ol>
+          <li><a href="#s14-1-1">Pengertian secara Bahasa dan Istilah</a></li>
+          <li><a href="#s14-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s14-1-3">Kedudukan Athaf Bayan dalam Tawabi'</a></li>
+        </ol>
+      </li>
+      <li><a href="#s14-2">14.2 Perbedaan Athaf Bayan dengan Na'at</a>
+        <ol>
+          <li><a href="#s14-2-1">Perbedaan Fungsi: Identitas vs Sifat</a></li>
+          <li><a href="#s14-2-2">Perbedaan Tanda: Ma'rifah vs Nakirah</a></li>
+          <li><a href="#s14-2-3">Uji Kriteria: Cara Membedakan Keduanya</a></li>
+        </ol>
+      </li>
+      <li><a href="#s14-3">14.3 Perbedaan Athaf Bayan dengan Badal</a></li>
+      <li><a href="#s14-4">14.4 Syarat-syarat Athaf Bayan</a></li>
+      <li><a href="#s14-5">14.5 Hukum I'rab Athaf Bayan</a></li>
+      <li><a href="#s14-6">14.6 Analisis Teks Otentik (Al-Qur'an & Hadis)</a></li>
+      <li><a href="#s14-7">14.7 Aplikasi Kontekstual</a></li>
+      <li><a href="#s14-8">14.8 Tugas Pertemuan 14</a></li>
+      <li><a href="#s14-9">14.9 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>Na'at</em> berfungsi menjelaskan <strong>sifat</strong> man'ut, dan <em>Badal</em> berfungsi <strong>menggantikan</strong> kedudukan mubdal minhu, maka <em>Athaf Bayan</em> berfungsi <strong>menjelaskan identitas atau hakikat</strong> — ia adalah tabi' yang menjawab pertanyaan "siapa" atau "apa" dari kata yang didahuluinya, sehingga makna menjadi lebih spesifik dan terang.
+  </p>
+
+  <p>
+    Setelah pada pertemuan ketigabelas kita mempelajari <strong>An-Na'at</strong> sebagai penjelas sifat, pada pertemuan keempatbelas ini kita memasuki jenis tabi' yang sering kali membingungkan karena kemiripannya dengan Na'at dan Badal: <strong>Athaf Bayan</strong> (عَطْفُ الْبَيَانِ). Athaf Bayan adalah tabi' yang berfungsi menjelaskan identitas, hakikat, atau contoh dari kata yang didahuluinya (ma'thuf 'alaih), tanpa menggantikan kedudukannya dan tanpa menjelaskan sifatnya.
+  </p>
+
+  <p>
+    Dalam Al-Qur'an, Athaf Bayan sering muncul untuk menjelaskan identitas tokoh, nama tempat, atau hakikat konsep yang telah disebutkan sebelumnya. Contoh klasik adalah kalimat <span class="arab" style="font-size:1.1rem">جَاءَ الْخَلِيفَةُ عُمَرُ</span> — "Khalifah itu datang, yaitu Umar." Di sini <span class="arab" style="font-size:1.1rem">عُمَرُ</span> bukan Na'at (sifat), bukan pula Badal (pengganti), melainkan Athaf Bayan yang menjelaskan siapa khalifah yang dimaksud.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Athaf Bayan secara komprehensif: mulai dari konsep dan definisi, perbedaan krusial dengan Na'at dan Badal, syarat-syarat berlakunya, hukum i'rab, analisis ayat-ayat Al-Qur'an dan hadis, hingga aplikasi dalam konteks kontemporer. Sebagai puncak pembelajaran, mahasiswa akan membedah ayat-ayat Al-Qur'an untuk membedakan antara Athaf Bayan dan Na'at — sebuah latihan yang melatih ketajaman linguistik dan kemampuan <em>ta'lil nahwi</em>.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">جَاءَ الْخَلِيفَةُ عُمَرُ</div>
+    <div class="translation">"Khalifah itu datang, yaitu Umar."</div>
+    <div class="source">— Contoh Klasik Athaf Bayan dalam Kitab Nahwu</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal Athaf Bayan dalam Kalimat Arab</h4>
+    <p>Simak penjelasan visual tentang bagaimana Athaf Bayan bekerja dalam struktur kalimat Arab — dari definisi dasar hingga perbedaan dengan Na'at dan Badal.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 14</h4>
+    <ul>
+      <li><strong>Athaf Bayan (عَطْفُ الْبَيَانِ):</strong> Tabi' yang menjelaskan identitas, hakikat, atau contoh dari kata yang didahuluinya (ma'thuf 'alaih).</li>
+      <li><strong>Ma'thuf 'alaih (المَعْطُوفُ عَلَيْهِ):</strong> Kata yang didahului oleh Athaf Bayan — biasanya berupa isim nakirah atau ambigu.</li>
+      <li><strong>Ma'thuf (المَعْطُوف):</strong> Kata yang berfungsi sebagai Athaf Bayan — biasanya berupa isim ma'rifah yang menjelaskan identitas.</li>
+      <li><strong>Perbedaan dengan Na'at:</strong> Na'at menjelaskan <em>sifat</em> (صفة), Athaf Bayan menjelaskan <em>identitas/hakikat</em> (هوية/حقيقة).</li>
+      <li><strong>Perbedaan dengan Badal:</strong> Badal <em>menggantikan</em> kedudukan mubdal minhu, Athaf Bayan <em>menjelaskan</em> tanpa menggantikan.</li>
+      <li><strong>I'rab Athaf Bayan:</strong> Selalu mengikuti i'rab ma'thuf 'alaih-nya — jika marfu', marfu'; jika manshub, manshub.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Tiga Tabi' yang Sering Tertukar</h4>
+    <div class="case-content">
+      Perhatikan tiga kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ الرَّجُلُ الْكَرِيمُ</span> — "Datang laki-laki yang mulia."<br>
+      → <span class="arab" style="font-size:1.2rem">الْكَرِيمُ</span> = <strong>Na'at</strong> (menjelaskan sifat: mulia)<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">جَاءَ الرَّجُلُ زَيْدٌ</span> — "Datang laki-laki itu, yaitu Zaid."<br>
+      → <span class="arab" style="font-size:1.2rem">زَيْدٌ</span> = <strong>Athaf Bayan</strong> (menjelaskan identitas: Zaid)<br><br>
+      (4) <span class="arab" style="font-size:1.3rem">جَاءَ الرَّجُلُ أَخُُ</span> — "Datang laki-laki itu, yaitu saudaranya."<br>
+      → <span class="arab" style="font-size:1.2rem">أَخُُ</span> = <strong>Badal</strong> (menggantikan kedudukan: saudaranya)
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Meskipun ketiga kalimat terlihat mirip, fungsi tabi'-nya berbeda. Na'at menjelaskan sifat, Athaf Bayan menjelaskan identitas, dan Badal menggantikan. Mahasiswa harus mampu membedakan ketiganya berdasarkan fungsi, konteks, dan tanda-tanda linguistik.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan perbedaan antara Na'at, Athaf Bayan, dan Badal kepada siswa. Perbedaan ini sering menjadi sumber kebingung bagi siswa karena ketiga tabi' ini sama-sama mengikuti matbu'-nya dalam hal i'rab. Namun, dengan memahami perbedaan fungsi dan tanda-tandanya, mahasiswa akan mampu menganalisis teks Arab dengan lebih tajam dan akurat.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 14.1 KONSEP DAN DEFINISI -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s14-1">14.1 Konsep dan Definisi <em>Athaf Bayan</em></h2>
+
+  <p>
+    Memahami konsep dan definisi Athaf Bayan adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat Athaf Bayan, mahasiswa akan kesulitan dalam membedakannya dengan Na'at dan Badal.
+  </p>
+
+  <h3 class="sub-title" id="s14-1-1">14.1.1 Pengertian Athaf Bayan secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, istilah <em>Athaf Bayan</em> terdiri dari dua kata: <em>athaf</em> (عَطْف) yang berarti "menghubungkan" atau "menyambungkan", dan <em>bayān</em> (بَيَان) yang berarti "penjelasan" atau "kejelasan". Secara harfiah, Athaf Bayan berarti "penyambungan yang menjelaskan".
+  </p>
+
+  <p>
+    Secara <strong>terminologis (istilah nahwu)</strong>, Athaf Bayan adalah tabi' yang berfungsi menjelaskan identitas, hakikat, atau contoh dari kata yang didahuluinya (ma'thuf 'alaih), sehingga makna menjadi lebih spesifik dan tidak ambigu. Athaf Bayan tidak menggantikan kedudukan matbu' (seperti Badal), dan tidak menjelaskan sifat (seperti Na'at), melainkan menjelaskan <em>siapa</em> atau <em>apa</em> yang dimaksud.
+  </p>
+
+  <h3 class="sub-title" id="s14-1-2">14.1.2 Definisi Athaf Bayan Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وَعَطْفُ بَيَانٍ بَعْدَ نَكِرَةٍ وَقَعْ</span></td>
+        <td>"Athaf Bayan terjadi setelah nakirah."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">عَطْفُ الْبَيَانِ: تَابِعٌ يُبَيِّنُ الْمَعْطُوفَ عَلَيْهِ بِذِكْرِ اسْمِهِ أَوْ صِفَتِهِ أَوْ نَحْوِ ذَلِكَ</span></td>
+        <td>"Athaf Bayan: tabi' yang menjelaskan ma'thuf 'alaih dengan menyebutkan namanya, sifatnya, atau sejenisnya."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">عَطْفُ الْبَيَانِ: مَا يُذْكَرُ بَعْدَ النَّكِرَةِ لِيُوضِّحَهَا وَيُحَدِّدَهَا</span></td>
+        <td>"Athaf Bayan: apa yang disebutkan setelah nakirah untuk menjelaskannya dan membatasinya."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">عَطْفُ الْبَيَانِ: تَابِعٌ يُفِيدُ تَحْدِيدَ الْمَعْطُوفِ عَلَيْهِ وَتَعْيِينَهُ</span></td>
+        <td>"Athaf Bayan: tabi' yang memberikan faidah pembatasan dan penentuan ma'thuf 'alaih."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Athaf Bayan adalah <strong>tabi'</strong> — artinya ia selalu mengikuti ma'thuf 'alaih-nya dalam hal i'rab (marfu', manshub, majrur, atau majzum).</li>
+      <li>Fungsi utama Athaf Bayan adalah <strong>menjelaskan identitas/hakikat</strong> — bukan menjelaskan sifat (seperti Na'at) atau menggantikan (seperti Badal).</li>
+      <li>Athaf Bayan biasanya muncul setelah <strong>isim nakirah</strong> atau isim yang ambigu, dan diikuti oleh <strong>isim ma'rifah</strong> yang menjelaskan identitas.</li>
+      <li>Dalam Al-Qur'an, Athaf Bayan sering digunakan untuk menjelaskan identitas nabi, rasul, atau konsep yang telah disebutkan sebelumnya.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s14-1-3">14.1.3 Kedudukan Athaf Bayan dalam Tawabi'</h3>
+
+  <p>
+    Athaf Bayan merupakan salah satu dari empat <strong>Tawabi'</strong> (kata-kata yang mengikuti) dalam nahwu. Keempat tabi' tersebut adalah:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Tabi'</th><th>Fungsi</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Na'at (النَّعْت)</strong></td>
+        <td>Menjelaskan sifat matbu'</td>
+        <td><span class="arab">جَاءَ الرَّجُلُ الْكَرِيمُ</span><br>"Datang laki-laki yang mulia."</td>
+      </tr>
+      <tr>
+        <td><strong>Taukid (التَّأْكِيد)</strong></td>
+        <td>Menguatkan makna matbu'</td>
+        <td><span class="arab">جَاءَ الرَّجُلُ نَفْسُهُ</span><br>"Laki-laki itu sendiri yang datang."</td>
+      </tr>
+      <tr>
+        <td><strong>Badal (الْبَدَل)</strong></td>
+        <td>Menggantikan matbu'</td>
+        <td><span class="arab">جَاءَ الرَّجُلُ أَخُُ</span><br>"Datang laki-laki, yaitu saudaranya."</td>
+      </tr>
+      <tr>
+        <td><strong>Athaf Bayan (عَطْفُ الْبَيَان)</strong></td>
+        <td>Menjelaskan identitas/hakikat matbu'</td>
+        <td><span class="arab">جَاءَ الرَّجُلُ زَيْدٌ</span><br>"Datang laki-laki itu, yaitu Zaid."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="key-concept">
+    <h4>✦ Perbedaan Athaf Bayan dengan Tabi' Lainnya</h4>
+    <ul>
+      <li><strong>Athaf Bayan vs Na'at:</strong> Na'at menjelaskan sifat (seperti "yang mulia"), sedangkan Athaf Bayan menjelaskan identitas (seperti "yaitu Zaid").</li>
+      <li><strong>Athaf Bayan vs Badal:</strong> Badal menggantikan kedudukan matbu' (bisa dihapus tanpa mengubah makna), sedangkan Athaf Bayan menjelaskan tanpa menggantikan (tidak bisa dihapus tanpa mengubah makna).</li>
+      <li><strong>Athaf Bayan vs Taukid:</strong> Taukid menguatkan (seperti "sendiri"), sedangkan Athaf Bayan menjelaskan identitas (seperti "yaitu").</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 14.2 PERBEDAAN ATHAF BAYAN DENGAN NA'AT -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s14-2">14.2 Perbedaan <em>Athaf Bayan dengan Na'at</em></h2>
+
+  <p>
+    Perbedaan antara Athaf Bayan dan Na'at adalah inti dari pertemuan ini. Meskipun keduanya sama-sama tabi' yang menjelaskan matbu', fungsi dan tanda-tandanya sangat berbeda. Pemahaman yang kokoh tentang perbedaan ini akan melatih ketajaman analisis linguistik mahasiswa.
+  </p>
+
+  <h3 class="sub-title" id="s14-2-1">14.2.1 Perbedaan Fungsi: Identitas vs Sifat</h3>
+
+  <p>
+    Perbedaan paling fundamental antara Athaf Bayan dan Na'at terletak pada <strong>fungsi</strong>:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Na'at</th><th>Athaf Bayan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fungsi</strong></td>
+        <td>Menjelaskan <em>sifat</em> man'ut (صفة)</td>
+        <td>Menjelaskan <em>identitas/hakikat</em> man'ut (هوية/حقيقة)</td>
+      </tr>
+      <tr>
+        <td><strong>Pertanyaan yang Dijawab</strong></td>
+        <td>"Bagaimana?" (كيف)</td>
+        <td>"Siapa?" atau "Apa?" (من / ما)</td>
+      </tr>
+      <tr>
+        <td><strong>Jenis Kata</strong></td>
+        <td>Biasanya berupa sifat (isim fa'il, isim maf'ul, sifat musyabbahah)</td>
+        <td>Biasanya berupa isim ma'rifah (nama, gelar, konsep)</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">جَاءَ الرَّجُلُ الْكَرِيمُ</span><br>"Datang laki-laki yang mulia."</td>
+        <td><span class="arab">جَاءَ الرَّجُلُ زَيْدٌ</span><br>"Datang laki-laki itu, yaitu Zaid."</td>
+      </tr>
+      <tr>
+        <td><strong>Analisis</strong></td>
+        <td><span class="arab">الْكَرِيمُ</span> = Na'at<br>Menjelaskan sifat "mulia"</td>
+        <td><span class="arab">زَيْدٌ</span> = Athaf Bayan<br>Menjelaskan identitas "Zaid"</td>
+      </tr>
+      <tr>
+        <td><strong>Tanda Khas</strong></td>
+        <td>Man'ut bisa ma'rifah atau nakirah</td>
+        <td>Man'ut biasanya nakirah, Athaf Bayan ma'rifah</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Analisis Perbandingan</h4>
+    <div class="case-content">
+      Bandingkan dua kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ النَّبِيُّ مُحَمَّدٌ</span> — "Datang nabi, yaitu Muhammad."<br>
+      → <span class="arab" style="font-size:1.2rem">مُحَمَّدٌ</span> = <strong>Athaf Bayan</strong> (menjelaskan identitas: siapa nabi yang dimaksud?)<br>
+      → Pertanyaan yang dijawab: "Siapa nabi yang datang?"<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">جَاءَ النَّبِيُّ الْكَرِيمُ</span> — "Datang nabi yang mulia."<br>
+      → <span class="arab" style="font-size:1.2rem">الْكَرِيمُ</span> = <strong>Na'at</strong> (menjelaskan sifat: mulia)<br>
+      → Pertanyaan yang dijawab: "Bagaimana nabi yang datang?"
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Meskipun kedua kalimat memiliki struktur yang mirip (fi'il + man'ut + tabi'), fungsi tabi'-nya berbeda. Pada kalimat (1), <span class="arab" style="font-size:1.2rem">مُحَمَّدٌ</span> menjelaskan <em>siapa</em> nabi yang dimaksud (identitas). Pada kalimat (2), <span class="arab" style="font-size:1.2rem">الْكَرِيمُ</span> menjelaskan <em>bagaimana</em> nabi yang datang (sifat). Mahasiswa harus mampu membedakan keduanya berdasarkan fungsi dan konteks.
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s14-2-2">14.2.2 Perbedaan Tanda: Ma'rifah vs Nakirah</h3>
+
+  <p>
+    Selain perbedaan fungsi, Athaf Bayan dan Na'at juga memiliki perbedaan dalam hal <strong>tanda linguistik</strong>:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Na'at</th><th>Athaf Bayan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Status Ma'rifah/Nakirah Man'ut</strong></td>
+        <td>Man'ut bisa ma'rifah atau nakirah</td>
+        <td>Man'ut biasanya nakirah (atau ambigu)</td>
+      </tr>
+      <tr>
+        <td><strong>Status Ma'rifah/Nakirah Tabi'</strong></td>
+        <td>Na'at mengikuti man'ut (jika man'ut ma'rifah, na'at ma'rifah)</td>
+        <td>Athaf Bayan biasanya ma'rifah (untuk menjelaskan identitas)</td>
+      </tr>
+      <tr>
+        <td><strong>Kesesuaian</strong></td>
+        <td>Na'at harus sesuai dengan man'ut dalam 4 hal: jenis, jumlah, definisi, i'rab</td>
+        <td>Athaf Bayan hanya harus sesuai dalam i'rab, tidak harus dalam jenis dan jumlah</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">جَاءَ الرَّجُلُ الْكَرِيمُ</span><br>(keduanya ma'rifah, sesuai dalam semua aspek)</td>
+        <td><span class="arab">جَاءَ رَجُلٌ زَيْدٌ</span><br>(man'ut nakirah, Athaf Bayan ma'rifah)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan tentang Kesesuaian</h4>
+    <ul>
+      <li><strong>Na'at:</strong> Harus sesuai dengan man'ut dalam 4 hal: jenis (mudzakkar/muannats), jumlah (mufrad/mutsanna/jamak), definisi (ma'rifah/nakirah), dan i'rab.</li>
+      <li><strong>Athaf Bayan:</strong> Hanya harus sesuai dalam i'rab, tidak harus dalam jenis dan jumlah. Ini karena Athaf Bayan menjelaskan identitas, bukan sifat.</li>
+      <li>Contoh: <span class="arab" style="font-size:1.1rem">جَاءَ رَجُلٌ زَيْدٌ</span> — man'ut <span class="arab" style="font-size:1.1rem">رَجُلٌ</span> adalah nakirah, sedangkan Athaf Bayan <span class="arab" style="font-size:1.1rem">زَيْدٌ</span> adalah ma'rifah. Ini diperbolehkan dalam Athaf Bayan, tetapi tidak dalam Na'at.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s14-2-3">14.2.3 Uji Kriteria: Cara Membedakan Athaf Bayan dan Na'at</h3>
+
+  <p>
+    Untuk membedakan Athaf Bayan dan Na'at, mahasiswa dapat menggunakan <strong>uji kriteria</strong> berikut:
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Uji Kriteria untuk Membedakan Athaf Bayan dan Na'at</h4>
+    <ul>
+      <li><strong>Uji 1: Pertanyaan yang Dijawab</strong>
+        <ul>
+          <li>Jika tabi' menjawab pertanyaan "Bagaimana?" (كيف) → <strong>Na'at</strong></li>
+          <li>Jika tabi' menjawab pertanyaan "Siapa?" atau "Apa?" (من / ما) → <strong>Athaf Bayan</strong></li>
+        </ul>
+      </li>
+      <li><strong>Uji 2: Jenis Kata</strong>
+        <ul>
+          <li>Jika tabi' berupa sifat (isim fa'il, isim maf'ul, sifat musyabbahah) → <strong>Na'at</strong></li>
+          <li>Jika tabi' berupa isim ma'rifah (nama, gelar, konsep) → <strong>Athaf Bayan</strong></li>
+        </ul>
+      </li>
+      <li><strong>Uji 3: Status Ma'rifah/Nakirah</strong>
+        <ul>
+          <li>Jika man'ut dan tabi' sama-sama ma'rifah atau sama-sama nakirah → <strong>Na'at</strong></li>
+          <li>Jika man'ut nakirah dan tabi' ma'rifah → <strong>Athaf Bayan</strong></li>
+        </ul>
+      </li>
+      <li><strong>Uji 4: Penghapusan</strong>
+        <ul>
+          <li>Jika tabi' bisa dihapus tanpa mengubah makna secara signifikan → <strong>Na'at</strong> (karena hanya menjelaskan sifat)</li>
+          <li>Jika tabi' tidak bisa dihapus tanpa mengubah makna → <strong>Athaf Bayan</strong> (karena menjelaskan identitas)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Penerapan Uji Kriteria</h4>
+    <div class="case-content">
+      Kalimat: <span class="arab" style="font-size:1.3rem">جَاءَ النَّبِيُّ مُحَمَّدٌ</span> — "Datang nabi, yaitu Muhammad."<br><br>
+      <strong>Uji 1:</strong> Pertanyaan yang dijawab adalah "Siapa nabi yang datang?" → <strong>Athaf Bayan</strong><br>
+      <strong>Uji 2:</strong> <span class="arab" style="font-size:1.2rem">مُحَمَّدٌ</span> adalah nama (isim ma'rifah), bukan sifat → <strong>Athaf Bayan</strong><br>
+      <strong>Uji 3:</strong> <span class="arab" style="font-size:1.2rem">النَّبِيُّ</span> adalah ma'rifah, <span class="arab" style="font-size:1.2rem">مُحَمَّدٌ</span> juga ma'rifah, tetapi <span class="arab" style="font-size:1.2rem">مُحَمَّدٌ</span> adalah nama, bukan sifat → <strong>Athaf Bayan</strong><br>
+      <strong>Uji 4:</strong> Jika <span class="arab" style="font-size:1.2rem">مُحَمَّدٌ</span> dihapus, makna berubah (kita tidak tahu siapa nabi yang dimaksud) → <strong>Athaf Bayan</strong>
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Dengan menerapkan empat uji kriteria di atas, mahasiswa dapat membedakan Athaf Bayan dan Na'at dengan akurat. Latihan ini penting untuk analisis teks-teks keislaman yang kaya dengan deskripsi.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 14.3 PERBEDAAN ATHAF BAYAN DENGAN BADAL -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s14-3">14.3 Perbedaan <em>Athaf Bayan dengan Badal</em></h2>
+
+  <p>
+    Selain dengan Na'at, Athaf Bayan juga sering tertukar dengan Badal. Meskipun keduanya sama-sama menjelaskan matbu', fungsi dan konsekuensi logisnya berbeda.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Badal</th><th>Athaf Bayan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fungsi</strong></td>
+        <td><em>Menggantikan</em> kedudukan mubdal minhu</td>
+        <td><em>Menjelaskan</em> identitas/hakikat tanpa menggantikan</td>
+      </tr>
+      <tr>
+        <td><strong>Konsekuensi Logis</strong></td>
+        <td>Badal dan mubdal minhu merujuk pada hal yang sama persis (bisa saling menggantikan)</td>
+        <td>Athaf Bayan dan ma'thuf 'alaih merujuk pada hal yang sama, tetapi Athaf Bayan tidak menggantikan</td>
+      </tr>
+      <tr>
+        <td><strong>Penghapusan</strong></td>
+        <td>Badal bisa dihapus tanpa mengubah makna (karena mubdal minhu sudah mewakili)</td>
+        <td>Athaf Bayan tidak bisa dihapus tanpa mengubah makna (karena menjelaskan identitas)</td>
+      </tr>
+      <tr>
+        <td><strong>Jenis Badal</strong></td>
+        <td>Badal Mutabiq, Ba'dh, Isytimal</td>
+        <td>Tidak ada pembagian jenis (hanya satu jenis)</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">جَاءَ الرَّجُلُ أَخُُ</span><br>"Datang laki-laki, yaitu saudaranya."</td>
+        <td><span class="arab">جَاءَ الرَّجُلُ زَيْدٌ</span><br>"Datang laki-laki itu, yaitu Zaid."</td>
+      </tr>
+      <tr>
+        <td><strong>Analisis</strong></td>
+        <td><span class="arab">أَخُُ</span> = Badal Mutabiq<br>Menggantikan <span class="arab" style="font-size:1.1rem">الرَّجُلُ</span></td>
+        <td><span class="arab">زَيْدٌ</span> = Athaf Bayan<br>Menjelaskan identitas <span class="arab" style="font-size:1.1rem">الرَّجُلُ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 4: Analisis Perbandingan</h4>
+    <div class="case-content">
+      Bandingkan dua kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ الرَّجُلُ زَيْدٌ</span> — "Datang laki-laki itu, yaitu Zaid."<br>
+      → <span class="arab" style="font-size:1.2rem">زَيْدٌ</span> = <strong>Athaf Bayan</strong> (menjelaskan identitas: siapa laki-laki yang datang?)<br>
+      → Jika <span class="arab" style="font-size:1.2rem">زَيْدٌ</span> dihapus, kita tidak tahu siapa laki-laki yang dimaksud<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">جَاءَ الرَّجُلُ أَخُُ</span> — "Datang laki-laki, yaitu saudaranya."<br>
+      → <span class="arab" style="font-size:1.2rem">أَخُُ</span> = <strong>Badal Mutabiq</strong> (menggantikan kedudukan <span class="arab" style="font-size:1.2rem">الرَّجُلُ</span>)<br>
+      → <span class="arab" style="font-size:1.2rem">أَخُُ</span> dan <span class="arab" style="font-size:1.2rem">الرَّجُلُ</span> merujuk pada orang yang sama (saudara yang laki-laki)
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Perbedaan antara Athaf Bayan dan Badal seringkali halus. Kunci perbedaannya terletak pada fungsi: Athaf Bayan menjelaskan identitas (siapa/apa), sedangkan Badal menggantikan kedudukan. Dalam analisis teks, mahasiswa harus memperhatikan konteks dan fungsi untuk menentukan jenis tabi' yang tepat.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 14.4 SYARAT-SYARAT ATHAF BAYAN -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s14-4">14.4 Syarat-syarat <em>Athaf Bayan</em></h2>
+
+  <p>
+    Athaf Bayan tidak sembarangan masuk ke kalimat. Ada syarat-syarat tertentu yang harus dipenuhi agar Athaf Bayan dapat berfungsi dengan benar.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Syarat</th><th>Penjelasan</th><th>Contoh Benar</th><th>Contoh Salah</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ma'thuf 'alaih biasanya nakirah atau ambigu</strong></td>
+        <td>Kata yang dijelaskan oleh Athaf Bayan biasanya berupa isim nakirah (tak tentu) atau isim yang ambigu (memerlukan penjelasan).</td>
+        <td><span class="arab">جَاءَ رَجُلٌ زَيْدٌ</span> ✓<br>(<span class="arab" style="font-size:1.1rem">رَجُلٌ</span> nakirah)</td>
+        <td><span class="arab">جَاءَ الرَّجُلُ زَيْدٌ</span> ✗<br>(<span class="arab" style="font-size:1.1rem">الرَّجُلُ</span> ma'rifah — ini bukan Athaf Bayan, melainkan Badal)</td>
+      </tr>
+      <tr>
+        <td><strong>Athaf Bayan harus ma'rifah</strong></td>
+        <td>Kata yang menjelaskan identitas harus berupa isim ma'rifah (tentu) — bisa berupa nama, gelar, atau konsep yang jelas.</td>
+        <td><span class="arab">جَاءَ رَجُلٌ زَيْدٌ</span> ✓<br>(<span class="arab" style="font-size:1.1rem">زَيْدٌ</span> ma'rifah)</td>
+        <td><span class="arab">جَاءَ رَجُلٌ رَجُلٌ</span> ✗<br>(keduanya nakirah — tidak menjelaskan identitas)</td>
+      </tr>
+      <tr>
+        <td><strong>Athaf Bayan harus mengikuti i'rab ma'thuf 'alaih</strong></td>
+        <td>Athaf Bayan selalu mengikuti i'rab ma'thuf 'alaih-nya (marfu', manshub, majrur).</td>
+        <td><span class="arab">رَأَيْتُ رَجُلاً زَيْدًا</span> ✓<br>(keduanya manshub)</td>
+        <td><span class="arab">رَأَيْتُ رَجُلاً زَيْدٌ</span> ✗<br>(ma'thuf 'alaih manshub, Athaf Bayan marfu')</td>
+      </tr>
+      <tr>
+        <td><strong>Athaf Bayan harus langsung setelah ma'thuf 'alaih</strong></td>
+        <td>Tidak boleh ada unsur lain yang memisahkan Athaf Bayan dari ma'thuf 'alaih-nya.</td>
+        <td><span class="arab">جَاءَ رَجُلٌ زَيْدٌ</span> ✓</td>
+        <td><span class="arab">جَاءَ رَجُلٌ فِي الْبَيْتِ زَيْدٌ</span> ✗<br>(ada pemisah)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kesalahan Umum Mahasiswa</h4>
+    <ul>
+      <li>Mengira semua tabi' yang menjelaskan adalah Athaf Bayan — padahal bisa juga Na'at atau Badal.</li>
+      <li>Tidak memperhatikan syarat ma'rifah/nakirah — menggunakan Athaf Bayan dengan ma'thuf 'alaih ma'rifah.</li>
+      <li>Tidak memperhatikan i'rab — mengira Athaf Bayan selalu marfu', padahal harus mengikuti ma'thuf 'alaih.</li>
+      <li>Salah membedakan Athaf Bayan dengan Badal — keduanya sama-sama menjelaskan, tetapi fungsi dan konsekuensinya berbeda.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 14.5 HUKUM I'RAB ATHAF BAYAN -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s14-5">14.5 Hukum I'rab <em>Athaf Bayan</em></h2>
+
+  <p>
+    Sebagai tabi', Athaf Bayan <strong>selalu mengikuti i'rab ma'thuf 'alaih-nya</strong>. Inilah kaidah fundamental yang harus dikuasai oleh mahasiswa.
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Kaidah Dasar I'rab Athaf Bayan</h4>
+    <ul>
+      <li><strong>Jika ma'thuf 'alaih marfu', maka Athaf Bayan marfu'.</li>
+      <li><strong>Jika ma'thuf 'alaih manshub, maka Athaf Bayan manshub.</li>
+      <li><strong>Jika ma'thuf 'alaih majrur, maka Athaf Bayan majrur.</li>
+      <li><strong>Jika ma'thuf 'alaih majzum, maka Athaf Bayan majzum.</li>
+      <li>Athaf Bayan tidak memiliki i'rab sendiri — ia selalu mengikuti ma'thuf 'alaih.</li>
+    </ul>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Posisi Ma'thuf 'alaih</th><th>I'rab Ma'thuf 'alaih</th><th>I'rab Athaf Bayan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fa'il</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td><span class="arab">جَاءَ رَجُلٌ زَيْدٌ</span><br><span class="arab">زَيْدٌ</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">رَجُلٌ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mubtada'</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td><span class="arab">رَجُلٌ زَيْدٌ قَائِمٌ</span><br><span class="arab">زَيْدٌ</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">رَجُلٌ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Maf'ul Bih</strong></td>
+        <td>Manshub</td>
+        <td>Manshub</td>
+        <td><span class="arab">رَأَيْتُ رَجُلاً زَيْدًا</span><br><span class="arab">زَيْدًا</span> manshub mengikuti <span class="arab" style="font-size:1.1rem">رَجُلاً</span></td>
+      </tr>
+      <tr>
+        <td><strong>Majrur (jar)</strong></td>
+        <td>Majrur</td>
+        <td>Majrur</td>
+        <td><span class="arab">مَرَرْتُ بِرَجُلٍ زَيْدٍ</span><br><span class="arab">زَيْدٍ</span> majrur mengikuti <span class="arab" style="font-size:1.1rem">بِرَجُلٍ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Isim Inna</strong></td>
+        <td>Manshub</td>
+        <td>Manshub</td>
+        <td><span class="arab">إِنَّ رَجُلاً زَيْدًا قَائِمٌ</span><br><span class="arab">زَيْدًا</span> manshub mengikuti <span class="arab" style="font-size:1.1rem">رَجُلاً</span></td>
+      </tr>
+      <tr>
+        <td><strong>Isim Kana</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td><span class="arab">كَانَ رَجُلٌ زَيْدٌ قَائِمًا</span><br><span class="arab">زَيْدٌ</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">رَجُلٌ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 5: Athaf Bayan dalam Berbagai Posisi I'rab</h4>
+    <div class="case-content">
+      Bandingkan tiga kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ نَبِيٌّ مُحَمَّدٌ</span> — "Datang seorang nabi, yaitu Muhammad."<br>
+      → <span class="arab" style="font-size:1.2rem">مُحَمَّدٌ</span> = Athaf Bayan marfu' (mengikuti Fa'il <span class="arab" style="font-size:1.2rem">نَبِيٌّ</span>)<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">رَأَيْتُ نَبِيًّا مُحَمَّدًا</span> — "Aku melihat seorang nabi, yaitu Muhammad."<br>
+      → <span class="arab" style="font-size:1.2rem">مُحَمَّدًا</span> = Athaf Bayan manshub (mengikuti Maf'ul Bih <span class="arab" style="font-size:1.2rem">نَبِيًّا</span>)<br><br>
+      (3) <span class="arab" style="font-size:1.3rem">مَرَرْتُ بِنَبِيٍّ مُحَمَّدٍ</span> — "Aku berpapasan dengan seorang nabi, yaitu Muhammad."<br>
+      → <span class="arab" style="font-size:1.2rem">مُحَمَّدٍ</span> = Athaf Bayan majrur (mengikuti majrur <span class="arab" style="font-size:1.2rem">بِنَبِيٍّ</span>)
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Athaf Bayan selalu mengikuti i'rab ma'thuf 'alaih-nya, tidak peduli apakah ma'thuf 'alaih itu marfu', manshub, atau majrur. Inilah yang membedakan Athaf Bayan dari Na'at (yang juga mengikuti i'rab man'ut, tetapi memiliki fungsi berbeda).
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 14.6 ANALISIS TEKS OTENTIK -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s14-6">14.6 Analisis <em>Teks Otentik (Al-Qur'an & Hadis)</em></h2>
+
+  <p>
+    Athaf Bayan sangat dominan dalam Al-Qur'an dan hadis. Allah SWT menggunakan Athaf Bayan untuk menjelaskan identitas nabi, rasul, atau konsep yang telah disebutkan sebelumnya. Mari kita analisis beberapa contoh.
+  </p>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 1: QS. Al-A'raf [7]: 157</h5>
+    <div class="arabic-paragraph">
+      الَّذِينَ يَتَّبِعُونَ الرَّسُولَ النَّبِيَّ الْأُمِّيَّ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "(Yaitu) orang-orang yang mengikuti rasul, nabi yang ummi."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "النَّبِيَّ الْأُمِّيَّ"</h5>
+    <div class="word-analysis">
+      <span class="word">الَّذِينَ</span>
+      <span class="detail"><strong>Isim maushul</strong> — marfu' dengan kasrah (karena jamak). <small>Berkedudukan sebagai Na'at dari kata yang sebelumnya.</small></span>
+
+      <span class="word">يَتَّبِعُونَ</span>
+      <span class="detail"><strong>Fi'il mudhari'</strong> + <strong>wawu jama'ah</strong> — <span class="arab" style="font-size:1.1rem">يَتَّبِعُونَ</span> marfu' dengan dhommah.</span>
+
+      <span class="word">الرَّسُولَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Ma'thuf 'alaih (yang dijelaskan).</small></span>
+
+      <span class="word">النَّبِيَّ</span>
+      <span class="detail"><strong>Athaf Bayan</strong> — manshub dengan fathah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">الرَّسُولَ</span>). <small>Menjelaskan identitas: rasul yang dimaksud adalah nabi.</small></span>
+
+      <span class="word">الْأُمِّيَّ</span>
+      <span class="detail"><strong>Na'at</strong> — manshub dengan fathah (mengikuti <span class="arab" style="font-size:1.1rem">النَّبِيَّ</span>). <small>Menjelaskan sifat: nabi yang ummi (tidak bisa membaca dan menulis).</small></span>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Analisis Mendalam</h4>
+    <ul>
+      <li><span class="arab" style="font-size:1.1rem">الرَّسُولَ</span> = ma'thuf 'alaih (yang dijelaskan)</li>
+      <li><span class="arab" style="font-size:1.1rem">النَّبِيَّ</span> = Athaf Bayan (menjelaskan identitas: rasul = nabi)</li>
+      <li><span class="arab" style="font-size:1.1rem">الْأُمِّيَّ</span> = Na'at (menjelaskan sifat: nabi yang ummi)</li>
+      <li>Perhatikan: <span class="arab" style="font-size:1.1rem">النَّبِيَّ</span> adalah Athaf Bayan karena menjelaskan identitas (rasul = nabi), sedangkan <span class="arab" style="font-size:1.1rem">الْأُمِّيَّ</span> adalah Na'at karena menjelaskan sifat (ummi).</li>
+    </ul>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 2: QS. Yusuf [12]: 4</h5>
+    <div class="arabic-paragraph">
+      إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Sesungguhnya aku telah melihat sebelas bintang."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">إِنِّي</span>
+      <span class="detail"><strong>Inna</strong> + <strong>dhamir muttashil</strong> — <span class="arab" style="font-size:1.1rem">إِنَّ</span> = huruf nasikh; <span class="arab" style="font-size:1.1rem">نِي</span> = Isim Inna manshub.</span>
+
+      <span class="word">رَأَيْتُ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>dhamir marfu'</strong> — <span class="arab" style="font-size:1.1rem">رَأَيْ</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">تُ</span> = fa'il marfu'.</span>
+
+      <span class="word">أَحَدَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Ma'thuf 'alaih (yang dijelaskan).</small></span>
+
+      <span class="word">عَشَرَ</span>
+      <span class="detail"><strong>Athaf Bayan</strong> — manshub dengan fathah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">أَحَدَ</span>). <small>Menjelaskan identitas: "satu" yang dimaksud adalah "sebelas".</small></span>
+
+      <span class="word">كَوْكَبًا</span>
+      <span class="detail"><strong>Tamyiz</strong> — manshub dengan fathah. <small>Menjelaskan jenis: bintang.</small></span>
+    </div>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 3: QS. Al-Kahfi [18]: 9</h5>
+    <div class="arabic-paragraph">
+      أَمْ حَسِبْتَ أَنَّ أَصْحَابَ الْكَهْفِ وَالرَّقِيمِ كَانُوا مِنْ آيَاتِنَا عَجَبًا
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Atau kamu mengira bahwa orang-orang yang menghuni gua dan (yang mempunyai) raqim itu, mereka termasuk tanda-tanda kekuasaan Kami yang mengherankan?"
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "وَالرَّقِيمِ"</h5>
+    <div class="word-analysis">
+      <span class="word">أَصْحَابَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah. <small>Ma'thuf 'alaih (yang dijelaskan).</small></span>
+
+      <span class="word">الْكَهْفِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah.</span>
+
+      <span class="word">وَالرَّقِيمِ</span>
+      <span class="detail"><strong>Athaf Bayan</strong> — majrur dengan kasrah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">الْكَهْفِ</span>). <small>Menjelaskan identitas: gua yang dimaksud adalah gua yang mempunyai raqim (papan batu yang bertuliskan nama-nama mereka).</small></span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 6: Pola Umum Athaf Bayan dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Dalam Al-Qur'an, Athaf Bayan sering muncul dalam pola-pola berikut:<br><br>
+      (1) <strong>Pola penjelasan identitas nabi/rasul:</strong><br>
+      <span class="arab" style="font-size:1.2rem">الرَّسُولَ النَّبِيَّ الْأُمِّيَّ</span> — "Rasul, nabi yang ummi"<br><br>
+      (2) <strong>Pola penjelasan konsep:</strong><br>
+      <span class="arab" style="font-size:1.2rem">أَحَدَ عَشَرَ كَوْكَبًا</span> — "Sebelas bintang"<br><br>
+      (3) <strong>Pola penjelasan tempat:</strong><br>
+      <span class="arab" style="font-size:1.2rem">أَصْحَابَ الْكَهْفِ وَالرَّقِيمِ</span> — "Penghuni gua dan raqim"<br><br>
+      <strong>Ta'lil Nahwi:</strong> Penggunaan Athaf Bayan dalam Al-Qur'an bukan sekadar variasi gramatikal — ia memiliki implikasi semantis yang dalam. Athaf Bayan memberikan penjelasan yang lebih rinci dan spesifik tentang identitas, sehingga pembaca dapat memahami dengan lebih jelas siapa atau apa yang dimaksud.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Mahasiswa PBA perlu memahami pola-pola umum Athaf Bayan dalam Al-Qur'an agar mampu menafsirkan ayat-ayat secara tepat. Kemampuan ini juga akan berguna dalam mengajarkan nahwu kepada siswa dengan contoh-contoh yang relevan.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 14.7 APLIKASI KONTEKSTUAL -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s14-7">14.7 Aplikasi <em>Kontekstual</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang Athaf Bayan, mari kita konstruksi kalimat-kalimat yang menggunakan Athaf Bayan dalam berbagai konteks. Tema yang dipilih mencakup keislaman, lingkungan, dan budaya Minangkabau.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Kalimat dengan Athaf Bayan</h5>
+    <div class="arabic-paragraph">
+      ١. جَاءَ نَبِيٌّ مُحَمَّدٌ<br>
+      ٢. رَأَيْتُ عَالِمًا زَيْدًا<br>
+      ٣. مَرَرْتُ بِمَسْجِدٍ الْمَسْجِدِ الْحَرَامِ<br>
+      ٤. إِنَّ مُعَلِّمًا أُسْتَاذًا قَائِمٌ<br>
+      ٥. جَاءَ رَجُلٌ مِنْ أَهْلِ بَيْتِهِ زَيْدٌ
+    </div>
+    <div class="translation">
+      1. Datang seorang nabi, yaitu Muhammad.<br>
+      2. Aku melihat seorang ulama, yaitu Zaid.<br>
+      3. Aku berpapasan dengan sebuah masjid, yaitu Masjidil Haram.<br>
+      4. Sesungguhnya seorang guru, yaitu ustadz, sedang berdiri.<br>
+      5. Datang seorang laki-laki dari ahli rumahnya, yaitu Zaid.
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 1</h5>
+    <div class="word-analysis">
+      <span class="word">جَاءَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">نَبِيٌّ</span>
+      <span class="detail"><strong>Fa'il</strong> — marfu' dengan tanwin dhommah. <small>Ma'thuf 'alaih (yang dijelaskan).</small></span>
+
+      <span class="word">مُحَمَّدٌ</span>
+      <span class="detail"><strong>Athaf Bayan</strong> — marfu' dengan tanwin dhommah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">نَبِيٌّ</span>). <small>Menjelaskan identitas: nabi yang dimaksud adalah Muhammad.</small></span>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 3</h5>
+    <div class="word-analysis">
+      <span class="word">مَرَرْتُ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>dhamir marfu'</strong> — <span class="arab" style="font-size:1.1rem">مَرَر</span> = fi'il madhi; <span class="arab" style="font-size:1.1rem">تُ</span> = fa'il marfu'.</span>
+
+      <span class="word">بِمَسْجِدٍ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">بِ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">مَسْجِدٍ</span> = majrur dengan kasrah. <small>Ma'thuf 'alaih (yang dijelaskan).</small></span>
+
+      <span class="word">الْمَسْجِدِ</span>
+      <span class="detail"><strong>Athaf Bayan</strong> — majrur dengan kasrah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">بِمَسْجِدٍ</span>). <small>Menjelaskan identitas: masjid yang dimaksud adalah Masjidil Haram.</small></span>
+
+      <span class="word">الْحَرَامِ</span>
+      <span class="detail"><strong>Na'at</strong> — majrur dengan kasrah (mengikuti <span class="arab" style="font-size:1.1rem">الْمَسْجِدِ</span>). <small>Menjelaskan sifat: masjid yang haram (suci).</small></span>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Mengonstruksi Kalimat dengan Athaf Bayan</h4>
+    <ul>
+      <li><strong>Pastikan ma'thuf 'alaih nakirah atau ambigu:</strong> Athaf Bayan biasanya muncul setelah isim nakirah atau isim yang memerlukan penjelasan.</li>
+      <li><strong>Pastikan Athaf Bayan ma'rifah:</strong> Athaf Bayan harus berupa isim ma'rifah (nama, gelar, konsep) untuk menjelaskan identitas.</li>
+      <li><strong>Perhatikan i'rab:</strong> Athaf Bayan harus mengikuti i'rab ma'thuf 'alaih-nya.</li>
+      <li><strong>Integrasikan nilai-nilai:</strong> Gunakan tema-tema yang relevan dengan kehidupan dan nilai-nilai keislaman.</li>
+      <li><strong>Perhatikan konteks:</strong> Athaf Bayan cocok digunakan ketika kita ingin menjelaskan identitas atau hakikat dari sesuatu yang telah disebutkan sebelumnya.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 14.8 TUGAS PERTEMUAN 14 -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s14-8">14.8 Tugas <em>Pertemuan 14</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Bedah ayat-ayat Al-Qur'an untuk <strong>membedakan antara Athaf Bayan dan Na'at</strong> dalam memberikan penjelasan isim.</li>
+      <li>Pilih minimal <strong>5 ayat Al-Qur'an</strong> yang mengandung Athaf Bayan atau Na'at.</li>
+      <li>Untuk setiap ayat:</li>
+      <li style="padding-left:2.5rem">— Identifikasi kata yang berfungsi sebagai tabi' (Na'at atau Athaf Bayan)</li>
+      <li style="padding-left:2.5rem">— Tentukan jenis tabi' (Na'at atau Athaf Bayan)</li>
+      <li style="padding-left:2.5rem">— Berikan analisis i'rab lengkap</li>
+      <li style="padding-left:2.5rem">— Jelaskan alasan mengapa tabi' tersebut termasuk Na'at atau Athaf Bayan (gunakan uji kriteria)</li>
+      <li>Susun dalam bentuk tabel yang rapi dan sistematis.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Merangkum materi Pertemuan 14 (Athaf Bayan) secara sistematis.</li>
+      <li>Rangkuman harus mencakup:</li>
+      <li style="padding-left:2.5rem">— Definisi dan konsep Athaf Bayan</li>
+      <li style="padding-left:2.5rem">— Perbedaan Athaf Bayan dengan Na'at dan Badal</li>
+      <li style="padding-left:2.5rem">— Syarat-syarat Athaf Bayan</li>
+      <li style="padding-left:2.5rem">— Hukum i'rab Athaf Bayan</li>
+      <li style="padding-left:2.5rem">— Uji kriteria untuk membedakan Athaf Bayan dan Na'at</li>
+      <li>Sumber: kitab <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>An-Nahw al-Wadhih</em> (Al-Jarim & Amin).</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Contoh Tabel Tugas Mandiri</h4>
+    <table>
+      <thead>
+        <tr><th>No</th><th>Ayat</th><th>Tabi'</th><th>Jenis</th><th>Analisis I'rab</th><th>Alasan</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><span class="arab">الرَّسُولَ النَّبِيَّ</span> (QS. Al-A'raf: 157)</td>
+          <td><span class="arab">النَّبِيَّ</span></td>
+          <td>Athaf Bayan</td>
+          <td><span class="arab">النَّبِيَّ</span> manshub mengikuti <span class="arab">الرَّسُولَ</span></td>
+          <td>Menjelaskan identitas (rasul = nabi), bukan sifat</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><span class="arab">النَّبِيَّ الْأُمِّيَّ</span> (QS. Al-A'raf: 157)</td>
+          <td><span class="arab">الْأُمِّيَّ</span></td>
+          <td>Na'at</td>
+          <td><span class="arab">الْأُمِّيَّ</span> manshub mengikuti <span class="arab">النَّبِيَّ</span></td>
+          <td>Menjelaskan sifat (ummi), bukan identitas</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><span class="arab">أَحَدَ عَشَرَ</span> (QS. Yusuf: 4)</td>
+          <td><span class="arab">عَشَرَ</span></td>
+          <td>Athaf Bayan</td>
+          <td><span class="arab">عَشَرَ</span> manshub mengikuti <span class="arab">أَحَدَ</span></td>
+          <td>Menjelaskan identitas (satu = sebelas), bukan sifat</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Pembelajaran</h4>
+    <p>
+      Melalui tugas ini, mahasiswa tidak hanya menguji pemahaman teoretis tentang Athaf Bayan, tetapi juga melatih kemampuan membedah ayat-ayat Al-Qur'an secara mendalam. Kemampuan membedakan Athaf Bayan dan Na'at dalam ayat-ayat Al-Qur'an akan memperkaya kompetensi mahasiswa dalam memahami deskripsi yang kaya dalam bahasa Arab.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 14.9 PETA KONSEP & GLOSARIUM -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s14-9">14.9 Peta Konsep <em>& Glosarium</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep Athaf Bayan</h4>
+    <div class="map-center">
+      <div class="core">ATHAF BAYAN</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Tabi' yang menjelaskan identitas/hakikat</p>
+        <ul>
+          <li>Menjelaskan siapa/apa</li>
+          <li>Tidak menggantikan</li>
+          <li>Tidak menjelaskan sifat</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Perbedaan</h5>
+        <ul>
+          <li><strong>vs Na'at:</strong>
+            <ul>
+              <li>Na'at: sifat (صفة)</li>
+              <li>Athaf Bayan: identitas (هوية)</li>
+            </ul>
+          </li>
+          <li><strong>vs Badal:</strong>
+            <ul>
+              <li>Badal: menggantikan</li>
+              <li>Athaf Bayan: menjelaskan</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Syarat</h5>
+        <ul>
+          <li>Ma'thuf 'alaih nakirah/ambigu</li>
+          <li>Athaf Bayan ma'rifah</li>
+          <li>Mengikuti i'rab ma'thuf 'alaih</li>
+          <li>Langsung setelah ma'thuf 'alaih</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 I'rab</h5>
+        <ul>
+          <li>Mengikuti ma'thuf 'alaih</li>
+          <li>Marfu' jika ma'thuf 'alaih marfu'</li>
+          <li>Manshub jika ma'thuf 'alaih manshub</li>
+          <li>Majrur jika ma'thuf 'alaih majrur</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📖 Glosarium Istilah Athaf Bayan</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Athaf Bayan</strong><span class="arab">عَطْفُ الْبَيَان</span></div>
+        <p>Tabi' yang menjelaskan identitas/hakikat dari kata yang didahuluinya.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ma'thuf 'alaih</strong><span class="arab">الْمَعْطُوفُ عَلَيْهِ</span></div>
+        <p>Kata yang didahului oleh Athaf Bayan — biasanya berupa isim nakirah atau ambigu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ma'thuf</strong><span class="arab">الْمَعْطُوف</span></div>
+        <p>Kata yang berfungsi sebagai Athaf Bayan — biasanya berupa isim ma'rifah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Na'at</strong><span class="arab">نَعْت</span></div>
+        <p>Tabi' yang menjelaskan sifat man'ut (yang disifati).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Badal</strong><span class="arab">بَدَل</span></div>
+        <p>Tabi' yang menggantikan kedudukan mubdal minhu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ma'rifah</strong><span class="arab">مَعْرِفَة</span></div>
+        <p>Isim tertentu (dengan alif-lam, dhamir, isim isyarah, dll).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Nakirah</strong><span class="arab">نَكِرَة</span></div>
+        <p>Isim tak tentu (tanpa alif-lam, bukan dhamir, dll).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Sifat</strong><span class="arab">صِفَة</span></div>
+        <p>Kualitas atau karakteristik yang dimiliki oleh sesuatu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Hakikat</strong><span class="arab">حَقِيقَة</span></div>
+        <p>Identitas atau esensi dari sesuatu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Uji Kriteria</strong><span class="arab">اِخْتِبَارُ الْمَعَايِير</span></div>
+        <p>Metode untuk membedakan Athaf Bayan dan Na'at berdasarkan fungsi, jenis kata, dan status ma'rifah/nakirah.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Tabi'</strong><span class="arab">تَابِع</span></div>
+        <p>Kata yang mengikuti matbu' dalam hal i'rab (Na'at, Taukid, Badal, Athaf Bayan, 'Athaf).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Matbu'</strong><span class="arab">مَتْبُوع</span></div>
+        <p>Kata yang diikuti oleh tabi' dalam hal i'rab.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 14</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep Athaf Bayan — dari definisi dan hakikatnya, perbedaan krusial dengan Na'at dan Badal, syarat-syarat berlakunya, hukum i'rab, analisis ayat-ayat Al-Qur'an dan hadis, hingga aplikasi dalam konteks kontemporer. Ingatlah, Athaf Bayan bukan sekadar "penjelas" — ia adalah <strong>alat identifikasi</strong> yang sangat kuat untuk menjelaskan siapa atau apa yang dimaksud dalam kalimat. Sebagai calon guru bahasa Arab, penguasaan terhadap Athaf Bayan akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- KESIMPULAN -->
+  <!-- ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 14</h3>
+    <p>
+      Pertemuan keempatbelas ini telah membahas secara komprehensif tentang Athaf Bayan — tabi' yang berfungsi menjelaskan identitas/hakikat dari kata yang didahuluinya. Mahasiswa telah memahami konsep dan definisi Athaf Bayan, perbedaan krusial dengan Na'at (yang menjelaskan sifat) dan Badal (yang menggantikan), syarat-syarat berlakunya, hukum i'rab, serta analisis ayat-ayat Al-Qur'an dan hadis.
+    </p>
+    <p>
+      Melalui analisis ayat-ayat Al-Qur'an, mahasiswa telah berlatih membedakan Athaf Bayan dan Na'at dalam teks otentik keislaman. Uji kriteria yang telah dipelajari akan membantu mahasiswa dalam menganalisis teks-teks Arab secara lebih tajam dan akurat. Aplikasi melalui konstruksi kalimat dalam berbagai konteks telah menunjukkan relevansi Athaf Bayan dalam konteks kontemporer.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 15 yang akan membahas <strong>'Athaf Nasaq</strong> — tabi' yang berfungsi menghubungkan dua unsur atau lebih dalam kalimat. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- DAFTAR PUSTAKA -->
+  <!-- ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Anbari, Ibnu. <em>Al-Mufrad fi Ushul an-Nahw</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="13.html">← Pertemuan 13: An-Na'at</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="15.html">Pertemuan 15: 'Athaf Nasaq →</a>
+  </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- UJI FORMATIF -->
+<!-- ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 14</span>
+      <h2>Athaf Bayan: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Penjelasan Identitas & Hakikat</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Konsep Athaf Bayan, perbedaan dengan Na'at & Badal, syarat-syarat, analisis Al-Qur'an</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">جَاءَ الرَّجُلُ زَيْدٌ</span>, kata <span class="arab">زَيْدٌ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Na'at</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Athaf Bayan</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Badal</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Khabar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>2.</strong> Fungsi utama Athaf Bayan dalam kalimat adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Menjelaskan sifat matbu'</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Menggantikan kedudukan matbu'</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Menjelaskan identitas/hakikat matbu'</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Menguatkan makna matbu'</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Perbedaan utama antara Athaf Bayan dan Na'at adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Athaf Bayan menjelaskan identitas, Na'at menjelaskan sifat</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Athaf Bayan menjelaskan sifat, Na'at menjelaskan identitas</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Athaf Bayan menggantikan, Na'at menjelaskan</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Tidak ada perbedaan</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Syarat utama Athaf Bayan adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Ma'thuf 'alaih harus ma'rifah</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Athaf Bayan harus nakirah</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Athaf Bayan tidak perlu mengikuti i'rab ma'thuf 'alaih</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Ma'thuf 'alaih biasanya nakirah atau ambigu, Athaf Bayan ma'rifah</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Dalam ayat <span class="arab">الرَّسُولَ النَّبِيَّ الْأُمِّيَّ</span> (QS. Al-A'raf: 157), kata <span class="arab">النَّبِيَّ</span> berfungsi sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Na'at</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Athaf Bayan</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Badal</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Taukid</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> I'rab Athaf Bayan adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Selalu marfu'</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Selalu manshub</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Mengikuti i'rab ma'thuf 'alaih</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. Mengikuti i'rab fi'il</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Dalam kalimat <span class="arab">جَاءَ الرَّجُلُ الْكَرِيمُ</span>, kata <span class="arab">الْكَرِيمُ</span> berfungsi sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Na'at</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Athaf Bayan</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Badal</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Khabar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Perbedaan antara Athaf Bayan dan Badal adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Athaf Bayan menggantikan, Badal menjelaskan</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Keduanya sama-sama menggantikan</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Keduanya sama-sama menjelaskan</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Athaf Bayan menjelaskan identitas tanpa menggantikan, Badal menggantikan kedudukan</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Dalam kalimat <span class="arab">رَأَيْتُ رَجُلاً زَيْدًا</span>, kata <span class="arab">زَيْدًا</span> berkedudukan...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Marfu' dengan dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Manshub dengan fathah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">رَجُلاً</span>)</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Majrur dengan kasrah</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Marfu' dengan tanwin</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Uji kriteria untuk membedakan Athaf Bayan dan Na'at meliputi...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Hanya pertanyaan yang dijawab</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Hanya jenis kata</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Pertanyaan yang dijawab, jenis kata, status ma'rifah/nakirah, dan penghapusan</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Tidak ada uji kriteria</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat Athaf Bayan menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda (dalam bahasa Arab), dan analisislah perbedaan antara Athaf Bayan dengan Na'at dan Badal!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Jelaskan empat uji kriteria untuk membedakan Athaf Bayan dan Na'at! Berikan contoh konkret untuk masing-masing uji kriteria, dan analisislah mengapa uji kriteria tersebut penting dalam analisis teks Arab!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Jelaskan syarat-syarat Athaf Bayan! Berikan contoh kalimat yang memenuhi setiap syarat dan contoh kalimat yang melanggar setiap syarat, serta analisislah mengapa kalimat tersebut memenuhi atau melanggar syarat!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Analisislah pola-pola umum Athaf Bayan dalam Al-Qur'an! Berikan minimal 5 contoh ayat yang menggunakan Athaf Bayan, dan jelaskan implikasi semantis dari penggunaan Athaf Bayan dalam ayat-ayat tersebut!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Bedah minimal 5 ayat Al-Qur'an untuk membedakan antara Athaf Bayan dan Na'at dalam memberikan penjelasan isim! Untuk setiap ayat, identifikasi kata yang berfungsi sebagai tabi', tentukan jenis tabi' (Na'at atau Athaf Bayan), berikan analisis i'rab lengkap, dan jelaskan alasan mengapa tabi' tersebut termasuk Na'at atau Athaf Bayan!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 14,
+    topik: 'Athaf Bayan',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 14
+  An-Nahw lil Mutawassithin
+  Topik: Athaf Bayan
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P14_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P14 (Athaf Bayan) - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 14 (Athaf Bayan) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

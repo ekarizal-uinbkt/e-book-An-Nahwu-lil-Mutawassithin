@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 15: 'Athaf Nasaq — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 15: Kohesi wacana dengan huruf athaf, 12 huruf athaf dan maknanya, hukum i'rab ma'thuf, analisis Al-Qur'an dan hadis, serta konstruksi wacana utuh bertema sains/islam." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--cream);line-height:1.7;overflow-x:hidden;
+  background-image:radial-gradient(circle at 15% 20%,rgba(201,169,97,.08) 0%,transparent 40%),radial-gradient(circle at 85% 80%,rgba(201,169,97,.06) 0%,transparent 40%);
+}
+.bg-ornament{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(201,169,97,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,.03) 1px,transparent 1px);
+  background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
+}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;border:1px solid var(--gold);border-radius:2px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dark) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+h2.section-title em{font-style:italic;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h3.sub-title{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem}
+.arabic-display{background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{background:rgba(201,169,97,.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box,.warning-box,.insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4,.warning-box h4,.insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul,.warning-box ul,.insight-box ul{list-style:none;padding:0}
+.tips-box li,.warning-box li,.insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{display:inline-block;padding:1rem 2rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:1rem}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{background:linear-gradient(135deg,rgba(100,180,220,.08) 0%,rgba(100,180,220,.02) 100%);border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{display:inline-block;margin-top:1rem;padding:.4rem 1rem;background:rgba(100,180,220,.15);border-radius:4px;font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase}
+.env-text{background:linear-gradient(135deg,rgba(80,200,120,.06) 0%,rgba(80,200,120,.02) 100%);border:1px solid rgba(80,200,120,.3);border-radius:8px;padding:2rem;margin:2rem 0}
+.env-text h5{font-family:var(--serif);color:#50c878;font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.env-text .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.env-text .translation{font-family:var(--serif-2);font-style:italic;color:var(--muted);font-size:.95rem;padding:1rem;border-left:2px solid #50c878}
+.quran-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:8px;padding:2rem;margin:2rem 0}
+.quran-box h5{font-family:var(--serif);color:var(--gold);font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.quran-box .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.quran-box .source-info{font-size:.85rem;color:var(--muted);font-style:italic;border-top:1px solid var(--line);padding-top:.8rem}
+.quiz-section{background:linear-gradient(180deg,var(--ink-2) 0%,var(--ink) 100%);padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{display:inline-block;padding:.5rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input,.form-group select{padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;display:inline-flex;align-items:center;gap:.6rem}
+.btn-submit{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf,.btn-score,.btn-email,.btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover,.btn-score:hover,.btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{display:none;background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .env-text .arabic-paragraph,.quran-box .arabic-paragraph{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 15
+  </div>
+  <span class="chapter-label">Pertemuan 15 · 2 SKS</span>
+  <h1>'Athaf Nasaq: <span class="accent">Kohesi Wacana dengan Huruf Athaf</span></h1>
+  <div class="hero-arabic">عَطْفُ النَّسَقِ: رَبْطُ الْكَلَامِ بِحُرُوفِ الْعَطْفِ</div>
+  <p class="subtitle">Kohesi wacana dengan huruf athaf, 12 huruf athaf dan maknanya, hukum i'rab ma'thuf, analisis Al-Qur'an dan hadis, serta konstruksi wacana utuh bertema sains/islam.</p>
+  <div class="hero-actions">
+    <a href="14.html" class="btn btn-outline">← Pertemuan 14</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 15</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s15-1">15.1 Konsep dan Definisi 'Athaf Nasaq</a>
+        <ol>
+          <li><a href="#s15-1-1">Pengertian secara Bahasa dan Istilah</a></li>
+          <li><a href="#s15-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s15-1-3">Struktur 'Athaf Nasaq</a></li>
+        </ol>
+      </li>
+      <li><a href="#s15-2">15.2 Huruf-huruf Athaf dan Maknanya</a>
+        <ol>
+          <li><a href="#s15-2-1">Huruf Athaf Utama (12 Huruf)</a></li>
+          <li><a href="#s15-2-2">Makna dan Fungsi Tiap Huruf</a></li>
+        </ol>
+      </li>
+      <li><a href="#s15-3">15.3 Hukum I'rab Ma'thuf</a>
+        <ol>
+          <li><a href="#s15-3-1">Kaidah Dasar: Mengikuti Ma'thuf 'alaih</a></li>
+          <li><a href="#s15-3-2">Pengecualian dan Kaidah Khusus</a></li>
+        </ol>
+      </li>
+      <li><a href="#s15-4">15.4 Jenis-jenis Ma'thuf</a></li>
+      <li><a href="#s15-5">15.5 Analisis Teks Otentik (Al-Qur'an & Hadis)</a></li>
+      <li><a href="#s15-6">15.6 Fungsi Retorika 'Athaf Nasaq</a></li>
+      <li><a href="#s15-7">15.7 Aplikasi: Wacana Bertema Sains/Islam</a></li>
+      <li><a href="#s15-8">15.8 Tugas Pertemuan 15</a></li>
+      <li><a href="#s15-9">15.9 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>Athaf Bayan</em> berfungsi menjelaskan identitas, maka <em>'Athaf Nasaq</em> berfungsi <strong>menghubungkan dan merangkaikan</strong> — ia adalah lem kohesi yang menyatukan berbagai unsur dalam wacana, sehingga kalimat menjadi padu, mengalir, dan bermakna utuh.
+  </p>
+
+  <p>
+    Setelah pada pertemuan keempatbelas kita mempelajari <strong>Athaf Bayan</strong> sebagai penjelas identitas, pada pertemuan kelimabelas ini kita memasuki jenis tabi' terakhir dalam kelompok Tawabi': <strong>'Athaf Nasaq</strong> (عَطْفُ النَّسَقِ). 'Athaf Nasaq adalah tabi' yang berfungsi menghubungkan ma'thuf (yang diathafkan) dengan ma'thuf 'alaih (yang diathafi) melalui huruf athaf, sehingga keduanya berbagi kedudukan i'rab yang sama.
+  </p>
+
+  <p>
+    Dalam Al-Qur'an, 'Athaf Nasaq sangat dominan digunakan untuk merangkaikan berbagai konsep, sifat, peristiwa, atau perintah dalam satu kalimat yang padu. Contoh paling indah adalah firman Allah: <span class="arab" style="font-size:1.1rem">إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ</span> — "Sesungguhnya Allah dan malaikat-malaikat-Nya bershalawat untuk Nabi." Di sini huruf <span class="arab" style="font-size:1.1rem">وَ</span> menghubungkan <span class="arab" style="font-size:1.1rem">اللَّهَ</span> dengan <span class="arab" style="font-size:1.1rem">مَلَائِكَتَهُ</span> dalam satu kesatuan makna.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah 'Athaf Nasaq secara komprehensif: mulai dari konsep dan definisi, 12 huruf athaf beserta makna dan fungsinya, hukum i'rab ma'thuf, jenis-jenis ma'thuf, analisis ayat-ayat Al-Qur'an dan hadis, fungsi retorika, hingga aplikasi dalam konstruksi wacana utuh bertema sains/islam. Sebagai puncak pembelajaran, mahasiswa akan mengonstruksi wacana utuh (minimal 100 kata) yang mengintegrasikan semua huruf athaf — sebuah latihan yang melatih kohesi dan koherensi wacana Arab.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ</div>
+    <div class="translation">"Sesungguhnya Allah dan malaikat-malaikat-Nya bershalawat untuk Nabi."</div>
+    <div class="source">— QS. Al-Ahzab [33]: 56</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal 'Athaf Nasaq dalam Kalimat Arab</h4>
+    <p>Simak penjelasan visual tentang bagaimana 'Athaf Nasaq bekerja dalam struktur kalimat Arab — dari definisi dasar hingga analisis 12 huruf athaf.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 15</h4>
+    <ul>
+      <li><strong>'Athaf Nasaq (عَطْفُ النَّسَقِ):</strong> Tabi' yang menghubungkan ma'thuf dengan ma'thuf 'alaih melalui huruf athaf, sehingga keduanya berbagi kedudukan i'rab yang sama.</li>
+      <li><strong>Ma'thuf 'alaih (المَعْطُوفُ عَلَيْهِ):</strong> Kata yang diathafi — kata yang didahului oleh huruf athaf.</li>
+      <li><strong>Ma'thuf (المَعْطُوفُ):</strong> Kata yang diathafkan — kata yang mengikuti huruf athaf.</li>
+      <li><strong>Huruf Athaf (حُرُوفُ الْعَطْفِ):</strong> 12 huruf yang berfungsi menghubungkan dua unsur: <span class="arab" style="font-size:1.1rem">وَ، فَ، ث، ثُمَّ، أَوْ، أَمْ، لَا، بَلْ، لَكِنْ، حَتَّى، ع، هَا</span>.</li>
+      <li><strong>I'rab Ma'thuf:</strong> Selalu mengikuti i'rab ma'thuf 'alaih-nya — jika marfu', marfu'; jika manshub, manshub; jika majrur, majrur.</li>
+      <li><strong>Kohesi Wacana:</strong> 'Athaf Nasaq berfungsi sebagai alat kohesi yang menyatukan berbagai unsur dalam wacana sehingga menjadi padu dan bermakna utuh.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Kekuatan 'Athaf Nasaq dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Bandingkan dua kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">خَلَقَ اللَّهُ السَّمَاوَاتِ. خَلَقَ اللَّهُ الْأَرْضَ.</span><br>
+      "Allah menciptakan langit. Allah menciptakan bumi."<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">خَلَقَ اللَّهُ السَّمَاوَاتِ وَالْأَرْضَ</span><br>
+      "Allah menciptakan langit dan bumi."<br><br>
+      Kedua kalimat menyampaikan informasi yang sama, tetapi kalimat (2) lebih <strong>padu, efisien, dan kohesif</strong> karena menggunakan huruf athaf <span class="arab" style="font-size:1.2rem">وَ</span> untuk menghubungkan dua objek dalam satu kalimat. Inilah kekuatan 'Athaf Nasaq — ia menciptakan kohesi wacana.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> 'Athaf Nasaq bukan sekadar "penyambung" — ia adalah alat kohesi yang sangat penting dalam wacana Arab. Tanpa 'Athaf Nasaq, wacana akan terasa terputus-putus dan tidak mengalir. Dalam Al-Qur'an, penggunaan 'Athaf Nasaq sangat strategis untuk menciptakan wacana yang padu dan bermakna utuh.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan 'Athaf Nasaq kepada siswa — baik dalam konteks nahwu maupun dalam konteks menulis wacana Arab. Pemahaman yang kokoh tentang 'Athaf Nasaq akan menjadi fondasi bagi siswa untuk menulis wacana Arab yang kohesif dan koheren. Bayangkan bagaimana Anda akan menjelaskan konsep ini dengan cara yang menarik — mungkin dengan contoh dari bahasa Indonesia ("dan", "lalu", "atau", "tetapi"), atau dari ayat-ayat Al-Qur'an yang sudah dihafal siswa.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 15.1 KONSEP DAN DEFINISI -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s15-1">15.1 Konsep dan Definisi <em>'Athaf Nasaq</em></h2>
+
+  <p>
+    Memahami konsep dan definisi 'Athaf Nasaq adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat 'Athaf Nasaq, mahasiswa akan kesulitan dalam menganalisis struktur kalimat Arab yang kompleks.
+  </p>
+
+  <h3 class="sub-title" id="s15-1-1">15.1.1 Pengertian 'Athaf Nasaq secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, istilah <em>'athaf</em> (عَطْف) berasal dari akar kata <em>'athafa</span> (عَطَفَ) yang berarti "memiringkan", "mengembalikan", atau "menghubungkan". Sedangkan <em>nasaq</em> (نَسَق) berarti "susunan", "rangkaian", atau "urutan". Secara harfiah, 'Athaf Nasaq berarti "penghubungan dalam susunan".
+  </p>
+
+  <p>
+    Secara <strong>terminologis (istilah nahwu)</strong>, 'Athaf Nasaq adalah tabi' yang berfungsi menghubungkan ma'thuf (yang diathafkan) dengan ma'thuf 'alaih (yang diathafi) melalui huruf athaf, sehingga ma'thuf mengikuti ma'thuf 'alaih dalam hal i'rab.
+  </p>
+
+  <h3 class="sub-title" id="s15-1-2">15.1.2 Definisi 'Athaf Nasaq Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وَالْعَطْفُ تَابِعٌ بِحَرْفٍ أَوْ بِدُونِ</span></td>
+        <td>"'Athaf adalah tabi' yang mengikuti melalui huruf atau tanpa huruf."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْعَطْفُ: إِتْبَاعُ كَلِمَةٍ لِكَلِمَةٍ بِحَرْفٍ مِنْ حُرُوفِ الْعَطْفِ لِيَشْتَرِكَا فِي الْحُكْمِ</span></td>
+        <td>"'Athaf: mengikuti kata dengan kata lain melalui salah satu huruf athaf agar keduanya berbagi hukum (i'rab)."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْعَطْفُ: تَابِعٌ يَتَبَعُ مَا قَبْلَهُ فِي إِعْرَابِهِ بِوَاسِطَةِ حَرْفٍ مِنَ الْعَطْفِ</span></td>
+        <td>"'Athaf: tabi' yang mengikuti kata sebelumnya dalam i'rab-nya melalui perantara salah satu huruf athaf."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">الْعَطْفُ: مَا يُذْكَرُ بَعْدَ حَرْفٍ مِنْ حُرُوفِ الْعَطْفِ لِيُشَارِكَ مَا قَبْلَهُ فِي الْحُكْمِ</span></td>
+        <td>"'Athaf: apa yang disebutkan setelah salah satu huruf athaf untuk berbagi hukum dengan kata sebelumnya."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>'Athaf Nasaq adalah <strong>tabi'</strong> — artinya ia selalu mengikuti ma'thuf 'alaih-nya dalam hal i'rab.</li>
+      <li>Fungsi utama 'Athaf Nasaq adalah <strong>menghubungkan dan merangkaikan</strong> — bukan menjelaskan sifat (seperti Na'at) atau menguatkan (seperti Taukid).</li>
+      <li>'Athaf Nasaq menggunakan <strong>12 huruf athaf</strong> yang masing-masing memiliki makna dan fungsi khusus.</li>
+      <li>Dalam Al-Qur'an, 'Athaf Nasaq sangat dominan digunakan untuk menciptakan wacana yang kohesif dan koheren.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s15-1-3">15.1.3 Struktur 'Athaf Nasaq</h3>
+
+  <p>
+    Struktur 'Athaf Nasaq terdiri dari tiga unsur utama:
+  </p>
+
+  <div class="arabic-display">
+    جَاءَ زَيْدٌ وَعَمْرٌو
+    <small>"Datang Zaid dan 'Amr."<br>Ma'thuf 'alaih + Huruf Athaf + Ma'thuf</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Struktur</h5>
+    <div class="word-analysis">
+      <span class="word">جَاءَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">زَيْدٌ</span>
+      <span class="detail"><strong>Ma'thuf 'alaih</strong> (Fa'il) — marfu' dengan dhommah zhahirah. <small>Kata yang diathafi — kata yang didahului oleh huruf athaf.</small></span>
+
+      <span class="word">وَ</span>
+      <span class="detail"><strong>Huruf athaf</strong> — mabni 'ala fathah / la mahalla lahu. <small>Huruf yang berfungsi menghubungkan ma'thuf dengan ma'thuf 'alaih.</small></span>
+
+      <span class="word">عَمْرٌو</span>
+      <span class="detail"><strong>Ma'thuf</strong> — marfu' dengan dhommah muqaddarah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">زَيْدٌ</span>). <small>Kata yang diathafkan — kata yang mengikuti huruf athaf.</small></span>
+    </div>
+  </div>
+
+  <div class="key-concept">
+    <h4>✦ Tiga Unsur 'Athaf Nasaq</h4>
+    <ul>
+      <li><strong>Ma'thuf 'alaih (المَعْطُوفُ عَلَيْهِ):</strong> Kata yang diathafi — kata yang didahului oleh huruf athaf. Ia memiliki kedudukan i'rab yang independen (bisa marfu', manshub, atau majrur).</li>
+      <li><strong>Huruf Athaf (حَرْفُ الْعَطْفِ):</strong> Huruf yang berfungsi menghubungkan ma'thuf dengan ma'thuf 'alaih. Ada 12 huruf athaf, masing-masing dengan makna khusus.</li>
+      <li><strong>Ma'thuf (المَعْطُوفُ):</strong> Kata yang diathafkan — kata yang mengikuti huruf athaf. Ia selalu mengikuti i'rab ma'thuf 'alaih-nya.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 15.2 HURUF-HURUF ATHAF -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s15-2">15.2 Huruf-huruf Athaf <em>dan Maknanya</em></h2>
+
+  <p>
+    'Athaf Nasaq menggunakan 12 huruf athaf yang masing-masing memiliki makna dan fungsi khusus. Pemahaman tentang makna tiap huruf athaf sangat penting untuk analisis yang akurat.
+  </p>
+
+  <h3 class="sub-title" id="s15-2-1">15.2.1 Huruf Athaf Utama (12 Huruf)</h3>
+
+  <p>
+    Berikut adalah 12 huruf athaf yang diakui oleh mayoritas ulama nahwu:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>No</th><th>Huruf</th><th>Nama</th><th>Makna Utama</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><span class="arab" style="font-size:1.3rem">وَ</span></td><td>Wawu 'Athaf</td><td>Penggabungan (jam') / Penyertaan (muşāhabah)</td></tr>
+      <tr><td>2</td><td><span class="arab" style="font-size:1.3rem">ف</span></td><td>Fa' 'Athaf</td><td>Urutan dengan segera (tartīb ma'a ta'qīb)</td></tr>
+      <tr><td>3</td><td><span class="arab" style="font-size:1.3rem">ث</span></td><td>Tsa' (Tsumma)</td><td>Urutan dengan jeda (tartīb ma'a tarākhi)</td></tr>
+      <tr><td>4</td><td><span class="arab" style="font-size:1.3rem">أَوْ</span></td><td>Au (Atau)</td><td>Pilihan (takhyīr) / Atau</td></tr>
+      <tr><td>5</td><td><span class="arab" style="font-size:1.3rem">أَمْ</span></td><td>Am</td><td>Persetaraan (taswiyah) / Atau</td></tr>
+      <tr><td>6</td><td><span class="arab" style="font-size:1.3rem">لَا</span></td><td>Lā Nafiyah</td><td>Penafian (nafy) / Tidak</td></tr>
+      <tr><td>7</td><td><span class="arab" style="font-size:1.3rem">بَلْ</span></td><td>Bal</td><td>Peralihan (idhrāb) / Bahkan</td></tr>
+      <tr><td>8</td><td><span class="arab" style="font-size:1.3rem">لَكِنْ</span></td><td>Lākin</td><td>Pertentangan (istidrak) / Tetapi</td></tr>
+      <tr><td>9</td><td><span class="arab" style="font-size:1.3rem">حَتَّى</span></td><td>Hattā</td><td>Akhiran (ghāyah) / Sampai</td></tr>
+      <tr><td>10</td><td><span class="arab" style="font-size:1.3rem">ع</span></td><td>'Ain ('Inda)</td><td>Pelaksanaan bersama (muşāhabah)</td></tr>
+      <tr><td>11</td><td><span class="arab" style="font-size:1.3rem">هَا</span></td><td>Hā</td><td>Penggabungan (jam')</td></tr>
+      <tr><td>12</td><td><span class="arab" style="font-size:1.3rem">ثُمَّ</span></td><td>Tsumma</td><td>Urutan dengan jeda (sama dengan Tsa')</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub-title" id="s15-2-2">15.2.2 Makna dan Fungsi Tiap Huruf</h3>
+
+  <p>
+    Setiap huruf athaf memiliki makna dan fungsi khusus yang perlu dipahami dengan baik:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Huruf</th><th>Makna</th><th>Contoh</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab" style="font-size:1.2rem">وَ</span></td>
+        <td>Penggabungan (jam')</td>
+        <td><span class="arab">جَاءَ زَيْدٌ وَعَمْرٌو</span></td>
+        <td>"Datang Zaid dan 'Amr."</td>
+      </tr>
+      <tr>
+        <td><span class="arab" style="font-size:1.2rem">ف</span></td>
+        <td>Urutan segera (ta'qīb)</td>
+        <td><span class="arab">دَخَلَ زَيْدٌ فَجَلَسَ</span></td>
+        <td>"Zaid masuk lalu duduk."</td>
+      </tr>
+      <tr>
+        <td><span class="arab" style="font-size:1.2rem">ث / ثُمَّ</span></td>
+        <td>Urutan dengan jeda (tarākhi)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ ثُمَّ عَمْرٌو</span></td>
+        <td>"Datang Zaid, kemudian 'Amr."</td>
+      </tr>
+      <tr>
+        <td><span class="arab" style="font-size:1.2rem">أَوْ</span></td>
+        <td>Pilihan (takhyīr)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ أَوْ عَمْرٌو</span></td>
+        <td>"Datang Zaid atau 'Amr."</td>
+      </tr>
+      <tr>
+        <td><span class="arab" style="font-size:1.2rem">أَمْ</span></td>
+        <td>Persetaraan (taswiyah)</td>
+        <td><span class="arab">سَوَاءٌ عَلَيْهِمْ أَأَنْذَرْتَهُمْ أَمْ لَمْ تُنْذِرْهُمْ</span></td>
+        <td>"Sama saja bagi mereka, apakah engkau beri peringatan atau tidak."</td>
+      </tr>
+      <tr>
+        <td><span class="arab" style="font-size:1.2rem">لَا</span></td>
+        <td>Penafian (nafy)</td>
+        <td><span class="arab">جَاءَ الْقَوْمُ لَا الرَّجُلُ</span></td>
+        <td>"Datang kaum itu, bukan laki-laki itu."</td>
+      </tr>
+      <tr>
+        <td><span class="arab" style="font-size:1.2rem">بَلْ</span></td>
+        <td>Peralihan (idhrāb)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ بَلْ عَمْرٌو</span></td>
+        <td>"Datang Zaid — bahkan 'Amr."</td>
+      </tr>
+      <tr>
+        <td><span class="arab" style="font-size:1.2rem">لَكِنْ</span></td>
+        <td>Pertentangan (istidrak)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ لَكِنْ لَا عَمْرٌو</span></td>
+        <td>"Datang Zaid, tetapi 'Amr tidak."</td>
+      </tr>
+      <tr>
+        <td><span class="arab" style="font-size:1.2rem">حَتَّى</span></td>
+        <td>Akhiran (ghāyah)</td>
+        <td><span class="arab">جَاءَ الْقَوْمُ حَتَّى الْأَمِيرُ</span></td>
+        <td>"Datang kaum itu sampai sang pemimpin."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan tentang Huruf Athaf</h4>
+    <ul>
+      <li><strong>Wawu (وَ)</strong> adalah huruf athaf yang paling umum dan paling sering digunakan dalam Al-Qur'an.</li>
+      <li><strong>Fa' (ف)</strong> menunjukkan urutan yang segera — peristiwa kedua terjadi segera setelah peristiwa pertama.</li>
+      <li><strong>Tsumma (ث / ثُمَّ)</strong> menunjukkan urutan dengan jeda — ada jarak waktu antara peristiwa pertama dan kedua.</li>
+      <li><strong>Au (أَوْ)</strong> menunjukkan pilihan — salah satu dari dua atau lebih pilihan.</li>
+      <li><strong>Am (أَمْ)</strong> menunjukkan persetaraan — kedua pilihan sama nilainya.</li>
+      <li><strong>Lā (لَا)</strong> menunjukkan penafian — menafikan ma'thuf.</li>
+      <li><strong>Bal (بَلْ)</strong> menunjukkan peralihan — beralih dari ma'thuf 'alaih ke ma'thuf.</li>
+      <li><strong>Lākin (لَكِنْ)</strong> menunjukkan pertentangan — ma'thuf bertentangan dengan ma'thuf 'alaih.</li>
+      <li><strong>Hattā (حَتَّى)</strong> menunjukkan akhiran — ma'thuf adalah batas akhir dari ma'thuf 'alaih.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 15.3 HUKUM I'RAB MA'THUF -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s15-3">15.3 Hukum I'rab <em>Ma'thuf</em></h2>
+
+  <p>
+    Hukum i'rab ma'thuf adalah kaidah fundamental dalam 'Athaf Nasaq. Pemahaman yang kokoh tentang kaidah ini akan melatih ketajaman analisis mahasiswa.
+  </p>
+
+  <h3 class="sub-title" id="s15-3-1">15.3.1 Kaidah Dasar: Mengikuti Ma'thuf 'alaih</h3>
+
+  <div class="key-concept">
+    <h4>✦ Kaidah Dasar I'rab Ma'thuf</h4>
+    <ul>
+      <li><strong>Jika ma'thuf 'alaih marfu', maka ma'thuf marfu'.</li>
+      <li><strong>Jika ma'thuf 'alaih manshub, maka ma'thuf manshub.</li>
+      <li><strong>Jika ma'thuf 'alaih majrur, maka ma'thuf majrur.</li>
+      <li><strong>Jika ma'thuf 'alaih majzum, maka ma'thuf majzum.</li>
+      <li>Ma'thuf tidak memiliki i'rab sendiri — ia selalu mengikuti ma'thuf 'alaih.</li>
+    </ul>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>I'rab Ma'thuf 'alaih</th><th>I'rab Ma'thuf</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Marfu' (Fa'il)</strong></td>
+        <td>Marfu'</td>
+        <td><span class="arab">جَاءَ زَيْدٌ وَعَمْرٌو</span></td>
+        <td><span class="arab">عَمْرٌو</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">زَيْدٌ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Marfu' (Mubtada')</strong></td>
+        <td>Marfu'</td>
+        <td><span class="arab">زَيْدٌ وَعَمْرٌو قَائِمَانِ</span></td>
+        <td><span class="arab">عَمْرٌو</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">زَيْدٌ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Manshub (Maf'ul Bih)</strong></td>
+        <td>Manshub</td>
+        <td><span class="arab">رَأَيْتُ زَيْدًا وَعَمْرًاو</span></td>
+        <td><span class="arab">عَمْرًا</span> manshub mengikuti <span class="arab" style="font-size:1.1rem">زَيْدًا</span></td>
+      </tr>
+      <tr>
+        <td><strong>Majrur (Jar)</strong></td>
+        <td>Majrur</td>
+        <td><span class="arab">مَرَرْتُ بِزَيْدٍ وَعَمْرٍو</span></td>
+        <td><span class="arab">عَمْرٍو</span> majrur mengikuti <span class="arab" style="font-size:1.1rem">بِزَيْدٍ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Majzum (Fi'il)</strong></td>
+        <td>Majzum</td>
+        <td><span class="arab">لَمْ يَجِئْ زَيْدٌ وَلَا عَمْرٌو</span></td>
+        <td><span class="arab">عَمْرٌو</span> majzum mengikuti <span class="arab" style="font-size:1.1rem">زَيْدٌ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Ma'thuf dalam Berbagai Posisi I'rab</h4>
+    <div class="case-content">
+      Bandingkan tiga kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ زَيْدٌ وَعَمْرٌو</span> — "Datang Zaid dan 'Amr."<br>
+      → <span class="arab" style="font-size:1.2rem">عَمْرٌو</span> = Ma'thuf marfu' (mengikuti Fa'il <span class="arab" style="font-size:1.2rem">زَيْدٌ</span>)<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">رَأَيْتُ زَيْدًا وَعَمْرًا</span> — "Aku melihat Zaid dan 'Amr."<br>
+      → <span class="arab" style="font-size:1.2rem">عَمْرًا</span> = Ma'thuf manshub (mengikuti Maf'ul Bih <span class="arab" style="font-size:1.2rem">زَيْدًا</span>)<br><br>
+      (3) <span class="arab" style="font-size:1.3rem">مَرَرْتُ بِزَيْدٍ وَعَمْرٍو</span> — "Aku berpapasan dengan Zaid dan 'Amr."<br>
+      → <span class="arab" style="font-size:1.2rem">عَمْرٍو</span> = Ma'thuf majrur (mengikuti majrur <span class="arab" style="font-size:1.2rem">بِزَيْدٍ</span>)
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Ma'thuf selalu mengikuti i'rab ma'thuf 'alaih-nya, tidak peduli apakah ma'thuf 'alaih itu marfu', manshub, atau majrur. Inilah yang membedakan 'Athaf Nasaq dari tabi' lainnya — ia selalu berbagi hukum i'rab dengan ma'thuf 'alaih.
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s15-3-2">15.3.2 Pengecualian dan Kaidah Khusus</h3>
+
+  <p>
+    Meskipun kaidah dasar adalah "ma'thuf mengikuti ma'thuf 'alaih", ada beberapa pengecualian dan kaidah khusus yang perlu dipahami:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Pengecualian</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ma'thuf 'alaih berupa jumlah fi'liyyah</strong></td>
+        <td>Jika ma'thuf 'alaih berupa jumlah fi'liyyah, ma'thuf bisa marfu' (sebagai fa'il) atau manshub (sebagai maf'ul bih), tergantung konteks.</td>
+        <td><span class="arab">جَاءَ زَيْدٌ وَعَمْرٌو</span> — <span class="arab" style="font-size:1.1rem">عَمْرٌو</span> marfu' sebagai fa'il</td>
+      </tr>
+      <tr>
+        <td><strong>Ma'thuf 'alaih berupa jumlah ismiyyah</strong></td>
+        <td>Jika ma'thuf 'alaih berupa jumlah ismiyyah, ma'thuf biasanya marfu' (sebagai mubtada' baru).</td>
+        <td><span class="arab">زَيْدٌ قَائِمٌ وَعَمْرٌو جَالِسٌ</span> — <span class="arab" style="font-size:1.1rem">عَمْرٌو</span> marfu' sebagai mubtada'</td>
+      </tr>
+      <tr>
+        <td><strong>Ma'thuf 'alaih berupa ism ghairu munṣarif</strong></td>
+        <td>Jika ma'thuf 'alaih berupa ism ghairu munṣarif, ma'thuf mengikuti i'rab-nya tanpa tanwin.</td>
+        <td><span class="arab">جَاءَ أَحْمَدُ وَعَلِيٌّ</span> — keduanya marfu' tanpa tanwin</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kesalahan Umum Mahasiswa</h4>
+    <ul>
+      <li>Mengira ma'thuf selalu marfu' — padahal ma'thuf mengikuti i'rab ma'thuf 'alaih.</li>
+      <li>Tidak memperhatikan makna huruf athaf — setiap huruf athaf memiliki makna khusus yang memengaruhi interpretasi kalimat.</li>
+      <li>Salah membedakan ma'thuf dengan tabi' lainnya — 'Athaf Nasaq selalu menggunakan huruf athaf, berbeda dengan Na'at, Taukid, atau Badal.</li>
+      <li>Tidak memperhatikan pengecualian — ada beberapa kasus di mana ma'thuf tidak mengikuti i'rab ma'thuf 'alaih secara ketat.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 15.4 JENIS-JENIS MA'THUF -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s15-4">15.4 Jenis-jenis <em>Ma'thuf</em></h2>
+
+  <p>
+    Ma'thuf dapat berupa berbagai jenis kata atau konstruk. Pemahaman tentang jenis-jenis ma'thuf akan memperkaya analisis mahasiswa.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Jenis Ma'thuf</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Isim Zhahir</strong></td>
+        <td>Ma'thuf berupa isim zhahir (kata benda nyata)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ وَعَمْرٌو</span></td>
+      </tr>
+      <tr>
+        <td><strong>Dhamir</strong></td>
+        <td>Ma'thuf berupa dhamir (kata ganti)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ وَهُوَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Fi'il</strong></td>
+        <td>Ma'thuf berupa fi'il (kata kerja)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ وَجَلَسَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Jumlah Fi'liyyah</strong></td>
+        <td>Ma'thuf berupa jumlah fi'liyyah (kalimat verbal)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ وَعَمْرٌو جَلَسَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Jumlah Ismiyyah</strong></td>
+        <td>Ma'thuf berupa jumlah ismiyyah (kalimat nominal)</td>
+        <td><span class="arab">جَاءَ زَيْدٌ وَعَمْرٌو قَائِمٌ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Jar-Majrur</strong></td>
+        <td>Ma'thuf berupa jar-majrur</td>
+        <td><span class="arab">مَرَرْتُ بِزَيْدٍ وَبِعَمْرٍو</span></td>
+      </tr>
+      <tr>
+        <td><strong>Zharf</strong></td>
+        <td>Ma'thuf berupa zharf (keterangan tempat/waktu)</td>
+        <td><span class="arab">جِئْتُ يَوْمَ الِاثْنَيْنِ وَيَوْمَ الثُّلَاثَاءِ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan tentang Jenis Ma'thuf</h4>
+    <ul>
+      <li>Ma'thuf yang paling umum adalah <strong>isim zhahir</strong> — kata benda nyata yang diathafkan.</li>
+      <li>Ma'thuf berupa <strong>fi'il</strong> juga sangat umum — terutama dalam wacana naratif.</li>
+      <li>Ma'thuf berupa <strong>jumlah</strong> (fi'liyyah atau ismiyyah) lebih kompleks dan memerlukan analisis yang lebih mendalam.</li>
+      <li>Ma'thuf berupa <strong>jar-majrur</strong> atau <strong>zharf</strong> juga sering muncul, terutama dalam deskripsi.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 15.5 ANALISIS TEKS OTENTIK -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s15-5">15.5 Analisis <em>Teks Otentik (Al-Qur'an & Hadis)</em></h2>
+
+  <p>
+    'Athaf Nasaq sangat dominan dalam Al-Qur'an dan hadis. Allah SWT menggunakan 'Athaf Nasaq untuk merangkaikan berbagai konsep, sifat, peristiwa, atau perintah dalam satu kalimat yang padu. Mari kita analisis beberapa contoh.
+  </p>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 1: QS. Al-Fatihah [1]: 1</h5>
+    <div class="arabic-paragraph">
+      بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "الرَّحْمَٰنِ الرَّحِيمِ"</h5>
+    <div class="word-analysis">
+      <span class="word">بِسْمِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">بِ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">اسْمِ</span> = majrur dengan kasrah.</span>
+
+      <span class="word">اللَّهِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah.</span>
+
+      <span class="word">الرَّحْمَٰنِ</span>
+      <span class="detail"><strong>Na'at</strong> — majrur dengan kasrah (mengikuti <span class="arab" style="font-size:1.1rem">اللَّهِ</span>).</span>
+
+      <span class="word">الرَّحِيمِ</span>
+      <span class="detail"><strong>Na'at kedua / Ma'thuf</strong> — majrur dengan kasrah. <small>Menurut sebagian ulama, <span class="arab" style="font-size:1.1rem">الرَّحِيمِ</span> adalah ma'thuf dari <span class="arab" style="font-size:1.1rem">الرَّحْمَٰنِ</span> (tanpa huruf athaf, disebut 'athaf bayan).</small></span>
+    </div>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 2: QS. Al-Ahzab [33]: 56</h5>
+    <div class="arabic-paragraph">
+      إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Sesungguhnya Allah dan malaikat-malaikat-Nya bershalawat untuk Nabi."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "وَمَلَائِكَتَهُ"</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">اللَّهَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan fathah. <small>Ma'thuf 'alaih (yang diathafi).</small></span>
+
+      <span class="word">وَ</span>
+      <span class="detail"><strong>Huruf athaf</strong> — mabni 'ala fathah / la mahalla lahu. <small>Huruf athaf yang berfungsi menghubungkan.</small></span>
+
+      <span class="word">مَلَائِكَتَهُ</span>
+      <span class="detail"><strong>Ma'thuf</strong> — manshub dengan fathah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">اللَّهَ</span>). <span class="arab" style="font-size:1.1rem">هُ</span> = dhamir muttashil majrur mudhaf ilaih. <small>Ma'thuf yang diathafkan.</small></span>
+
+      <span class="word">يُصَلُّونَ</span>
+      <span class="detail"><strong>Fi'il mudhari'</strong> — marfu' dengan dhommah. <small>Fi'il ma'lum yang membutuhkan fa'il.</small></span>
+
+      <span class="word">عَلَى النَّبِيِّ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">عَلَى</span> = huruf jar; <span class="arab" style="font-size:1.1rem">النَّبِيِّ</span> = majrur dengan kasrah. <small>Keterangan tempat/objek.</small></span>
+    </div>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 3: QS. Al-Baqarah [2]: 177</h5>
+    <div class="arabic-paragraph">
+      لَيْسَ الْبِرَّ أَنْ تُوَلُّوا وُجُوهَكُمْ قِبَلَ الْمَشْرِقِ وَالْمَغْرِبِ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Bukanlah kebajikan itu menghadapkan wajah kalian ke arah timur dan barat."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "وَالْمَغْرِبِ"</h5>
+    <div class="word-analysis">
+      <span class="word">لَيْسَ</span>
+      <span class="detail"><strong>Fi'il naqishah</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الْبِرَّ</span>
+      <span class="detail"><strong>Isim Laisa</strong> — manshub dengan fathah.</span>
+
+      <span class="word">أَنْ تُوَلُّوا</span>
+      <span class="detail"><strong>Mashdar mu'awwal</strong> — <span class="arab" style="font-size:1.1rem">أَنْ</span> + <span class="arab" style="font-size:1.1rem">تُوَلُّوا</span> ditakwil menjadi mashdar. <small>Berkedudukan Khabar Laisa.</small></span>
+
+      <span class="word">وُجُوهَكُمْ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <span class="arab" style="font-size:1.1rem">كُمْ</span> = dhamir muttashil manshub mudhaf ilaih.</span>
+
+      <span class="word">قِبَلَ</span>
+      <span class="detail"><strong>Zharf makan</strong> — manshub dengan fathah. <small>Ma'thuf 'alaih (yang diathafi).</small></span>
+
+      <span class="word">الْمَشْرِقِ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah.</span>
+
+      <span class="word">وَ</span>
+      <span class="detail"><strong>Huruf athaf</strong> — mabni 'ala fathah / la mahalla lahu.</span>
+
+      <span class="word">الْمَغْرِبِ</span>
+      <span class="detail"><strong>Ma'thuf</strong> — majrur dengan kasrah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">الْمَشْرِقِ</span>). <small>Ma'thuf yang diathafkan.</small></span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Pola Umum 'Athaf Nasaq dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Dalam Al-Qur'an, 'Athaf Nasaq sering muncul dalam pola-pola berikut:<br><br>
+      (1) <strong>Pola penggabungan sifat Allah:</strong><br>
+      <span class="arab" style="font-size:1.2rem">الرَّحْمَٰنِ الرَّحِيمِ</span> — "Yang Maha Pengasih lagi Maha Penyayang"<br><br>
+      (2) <strong>Pola penggabungan subjek:</strong><br>
+      <span class="arab" style="font-size:1.2rem">إِنَّ اللَّهَ وَمَلَائِكَتَهُ</span> — "Sesungguhnya Allah dan malaikat-malaikat-Nya"<br><br>
+      (3) <strong>Pola penggabungan objek:</strong><br>
+      <span class="arab" style="font-size:1.2rem">الْمَشْرِقِ وَالْمَغْرِبِ</span> — "Timur dan barat"<br><br>
+      (4) <strong>Pola urutan peristiwa:</strong><br>
+      <span class="arab" style="font-size:1.2rem">ثُمَّ أَوْرَثْنَا الْكِتَابَ</span> — "Kemudian Kami wariskan kitab"<br><br>
+      <strong>Ta'lil Nahwi:</strong> Penggunaan 'Athaf Nasaq dalam Al-Qur'an bukan sekadar variasi gramatikal — ia memiliki implikasi semantis yang dalam. 'Athaf Nasaq menciptakan kohesi wacana yang padu, sehingga pembaca dapat memahami hubungan antar konsep, sifat, atau peristiwa dengan lebih jelas.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Mahasiswa PBA perlu memahami pola-pola umum 'Athaf Nasaq dalam Al-Qur'an agar mampu menafsirkan ayat-ayat secara tepat. Kemampuan ini juga akan berguna dalam mengajarkan nahwu kepada siswa dengan contoh-contoh yang relevan.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 15.6 FUNGSI RETORIKA 'ATHAF NASAQA -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s15-6">15.6 Fungsi Retorika <em>'Athaf Nasaq</em></h2>
+
+  <p>
+    'Athaf Nasaq bukan sekadar alat gramatikal — ia adalah alat retorika yang sangat kuat. Dalam bahasa Arab, 'Athaf Nasaq memiliki berbagai fungsi retorika yang perlu dipahami oleh mahasiswa PBA.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fungsi Retorika</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Kohesi Wacana</strong></td>
+        <td>Menyatukan berbagai unsur dalam wacana sehingga menjadi padu dan bermakna utuh</td>
+        <td><span class="arab">إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ</span><br>"Sesungguhnya Allah dan malaikat-malaikat-Nya bershalawat"</td>
+      </tr>
+      <tr>
+        <td><strong>Penggabungan Makna</strong></td>
+        <td>Menggabungkan dua atau lebih konsep dalam satu kalimat</td>
+        <td><span class="arab">الرَّحْمَٰنِ الرَّحِيمِ</span><br>"Yang Maha Pengasih lagi Maha Penyayang"</td>
+      </tr>
+      <tr>
+        <td><strong>Urutan Peristiwa</strong></td>
+        <td>Menunjukkan urutan peristiwa dalam narasi</td>
+        <td><span class="arab">ثُمَّ أَوْرَثْنَا الْكِتَابَ</span><br>"Kemudian Kami wariskan kitab"</td>
+      </tr>
+      <tr>
+        <td><strong>Pilihan</strong></td>
+        <td>Menunjukkan pilihan antara dua atau lebih alternatif</td>
+        <td><span class="arab">جَاءَ زَيْدٌ أَوْ عَمْرٌو</span><br>"Datang Zaid atau 'Amr"</td>
+      </tr>
+      <tr>
+        <td><strong>Pertentangan</strong></td>
+        <td>Menunjukkan pertentangan antara dua hal</td>
+        <td><span class="arab">جَاءَ زَيْدٌ لَكِنْ لَا عَمْرٌو</span><br>"Datang Zaid, tetapi 'Amr tidak"</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Pemahaman fungsi retorika 'Athaf Nasaq akan membantu mahasiswa dalam <strong>menafsirkan Al-Qur'an</strong> secara lebih mendalam.</li>
+      <li>Dalam <strong>khutbah Jumat</strong>, khatib sering menggunakan 'Athaf Nasaq untuk menciptakan wacana yang padu dan mengalir.</li>
+      <li>Dalam <strong>pengajaran nahwu</strong>, mahasiswa dapat menggunakan contoh-contoh 'Athaf Nasaq dari Al-Qur'an untuk membuat pembelajaran lebih bermakna.</li>
+      <li>Dalam <strong>penulisan kreatif</strong>, 'Athaf Nasaq dapat digunakan untuk menciptakan wacana Arab yang kohesif dan koheren.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 15.7 APLIKASI: WACANA BERTEMA SAINS/ISLAM -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s15-7">15.7 Aplikasi: <em>Wacana Bertema Sains/Islam</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang 'Athaf Nasaq, mari kita konstruksi wacana utuh bertema sains/islam yang mengintegrasikan berbagai huruf athaf. Tema ini dipilih karena relevan dengan isu global dan sesuai dengan nilai-nilai keislaman.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Wacana Bertema Sains/Islam</h5>
+    <div class="arabic-paragraph">
+      إِنَّ الْعِلْمَ وَالْعَمَلَ رُكْنَانِ أَسَاسِيَّانِ فِي الْحَيَاةِ. يَطْلُبُ الطَّالِبُ الْعِلْمَ ثُمَّ يَعْمَلُ بِهِ. يَجِبُ أَنْ نَدْرُسَ الْعُلُومَ الطَّبِيعِيَّةَ أَوِ الْعُلُومَ الشَّرْعِيَّةَ. لَيْسَ الْعِلْمُ مَحْضَ نَظَرِيٍّ بَلْ عَمَلِيٌّ. جَاءَ الْعُلَمَاءُ حَتَّى الطُّلَّابُ لِيَتَعَلَّمُوا. خَلَقَ اللَّهُ السَّمَاوَاتِ وَالْأَرْضَ وَمَا بَيْنَهُمَا.
+    </div>
+    <div class="translation">
+      "Sesungguhnya ilmu dan amal adalah dua rukun fundamental dalam kehidupan. Pelajar menuntut ilmu kemudian mengamalkannya. Kita harus mempelajari ilmu-ilmu alam atau ilmu-ilmu syar'i. Ilmu bukan sekadar teori tetapi praktis. Datang para ulama sampai para pelajar untuk belajar. Allah menciptakan langit dan bumi dan apa yang ada di antara keduanya."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Huruf Athaf dalam Wacana</h5>
+    <div class="word-analysis">
+      <span class="word">الْعِلْمَ وَالْعَمَلَ</span>
+      <span class="detail"><strong>Wawu 'Athaf (وَ)</strong> — menggabungkan <span class="arab" style="font-size:1.1rem">الْعِلْمَ</span> dengan <span class="arab" style="font-size:1.1rem">الْعَمَلَ</span>. <small>Keduanya manshub sebagai Isim Inna.</small></span>
+
+      <span class="word">ثُمَّ يَعْمَلُ</span>
+      <span class="detail"><strong>Tsumma (ثُمَّ)</strong> — menunjukkan urutan dengan jeda. <small>Pelajar menuntut ilmu, kemudian mengamalkannya.</small></span>
+
+      <span class="word">أَوِ الْعُلُومَ</span>
+      <span class="detail"><strong>Au (أَوْ)</strong> — menunjukkan pilihan. <small>Ilmu-ilmu alam atau ilmu-ilmu syar'i.</small></span>
+
+      <span class="word">بَلْ عَمَلِيٌّ</span>
+      <span class="detail"><strong>Bal (بَلْ)</strong> — menunjukkan peralihan. <small>Ilmu bukan teori, bahkan praktis.</small></span>
+
+      <span class="word">حَتَّى الطُّلَّابُ</span>
+      <span class="detail"><strong>Hattā (حَتَّى)</strong> — menunjukkan akhiran. <small>Datang para ulama sampai para pelajar.</small></span>
+
+      <span class="word">السَّمَاوَاتِ وَالْأَرْضَ</span>
+      <span class="detail"><strong>Wawu 'Athaf (وَ)</strong> — menggabungkan <span class="arab" style="font-size:1.1rem">السَّمَاوَاتِ</span> dengan <span class="arab" style="font-size:1.1rem">الْأَرْضَ</span>. <small>Keduanya manshub sebagai Maf'ul Bih.</small></span>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Mengonstruksi Wacana dengan 'Athaf Nasaq</h4>
+    <ul>
+      <li><strong>Gunakan variasi huruf athaf:</strong> Jangan hanya menggunakan wawu (وَ), gunakan juga fa' (ف), tsumma (ث / ثُمَّ), au (أَوْ), bal (بَلْ), dll.</li>
+      <li><strong>Perhatikan makna tiap huruf:</strong> Setiap huruf athaf memiliki makna khusus yang memengaruhi interpretasi wacana.</li>
+      <li><strong>Pastikan i'rab ma'thuf benar:</strong> Ma'thuf harus mengikuti i'rab ma'thuf 'alaih-nya.</li>
+      <li><strong>Ciptakan kohesi:</strong> 'Athaf Nasaq berfungsi menciptakan kohesi wacana — pastikan wacana padu dan mengalir.</li>
+      <li><strong>Integrasikan nilai-nilai:</strong> Gunakan tema-tema yang relevan dengan kehidupan dan nilai-nilai keislaman.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 15.8 TUGAS PERTEMUAN 15 -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s15-8">15.8 Tugas <em>Pertemuan 15</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Mengonstruksi <strong>wacana utuh (minimal 100 kata)</strong> yang menggunakan <strong>semua huruf athaf</strong> (minimal 5 huruf athaf yang berbeda).</li>
+      <li>Wacana harus:</li>
+      <li style="padding-left:2.5rem">— Bertema sains atau keislaman</li>
+      <li style="padding-left:2.5rem">— Minimal 100 kata dalam bahasa Arab</li>
+      <li style="padding-left:2.5rem">— Menggunakan minimal 5 huruf athaf yang berbeda (وَ، فَ، ث، أَوْ، أَمْ، لَا، بَلْ، لَكِنْ، حَتَّى، dll)</li>
+      <li>Untuk setiap huruf athaf yang digunakan:</li>
+      <li style="padding-left:2.5rem">— Identifikasi ma'thuf 'alaih dan ma'thuf</li>
+      <li style="padding-left:2.5rem">— Tentukan i'rab ma'thuf</li>
+      <li style="padding-left:2.5rem">— Jelaskan makna huruf athaf tersebut dalam konteks wacana</li>
+      <li>Sertakan terjemahan Indonesia di bawah wacana Arab.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Merangkum materi Pertemuan 15 ('Athaf Nasaq) secara sistematis.</li>
+      <li>Rangkuman harus mencakup:</li>
+      <li style="padding-left:2.5rem">— Definisi dan konsep 'Athaf Nasaq</li>
+      <li style="padding-left:2.5rem">— 12 huruf athaf dan maknanya</li>
+      <li style="padding-left:2.5rem">— Hukum i'rab ma'thuf</li>
+      <li style="padding-left:2.5rem">— Jenis-jenis ma'thuf</li>
+      <li style="padding-left:2.5rem">— Fungsi retorika 'Athaf Nasaq</li>
+      <li>Sumber: kitab <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>An-Nahw al-Wadhih</em> (Al-Jarim & Amin).</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Contoh Tugas Mandiri (Sebagai Inspirasi)</h4>
+    <p style="margin-bottom:1rem"><strong>Wacana:</strong></p>
+    <div class="env-text" style="margin-bottom:1rem">
+      <div class="arabic-paragraph">
+        إِنَّ اللَّهَ خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ وَمَا بَيْنَهُمَا. ثُمَّ خَلَقَ الْإِنْسَانَ فِي أَحْسَنِ تَقْوِيمٍ. يَجِبُ أَنْ نَشْكُرَ اللَّهَ عَلَى نِعَمِهِ. لَيْسَ الشُّكْرُ بِاللِّسَانِ فَقَطْ بَلْ بِالْعَمَلِ. جَاءَ الْأَنْبِيَاءُ حَتَّى مُحَمَّدٌ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لِيَهْدُوا النَّاسَ. خُذُوا الْعِلْمَ مِنَ الْعُلَمَاءِ وَالْحِكْمَةَ مِنَ الْحُكَمَاءِ.
+      </div>
+      <div class="translation">
+        "Sesungguhnya Allah telah menciptakan langit dan bumi dan apa yang ada di antara keduanya. Kemudian Dia menciptakan manusia dalam bentuk yang terbaik. Kita harus bersyukur kepada Allah atas nikmat-nikmat-Nya. Syukur bukan hanya dengan lisan tetapi dengan amal. Datang para nabi sampai Muhammad ﷺ untuk memberi petunjuk kepada manusia. Ambillah ilmu dari para ulama dan hikmah dari para orang bijak."
+      </div>
+    </div>
+    <p><strong>Huruf Athaf yang digunakan:</strong></p>
+    <ul style="list-style:none;padding:0">
+      <li>• <span class="arab" style="font-size:1.1rem">وَ</span> (Wawu) — menggabungkan <span class="arab" style="font-size:1.1rem">السَّمَاوَاتِ</span> dengan <span class="arab" style="font-size:1.1rem">الْأَرْضَ</span></li>
+      <li>• <span class="arab" style="font-size:1.1rem">ثُمَّ</span> (Tsumma) — urutan dengan jeda: menciptakan, kemudian menciptakan manusia</li>
+      <li>• <span class="arab" style="font-size:1.1rem">بَلْ</span> (Bal) — peralihan: bukan lisan, bahkan amal</li>
+      <li>• <span class="arab" style="font-size:1.1rem">حَتَّى</span> (Hattā) — akhiran: para nabi sampai Muhammad</li>
+      <li>• <span class="arab" style="font-size:1.1rem">وَ</span> (Wawu) — menggabungkan <span class="arab" style="font-size:1.1rem">الْعِلْمَ</span> dengan <span class="arab" style="font-size:1.1rem">الْحِكْمَةَ</span></li>
+    </ul>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Pembelajaran</h4>
+    <p>
+      Melalui tugas ini, mahasiswa tidak hanya menguji pemahaman teoretis tentang 'Athaf Nasaq, tetapi juga melatih keterampilan menulis wacana Arab yang kohesif dan koheren. Kemampuan mengonstruksi wacana utuh dengan berbagai huruf athaf akan memperkaya kompetensi mahasiswa dalam menulis wacana Arab yang padu dan bermakna.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 15.9 PETA KONSEP & GLOSARIUM -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s15-9">15.9 Peta Konsep <em>& Glosarium</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep 'Athaf Nasaq</h4>
+    <div class="map-center">
+      <div class="core">'ATHAF NASAQA</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Tabi' yang menghubungkan ma'thuf dengan ma'thuf 'alaih</p>
+        <ul>
+          <li>Menciptakan kohesi wacana</li>
+          <li>Menggunakan huruf athaf</li>
+          <li>Ma'thuf mengikuti ma'thuf 'alaih</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 12 Huruf Athaf</h5>
+        <ul>
+          <li><strong>وَ</strong> — penggabungan</li>
+          <li><strong>ف</strong> — urutan segera</li>
+          <li><strong>ث/ثُمَّ</strong> — urutan dengan jeda</li>
+          <li><strong>أَوْ</strong> — pilihan</li>
+          <li><strong>أَمْ</strong> — persetaraan</li>
+          <li><strong>لَا</strong> — penafian</li>
+          <li><strong>بَلْ</strong> — peralihan</li>
+          <li><strong>لَكِنْ</strong> — pertentangan</li>
+          <li><strong>حَتَّى</strong> — akhiran</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 I'rab Ma'thuf</h5>
+        <ul>
+          <li>Mengikuti ma'thuf 'alaih</li>
+          <li>Marfu' jika ma'thuf 'alaih marfu'</li>
+          <li>Manshub jika ma'thuf 'alaih manshub</li>
+          <li>Majrur jika ma'thuf 'alaih majrur</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Fungsi Retorika</h5>
+        <ul>
+          <li>Kohesi wacana</li>
+          <li>Penggabungan makna</li>
+          <li>Urutan peristiwa</li>
+          <li>Pilihan</li>
+          <li>Pertentangan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📖 Glosarium Istilah 'Athaf Nasaq</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>'Athaf Nasaq</strong><span class="arab">عَطْفُ النَّسَق</span></div>
+        <p>Tabi' yang menghubungkan ma'thuf dengan ma'thuf 'alaih melalui huruf athaf.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ma'thuf</strong><span class="arab">مَعْطُوف</span></div>
+        <p>Kata yang diathafkan — kata yang mengikuti huruf athaf.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ma'thuf 'alaih</strong><span class="arab">مَعْطُوفٌ عَلَيْهِ</span></div>
+        <p>Kata yang diathafi — kata yang didahului oleh huruf athaf.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Huruf Athaf</strong><span class="arab">حَرْفُ الْعَطْف</span></div>
+        <p>Huruf yang berfungsi menghubungkan ma'thuf dengan ma'thuf 'alaih (12 huruf).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Wawu 'Athaf</strong><span class="arab">وَاوُ الْعَطْف</span></div>
+        <p>Huruf athaf yang bermakna penggabungan (jam').</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fa' 'Athaf</strong><span class="arab">فَاءُ الْعَطْف</span></div>
+        <p>Huruf athaf yang bermakna urutan segera (ta'qīb).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Tsumma</strong><span class="arab">ثُمَّ</span></div>
+        <p>Huruf athaf yang bermakna urutan dengan jeda (tarākhi).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Au</strong><span class="arab">أَوْ</span></div>
+        <p>Huruf athaf yang bermakna pilihan (takhyīr).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Bal</strong><span class="arab">بَلْ</span></div>
+        <p>Huruf athaf yang bermakna peralihan (idhrāb).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Lākin</strong><span class="arab">لَكِنْ</span></div>
+        <p>Huruf athaf yang bermakna pertentangan (istidrak).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Hattā</strong><span class="arab">حَتَّى</span></div>
+        <p>Huruf athaf yang bermakna akhiran (ghāyah).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Kohesi</strong><span class="arab">الْتِئَام</span></div>
+        <p>Kepaduan wacana — hubungan antar unsur dalam wacana.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 15</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep 'Athaf Nasaq — dari definisi dan hakikatnya, 12 huruf athaf beserta makna dan fungsinya, hukum i'rab ma'thuf, jenis-jenis ma'thuf, analisis ayat-ayat Al-Qur'an dan hadis, fungsi retorika, hingga aplikasi dalam konstruksi wacana utuh bertema sains/islam. Ingatlah, 'Athaf Nasaq bukan sekadar "penyambung" — ia adalah <strong>alat kohesi</strong> yang sangat kuat untuk menciptakan wacana Arab yang padu dan bermakna utuh. Sebagai calon guru bahasa Arab, penguasaan terhadap 'Athaf Nasaq akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- KESIMPULAN -->
+  <!-- ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 15</h3>
+    <p>
+      Pertemuan kelimabelas ini telah membahas secara komprehensif tentang 'Athaf Nasaq — tabi' yang berfungsi menghubungkan ma'thuf dengan ma'thuf 'alaih melalui huruf athaf. Mahasiswa telah memahami konsep dan definisi 'Athaf Nasaq, 12 huruf athaf beserta makna dan fungsinya, hukum i'rab ma'thuf, jenis-jenis ma'thuf, serta analisis ayat-ayat Al-Qur'an dan hadis.
+    </p>
+    <p>
+      Melalui analisis ayat-ayat Al-Qur'an, mahasiswa telah berlatih mengidentifikasi 'Athaf Nasaq dalam teks otentik keislaman. Fungsi retorika 'Athaf Nasaq telah memperkaya perspektif mahasiswa tentang kohesi wacana dalam bahasa Arab. Aplikasi melalui konstruksi wacana utuh bertema sains/islam dengan minimal 5 huruf athaf telah menunjukkan relevansi 'Athaf Nasaq dalam konteks kontemporer.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa telah menyelesaikan seluruh materi Tawabi' (Na'at, Taukid, Badal, 'Athaf Bayan, 'Athaf Nasaq) dan siap melangkah ke Pertemuan 16 yang akan menjadi <strong>Ujian Akhir Semester (UAS)</strong> — evaluasi komprehensif terhadap seluruh materi Marfu'atul Asma dan Tawabi'. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- DAFTAR PUSTAKA -->
+  <!-- ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Anbari, Ibnu. <em>Al-Mufrad fi Ushul an-Nahw</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="14.html">← Pertemuan 14: Athaf Bayan</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="16.html">Pertemuan 16: UAS →</a>
+  </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- UJI FORMATIF -->
+<!-- ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 15</span>
+      <h2>'Athaf Nasaq: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Kohesi Wacana dengan Huruf Athaf</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Konsep 'Athaf Nasaq, 12 huruf athaf, hukum i'rab ma'thuf, analisis Al-Qur'an</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">جَاءَ زَيْدٌ وَعَمْرٌو</span>, kata <span class="arab">عَمْرٌو</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Na'at</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Ma'thuf (yang diathafkan)</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Badal</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Khabar</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>2.</strong> Fungsi utama 'Athaf Nasaq dalam wacana adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Menjelaskan sifat matbu'</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Menguatkan makna matbu'</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Menghubungkan dan merangkaikan unsur-unsur wacana</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Menggantikan kedudukan matbu'</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Hukum i'rab ma'thuf adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Selalu mengikuti i'rab ma'thuf 'alaih</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Selalu marfu'</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Selalu manshub</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Tidak memiliki i'rab</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Huruf athaf yang bermakna "urutan dengan jeda" adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Wawu (وَ)</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Fa' (ف)</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Au (أَوْ)</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Tsumma (ث / ثُمَّ)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Dalam ayat <span class="arab">إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ</span>, kata <span class="arab">وَمَلَائِكَتَهُ</span> berkedudukan...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Marfu' dengan dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Manshub dengan fathah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">اللَّهَ</span>)</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Majrur dengan kasrah</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Marfu' dengan tanwin</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> Huruf athaf yang bermakna "pilihan" adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Wawu (وَ)</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Bal (بَلْ)</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Au (أَوْ)</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. Hattā (حَتَّى)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Dalam kalimat <span class="arab">رَأَيْتُ زَيْدًا وَعَمْرًا</span>, kata <span class="arab">عَمْرًا</span> berkedudukan...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Manshub dengan fathah (mengikuti ma'thuf 'alaih <span class="arab" style="font-size:1.1rem">زَيْدًا</span>)</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Marfu' dengan dhommah</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Majrur dengan kasrah</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Manshub dengan ya'</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Huruf athaf yang bermakna "pertentangan" adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Wawu (وَ)</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Fa' (ف)</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Au (أَوْ)</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Lākin (لَكِنْ)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Struktur 'Athaf Nasaq terdiri dari...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Mubtada' + Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Ma'thuf 'alaih + Huruf Athaf + Ma'thuf</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Fi'il + Fa'il + Maf'ul Bih</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Man'ut + Na'at</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Huruf athaf yang bermakna "akhiran" (ghāyah) adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Wawu (وَ)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Fa' (ف)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Hattā (حَتَّى)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Am (أَمْ)</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat 'Athaf Nasaq menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda (dalam bahasa Arab), dan analisislah perbedaan antara 'Athaf Nasaq dengan tabi' lainnya (Na'at, Taukid, Badal, Athaf Bayan)!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Sebutkan dan jelaskan 12 huruf athaf beserta makna dan fungsinya! Berikan contoh konkret untuk masing-masing huruf athaf, dan analisislah bagaimana perbedaan makna tiap huruf athaf memengaruhi interpretasi kalimat!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Jelaskan hukum i'rab ma'thuf! Berikan contoh kalimat untuk masing-masing posisi i'rab (marfu', manshub, majrur), dan analisislah mengapa ma'thuf harus mengikuti i'rab ma'thuf 'alaih!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Analisislah pola-pola umum 'Athaf Nasaq dalam Al-Qur'an! Berikan minimal 5 contoh ayat yang menggunakan 'Athaf Nasaq, dan jelaskan implikasi semantis dari penggunaan 'Athaf Nasaq dalam ayat-ayat tersebut!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Konstruksilah sebuah <strong>wacana utuh (minimal 100 kata)</strong> bertema <strong>"Sains dan Islam"</strong> yang mengintegrasikan <strong>minimal 5 huruf athaf yang berbeda</strong>! Sertakan terjemahan Indonesia dan analisis i'rab untuk setiap ma'thuf yang Anda gunakan, serta jelaskan makna huruf athaf dalam konteks wacana!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 15,
+    topik: "'Athaf Nasaq",
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 15
+  An-Nahw lil Mutawassithin
+  Topik: 'Athaf Nasaq
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P15_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P15 ('Athaf Nasaq) - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 15 ('Athaf Nasaq) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

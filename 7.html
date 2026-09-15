@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 7: Isim Kada — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 7: Validasi penggunaan Isim Kada (Muqarabah, Raja', Syuru'), perbandingan dengan Isim Kana, analisis hadis Arbain Nawawi, dan konstruksi kalimat bertema lingkungan." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--ink);color:var(--cream);
+  line-height:1.7;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(201,169,97,.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(201,169,97,.06) 0%, transparent 40%);
+}
+.bg-ornament{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    linear-gradient(rgba(201,169,97,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,97,.03) 1px, transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{
+  min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1;
+}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{
+  display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;
+  border:1px solid var(--gold);border-radius:2px;
+}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{
+  background:linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{
+  display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;
+  font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;
+  text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none;
+}
+.btn-primary{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;
+  color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line);
+}
+h2.section-title em{
+  font-style:italic;
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+h3.sub-title{
+  font-family:var(--serif);font-size:1.5rem;color:var(--gold);
+  margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem;
+}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{
+  font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);
+  font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem;
+}
+.arabic-display{
+  background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;
+  padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);
+  font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2;
+}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{
+  background:rgba(201,169,97,.04);border-left:3px solid var(--gold);
+  padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0;
+}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center;
+}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg, transparent, var(--gold), transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;
+}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box, .warning-box, .insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4, .warning-box h4, .insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul, .warning-box ul, .insight-box ul{list-style:none;padding:0}
+.tips-box li, .warning-box li, .insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative;
+}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{
+  display:inline-block;padding:1rem 2rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3);
+}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center;
+}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  flex-wrap:wrap;gap:1rem;
+}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{
+  background:linear-gradient(135deg, rgba(100,180,220,.08) 0%, rgba(100,180,220,.02) 100%);
+  border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0;
+}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{
+  display:inline-block;margin-top:1rem;padding:.4rem 1rem;
+  background:rgba(100,180,220,.15);border-radius:4px;
+  font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase;
+}
+.env-text{
+  background:linear-gradient(135deg, rgba(80,200,120,.06) 0%, rgba(80,200,120,.02) 100%);
+  border:1px solid rgba(80,200,120,.3);border-radius:8px;
+  padding:2rem;margin:2rem 0;
+}
+.env-text h5{
+  font-family:var(--serif);color:#50c878;font-size:1.15rem;
+  margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.env-text .arabic-paragraph{
+  font-family:var(--arab);font-size:1.5rem;color:var(--gold);
+  direction:rtl;line-height:2.4;text-align:right;
+  padding:1.5rem;background:rgba(0,0,0,.25);
+  border-radius:6px;margin-bottom:1rem;
+}
+.env-text .translation{
+  font-family:var(--serif-2);font-style:italic;
+  color:var(--muted);font-size:.95rem;
+  padding:1rem;border-left:2px solid #50c878;
+}
+.hadith-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.08) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--gold);border-radius:8px;
+  padding:2rem;margin:2rem 0;
+}
+.hadith-box h5{
+  font-family:var(--serif);color:var(--gold);font-size:1.15rem;
+  margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.hadith-box .arabic-paragraph{
+  font-family:var(--arab);font-size:1.5rem;color:var(--gold);
+  direction:rtl;line-height:2.4;text-align:right;
+  padding:1.5rem;background:rgba(0,0,0,.25);
+  border-radius:6px;margin-bottom:1rem;
+}
+.hadith-box .source-info{
+  font-size:.85rem;color:var(--muted);
+  font-style:italic;border-top:1px solid var(--line);
+  padding-top:.8rem;
+}
+.comparison-box{
+  background:linear-gradient(135deg, rgba(201,169,97,.06) 0%, rgba(201,169,97,.02) 100%);
+  border:1px solid var(--line);border-radius:8px;
+  padding:2rem;margin:2rem 0;
+}
+.comparison-box h5{
+  font-family:var(--serif);color:var(--gold);font-size:1.15rem;
+  margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;
+}
+.comparison-grid{
+  display:grid;grid-template-columns:1fr auto 1fr;
+  gap:1rem;align-items:center;margin:1rem 0;
+}
+.comparison-grid .arrow{
+  font-size:2rem;color:var(--gold);text-align:center;
+}
+.comparison-grid .box{
+  padding:1rem;background:rgba(0,0,0,.3);
+  border:1px solid var(--line);border-radius:6px;
+  text-align:center;
+}
+.comparison-grid .box .arab{
+  font-family:var(--arab);font-size:1.4rem;color:var(--gold);
+  direction:rtl;display:block;margin-bottom:.5rem;
+}
+.comparison-grid .box small{color:var(--muted);font-size:.8rem}
+.comparison-grid .box .label{
+  display:block;margin-top:.5rem;
+  font-size:.75rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--gold);
+}
+.quiz-section{
+  background:linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%);
+  padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1;
+}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{
+  display:inline-block;padding:.5rem 1.5rem;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  color:var(--ink);font-size:.75rem;letter-spacing:3px;
+  text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem;
+}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;
+}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input, .form-group select{
+  padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);
+  border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s;
+}
+.form-group input:focus, .form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{
+  width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);
+  border:1px solid var(--line);border-radius:4px;color:var(--cream);
+  font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s;
+}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{
+  padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;
+  font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;
+  display:inline-flex;align-items:center;gap:.6rem;
+}
+.btn-submit{background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf, .btn-score, .btn-email, .btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover, .btn-score:hover, .btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{
+  display:none;
+  background:linear-gradient(135deg, rgba(201,169,97,.1) 0%, rgba(201,169,97,.03) 100%);
+  border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center;
+}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .env-text .arabic-paragraph, .hadith-box .arabic-paragraph{font-size:1.2rem}
+  .comparison-grid{grid-template-columns:1fr}
+  .comparison-grid .arrow{transform:rotate(90deg)}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 7
+  </div>
+  <span class="chapter-label">Pertemuan 7 · 2 SKS</span>
+  <h1>Isim Kada: <span class="accent">Muqarabah, Raja', dan Syuru'</span></h1>
+  <div class="hero-arabic">اسْمُ كَادَ: الْمُقَارَبَةُ وَالرَّجَاءُ وَالشُّرُوعُ</div>
+  <p class="subtitle">Validasi penggunaan Isim Kada (Muqarabah, Raja', Syuru'), perbandingan dengan Isim Kana, analisis hadis Arbain Nawawi, dan konstruksi kalimat bertema lingkungan.</p>
+  <div class="hero-actions">
+    <a href="6.html" class="btn btn-outline">← Pertemuan Sebelumnya</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 7</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s7-1">7.1 Konsep dan Definisi Isim Kada</a>
+        <ol>
+          <li><a href="#s7-1-1">Pengertian Isim Kada secara Bahasa dan Istilah</a></li>
+          <li><a href="#s7-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s7-1-3">Kedudukan Isim Kada dalam Nawasikh</a></li>
+        </ol>
+      </li>
+      <li><a href="#s7-2">7.2 Kelompok Muqarabah (Kedekatan Waktu)</a>
+        <ol>
+          <li><a href="#s7-2-1">Kaada dan Saudara-saudaranya</a></li>
+          <li><a href="#s7-2-2">Syarat-syarat Amal Kaada</a></li>
+        </ol>
+      </li>
+      <li><a href="#s7-3">7.3 Kelompok Raja' (Harapan)</a></li>
+      <li><a href="#s7-4">7.4 Kelompok Syuru' (Permulaan)</a></li>
+      <li><a href="#s7-5">7.5 Perbandingan Isim Kana dan Isim Kada</a></li>
+      <li><a href="#s7-6">7.6 Pengaruh Isim Kada terhadap Hukum i'rab</a></li>
+      <li><a href="#s7-7">7.7 Analisis Teks Otentik (Al-Qur'an & Hadis)</a></li>
+      <li><a href="#s7-8">7.8 Aplikasi: Kalimat Bertema Lingkungan</a></li>
+      <li><a href="#s7-9">7.9 Tugas Pertemuan 7</a></li>
+      <li><a href="#s7-10">7.10 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>Isim Kana</em> memberikan dimensi waktu lampau pada kalimat nominal, maka <em>Isim Kada</em> memperkaya ekspresi bahasa Arab dengan nuansa <strong>kedekatan</strong>, <strong>harapan</strong>, dan <strong>permulaan</strong> — tiga dimensi makna yang membuat bahasa Arab begitu kaya dan halus.
+  </p>
+
+  <p>
+    Setelah pada pertemuan keenam kita menyelami kedalaman <strong>Isim Kana</strong> dan saudara-saudaranya, pada pertemuan ketujuh ini kita melangkah ke kelompok nawasikh yang memiliki kemiripan struktur tetapi perbedaan makna: <strong>Isim Kada</strong> (اسْمُ كَادَ). Sebagai mahasiswa Pendidikan Bahasa Arab (PBA), penguasaan terhadap Isim Kada bukan sekadar syarat lulus mata kuliah — ia adalah kunci untuk memahami nuansa makna yang halus dalam bahasa Arab, baik dalam Al-Qur'an, hadis, karya ulama klasik, maupun teks kontemporer.
+  </p>
+
+  <p>
+    Isim Kada terbagi menjadi tiga kelompok utama berdasarkan maknanya: (1) <strong>Muqarabah</strong> (kedekatan waktu) — seperti <span class="arab" style="font-size:1.1rem">كَادَ</span> (hampir); (2) <strong>Raja'</strong> (harapan) — seperti <span class="arab" style="font-size:1.1rem">حَرَى</span> (berharap); dan (3) <strong>Syuru'</strong> (permulaan) — seperti <span class="arab" style="font-size:1.1rem">جَعَلَ</span> (mulai). Meskipun struktur i'rabnya sama dengan Isim Kana (merafa'kan Mubtada' dan menashabkan Khabar), makna yang dihasilkan sangat berbeda.
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Isim Kada secara komprehensif: mulai dari konsep dan definisi, tiga kelompok utama beserta anggotanya, syarat-syarat amal, perbandingan dengan Isim Kana, analisis teks otentik dari Al-Qur'an dan hadis, hingga aplikasi praktis dalam konstruksi kalimat bertema lingkungan. Sebagai puncak pembelajaran, mahasiswa akan membandingkan penggunaan Isim Kada dan Isim Kana dalam satu paragraf, lalu memberikan argumentasi logis (<em>ta'lil</em>) — sebuah latihan yang melatih kompetensi analitis dan kritis.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">كَادَ الْغَيْثُ أَنْ يَهْطِلَ *** وَجَعَلَ الطَّالِبُ يَدْرُسُ</div>
+    <div class="translation">"Hampir saja hujan turun" dan "Sang pelajar mulai belajar."<br>Dua kalimat dengan struktur yang sama (Isim Kada), tetapi makna yang berbeda: kedekatan vs permulaan.</div>
+    <div class="source">— Contoh Klasik dalam An-Nahw al-Wadhih</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal Isim Kada dan Tiga Kelompoknya</h4>
+    <p>Simak penjelasan visual tentang bagaimana Isim Kada bekerja dalam struktur kalimat nominal — dari Muqarabah, Raja', hingga Syuru'.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 7</h4>
+    <ul>
+      <li><strong>Isim Kada (اسْمُ كَادَ):</strong> Kelompok fi'il yang masuk ke jumla ismiyyah, merafa'kan Mubtada' (Isim Kada) dan menashabkan Khabar (Khabar Kada), dengan makna kedekatan, harapan, atau permulaan.</li>
+      <li><strong>Muqarabah (مُقَارَبَة):</strong> Kelompok Isim Kada yang menunjukkan "kedekatan waktu" — hampir terjadi. Contoh: <span class="arab" style="font-size:1.1rem">كَادَ، كَرَبَ، أَشْرَفَ</span>.</li>
+      <li><strong>Raja' (رَجَاء):</strong> Kelompok Isim Kada yang menunjukkan "harapan" — diharapkan terjadi. Contoh: <span class="arab" style="font-size:1.1rem">حَرَى، فَعَلَ، وَضَعَ</span>.</li>
+      <li><strong>Syuru' (شُرُوع):</strong> Kelompok Isim Kada yang menunjukkan "permulaan" — mulai terjadi. Contoh: <span class="arab" style="font-size:1.1rem">جَعَلَ، أَخَذَ، طَفِقَ</span>.</li>
+      <li><strong>Ta'lil Nahwi:</strong> Argumentasi logis yang digunakan untuk memvalidasi pemilihan Isim Kada yang tepat dalam konteks tertentu.</li>
+      <li><strong>Perbedaan dengan Isim Kana:</strong> Isim Kana menunjukkan waktu lampau; Isim Kada menunjukkan kedekatan/harapan/permulaan.</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Salah Pilih Isim Kada, Salah Makna</h4>
+    <div class="case-content">
+      Seorang siswa ingin menulis: "Hampir saja bumi binasa karena polusi." Ia menulis: <span class="arab" style="font-size:1.3rem">جَعَلَتِ الْأَرْضُ أَنْ تَهْلِكَ</span> — padahal seharusnya <span class="arab" style="font-size:1.3rem">كَادَتِ الْأَرْضُ أَنْ تَهْلِكَ</span>.<br>
+      Kesalahannya: <span class="arab" style="font-size:1.2rem">جَعَلَ</span> bermakna "mulai" (syuru'), bukan "hampir" (muqarabah). Akibatnya, maknanya berubah menjadi "Bumi mulai binasa" — padahal maksudnya adalah "Bumi hampir binasa" (belum binasa, tapi hampir).
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Pemilihan Isim Kada yang tepat sangat menentukan makna kalimat. Mahasiswa PBA perlu memahami perbedaan nuansa antara Muqarabah, Raja', dan Syuru' agar mampu mengekspresikan makna secara presisi.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan perbedaan nuansa makna kepada siswa. Isim Kada adalah alat linguistik yang sangat halus — ia mampu membedakan antara "hampir terjadi", "diharapkan terjadi", dan "mulai terjadi". Bayangkan bagaimana Anda akan menjelaskan perbedaan ini dengan cara yang menarik — mungkin dengan contoh dari kehidupan sehari-hari, dari pepatah Minangkabau, atau dari ayat Al-Qur'an.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       7.1 KONSEP DAN DEFINISI
+       ========================================================= -->
+  <h2 class="section-title" id="s7-1">7.1 Konsep dan Definisi <em>Isim Kada</em></h2>
+
+  <p>
+    Memahami konsep dan definisi Isim Kada adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat Isim Kada, mahasiswa akan kesulitan dalam membedakan dengan Isim Kana dan memilih fi'il yang tepat sesuai konteks.
+  </p>
+
+  <h3 class="sub-title" id="s7-1-1">7.1.1 Pengertian Isim Kada secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, istilah <em>Isim Kada</em> berasal dari fi'il <em>Kada</em> (كَادَ) yang bermakna "hampir" atau "hampir saja". Secara harfiah, Isim Kada berarti "isim yang masuk kepadanya fi'il Kada".
+  </p>
+
+  <p>
+    Secara <strong>terminologis (istilah nahwu)</strong>, Isim Kada memiliki makna yang lebih luas — mencakup seluruh fi'il yang memiliki hukum yang sama dengan <span class="arab" style="font-size:1.1rem">كَادَ</span>, yaitu merafa'kan Mubtada' dan menashabkan Khabar, dengan makna kedekatan, harapan, atau permulaan.
+  </p>
+
+  <h3 class="sub-title" id="s7-1-2">7.1.2 Definisi Isim Kada Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وَكَاسْمِ كَانَ اسْمُ كَادَ عَمِلْ *** فَعَمِّلاَنِ كَفِعْلِ كَانَ قُلْ</span></td>
+        <td>"Seperti Isim Kana, Isim Kada juga beramal. Keduanya bekerja seperti fi'il Kana."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">اسْمُ كَادَ: هِيَ أَفْعَالٌ دَخَلَتْ عَلَى الْجُمْلَةِ الِاسْمِيَّةِ فَرَفَعَتِ الْمُبْتَدَأَ وَنَصَبَتِ الْخَبَرَ، وَدَلَّتْ عَلَى مُقَارَبَةٍ أَوْ رَجَاءٍ أَوْ شُرُوعٍ</span></td>
+        <td>"Isim Kada: fi'il-fi'il yang masuk ke jumla ismiyyah, merafa'kan Mubtada' dan menashabkan Khabar, serta menunjukkan makna kedekatan, harapan, atau permulaan."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">كَادَ وَأَخَوَاتُهَا: أَفْعَالٌ نَاقِصَةٌ تَرْفَعُ الْمُبْتَدَأَ وَيُسَمَّى اسْمَهَا، وَتَنْصِبُ الْخَبَرَ وَيُسَمَّى خَبَرَهَا</span></td>
+        <td>"Kada dan saudara-saudaranya: fi'il-fi'il naqishah yang merafa'kan Mubtada' (disebut Isim-nya) dan menashabkan Khabar (disebut Khabar-nya)."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">هِيَ أَفْعَالٌ نَاسِخَةٌ تَدُلُّ عَلَى قُرْبِ وُقُوعِ الْخَبَرِ أَوْ رَجَائِهِ أَوْ ابْتِدَائِهِ</span></td>
+        <td>"Ia adalah fi'il-fi'il nasikhah yang menunjukkan kedekatan terjadinya Khabar, harapan terjadinya, atau permulaannya."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Perhatikan bahwa Isim Kada <strong>serupa dengan Isim Kana</strong> dalam hal struktur i'rab (merafa'kan Mubtada', menashabkan Khabar), tetapi <strong>berbeda dalam makna</strong>.</li>
+      <li>Isim Kana menunjukkan waktu lampau; Isim Kada menunjukkan kedekatan/harapan/permulaan.</li>
+      <li>Pemahaman yang tepat tentang perbedaan ini akan membantu mahasiswa memilih fi'il yang sesuai dengan konteks.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s7-1-3">7.1.3 Kedudukan Isim Kada dalam Nawasikh</h3>
+
+  <p>
+    Isim Kada merupakan bagian dari <strong>Nawasikh Mubtada'</strong> — kelompok amil yang merafa'kan Mubtada' dan menashabkan Khabar. Kelompok ini mencakup:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Kelompok</th><th>Anggota</th><th>Makna</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Isim Kana</strong></td>
+        <td>Kana, Ashbaha, Amsa, Laita, Lana, Zala, Laisa, Mazal, Fatih, dll.</td>
+        <td>Waktu lampau, keadaan, peniadaan, keberlanjutan</td>
+      </tr>
+      <tr>
+        <td><strong>Isim Kada</strong></td>
+        <td>Kaada, Karaaba, Asyrafa, Haraa, Ja'ala, Akhodza, Thafiqa, dll.</td>
+        <td>Kedekatan (hampir), harapan, permulaan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- =========================================================
+       7.2 KELOMPOK MUQARABAH
+       ========================================================= -->
+  <h2 class="section-title" id="s7-2">7.2 Kelompok Muqarabah <em>(Kedekatan Waktu)</em></h2>
+
+  <p>
+    Kelompok pertama Isim Kada adalah <strong>Muqarabah</strong> (مُقَارَبَة) — fi'il-fi'il yang menunjukkan <strong>kedekatan waktu</strong> terjadinya sesuatu, atau "hampir saja" sesuatu terjadi.
+  </p>
+
+  <h3 class="sub-title" id="s7-2-1">7.2.1 Kaada dan Saudara-saudaranya</h3>
+
+  <p>
+    Anggota kelompok Muqarabah yang paling terkenal adalah <strong>Kaada</strong> (كَادَ). Selain Kaada, ada beberapa fi'il lain yang memiliki makna dan hukum yang sama:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fi'il</th><th>Arti</th><th>Contoh Kalimat</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">كَادَ</span></td>
+        <td>Hampir / hampir saja</td>
+        <td><span class="arab">كَادَ الطَّالِبُ أَنْ يَسْقُطَ</span></td>
+        <td>"Pelajar itu hampir jatuh."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">كَرَبَ</span></td>
+        <td>Hampir / nyaris</td>
+        <td><span class="arab">كَرَبَ الْغَيْثُ أَنْ يَهْطِلَ</span></td>
+        <td>"Hujan hampir turun."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">أَشْرَفَ</span></td>
+        <td>Hampir / hampir binasa</td>
+        <td><span class="arab">أَشْرَفَ الْمَرِيضُ عَلَى الْمَوْتِ</span></td>
+        <td>"Orang sakit itu hampir mati."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">أَمْسَكَ</span></td>
+        <td>Hampir / nyaris</td>
+        <td><span class="arab">أَمْسَكَ الزُّجَاجُ أَنْ يَنْكَسِرَ</span></td>
+        <td>"Gelas itu hampir pecah."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">اِقْتَرَبَ</span></td>
+        <td>Hampir / mendekat</td>
+        <td><span class="arab">اِقْتَرَبَتِ السَّاعَةُ</span></td>
+        <td>"Kiamat hampir tiba."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="arabic-display">
+    كَادَتِ الْأَرْضُ أَنْ تَهْلِكَ بِالتَّلَوُّثِ
+    <small>"Bumi hampir binasa karena polusi."<br>Isim Kada (marfu') + Khabar Kada (manshub)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">كَادَتْ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>ta' ta'nits</strong> — mabni 'ala fathah. <small>Fi'il naqishah dari kelompok Muqarabah. Ta' ta'nits karena Isim-nya muannats (الْأَرْضُ).</small></span>
+
+      <span class="word">(Fa'il Mustatir)</span>
+      <span class="detail"><strong>Fa'il mustatir wajib</strong> — taqdiruhu <span class="arab" style="font-size:1.1rem">هُوَ</span>. <small>Mengikuti Isim Kada.</small></span>
+
+      <span class="word">الْأَرْضُ</span>
+      <span class="detail"><strong>Isim Kada</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya Mubtada', tetap marfu' setelah masuknya Kaada.</small></span>
+
+      <span class="word">أَنْ</span>
+      <span class="detail"><strong>Huruf mashdariyyah nasb</strong> — mabni 'ala sukun. <small>Masuk ke fi'il mudhari' dan menashabkannya.</small></span>
+
+      <span class="word">تَهْلِكَ</span>
+      <span class="detail"><strong>Fi'il mudhari' manshub</strong> — manshub dengan fathah (karena didahului <span class="arab" style="font-size:1.1rem">أَنْ</span>). <small>Bersama <span class="arab" style="font-size:1.1rem">أَنْ</span> ditakwil menjadi mashdar yang berkedudukan Khabar Kada.</small></span>
+
+      <span class="word">بِالتَّلَوُّثِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan zharf sebab. <small>"Karena polusi".</small></span>
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s7-2-2">7.2.2 Syarat-syarat Amal Kaada</h3>
+
+  <p>
+    Kaada dan saudara-saudaranya memiliki syarat-syarat khusus agar dapat "beramal" (mengubah hukum Mubtada' dan Khabar):
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Syarat</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Khabar berupa fi'il mudhari'</strong></td>
+        <td>Khabar Kada harus berupa fi'il mudhari' yang didahului <span class="arab" style="font-size:1.1rem">أَنْ</span> (menjadi mashdar mu'awwal).</td>
+        <td><span class="arab">كَادَ الطَّالِبُ أَنْ يَسْقُطَ</span> ✓</td>
+      </tr>
+      <tr>
+        <td><strong>Fi'il mudhari' tersebut kembali kepada Mubtada'</strong></td>
+        <td>Fa'il dari fi'il mudhari' harus kembali kepada Isim Kada (Mubtada').</td>
+        <td><span class="arab">كَادَ الطَّالِبُ أَنْ يَسْقُطَ</span> ✓ — yang jatuh adalah pelajar</td>
+      </tr>
+      <tr>
+        <td><strong>Tidak didahului oleh "Kana" atau saudara-saudaranya</strong></td>
+        <td>Jika didahului Kana, maka Kaada kehilangan kemampuan amal.</td>
+        <td><span class="arab">كَانَ كَادَ الطَّالِبُ أَنْ يَسْقُطَ</span> ✗ (tidak bisa)</td>
+      </tr>
+      <tr>
+        <td><strong>Fi'il mudhari' tidak didahului oleh "La Nafiyah" atau "La Nafiyah lil Jins"</strong></td>
+        <td>Jika didahului La Nafiyah, maka Kaada tidak bisa beramal.</td>
+        <td><span class="arab">كَادَ الطَّالِبُ لَا يَسْقُطُ</span> ✗ (tidak bisa)</td>
+      </tr>
+      <tr>
+        <td><strong>Peristiwa yang "hampir terjadi" tidak benar-benar terjadi</strong></td>
+        <td>Jika peristiwa sudah terjadi, Kaada tidak bisa digunakan.</td>
+        <td><span class="arab">كَادَ الطَّالِبُ أَنْ يَسْقُطَ وَقَدْ سَقَطَ</span> ✗ (kontradiksi)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kesalahan Umum Mahasiswa</h4>
+    <ul>
+      <li>Menggunakan Kaada untuk peristiwa yang sudah terjadi — seharusnya menggunakan Isim Kana.</li>
+      <li>Meletakkan Khabar bukan berupa fi'il mudhari' — Kaada hanya beramal jika Khabarnya berupa fi'il mudhari' yang didahului <span class="arab" style="font-size:1.1rem">أَنْ</span>.</li>
+      <li>Tidak memperhatikan kesesuaian antara Isim Kada dan fi'il mudhari' dalam hal jenis (mudzakkar/muannats).</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       7.3 KELOMPOK RAJA'
+       ========================================================= -->
+  <h2 class="section-title" id="s7-3">7.3 Kelompok Raja' <em>(Harapan)</em></h2>
+
+  <p>
+    Kelompok kedua Isim Kada adalah <strong>Raja'</strong> (رَجَاء) — fi'il-fi'il yang menunjukkan <strong>harapan</strong> akan terjadinya sesuatu. Kelompok ini digunakan untuk mengekspresikan keinginan atau harapan yang mungkin terjadi di masa depan.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fi'il</th><th>Arti</th><th>Contoh Kalimat</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">حَرَى</span></td>
+        <td>Berharap / diharapkan</td>
+        <td><span class="arab">حَرَى الْمُسْلِمُونَ أَنْ يَنْتَصِرُوا</span></td>
+        <td>"Kaum muslimin diharapkan menang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">فَعَلَ</span></td>
+        <td>Berharap / diharapkan</td>
+        <td><span class="arab">فَعَلَ الطَّالِبُ أَنْ يَنْجَحَ</span></td>
+        <td>"Pelajar itu diharapkan berhasil."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">وَضَعَ</span></td>
+        <td>Berharap / diharapkan</td>
+        <td><span class="arab">وَضَعَ الْعُلَمَاءُ أَنْ يَكْتُشِفُوا الْحَقِيقَةَ</span></td>
+        <td>"Para ulama diharapkan menemukan kebenaran."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="arabic-display">
+    حَرَى الْبَشَرِيَّةُ أَنْ تَحْفَظَ الْبِيئَةَ
+    <small>"Umat manusia diharapkan menjaga lingkungan."<br>Isim Kada (marfu') + Khabar Kada (manshub)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">حَرَى</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Fi'il naqishah dari kelompok Raja'.</small></span>
+
+      <span class="word">الْبَشَرِيَّةُ</span>
+      <span class="detail"><strong>Isim Kada</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya Mubtada', tetap marfu'.</small></span>
+
+      <span class="word">أَنْ</span>
+      <span class="detail"><strong>Huruf mashdariyyah nasb</strong> — mabni 'ala sukun.</span>
+
+      <span class="word">تَحْفَظَ</span>
+      <span class="detail"><strong>Fi'il mudhari' manshub</strong> — manshub dengan fathah. <small>Bersama <span class="arab" style="font-size:1.1rem">أَنْ</span> menjadi Khabar Kada.</small></span>
+
+      <span class="word">الْبِيئَةَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Objek dari fi'il <span class="arab" style="font-size:1.1rem">تَحْفَظَ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Catatan tentang Kelompok Raja'</h4>
+    <ul>
+      <li>Kelompok Raja' <strong>jarang digunakan</strong> dalam bahasa Arab kontemporer — lebih sering ditemukan dalam teks klasik.</li>
+      <li>Dalam bahasa Arab modern, harapan lebih sering diekspresikan dengan <span class="arab" style="font-size:1.1rem">أَمَلَ</span> (berharap) + <span class="arab" style="font-size:1.1rem">أَنْ</span> + fi'il mudhari', atau dengan <span class="arab" style="font-size:1.1rem">لَعَلَّ</span> (mudah-mudahan).</li>
+      <li>Namun, pemahaman tentang kelompok Raja' tetap penting untuk membaca teks-teks klasik dan Al-Qur'an.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       7.4 KELOMPOK SYURU'
+       ========================================================= -->
+  <h2 class="section-title" id="s7-4">7.4 Kelompok Syuru' <em>(Permulaan)</em></h2>
+
+  <p>
+    Kelompok ketiga Isim Kada adalah <strong>Syuru'</strong> (شُرُوع) — fi'il-fi'il yang menunjukkan <strong>permulaan</strong> terjadinya sesuatu. Kelompok ini sangat sering digunakan dalam bahasa Arab, baik klasik maupun kontemporer.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fi'il</th><th>Arti</th><th>Contoh Kalimat</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">جَعَلَ</span></td>
+        <td>Mulai / menjadikan</td>
+        <td><span class="arab">جَعَلَ الطَّالِبُ يَدْرُسُ</span></td>
+        <td>"Pelajar itu mulai belajar."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">أَخَذَ</span></td>
+        <td>Mulai / mengambil</td>
+        <td><span class="arab">أَخَذَ الْمَطَرُ يَهْطِلُ</span></td>
+        <td>"Hujan mulai turun."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">طَفِقَ</span></td>
+        <td>Mulai / sibuk dengan</td>
+        <td><span class="arab">طَفِقَ الْعُمَّالُ يَعْمَلُونَ</span></td>
+        <td>"Para pekerja mulai bekerja."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">عَلِقَ</span></td>
+        <td>Mulai / melekat</td>
+        <td><span class="arab">عَلِقَ الطِّفْلُ يَبْكِي</span></td>
+        <td>"Anak itu mulai menangis."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">أَنْشَأَ</span></td>
+        <td>Mulai / menciptakan</td>
+        <td><span class="arab">أَنْشَأَ السَّحَابُ يُمْطِرُ</span></td>
+        <td>"Awan mulai menurunkan hujan."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">هَلَقَ</span></td>
+        <td>Mulai / binasa</td>
+        <td><span class="arab">هَلَقَتِ الْبَهَائِمُ تَرْكَضُ</span></td>
+        <td>"Hewan-hewan mulai berlari."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">إِنْبَدَأَ</span></td>
+        <td>Mulai / memulai</td>
+        <td><span class="arab">إِنْبَدَأَ الْمُعَلِّمُ يُشْرَحُ الدَّرْسَ</span></td>
+        <td>"Guru itu mulai menjelaskan pelajaran."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="arabic-display">
+    جَعَلَ النَّاسُ يَغْرِسُونَ الْأَشْجَارَ
+    <small>"Manusia mulai menanam pepohonan."<br>Isim Kada (marfu') + Khabar Kada (fi'il mudhari')</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">جَعَلَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Fi'il naqishah dari kelompok Syuru'.</small></span>
+
+      <span class="word">النَّاسُ</span>
+      <span class="detail"><strong>Isim Kada</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya Mubtada', tetap marfu'.</small></span>
+
+      <span class="word">يَغْرِسُونَ</span>
+      <span class="detail"><strong>Fi'il mudhari' marfu'</strong> — marfu' dengan dhommah (karena bersambung dengan wawu jama'ah). <small>Berkedudukan Khabar Kada. Perhatikan: dalam kelompok Syuru', Khabar-nya bisa berupa fi'il mudhari' tanpa didahului <span class="arab" style="font-size:1.1rem">أَنْ</span>.</small></span>
+
+      <span class="word">الْأَشْجَارَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Objek dari fi'il <span class="arab" style="font-size:1.1rem">يَغْرِسُونَ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Perbedaan Penting: Muqarabah vs Syuru'</h4>
+    <ul>
+      <li><strong>Muqarabah (Kaada):</strong> Khabar-nya <strong>wajib</strong> berupa fi'il mudhari' yang didahului <span class="arab" style="font-size:1.1rem">أَنْ</span>. Contoh: <span class="arab" style="font-size:1.1rem">كَادَ الطَّالِبُ أَنْ يَسْقُطَ</span></li>
+      <li><strong>Syuru' (Ja'ala):</strong> Khabar-nya bisa berupa fi'il mudhari' <strong>tanpa</strong> didahului <span class="arab" style="font-size:1.1rem">أَنْ</span>. Contoh: <span class="arab" style="font-size:1.1rem">جَعَلَ الطَّالِبُ يَدْرُسُ</span></li>
+      <li>Perbedaan ini penting untuk analisis i'rab yang presisi.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       7.5 PERBANDINGAN ISIM KANA DAN ISIM KADA
+       ========================================================= -->
+  <h2 class="section-title" id="s7-5">7.5 Perbandingan <em>Isim Kana dan Isim Kada</em></h2>
+
+  <p>
+    Pemahaman yang kokoh tentang perbedaan antara Isim Kana dan Isim Kada sangat penting. Meskipun keduanya memiliki struktur i'rab yang sama, makna yang dihasilkan sangat berbeda.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Aspek</th><th>Isim Kana</th><th>Isim Kada</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Struktur i'rab</strong></td>
+        <td>Merafa'kan Mubtada', menashabkan Khabar</td>
+        <td>Merafa'kan Mubtada', menashabkan Khabar</td>
+      </tr>
+      <tr>
+        <td><strong>Makna</strong></td>
+        <td>Waktu lampau, keadaan, peniadaan, keberlanjutan</td>
+        <td>Kedekatan (hampir), harapan, permulaan</td>
+      </tr>
+      <tr>
+        <td><strong>Anggota</strong></td>
+        <td>Kana, Ashbaha, Amsa, Laisa, Mazal, dll.</td>
+        <td>Kaada, Haraa, Ja'ala, Akhodza, Thafiqa, dll.</td>
+      </tr>
+      <tr>
+        <td><strong>Bentuk Khabar</strong></td>
+        <td>Isim mufrad, jar-majrur, zharf, dll.</td>
+        <td>Fi'il mudhari' (dengan atau tanpa <span class="arab" style="font-size:1.1rem">أَنْ</span>)</td>
+      </tr>
+      <tr>
+        <td><strong>Contoh</strong></td>
+        <td><span class="arab">كَانَ الْجَوُّ صَافِيًا</span><br>"Udara itu dulu jernih."</td>
+        <td><span class="arab">كَادَ الْجَوُّ أَنْ يَصْفُوَ</span><br>"Udara itu hampir jernih."</td>
+      </tr>
+      <tr>
+        <td><strong>Fungsi</strong></td>
+        <td>Menceritakan keadaan yang sudah terjadi</td>
+        <td>Mengekspresikan kedekatan/harapan/permulaan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="comparison-box">
+    <h5>🔄 Perbandingan Langsung</h5>
+    <div class="comparison-grid">
+      <div class="box">
+        <span class="arab">كَانَ الطَّالِبُ مُجْتَهِدًا</span>
+        <small>"Pelajar itu dulu rajin."</small>
+        <span class="label">Isim Kana (waktu lampau)</span>
+      </div>
+      <div class="arrow">⟷</div>
+      <div class="box">
+        <span class="arab">كَادَ الطَّالِبُ أَنْ يَجْتَهِدَ</span>
+        <small>"Pelajar itu hampir rajin."</small>
+        <span class="label">Isim Kada (hampir terjadi)</span>
+      </div>
+    </div>
+    <div class="comparison-grid">
+      <div class="box">
+        <span class="arab">جَعَلَ الطَّالِبُ يَدْرُسُ</span>
+        <small>"Pelajar itu mulai belajar."</small>
+        <span class="label">Isim Kada (permulaan)</span>
+      </div>
+      <div class="arrow">⟷</div>
+      <div class="box">
+        <span class="arab">حَرَى الطَّالِبُ أَنْ يَدْرُسَ</span>
+        <small>"Pelajar itu diharapkan belajar."</small>
+        <span class="label">Isim Kada (harapan)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Perbandingan dalam Satu Paragraf</h4>
+    <div class="case-content">
+      <span class="arab" style="font-size:1.3rem">كَانَ الْبِيئَةُ نَظِيفَةً فِي الْمَاضِي. كَادَتِ الْأَنْهَارُ أَنْ تَجِفَّ بِسَبَبِ التَّلَوُّثِ. جَعَلَ النَّاسُ يَغْرِسُونَ الْأَشْجَارَ لِإِصْلَاحِ الْبِيئَةِ. حَرَى الْعُلَمَاءُ أَنْ يَجِدُوا حُلُولًا لِهَذِهِ الْمُشْكِلَةِ.</span>
+    </div>
+    <div class="lesson">
+      <strong>Terjemahan:</strong> "Lingkungan dulu bersih di masa lalu. Sungai-sungai hampir kering karena polusi. Manusia mulai menanam pepohonan untuk memperbaiki lingkungan. Para ulama diharapkan menemukan solusi untuk masalah ini."<br><br>
+      <strong>Analisis:</strong> Paragraf ini memadukan <strong>Isim Kana</strong> (<span class="arab" style="font-size:1.2rem">كَانَ</span>) untuk menceritakan keadaan lampau, dan <strong>Isim Kada</strong> dari tiga kelompok: Muqarabah (<span class="arab" style="font-size:1.2rem">كَادَتْ</span>), Syuru' (<span class="arab" style="font-size:1.2rem">جَعَلَ</span>), dan Raja' (<span class="arab" style="font-size:1.2rem">حَرَى</span>).<br><br>
+      <strong>Ta'lil Nahwi:</strong> Penggunaan <span class="arab" style="font-size:1.2rem">كَانَ</span> tepat karena menceritakan keadaan yang sudah terjadi (lingkungan dulu bersih). Penggunaan <span class="arab" style="font-size:1.2rem">كَادَتْ</span> tepat karena sungai belum kering, tapi hampir kering. Penggunaan <span class="arab" style="font-size:1.2rem">جَعَلَ</span> tepat karena manusia sudah mulai menanam pepohonan. Penggunaan <span class="arab" style="font-size:1.2rem">حَرَى</span> tepat karena ulama belum menemukan solusi, tapi diharapkan menemukan.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       7.6 PENGARUH ISIM KADA
+       ========================================================= -->
+  <h2 class="section-title" id="s7-6">7.6 Pengaruh Isim Kada <em>terhadap Hukum i'rab</em></h2>
+
+  <p>
+    Pengaruh Isim Kada terhadap hukum i'rab <strong>sama dengan Isim Kana</strong>: merafa'kan Mubtada' (Isim Kada) dan menashabkan Khabar (Khabar Kada). Namun, ada beberapa kekhususan yang perlu diperhatikan.
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Kaidah Dasar Isim Kada</h4>
+    <ul>
+      <li><strong>Isim Kada (Mubtada'):</strong> Tetap berkedudukan <strong>marfu'</strong> — tidak berubah dari hukum asalnya.</li>
+      <li><strong>Khabar Kada:</strong> Berubah menjadi <strong>manshub</strong> — ini adalah pengaruh utama Isim Kada.</li>
+      <li><strong>Fi'il Kada:</strong> Berkedudukan fi'il ma'lum (aktif) yang membutuhkan Fa'il (biasanya dhamir mustatir).</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title">Tanda-tanda i'rab Khabar Kada</h3>
+
+  <table>
+    <thead>
+      <tr><th>Bentuk Khabar</th><th>Tanda Nashab</th><th>Contoh</th><th>Analisis</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fi'il mudhari' mufrad</strong></td>
+        <td>Fathah zhahirah</td>
+        <td><span class="arab">كَادَ الطَّالِبُ أَنْ يَسْقُطَ</span></td>
+        <td><span class="arab">يَسْقُطَ</span> manshub dengan fathah (karena <span class="arab" style="font-size:1.1rem">أَنْ</span>)</td>
+      </tr>
+      <tr>
+        <td><strong>Fi'il mudhari' jamak mudzakkar salim</strong></td>
+        <td>Tetap dhommah (tidak berubah)</td>
+        <td><span class="arab">جَعَلَ الطُّلَّابُ يَدْرُسُونَ</span></td>
+        <td><span class="arab">يَدْرُسُونَ</span> tetap marfu' dengan dhommah (karena fi'il mudhari' yang tidak masuk kepadanya 'amil nashab)</td>
+      </tr>
+      <tr>
+        <td><strong>Fi'il mudhari' itsna</strong></td>
+        <td>Tetap dhommah (tidak berubah)</td>
+        <td><span class="arab">كَادَ الطَّالِبَانِ أَنْ يَسْقُطَا</span></td>
+        <td><span class="arab">يَسْقُطَا</span> tetap marfu' dengan alif (karena itsna)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Catatan Penting tentang Khabar Kada</h4>
+    <ul>
+      <li>Dalam kelompok <strong>Muqarabah</strong>, Khabar-nya <strong>wajib</strong> berupa fi'il mudhari' yang didahului <span class="arab" style="font-size:1.1rem">أَنْ</span>, sehingga manshub.</li>
+      <li>Dalam kelompok <strong>Syuru'</strong>, Khabar-nya bisa berupa fi'il mudhari' <strong>tanpa</strong> <span class="arab" style="font-size:1.1rem">أَنْ</span>, sehingga tetap marfu'.</li>
+      <li>Dalam kelompok <strong>Raja'</strong>, Khabar-nya biasanya berupa fi'il mudhari' yang didahului <span class="arab" style="font-size:1.1rem">أَنْ</span>, sehingga manshub.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       7.7 ANALISIS TEKS OTENTIK
+       ========================================================= -->
+  <h2 class="section-title" id="s7-7">7.7 Analisis <em>Teks Otentik (Al-Qur'an & Hadis)</em></h2>
+
+  <p>
+    Isim Kada sering muncul dalam Al-Qur'an dan hadis untuk mengekspresikan nuansa makna yang halus. Mari kita analisis beberapa contoh.
+  </p>
+
+  <div class="arabic-display">
+    كَادَتِ السَّمَاوَاتُ يَتَفَطَّرْنَ مِنْهُ
+    <small>— QS. Maryam [19]: 90 (adaptasi)</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">كَادَتْ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>ta' ta'nits</strong> — mabni 'ala fathah. <small>Fi'il naqishah dari kelompok Muqarabah.</small></span>
+
+      <span class="word">السَّمَاوَاتُ</span>
+      <span class="detail"><strong>Isim Kada</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya Mubtada', tetap marfu'.</small></span>
+
+      <span class="word">يَتَفَطَّرْنَ</span>
+      <span class="detail"><strong>Fi'il mudhari' marfu'</strong> — marfu' dengan nun (karena fi'il muannats salim jamak). <small>Berkedudukan Khabar Kada. Perhatikan: dalam beberapa qira'at, fi'il ini manshub dengan fathah.</small></span>
+    </div>
+  </div>
+
+  <div class="arabic-display">
+    كَادُوا يُخْرِجُونَكَ مِنَ الْأَرْضِ
+    <small>— QS. Al-Isra' [17]: 76</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">كَادُوا</span>
+      <span class="detail"><strong>Fi'il madhi</strong> + <strong>wawu jama'ah</strong> — mabni 'ala dhommah. <small>Fi'il naqishah dari kelompok Muqarabah.</small></span>
+
+      <span class="word">(Fa'il)</span>
+      <span class="detail"><strong>Wawu jama'ah</strong> — marfu' dengan dhommah. <small>Fa'il dari <span class="arab" style="font-size:1.1rem">كَادُوا</span>.</small></span>
+
+      <span class="word">يُخْرِجُونَكَ</span>
+      <span class="detail"><strong>Fi'il mudhari' marfu'</strong> + <strong>dhamir nashab</strong> — <span class="arab" style="font-size:1.1rem">يُخْرِجُونَ</span> marfu' dengan dhommah; <span class="arab" style="font-size:1.1rem">كَ</span> manshub sebagai maf'ul bih. <small>Berkedudukan Khabar Kada.</small></span>
+    </div>
+  </div>
+
+  <div class="hadith-box">
+    <h5>📜 Hadis tentang Muqarabah</h5>
+    <div class="arabic-paragraph">
+      كَادَ الْفَقْرُ أَنْ يَكُونَ كُفْرًا
+    </div>
+    <div class="source-info">
+      <strong>Sumber:</strong> Hadis populer (mauquf) | Makna: "Kemiskinan hampir menjadi kekafiran."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">كَادَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Fi'il naqishah dari kelompok Muqarabah.</small></span>
+
+      <span class="word">الْفَقْرُ</span>
+      <span class="detail"><strong>Isim Kada</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya Mubtada', tetap marfu'.</small></span>
+
+      <span class="word">أَنْ</span>
+      <span class="detail"><strong>Huruf mashdariyyah nasb</strong> — mabni 'ala sukun.</span>
+
+      <span class="word">يَكُونَ</span>
+      <span class="detail"><strong>Fi'il mudhari' manshub</strong> — manshub dengan fathah (karena <span class="arab" style="font-size:1.1rem">أَنْ</span>). <small>Fi'il naqishah (dari kelompok Isim Kana) yang masuk ke jumla ismiyyah.</small></span>
+
+      <span class="word">كُفْرًا</span>
+      <span class="detail"><strong>Khabar يكون</strong> — manshub dengan fathah. <small>Khabar dari fi'il <span class="arab" style="font-size:1.1rem">يَكُونَ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Struktur Berlapis dalam Hadis</h4>
+    <div class="case-content">
+      Hadis <span class="arab" style="font-size:1.3rem">كَادَ الْفَقْرُ أَنْ يَكُونَ كُفْرًا</span> menunjukkan <strong>struktur berlapis</strong>: Isim Kada (<span class="arab" style="font-size:1.2rem">كَادَ</span>) masuk ke jumla ismiyyah, lalu di dalamnya terdapat Isim Kana (<span class="arab" style="font-size:1.2rem">يَكُونَ</span>) yang masuk ke jumla ismiyyah lagi.<br><br>
+      <strong>Struktur:</strong><br>
+      • <span class="arab" style="font-size:1.2rem">كَادَ</span> = Isim Kada (Muqarabah)<br>
+      • <span class="arab" style="font-size:1.2rem">الْفَقْرُ</span> = Isim Kada (marfu')<br>
+      • <span class="arab" style="font-size:1.2rem">أَنْ يَكُونَ كُفْرًا</span> = Khabar Kada (mashdar mu'awwal)<br>
+      • <span class="arab" style="font-size:1.2rem">يَكُونَ</span> = Fi'il naqishah (Isim Kana)<br>
+      • <span class="arab" style="font-size:1.2rem">كُفْرًا</span> = Khabar يكون (manshub)
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Bahasa Arab memungkinkan struktur berlapis di mana Isim Kada dan Isim Kana dapat bekerja secara bersamaan. Mahasiswa PBA perlu memahami struktur ini agar mampu membaca hadis-hadis kompleks dengan tepat.
+    </div>
+  </div>
+
+  <!-- =========================================================
+       7.8 APLIKASI: LINGKUNGAN
+       ========================================================= -->
+  <h2 class="section-title" id="s7-8">7.8 Aplikasi: <em>Kalimat Bertema Lingkungan</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang Isim Kada, mari kita konstruksi kalimat-kalimat bertema lingkungan dengan menggunakan berbagai kelompok Isim Kada.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Kalimat dengan Isim Kada Bertema Lingkungan</h5>
+    <div class="arabic-paragraph">
+      ١. كَادَتِ الْأَرْضُ أَنْ تَهْلِكَ بِالتَّلَوُّثِ (Muqarabah)<br>
+      ٢. كَادَ الْمَاءُ أَنْ يَجِفَّ فِي بَعْضِ الْمَنَاطِقِ (Muqarabah)<br>
+      ٣. جَعَلَ النَّاسُ يَغْرِسُونَ الْأَشْجَارَ (Syuru')<br>
+      ٤. أَخَذَتِ الْحُكُومَةُ تُطَبِّقُ سِيَاسَاتٍ بِيئِيَّةً (Syuru')<br>
+      ٥. حَرَى الْعُلَمَاءُ أَنْ يَجِدُوا حُلُولًا لِهَذِهِ الْمُشْكِلَةِ (Raja')
+    </div>
+    <div class="translation">
+      1. Bumi hampir binasa karena polusi. (Muqarabah)<br>
+      2. Air hampir kering di beberapa wilayah. (Muqarabah)<br>
+      3. Manusia mulai menanam pepohonan. (Syuru')<br>
+      5. Pemerintah mulai menerapkan kebijakan lingkungan. (Syuru')<br>
+      5. Para ulama diharapkan menemukan solusi untuk masalah ini. (Raja')
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 3 (Syuru')</h5>
+    <div class="word-analysis">
+      <span class="word">جَعَلَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Fi'il naqishah dari kelompok Syuru'.</small></span>
+
+      <span class="word">النَّاسُ</span>
+      <span class="detail"><strong>Isim Kada</strong> — marfu' dengan dhommah zhahirah. <small>Asalnya Mubtada', tetap marfu'.</small></span>
+
+      <span class="word">يَغْرِسُونَ</span>
+      <span class="detail"><strong>Fi'il mudhari' marfu'</strong> — marfu' dengan dhommah (karena bersambung dengan wawu jama'ah). <small>Berkedudukan Khabar Kada. Perhatikan: dalam Syuru', Khabar-nya bisa berupa fi'il mudhari' tanpa <span class="arab" style="font-size:1.1rem">أَنْ</span>.</small></span>
+
+      <span class="word">الْأَشْجَارَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah. <small>Objek dari fi'il <span class="arab" style="font-size:1.1rem">يَغْرِسُونَ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Mengonstruksi Kalimat dengan Isim Kada</h4>
+    <ul>
+      <li><strong>Pilih kelompok yang sesuai:</strong> Gunakan Muqarabah untuk "hampir", Raja' untuk "diharapkan", Syuru' untuk "mulai".</li>
+      <li><strong>Perhatikan struktur Khabar:</strong> Muqarabah dan Raja' biasanya menggunakan <span class="arab" style="font-size:1.1rem">أَنْ</span> + fi'il mudhari'; Syuru' bisa tanpa <span class="arab" style="font-size:1.1rem">أَنْ</span>.</li>
+      <li><strong>Perhatikan kesesuaian:</strong> Isim Kada harus sesuai dengan fi'il dalam hal jenis (mudzakkar/muannats).</li>
+      <li><strong>Integrasikan nilai-nilai:</strong> Gunakan tema-tema yang relevan dengan kehidupan dan nilai-nilai keislaman.</li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       7.9 TUGAS PERTEMUAN 7
+       ========================================================= -->
+  <h2 class="section-title" id="s7-9">7.9 Tugas <em>Pertemuan 7</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Membandingkan penggunaan <strong>Isim Kada</strong> dan <strong>Isim Kana</strong> dalam satu paragraf, lalu memberikan argumentasi logis (<em>ta'lil</em>).</li>
+      <li>Paragraf harus:</li>
+      <li style="padding-left:2.5rem">— Minimal 100 kata dalam bahasa Arab</li>
+      <li style="padding-left:2.5rem">— Bertema lingkungan atau keislaman</li>
+      <li style="padding-left:2.5rem">— Menggunakan minimal 2 Isim Kana dan 3 Isim Kada (dari kelompok berbeda)</li>
+      <li>Untuk setiap penggunaan Isim Kana/Kada:</li>
+      <li style="padding-left:2.5rem">— Identifikasi jenisnya (Kana, Muqarabah, Raja', Syuru')</li>
+      <li style="padding-left:2.5rem">— Tentukan Isim dan Khabar-nya</li>
+      <li style="padding-left:2.5rem">— Berikan ta'lil: mengapa fi'il tersebut dipilih? Mengapa tidak diganti dengan fi'il lain?</li>
+      <li>Sertakan terjemahan Indonesia di bawah paragraf Arab.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Merangkum materi Pertemuan 7 (Isim Kada) secara sistematis.</li>
+      <li>Rangkuman harus mencakup:</li>
+      <li style="padding-left:2.5rem">— Definisi dan konsep Isim Kada</li>
+      <li style="padding-left:2.5rem">— Tiga kelompok Isim Kada (Muqarabah, Raja', Syuru')</li>
+      <li style="padding-left:2.5rem">— Perbandingan dengan Isim Kana</li>
+      <li style="padding-left:2.5rem">— Pengaruh terhadap hukum i'rab</li>
+      <li>Sumber: kitab <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>An-Nahw al-Wadhih</em> (Al-Jarim & Amin).</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Contoh Tugas Mandiri (Sebagai Inspirasi)</h4>
+    <p style="margin-bottom:1rem"><strong>Paragraf:</strong></p>
+    <div class="env-text" style="margin-bottom:1rem">
+      <div class="arabic-paragraph">
+        كَانَتِ الْبِيئَةُ نَظِيفَةً فِي الْعَصْرِ الذَّهَبِيِّ لِلْإِسْلَامِ. كَادَ التَّلَوُّثُ أَنْ يُدَمِّرَ الْبِيئَةَ فِي الْقَرْنِ الْعِشْرِينَ. جَعَلَ الْعُلَمَاءُ يَبْحَثُونَ عَنْ حُلُولٍ لِهَذِهِ الْمُشْكِلَةِ. حَرَى الْحُكُومَاتُ أَنْ تَتَعَاوَنَ لِحِفْظِ الْبِيئَةِ. طَفِقَ النَّاسُ يَغْرِسُونَ الْأَشْجَارَ فِي كُلِّ مَكَانٍ.
+      </div>
+      <div class="translation">
+        "Lingkungan dulu bersih di masa keemasan Islam. Polusi hampir merusak lingkungan di abad ke-20. Para ulama mulai mencari solusi untuk masalah ini. Pemerintah diharapkan bekerja sama untuk menjaga lingkungan. Manusia mulai menanam pepohonan di setiap tempat."
+      </div>
+    </div>
+    <p><strong>Ta'lil:</strong></p>
+    <ul style="list-style:none;padding:0">
+      <li>• <span class="arab" style="font-size:1.1rem">كَانَتِ</span> (Isim Kana): dipilih karena menceritakan keadaan lampau yang sudah terjadi.</li>
+      <li>• <span class="arab" style="font-size:1.1rem">كَادَ</span> (Muqarabah): dipilih karena polusi belum benar-benar merusak, tapi hampir.</li>
+      <li>• <span class="arab" style="font-size:1.1rem">جَعَلَ</span> (Syuru'): dipilih karena ulama sudah mulai mencari solusi.</li>
+      <li>• <span class="arab" style="font-size:1.1rem">حَرَى</span> (Raja'): dipilih karena kerja sama pemerintah belum terjadi, tapi diharapkan.</li>
+      <li>• <span class="arab" style="font-size:1.1rem">طَفِقَ</span> (Syuru'): dipilih karena manusia sudah mulai menanam pepohonan.</li>
+    </ul>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Pembelajaran</h4>
+    <p>
+      Melalui tugas ini, mahasiswa tidak hanya menguji pemahaman teoretis tentang Isim Kada, tetapi juga melatih kemampuan analitis dan kritis dalam memberikan ta'lil nahwi. Kemampuan membandingkan Isim Kana dan Isim Kada dalam satu paragraf akan memperkaya kompetensi mahasiswa dalam menganalisis dan memproduksi teks Arab yang kaya nuansa makna.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       7.10 PETA KONSEP & GLOSARIUM
+       ========================================================= -->
+  <h2 class="section-title" id="s7-10">7.10 Peta Konsep <em>& Glosarium</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep Isim Kada</h4>
+    <div class="map-center">
+      <div class="core">ISIM KADA</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Fi'il naqishah yang merafa'kan Mubtada' dan menashabkan Khabar</p>
+        <ul>
+          <li>Isim tetap marfu'</li>
+          <li>Khabar menjadi manshub</li>
+          <li>Menunjukkan kedekatan/harapan/permulaan</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Tiga Kelompok</h5>
+        <ul>
+          <li><strong>Muqarabah:</strong> Kaada, Karaaba, Asyrafa</li>
+          <li><strong>Raja':</strong> Haraa, Fa'ala, Wada'a</li>
+          <li><strong>Syuru':</strong> Ja'ala, Akhodza, Thafiqa</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Perbedaan dengan Isim Kana</h5>
+        <ul>
+          <li>Struktur sama: rafa'-nashab</li>
+          <li>Makna berbeda: lampau vs kedekatan/harapan/permulaan</li>
+          <li>Bentuk Khabar berbeda</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Syarat Amal</h5>
+        <ul>
+          <li>Khabar berupa fi'il mudhari'</li>
+          <li>Fi'il kembali kepada Isim</li>
+          <li>Tidak didahului Kana</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📖 Glosarium Istilah Isim Kada</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Isim Kada</strong><span class="arab">اسْمُ كَادَ</span></div>
+        <p>Fi'il naqishah yang merafa'kan Mubtada' dan menashabkan Khabar dengan makna kedekatan/harapan/permulaan.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Muqarabah</strong><span class="arab">مُقَارَبَة</span></div>
+        <p>Kelompok Isim Kada yang menunjukkan "kedekatan waktu" (hampir terjadi).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Raja'</strong><span class="arab">رَجَاء</span></div>
+        <p>Kelompok Isim Kada yang menunjukkan "harapan" (diharapkan terjadi).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Syuru'</strong><span class="arab">شُرُوع</span></div>
+        <p>Kelompok Isim Kada yang menunjukkan "permulaan" (mulai terjadi).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Kaada</strong><span class="arab">كَادَ</span></div>
+        <p>Fi'il dari kelompok Muqarabah yang bermakna "hampir".</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ja'ala</strong><span class="arab">جَعَلَ</span></div>
+        <p>Fi'il dari kelompok Syuru' yang bermakna "mulai" atau "menjadikan".</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Haraa</strong><span class="arab">حَرَى</span></div>
+        <p>Fi'il dari kelompok Raja' yang bermakna "berharap".</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Fi'il Naqishah</strong><span class="arab">فِعْلٌ نَاقِص</span></div>
+        <p>Fi'il yang tidak membutuhkan maf'ul bih, tetapi membutuhkan isim dan khabar.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Mashdar Mu'awwal</strong><span class="arab">مَصْدَرٌ مُؤَوَّل</span></div>
+        <p>Konstruk <span class="arab" style="font-size:1.1rem">أَنْ</span> + fi'il mudhari' yang ditakwil menjadi mashdar.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Ta'lil Nahwi</strong><span class="arab">تَعْلِيلٌ نَحْوِيّ</span></div>
+        <p>Argumentasi logis untuk memvalidasi pemilihan fi'il tertentu dalam konteks tertentu.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Nawasikh</strong><span class="arab">نَوَاسِخ</span></div>
+        <p>Amil-amil yang mengubah hukum Mubtada'-Khabar (Kana, Inna, Kada, dll).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Isim Kana</strong><span class="arab">اسْمُ كَانَ</span></div>
+        <p>Fi'il naqishah yang merafa'kan Mubtada' dan menashabkan Khabar dengan makna waktu lampau.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 7</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep Isim Kada — dari definisi dan hakikatnya, tiga kelompok utama (Muqarabah, Raja', Syuru'), perbandingan dengan Isim Kana, pengaruh terhadap hukum i'rab, analisis teks otentik, hingga aplikasi praktis dalam konstruksi kalimat bertema lingkungan. Ingatlah, Isim Kada adalah alat linguistik yang sangat halus — ia mampu membedakan antara "hampir terjadi", "diharapkan terjadi", dan "mulai terjadi". Sebagai calon guru bahasa Arab, penguasaan terhadap Isim Kada akan menjadi modal berharga dalam mengajarkan nuansa makna bahasa Arab kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       KESIMPULAN
+       ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 7</h3>
+    <p>
+      Pertemuan ketujuh ini telah membahas secara komprehensif tentang Isim Kada — kelompok nawasikh yang memiliki kemiripan struktur dengan Isim Kana tetapi perbedaan makna. Mahasiswa telah memahami konsep dan definisi Isim Kada, tiga kelompok utama (Muqarabah, Raja', Syuru') beserta anggotanya, syarat-syarat amal, perbandingan dengan Isim Kana, serta pengaruhnya terhadap hukum i'rab.
+    </p>
+    <p>
+      Melalui analisis teks otentik dari Al-Qur'an dan hadis, mahasiswa telah berlatih mengidentifikasi Isim Kada dalam teks keislaman. Aplikasi melalui konstruksi kalimat bertema lingkungan dan tugas membandingkan Isim Kana dan Isim Kada dalam satu paragraf telah menunjukkan relevansi Isim Kada dalam konteks kontemporer dan kepedulian terhadap isu global.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 8 yang akan menjadi <strong>Ujian Tengah Semester (UTS)</strong> — evaluasi komprehensif terhadap materi pertemuan 1–7. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       DAFTAR PUSTAKA
+       ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Anbari, Ibnu. <em>Al-Mufrad fi Ushul an-Nahw</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="6.html">← Pertemuan 6: Isim Kana</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="8.html">Pertemuan 8: UTS →</a>
+  </div>
+
+</section>
+
+<!-- =========================================================
+     UJI FORMATIF
+     ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 7</span>
+      <h2>Isim Kada: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Muqarabah, Raja', dan Syuru'</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Konsep, tiga kelompok Isim Kada, perbandingan dengan Isim Kana, analisis hadis</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">كَادَ الطَّالِبُ أَنْ يَسْقُطَ</span>, kata <span class="arab">كَادَ</span> termasuk kelompok Isim Kada...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Raja' (harapan)</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Syuru' (permulaan)</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Muqarabah (kedekatan)</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Isim Kana (waktu lampau)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>2.</strong> Pengaruh Isim Kada terhadap hukum i'rab Mubtada' dan Khabar adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Menashabkan keduanya</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Merafa'kan Mubtada' dan menashabkan Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Menashabkan Mubtada' dan merafa'kan Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Merafa'kan keduanya</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Fi'il <span class="arab">جَعَلَ</span> termasuk kelompok Isim Kada...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Syuru' (permulaan)</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Muqarabah (kedekatan)</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Raja' (harapan)</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Isim Kana (waktu lampau)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>4.</strong> Perbedaan utama antara Isim Kana dan Isim Kada adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a. Struktur i'rabnya berbeda</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b. Jumlah anggotanya berbeda</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c. Bentuk Isim-nya berbeda</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d. Maknanya berbeda: Isim Kana menunjukkan waktu lampau, Isim Kada menunjukkan kedekatan/harapan/permulaan</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Dalam kalimat <span class="arab">جَعَلَ الطَّالِبُ يَدْرُسُ</span>, kata <span class="arab">يَدْرُسُ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Isim Kada</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Khabar Kada (marfu')</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Khabar Kada (manshub)</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Fa'il</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> Syarat agar Kaada dapat "beramal" adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Khabar berupa isim mufrad</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Khabar berupa jar-majrur</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Khabar berupa fi'il mudhari' yang didahului <span class="arab" style="font-size:1.1rem">أَنْ</span></label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. Khabar berupa zharf</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Fi'il <span class="arab">حَرَى</span> termasuk kelompok Isim Kada...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Raja' (harapan)</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Muqarabah (kedekatan)</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Syuru' (permulaan)</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Isim Kana (waktu lampau)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Dalam kalimat <span class="arab">كَادَتِ الْأَرْضُ أَنْ تَهْلِكَ</span>, kata <span class="arab">الْأَرْضُ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Khabar Kada</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. Maf'ul bih</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Fa'il</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Isim Kada (marfu')</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Perbedaan antara kelompok Muqarabah dan Syuru' adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Muqarabah menggunakan <span class="arab" style="font-size:1.1rem">أَنْ</span>, Syuru' tidak</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Muqarabah menunjukkan "hampir", Syuru' menunjukkan "mulai"</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Muqarabeth untuk masa lampau, Syuru' untuk masa depan</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Tidak ada perbedaan</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Dalam hadis <span class="arab">كَادَ الْفَقْرُ أَنْ يَكُونَ كُفْرًا</span>, struktur yang terkandung adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Hanya Isim Kada</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Hanya Isim Kana</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Struktur berlapis: Isim Kada (<span class="arab" style="font-size:1.1rem">كَادَ</span>) + Isim Kana (<span class="arab" style="font-size:1.1rem">يَكُونَ</span>)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Tidak ada Isim Kada maupun Isim Kana</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat Isim Kada menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda (dalam bahasa Arab), dan analisislah perbedaan antara Isim Kana dan Isim Kada!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>2.</strong> Jelaskan tiga kelompok Isim Kada (Muqarabah, Raja', Syuru')! Berikan masing-masing minimal 3 anggota beserta contoh penggunaan dalam kalimat, dan analisislah i'rabnya!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>3.</strong> Analisislah syarat-syarat amal Kaada (dan saudara-saudaranya)! Berikan contoh kalimat yang memenuhi syarat dan contoh kalimat yang tidak memenuhi syarat, serta jelaskan alasannya!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>4.</strong> Identifikasi minimal 2 contoh penggunaan Isim Kada dalam Al-Qur'an atau hadis! Berikan analisis i'rab lengkap untuk setiap contoh, dan jelaskan makna yang ditambahkan oleh Isim Kada dalam konteks tersebut!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>5.</strong> Susunlah sebuah <strong>paragraf</strong> (minimal 100 kata) bertema <strong>"Pelestarian Lingkungan"</strong> yang menggunakan minimal <strong>2 Isim Kana</strong> dan <strong>3 Isim Kada</strong> (dari kelompok berbeda: Muqarabah, Raja', Syuru')! Sertakan terjemahan Indonesia dan <strong>ta'lil nahwi</strong> untuk setiap penggunaan Isim Kana/Kada (mengapa fi'il tersebut dipilih)?</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Uji Formatif</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+function submitQuiz(){
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 10;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    alert('⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!');
+    return;
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 5;
+    else if(answer.length < 150) scoreEssay += 10;
+    else if(answer.length < 300) scoreEssay += 15;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    pertemuan: 7,
+    topik: 'Isim Kada',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    konsentrasi: document.getElementById('konsentrasi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJI FORMATIF - PERTEMUAN 7
+  An-Nahw lil Mutawassithin
+  Topik: Isim Kada
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Konsentrasi : ${r.konsentrasi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL NILAI     : ${r.total}/100
+NILAI HURUF     : ${r.grade}
+STATUS          : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UjiFormatif_P7_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil Uji Formatif P7 (Isim Kada) - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Uji Formatif Pertemuan 7 (Isim Kada) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG)   : ${r.scorePG}/100
+Bagian B (Essay): ${r.scoreEssay}/100
+TOTAL           : ${r.total}/100
+Grade           : ${r.grade}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal?')) return;
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

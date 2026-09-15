@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>UTS — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Ujian Tengah Semester: An-Nahw lil Mutawassithin — 20 soal PG HOTS dan 5 soal Essay, materi Pertemuan 1–7." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--cream);line-height:1.7;overflow-x:hidden;
+  background-image:radial-gradient(circle at 15% 20%,rgba(201,169,97,.08) 0%,transparent 40%),radial-gradient(circle at 85% 80%,rgba(201,169,97,.06) 0%,transparent 40%);
+}
+.bg-ornament{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(201,169,97,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,.03) 1px,transparent 1px);
+  background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
+}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+
+/* HERO */
+.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:9rem 8% 3rem;position:relative;z-index:1}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .chapter-label{display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;color:var(--ink);margin-bottom:1.5rem;padding:.6rem 2rem;
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);border-radius:2px;font-weight:700;
+}
+.hero h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3.5rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1rem;max-width:900px}
+.hero h1 .accent{background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dark) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.hero-arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);margin:.8rem 0 1.2rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.15rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+
+/* INFO CARDS */
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:900px;margin:2rem auto 0;position:relative;z-index:1}
+.info-card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:6px;padding:1.2rem;text-align:center}
+.info-card .num{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.info-card .label{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+
+/* QUIZ SECTION */
+.quiz-section{padding:4rem 8%;position:relative;z-index:1}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{display:inline-block;padding:.5rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);
+  color:var(--ink);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem;
+}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--cream);margin-bottom:.8rem}
+.quiz-header h2 em{background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+
+/* TIMER */
+.timer-bar{display:flex;justify-content:center;align-items:center;gap:1rem;margin-bottom:2rem;padding:1rem;background:rgba(201,169,97,.06);border:1px solid var(--line);border-radius:6px}
+.timer-bar .timer-icon{font-size:1.5rem;color:var(--gold)}
+.timer-bar .timer-display{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--gold);letter-spacing:3px}
+.timer-bar .timer-label{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
+/* FORM */
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input,.form-group select{padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+
+/* QUIZ PART */
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+
+/* MC QUESTION */
+.mc-question{padding:1.8rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-num{display:inline-block;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);
+  font-family:var(--serif);font-weight:700;font-size:.85rem;padding:.3rem .8rem;border-radius:3px;margin-bottom:.8rem;
+}
+.mc-question .q-narration{background:rgba(201,169,97,.04);border-left:3px solid var(--gold);padding:1rem 1.2rem;margin-bottom:1rem;border-radius:0 4px 4px 0;
+  font-family:var(--serif-2);font-size:.95rem;color:var(--cream);line-height:1.8;
+}
+.mc-question .q-narration .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6;font-weight:600}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.5rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.93rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+
+/* ESSAY */
+.essay-question{padding:1.8rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-num{display:inline-block;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);
+  font-family:var(--serif);font-weight:700;font-size:.85rem;padding:.3rem .8rem;border-radius:3px;margin-bottom:.8rem;
+}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question .q-text .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.essay-question textarea{width:100%;min-height:140px;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+
+/* BUTTONS */
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;display:inline-flex;align-items:center;gap:.6rem}
+.btn-submit{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf,.btn-score,.btn-email,.btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover,.btn-score:hover,.btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+
+/* RESULT */
+.result-box{display:none;background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+
+/* FOOTER */
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .info-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; UTS
+  </div>
+  <span class="chapter-label">UJIAN TENGAH SEMESTER</span>
+  <h1>UTS: <span class="accent">An-Nahw lil Mutawassithin</span></h1>
+  <div class="hero-arabic">الِامْتِحَانُ النَّصْفِيُّ</div>
+  <p class="subtitle">Materi Pertemuan 1–7 · 20 Soal PG HOTS (C4–C6) · 5 Soal Essay · Waktu: 120 Menit</p>
+
+  <div class="info-grid">
+    <div class="info-card"><div class="num">20</div><div class="label">Soal PG HOTS</div></div>
+    <div class="info-card"><div class="num">5</div><div class="label">Soal Essay</div></div>
+    <div class="info-card"><div class="num">120</div><div class="label">Menit</div></div>
+    <div class="info-card"><div class="num">1–7</div><div class="label">Bab Materi</div></div>
+  </div>
+
+  <div class="hero-actions" style="margin-top:2rem">
+    <a href="7.html" class="btn btn-outline">← Pertemuan 7</a>
+    <a href="#quiz" class="btn btn-primary">Mulai Ujian ↓</a>
+  </div>
+</header>
+
+<!-- ========================================================= -->
+<!-- QUIZ SECTION -->
+<!-- ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📝 UJIAN TENGAH SEMESTER</span>
+      <h2>An-Nahw lil Mutawassithin — <em>Pertemuan 1–7</em></h2>
+      <p>📋 Bagian A: 20 Soal PG HOTS (skor 5/soal = 100) · ✍️ Bagian B: 5 Soal Essay (skor 20/soal = 100)<br>
+      🎯 Level Kognitif: C4 (Menganalisis), C5 (Mengevaluasi), C6 (Mencipta)</p>
+    </div>
+
+    <div class="timer-bar">
+      <span class="timer-icon">⏱</span>
+      <div>
+        <div class="timer-display" id="timerDisplay">120:00</div>
+        <div class="timer-label">Sisa Waktu</div>
+      </div>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Ujian ini bersifat individual. Dilarang membuka catatan, buku, atau sumber lain. Mohon lengkapi semua data dan jawaban sebelum mengirimkan!
+    </div>
+
+    <!-- DATA MAHASISWA -->
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+        <div class="form-group">
+          <label>No. Meja / Absen</label>
+          <input type="text" id="absen" placeholder="Contoh: 12">
+        </div>
+      </div>
+    </form>
+
+    <!-- ========================================================= -->
+    <!-- BAGIAN A: 20 SOAL PG HOTS -->
+    <!-- ========================================================= -->
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda HOTS (20 Soal)</h3>
+      <p class="part-desc">⚠ Setiap soal memiliki narasi berupa teori atau kasus. Pilih SATU jawaban yang paling tepat dari 5 opsi (A–E). Skor: 5 poin/soal.</p>
+
+      <!-- SOAL 1 — Bab 1: Prolog (C5-Evaluasi) -->
+      <div class="mc-question" data-correct="c">
+        <span class="q-num">Soal 1 · Bab 1 · C5</span>
+        <div class="q-narration">
+          Seorang penerjemah menerjemahkan ayat <span class="arab">وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ</span> (QS. Al-Baqarah: 196) menjadi: <em>"Sempurnakanlah haji, dan umrah itu milik Allah."</em> Seorang ulama nahwu mengkritik terjemahan tersebut karena penerjemah mengabaikan i'rab kata <span class="arab">الْعُمْرَةَ</span> yang seharusnya nashab sebagai maf'ul bih yang di'athaf-kan, bukan rafa' sebagai mubtada'.
+        </div>
+        <div class="q-text">Berdasarkan kasus di atas, evaluasi manakah yang paling tepat menjelaskan dampak kesalahan i'rab terhadap pemahaman hukum fiqh?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">A. Kesalahan i'rab tidak berdampak pada hukum fiqh karena makna keseluruhan ayat tetap dapat dipahami dari konteks.</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">B. Kesalahan i'rab hanya berdampak pada aspek balaghah (keindahan bahasa), bukan pada hukum fiqh.</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">C. Kesalahan i'rab mengubah status hukum umrah dari wajib (karena di'athaf-kan pada haji yang wajib) menjadi sekadar informasi bahwa umrah milik Allah, sehingga menghilangkan kewajiban umrah.</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">D. Kesalahan i'rab hanya berdampak pada Mazhab Kufah, sedangkan Mazhab Basrah tetap memahami umrah sebagai wajib.</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1e" value="e"><label for="q1e">E. Kesalahan i'rab menyebabkan ayat tersebut menjadi tidak gramatikal sehingga tidak dapat dijadikan dalil hukum sama sekali.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 2 — Bab 1: Prolog (C4-Analisis) -->
+      <div class="mc-question" data-correct="d">
+        <span class="q-num">Soal 2 · Bab 1 · C4</span>
+        <div class="q-narration">
+          Dalam teori linguistik modern, Chomsky (1981) memperkenalkan konsep <em>Government and Binding</em> yang menjelaskan bahwa setiap kata dalam kalimat memiliki hubungan hierarkis. Konsep ini memiliki padanan dalam nahwu klasik, yaitu konsep <em>'awamil</em> (faktor-faktor yang mengubah i'rab). Misalnya, fi'il <span class="arab">كَتَبَ</span> menjadi 'amil yang merafa'kan <span class="arab">الطَّالِبُ</span> sebagai Fa'il.
+        </div>
+        <div class="q-text">Berdasarkan integrasi teori Chomsky dan konsep 'awamil dalam nahwu, analisis manakah yang paling tepat?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">A. Teori Chomsky menolak konsep 'awamil karena bahasa Arab tidak memiliki struktur hierarkis seperti bahasa Inggris.</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">B. Konsep 'awamil identik dengan teori X-bar dalam semua aspek, sehingga tidak ada perbedaan antara nahwu klasik dan linguistik modern.</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">C. Teori Chomsky hanya berlaku untuk bahasa Indo-Eropa dan tidak dapat diterapkan pada bahasa Arab sama sekali.</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">D. Konsep 'awamil dalam nahwu klasik sejalan dengan konsep Government dalam teori Chomsky — keduanya menjelaskan bagaimana suatu kata "mengatur" bentuk kata lain dalam struktur hierarkis kalimat.</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2e" value="e"><label for="q2e">E. Konsep 'awamil lebih unggul dari teori Chomsky karena nahwu klasik sudah ada sejak abad ke-2 Hijriah.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 3 — Bab 2: Fa'il (C4-Analisis) -->
+      <div class="mc-question" data-correct="b">
+        <span class="q-num">Soal 3 · Bab 2 · C4</span>
+        <div class="q-narration">
+          Perhatikan ayat berikut: <span class="arab">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</span> (QS. Al-Fatihah: 5). Dalam ayat ini, fi'il <span class="arab">نَعْبُدُ</span> dan <span class="arab">نَسْتَعِينُ</span> masing-masing memiliki Fa'il. Seorang mahasiswa mengidentifikasi Fa'il-nya sebagai dhamir bariz <span class="arab">نَحْنُ</span> yang disebutkan secara zhahir.
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat mengoreksi identifikasi mahasiswa tersebut?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">A. Fa'il-nya bukan dhamir bariz, melainkan isim zhahir <span class="arab">إِيَّاكَ</span> yang didahulukan.</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">B. Fa'il-nya adalah dhamir mustatir wajib taqdiruhu <span class="arab">نَحْنُ</span>, bukan dhamir bariz, karena bentuk fi'il sudah menunjukkan orang pertama jamak sehingga dhamir tidak perlu disebutkan secara zhahir.</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">C. Fa'il-nya adalah dhamir mustatir jaiz taqdiruhu <span class="arab">هُوَ</span>, karena fi'il mudhari' bisa merujuk kepada siapa saja.</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">D. Fa'il-nya adalah <span class="arab">إِيَّاكَ</span> yang berkedudukan sebagai Fa'il muqaddam (Fa'il yang didahulukan).</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3e" value="e"><label for="q3e">E. Ayat ini tidak memiliki Fa'il karena merupakan jumlah ismiyyah, bukan jumlah fi'liyyah.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 4 — Bab 2: Fa'il (C5-Evaluasi) -->
+      <div class="mc-question" data-correct="a">
+        <span class="q-num">Soal 4 · Bab 2 · C5</span>
+        <div class="q-narration">
+          Mazhab Basrah berpendapat bahwa Fa'il tidak boleh berupa jumlah (kalimat) secara langsung — harus ditakwilkan menjadi isim mufrad terlebih dahulu. Sementara Mazhab Kufah membolehkan Fa'il berupa jumlah tanpa takwil. Perhatikan kalimat: <span class="arab">يَسُرُّنِي أَنْ تَزُورَنِي</span> ("Aku senang engkau mengunjungiku").
+        </div>
+        <div class="q-text">Evaluasi manakah yang paling tepat menilai kekuatan argumentasi kedua mazhab dalam konteks kalimat di atas?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">A. Argumentasi Basrah lebih kuat secara sistematis karena takwil <span class="arab">أَنْ تَزُورَنِي</span> menjadi <span class="arab">زِيَارَتُكَ</span> menjaga konsistensi kaidah bahwa Fa'il harus berupa isim mufrad; namun argumentasi Kufah lebih deskriptif karena mencerminkan penggunaan nyata bahasa Arab.</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">B. Argumentasi Kufah sepenuhnya salah karena jumlah tidak mungkin menjadi Fa'il dalam bahasa Arab manapun.</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">C. Argumentasi Basrah sepenuhnya salah karena takwil adalah konsep yang dibuat-buat dan tidak ada dasarnya dalam Al-Qur'an.</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">D. Kedua mazhab sama-sama salah karena <span class="arab">أَنْ تَزُورَنِي</span> bukan Fa'il melainkan Maf'ul bih.</label></div>
+          <div class="mc-option"><input type="radio" name="q4" id="q4e" value="e"><label for="q4e">E. Perbedaan ini tidak relevan karena kalimat tersebut tidak mengandung Fa'il sama sekali.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 5 — Bab 2: Fa'il (C4-Analisis) -->
+      <div class="mc-question" data-correct="c">
+        <span class="q-num">Soal 5 · Bab 2 · C4</span>
+        <div class="q-narration">
+          Dalam teks berita Arab kontemporer ditemukan kalimat: <span class="arab">أَصْدَرَ رَأِيسُ الْجَامِعَةِ قَرَارًا جَدِيدًا</span>. Seorang siswa MTs mengira bahwa <span class="arab">رَأِيسُ</span> adalah Mubtada' karena berada di tengah kalimat dan berharakat dhommah.
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat mengoreksi kesalahan siswa tersebut?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">A. <span class="arab">رَأِيسُ</span> memang Mubtada' karena berharakat dhommah dan berada setelah fi'il.</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">B. <span class="arab">رَأِيسُ</span> adalah Khabar dari Mubtada' yang tersembunyi.</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">C. <span class="arab">رَأِيسُ</span> adalah Fa'il zhahir dari fi'il <span class="arab">أَصْدَرَ</span> — berharakat dhommah karena Fa'il selalu marfu', dan posisinya setelah fi'il adalah susunan standar jumlah fi'liyyah (fi'il + Fa'il + Maf'ul Bih).</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">D. <span class="arab">رَأِيسُ</span> adalah Na'ibul Fa'il karena fi'il <span class="arab">أَصْدَرَ</span> adalah fi'il majhul.</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5e" value="e"><label for="q5e">E. <span class="arab">رَأِيسُ</span> adalah Maf'ul bih yang didahulukan (maf'ul bih muqaddam).</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 6 — Bab 3: Na'ibul Fa'il (C5-Evaluasi) -->
+      <div class="mc-question" data-correct="d">
+        <span class="q-num">Soal 6 · Bab 3 · C5</span>
+        <div class="q-narration">
+          Seorang mahasiswa mentransformasikan kalimat aktif <span class="arab">كَتَبَ الطَّالِبُ الدَّرْسَ</span> menjadi kalimat pasif <span class="arab">كُتِبَ الدَّرْسُ</span>. Ia kemudian mentransformasikan kalimat <span class="arab">ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ</span> menjadi <span class="arab">ذُهِبَ إِلَى الْمَدْرَسَةِ</span> dan mengklaim bahwa <span class="arab">إِلَى الْمَدْرَسَةِ</span> adalah Na'ibul Fa'il.
+        </div>
+        <div class="q-text">Evaluasi manakah yang paling tepat menilai kesalahan transformasi kedua?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">A. Transformasi kedua benar karena semua fi'il dapat dipasifkan dan jar-majrur bisa menjadi Na'ibul Fa'il.</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">B. Transformasi kedua benar secara gramatikal tetapi salah secara makna.</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">C. Transformasi kedua salah karena fi'il <span class="arab">ذَهَبَ</span> adalah fi'il mut'addi sehingga tidak bisa dipasifkan.</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">D. Transformasi kedua salah karena <span class="arab">ذَهَبَ</span> adalah fi'il lazim (intransitif) yang tidak memiliki maf'ul bih, sehingga tidak ada unsur yang bisa diangkat menjadi Na'ibul Fa'il — syarat utama pembentukan fi'il majhul tidak terpenuhi.</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6e" value="e"><label for="q6e">E. Transformasi kedua salah karena Na'ibul Fa'il harus selalu berupa isim zhahir, bukan jar-majrur.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 7 — Bab 3: Na'ibul Fa'il (C4-Analisis) -->
+      <div class="mc-question" data-correct="b">
+        <span class="q-num">Soal 7 · Bab 3 · C4</span>
+        <div class="q-narration">
+          Perhatikan ayat: <span class="arab">خُلِقَ الْإِنْسَانُ مِنْ عَجَلٍ</span> (QS. Al-Anbiya': 37). Allah menggunakan fi'il majhul <span class="arab">خُلِقَ</span> tanpa menyebutkan Fa'il (pelaku penciptaan) secara eksplisit.
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat menjelaskan fungsi retorika penggunaan fi'il majhul dalam ayat ini?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">A. Fi'il majhul digunakan karena Allah tidak ingin menyebutkan diri-Nya sebagai pencipta dalam ayat ini.</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">B. Fi'il majhul digunakan untuk memberikan kesan universal dan timeless — penciptaan manusia adalah fakta yang sudah maklum sehingga pelaku tidak perlu disebutkan; penekanan diberikan pada yang diciptakan (<span class="arab">الْإِنْسَانُ</span> sebagai Na'ibul Fa'il) dan asal penciptaan (<span class="arab">مِنْ عَجَلٍ</span>).</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">C. Fi'il majhul digunakan karena ayat ini adalah jumlah ismiyyah, bukan jumlah fi'liyyah.</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">D. Fi'il majhul digunakan karena <span class="arab">الْإِنْسَانُ</span> adalah Fa'il, bukan Na'ibul Fa'il.</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7e" value="e"><label for="q7e">E. Fi'il majhul digunakan karena tidak ada fi'il ma'lum yang sesuai untuk konteks penciptaan.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 8 — Bab 3: Na'ibul Fa'il (C4-Analisis) -->
+      <div class="mc-question" data-correct="a">
+        <span class="q-num">Soal 8 · Bab 3 · C4</span>
+        <div class="q-narration">
+          Dalam kalimat <span class="arab">أُعْطِيَ الطَّالِبُ كِتَابًا</span> ("Pelajar diberikan sebuah buku"), fi'il <span class="arab">أُعْطِيَ</span> berasal dari fi'il <span class="arab">أَعْطَى</span> yang memiliki dua objek (maf'ul bih): <span class="arab">الطَّالِبَ</span> (objek pertama/orang) dan <span class="arab">كِتَابًا</span> (objek kedua/benda).
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat menjelaskan mengapa <span class="arab">الطَّالِبُ</span> yang diangkat menjadi Na'ibul Fa'il, bukan <span class="arab">كِتَابٌ</span>?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">A. Objek pertama (<span class="arab">الطَّالِبَ</span>) lebih utama diangkat menjadi Na'ibul Fa'il karena merupakan orang (dzul 'aql) dan lebih dekat secara semantis kepada pelaku — ini adalah kaidah yang disepakati mayoritas ulama nahwu.</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">B. Objek kedua (<span class="arab">كِتَابًا</span>) tidak bisa menjadi Na'ibul Fa'il karena berupa benda mati.</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">C. Kedua objek bisa diangkat secara bersamaan menjadi Na'ibul Fa'il.</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">D. <span class="arab">الطَّالِبُ</span> bukan Na'ibul Fa'il melainkan Fa'il zhahir dari fi'il majhul.</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8e" value="e"><label for="q8e">E. Pemilihan Na'ibul Fa'il bersifat acak dan tidak ada kaidah yang mengaturnya.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 9 — Bab 4: Mubtada' (C5-Evaluasi) -->
+      <div class="mc-question" data-correct="c">
+        <span class="q-num">Soal 9 · Bab 4 · C5</span>
+        <div class="q-narration">
+          Seorang mahasiswa menyusun kalimat: <span class="arab">أَنْ نَحْفَظَ الْبِيئَةَ وَاجِبٌ</span> ("Bahwa kita menjaga lingkungan adalah kewajiban"). Ia mengklaim bahwa <span class="arab">أَنْ نَحْفَظَ</span> adalah Mubtada' zhahir dan <span class="arab">وَاجِبٌ</span> adalah Khabar.
+        </div>
+        <div class="q-text">Evaluasi manakah yang paling tepat menilai klaim mahasiswa tersebut?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">A. Klaim benar — <span class="arab">أَنْ نَحْفَظَ</span> adalah Mubtada' zhahir karena berupa fi'il mudhari' yang didahului <span class="arab">أَنْ</span>.</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">B. Klaim salah — <span class="arab">أَنْ نَحْفَظَ</span> bukan Mubtada' melainkan Khabar yang didahulukan.</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">C. Klaim sebagian benar — <span class="arab">أَنْ نَحْفَظَ الْبِيئَةَ</span> secara keseluruhan adalah <strong>Mubtada' Mu'awwal</strong> (bukan zhahir) yang ditakwil menjadi <span class="arab">حِفْظُنَا الْبِيئَةَ</span> ("penjagaan kami terhadap lingkungan"), dan <span class="arab">وَاجِبٌ</span> adalah Khabar.</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">D. Klaim salah — kalimat ini adalah jumlah fi'liyyah, bukan jumlah ismiyyah, sehingga tidak ada Mubtada'.</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9e" value="e"><label for="q9e">E. Klaim salah — <span class="arab">وَاجِبٌ</span> adalah Fa'il, bukan Khabar.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 10 — Bab 4: Mubtada' (C4-Analisis) -->
+      <div class="mc-question" data-correct="e">
+        <span class="q-num">Soal 10 · Bab 4 · C4</span>
+        <div class="q-narration">
+          Dalam ayat <span class="arab">فِي الْأَرْضِ آيَاتٌ لِلْمُوقِنِينَ</span> (QS. Adz-Dzariyat: 20), susunan kalimat tidak mengikuti pola standar Mubtada' → Khabar. Kata <span class="arab">آيَاتٌ</span> (nakirah) berada setelah <span class="arab">فِي الْأَرْضِ</span> (ma'rifah).
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat menjelaskan struktur taqdim/ta'khir dalam ayat ini?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">A. <span class="arab">فِي الْأَرْضِ</span> adalah Mubtada' dan <span class="arab">آيَاتٌ</span> adalah Khabar — susunan standar.</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">B. <span class="arab">آيَاتٌ</span> adalah Fa'il dari fi'il yang tersembunyi.</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">C. Ayat ini tidak memiliki Mubtada' karena merupakan jumlah fi'liyyah.</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">D. <span class="arab">فِي الْأَرْضِ</span> adalah Khabar dan <span class="arab">آيَاتٌ</span> adalah Mubtada' — taqdim Khabar haram dalam kondisi ini.</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10e" value="e"><label for="q10e">E. <span class="arab">فِي الْأَرْضِ</span> adalah Khabar Muqaddam (syibh jumlah jar-majrur) dan <span class="arab">آيَاتٌ</span> adalah Mubtada' Mu'akkhar — taqdim Khabar wajib karena Mubtada' berupa nakirah dan Khabar berupa ma'rifah.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 11 — Bab 4: Mubtada' (C4-Analisis) -->
+      <div class="mc-question" data-correct="b">
+        <span class="q-num">Soal 11 · Bab 4 · C4</span>
+        <div class="q-narration">
+          Perhatikan dua kalimat berikut:<br>
+          (1) <span class="arab">الْعِلْمُ نُورٌ</span> — "Ilmu adalah cahaya."<br>
+          (2) <span class="arab">الْعِلْمُ فِي الصَّدْرِ كَالنُّورِ فِي الْعَيْنِ</span> — "Ilmu di dada bagaikan cahaya di mata."<br>
+          Kedua kalimat memiliki Mubtada' yang sama (<span class="arab">الْعِلْمُ</span>), tetapi Khabar-nya berbeda jenis.
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat mengklasifikasikan jenis Khabar dalam kedua kalimat tersebut?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q11" id="q11a" value="a"><label for="q11a">A. Kalimat (1) Khabar-nya syibh jumlah, kalimat (2) Khabar-nya mufrad.</label></div>
+          <div class="mc-option"><input type="radio" name="q11" id="q11b" value="b"><label for="q11b">B. Kalimat (1) Khabar-nya mufrad (<span class="arab">نُورٌ</span>), kalimat (2) Khabar-nya syibh jumlah jar-majrur (<span class="arab">فِي الصَّدْرِ</span>) — keduanya marfu' secara mahallan.</label></div>
+          <div class="mc-option"><input type="radio" name="q11" id="q11c" value="c"><label for="q11c">C. Kalimat (1) Khabar-nya jumlah fi'liyyah, kalimat (2) Khabar-nya jumlah ismiyyah.</label></div>
+          <div class="mc-option"><input type="radio" name="q11" id="q11d" value="d"><label for="q11d">D. Kedua kalimat memiliki Khabar yang sama jenisnya, yaitu mufrad.</label></div>
+          <div class="mc-option"><input type="radio" name="q11" id="q11e" value="e"><label for="q11e">E. Kalimat (2) tidak memiliki Khabar karena <span class="arab">فِي الصَّدْرِ</span> adalah zharf, bukan Khabar.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 12 — Bab 5: Khabar (C4-Analisis) -->
+      <div class="mc-question" data-correct="d">
+        <span class="q-num">Soal 12 · Bab 5 · C4</span>
+        <div class="q-narration">
+          Dalam jurnal berbahasa Arab ditemukan kalimat: <span class="arab">الْبَحْثُ نَتَائِجُهُ مُهِمَّةٌ</span> ("Penelitian, hasil-hasilnya penting"). Seorang mahasiswa mengidentifikasi <span class="arab">نَتَائِجُهُ</span> sebagai Khabar Mufrad dari Mubtada' <span class="arab">الْبَحْثُ</span>.
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat mengoreksi identifikasi mahasiswa tersebut?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q12" id="q12a" value="a"><label for="q12a">A. Identifikasi benar — <span class="arab">نَتَائِجُهُ</span> adalah Khabar Mufrad dari <span class="arab">الْبَحْثُ</span>.</label></div>
+          <div class="mc-option"><input type="radio" name="q12" id="q12b" value="b"><label for="q12b">B. <span class="arab">نَتَائِجُهُ</span> adalah Khabar Syibh Jumlah, bukan Khabar Mufrad.</label></div>
+          <div class="mc-option"><input type="radio" name="q12" id="q12c" value="c"><label for="q12c">C. <span class="arab">نَتَائِجُهُ</span> adalah Mubtada' kedua, dan <span class="arab">الْبَحْثُ</span> adalah Khabar yang didahulukan.</label></div>
+          <div class="mc-option"><input type="radio" name="q12" id="q12d" value="d"><label for="q12d">D. <span class="arab">نَتَائِجُهُ</span> adalah Mubtada' kedua (marfu' dengan dhommah), <span class="arab">مُهِمَّةٌ</span> adalah Khabar kedua, dan seluruh jumla ismiyyah <span class="arab">نَتَائِجُهُ مُهِمَّةٌ</span> berkedudukan sebagai <strong>Khabar Jumlah Ismiyyah</strong> dari Mubtada' <span class="arab">الْبَحْثُ</span>.</label></div>
+          <div class="mc-option"><input type="radio" name="q12" id="q12e" value="e"><label for="q12e">E. Kalimat ini tidak memiliki Khabar karena merupakan jumlah fi'liyyah yang tersembunyi.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 13 — Bab 5: Khabar (C5-Evaluasi) -->
+      <div class="mc-question" data-correct="a">
+        <span class="q-num">Soal 13 · Bab 5 · C5</span>
+        <div class="q-narration">
+          Seorang guru bahasa Arab menjelaskan kepada siswanya bahwa Khabar Jumlah Fi'liyyah boleh langsung menjadi Khabar bagi Mubtada' nakirah tanpa memerlukan dhamir yang kembali ke Mubtada'. Ia memberikan contoh: <span class="arab">رَجُلٌ يَقُومُ</span> ("Seorang laki-laki berdiri") dan mengklaim kalimat ini benar secara gramatikal.
+        </div>
+        <div class="q-text">Evaluasi manakah yang paling tepat menilai penjelasan guru tersebut?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q13" id="q13a" value="a"><label for="q13a">A. Penjelasan guru salah — Khabar Jumlah Fi'liyyah <strong>tidak boleh</strong> langsung menjadi Khabar bagi Mubtada' nakirah tanpa dhamir yang kembali ke Mubtada'. Kalimat yang benar seharusnya <span class="arab">رَجُلٌ هُوَ يَقُومُ</span> atau <span class="arab">الرَّجُلُ يَقُومُ</span> (Mubtada' ma'rifah).</label></div>
+          <div class="mc-option"><input type="radio" name="q13" id="q13b" value="b"><label for="q13b">B. Penjelasan guru benar — Khabar Jumlah Fi'liyyah boleh langsung menjadi Khabar bagi Mubtada' nakirah dalam semua kondisi.</label></div>
+          <div class="mc-option"><input type="radio" name="q13" id="q13c" value="c"><label for="q13c">C. Penjelasan guru benar hanya menurut Mazhab Kufah, tetapi salah menurut Mazhab Basrah.</label></div>
+          <div class="mc-option"><input type="radio" name="q13" id="q13d" value="d"><label for="q13d">D. Penjelasan guru salah karena <span class="arab">رَجُلٌ</span> bukan Mubtada' melainkan Fa'il.</label></div>
+          <div class="mc-option"><input type="radio" name="q13" id="q13e" value="e"><label for="q13e">E. Penjelasan guru benar karena dhamir tidak diperlukan dalam bahasa Arab modern.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 14 — Bab 5: Khabar (C4-Analisis) -->
+      <div class="mc-question" data-correct="c">
+        <span class="q-num">Soal 14 · Bab 5 · C4</span>
+        <div class="q-narration">
+          Dalam ayat <span class="arab">وَاللَّهُ غَفُورٌ رَحِيمٌ</span> (QS. Al-Baqarah: 173), terdapat Mubtada' <span class="arab">اللَّهُ</span> dan dua kata setelahnya: <span class="arab">غَفُورٌ</span> dan <span class="arab">رَحِيمٌ</span>.
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat menjelaskan kedudukan <span class="arab">غَفُورٌ رَحِيمٌ</span> dalam struktur kalimat ini?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q14" id="q14a" value="a"><label for="q14a">A. <span class="arab">غَفُورٌ</span> adalah Khabar dan <span class="arab">رَحِيمٌ</span> adalah Fa'il dari fi'il yang tersembunyi.</label></div>
+          <div class="mc-option"><input type="radio" name="q14" id="q14b" value="b"><label for="q14b">B. <span class="arab">غَفُورٌ</span> adalah Khabar Mufrad dan <span class="arab">رَحِيمٌ</span> adalah Khabar Jumlah Ismiyyah.</label></div>
+          <div class="mc-option"><input type="radio" name="q14" id="q14c" value="c"><label for="q14c">C. <span class="arab">غَفُورٌ</span> adalah Khabar Mufrad pertama dan <span class="arab">رَحِيمٌ</span> adalah Khabar Mufrad kedua (atau Na'at dari <span class="arab">غَفُورٌ</span>) — keduanya marfu' dengan tanwin dhommah.</label></div>
+          <div class="mc-option"><input type="radio" name="q14" id="q14d" value="d"><label for="q14d">D. <span class="arab">غَفُورٌ رَحِيمٌ</span> adalah Khabar Syibh Jumlah.</label></div>
+          <div class="mc-option"><input type="radio" name="q14" id="q14e" value="e"><label for="q14e">E. <span class="arab">غَفُورٌ</span> adalah Mubtada' kedua dan <span class="arab">رَحِيمٌ</span> adalah Khabar-nya.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 15 — Bab 6: Isim Kana (C5-Evaluasi) -->
+      <div class="mc-question" data-correct="b">
+        <span class="q-num">Soal 15 · Bab 6 · C5</span>
+        <div class="q-narration">
+          Dalam Hadis Arbain Nawawi ke-2 terdapat kalimat: <span class="arab">فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ</span>. Seorang mahasiswa mengidentifikasi <span class="arab">تَكُنْ</span> sebagai Isim Kana yang Khabar-nya adalah <span class="arab">تَرَاهُ</span>. Namun, ia juga mengklaim bahwa <span class="arab">تَرَاهُ</span> berkedudukan manshub karena Khabar Kana selalu manshub.
+        </div>
+        <div class="q-text">Evaluasi manakah yang paling tepat menilai klaim mahasiswa tersebut?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q15" id="q15a" value="a"><label for="q15a">A. Klaim benar — <span class="arab">تَرَاهُ</span> manshub karena Khabar Kana selalu manshub.</label></div>
+          <div class="mc-option"><input type="radio" name="q15" id="q15b" value="b"><label for="q15b">B. Klaim sebagian benar — <span class="arab">تَكُنْ</span> memang Isim Kana (mudhari' dari <span class="arab">كَانَ</span>), dan <span class="arab">تَرَاهُ</span> adalah Khabar-nya berupa jumla fi'liyyah. Namun, <span class="arab">تَرَاهُ</span> berkedudukan <strong>manshub mahallan</strong> (secara kedudukan), bukan manshub lafzhan, karena ia adalah jumla fi'liyyah yang ditakwil menjadi mashdar.</label></div>
+          <div class="mc-option"><input type="radio" name="q15" id="q15c" value="c"><label for="q15c">C. Klaim salah — <span class="arab">تَكُنْ</span> bukan Isim Kana melainkan fi'il mudhari' biasa yang di-jazm-kan oleh <span class="arab">لَمْ</span>.</label></div>
+          <div class="mc-option"><input type="radio" name="q15" id="q15d" value="d"><label for="q15d">D. Klaim salah — <span class="arab">تَرَاهُ</span> adalah Fa'il, bukan Khabar Kana.</label></div>
+          <div class="mc-option"><input type="radio" name="q15" id="q15e" value="e"><label for="q15e">E. Klaim salah — kalimat ini tidak mengandung Isim Kana sama sekali.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 16 — Bab 6: Isim Kana (C4-Analisis) -->
+      <div class="mc-question" data-correct="d">
+        <span class="q-num">Soal 16 · Bab 6 · C4</span>
+        <div class="q-narration">
+          Perhatikan dua kalimat berikut:<br>
+          (1) <span class="arab">كَانَ الْجَوُّ صَافِيًا</span> — "Udara itu dulu jernih."<br>
+          (2) <span class="arab">إِنَّ الْجَوَّ صَافٍ</span> — "Sesungguhnya udara itu jernih."<br>
+          Kedua kalimat memiliki Mubtada' dan Khabar yang sama secara makna, tetapi hukum i'rab-nya berbeda karena dimasuki oleh nawasikh yang berbeda.
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat membandingkan pengaruh Isim Kana dan Inna terhadap hukum i'rab dalam kedua kalimat tersebut?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q16" id="q16a" value="a"><label for="q16a">A. Isim Kana dan Inna memiliki pengaruh yang sama — keduanya menashabkan Mubtada' dan merafa'kan Khabar.</label></div>
+          <div class="mc-option"><input type="radio" name="q16" id="q16b" value="b"><label for="q16b">B. Isim Kana menashabkan Mubtada' dan merafa'kan Khabar, sedangkan Inna merafa'kan Mubtada' dan menashabkan Khabar.</label></div>
+          <div class="mc-option"><input type="radio" name="q16" id="q16c" value="c"><label for="q16c">C. Isim Kana tidak mengubah hukum i'rab sama sekali, sedangkan Inna menashabkan Khabar.</label></div>
+          <div class="mc-option"><input type="radio" name="q16" id="q16d" value="d"><label for="q16d">D. Isim Kana (<span class="arab">كَانَ</span>) merafa'kan Mubtada' (<span class="arab">الْجَوُّ</span> tetap marfu') dan menashabkan Khabar (<span class="arab">صَافِيًا</span> menjadi manshub); sedangkan Inna (<span class="arab">إِنَّ</span>) menashabkan Mubtada' (<span class="arab">الْجَوَّ</span> menjadi manshub) dan merafa'kan Khabar (<span class="arab">صَافٍ</span> tetap marfu') — keduanya memiliki efek yang berlawanan.</label></div>
+          <div class="mc-option"><input type="radio" name="q16" id="q16e" value="e"><label for="q16e">E. Isim Kana dan Inna keduanya tidak memengaruhi hukum i'rab Mubtada' dan Khabar.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 17 — Bab 6: Isim Kana (C4-Analisis) -->
+      <div class="mc-question" data-correct="a">
+        <span class="q-num">Soal 17 · Bab 6 · C4</span>
+        <div class="q-narration">
+          Dalam teks klasik ditemukan kalimat: <span class="arab">مَا زَالَتِ الْحَقِيقَةُ وَاضِحَةً</span> ("Kebenaran tetap jelas"). Fi'il <span class="arab">مَا زَالَ</span> termasuk saudara-saudara Kana yang bermakna "keberlanjutan" (istimrar).
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat menjelaskan struktur i'rab kalimat ini?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q17" id="q17a" value="a"><label for="q17a">A. <span class="arab">مَا</span> = huruf nafi; <span class="arab">زَالَتْ</span> = fi'il madhi + ta' ta'nits (Isim Kana); <span class="arab">الْحَقِيقَةُ</span> = Isim Kana (marfu' dengan dhommah); <span class="arab">وَاضِحَةً</span> = Khabar Kana (manshub dengan fathah) — makna: kebenaran tidak berhenti menjadi jelas.</label></div>
+          <div class="mc-option"><input type="radio" name="q17" id="q17b" value="b"><label for="q17b">B. <span class="arab">مَا</span> = isim maushul; <span class="arab">زَالَتْ</span> = fi'il madhi (Isim Kana); <span class="arab">الْحَقِيقَةُ</span> = Fa'il; <span class="arab">وَاضِحَةً</span> = Hal.</label></div>
+          <div class="mc-option"><input type="radio" name="q17" id="q17c" value="c"><label for="q17c">C. <span class="arab">مَا زَالَتْ</span> = fi'il majhul; <span class="arab">الْحَقِيقَةُ</span> = Na'ibul Fa'il; <span class="arab">وَاضِحَةً</span> = Khabar Na'ibul Fa'il.</label></div>
+          <div class="mc-option"><input type="radio" name="q17" id="q17d" value="d"><label for="q17d">D. Kalimat ini adalah jumlah ismiyyah biasa tanpa nawasikh — <span class="arab">الْحَقِيقَةُ</span> = Mubtada', <span class="arab">وَاضِحَةً</span> = Khabar.</label></div>
+          <div class="mc-option"><input type="radio" name="q17" id="q17e" value="e"><label for="q17e">E. <span class="arab">مَا</span> = huruf istifham; <span class="arab">زَالَتْ</span> = fi'il madhi; <span class="arab">الْحَقِيقَةُ</span> = Mubtada'; <span class="arab">وَاضِحَةً</span> = Khabar.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 18 — Bab 7: Isim Kada (C5-Evaluasi) -->
+      <div class="mc-question" data-correct="c">
+        <span class="q-num">Soal 18 · Bab 7 · C5</span>
+        <div class="q-narration">
+          Seorang mahasiswa ingin menulis: "Hampir saja bumi binasa karena polusi." Ia menulis: <span class="arab">جَعَلَتِ الْأَرْضُ أَنْ تَهْلِكَ بِالتَّلَوُّثِ</span>. Temannya mengoreksi dan menyarankan: <span class="arab">كَادَتِ الْأَرْضُ أَنْ تَهْلِكَ بِالتَّلَوُّثِ</span>.
+        </div>
+        <div class="q-text">Evaluasi manakah yang paling tepat menilai kesalahan mahasiswa dan koreksi temannya?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q18" id="q18a" value="a"><label for="q18a">A. Kalimat mahasiswa benar — <span class="arab">جَعَلَ</span> dan <span class="arab">كَادَ</span> memiliki makna yang sama sehingga bisa saling menggantikan.</label></div>
+          <div class="mc-option"><input type="radio" name="q18" id="q18b" value="b"><label for="q18b">B. Kalimat mahasiswa benar secara gramatikal tetapi koreksi temannya lebih indah secara balaghah.</label></div>
+          <div class="mc-option"><input type="radio" name="q18" id="q18c" value="c"><label for="q18c">C. Kalimat mahasiswa salah secara makna — <span class="arab">جَعَلَ</span> termasuk kelompok Syuru' (permulaan: "mulai"), bukan Muqarabah (kedekatan: "hampir"). Koreksi temannya tepat karena <span class="arab">كَادَ</span> termasuk kelompok Muqarabah yang bermakna "hampir saja", sesuai dengan maksud kalimat.</label></div>
+          <div class="mc-option"><input type="radio" name="q18" id="q18d" value="d"><label for="q18d">D. Kedua kalimat salah karena Isim Kada tidak bisa digunakan dengan fi'il madhi.</label></div>
+          <div class="mc-option"><input type="radio" name="q18" id="q18e" value="e"><label for="q18e">E. Kalimat mahasiswa salah karena <span class="arab">جَعَلَ</span> bukan termasuk Isim Kada sama sekali.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 19 — Bab 7: Isim Kada (C4-Analisis) -->
+      <div class="mc-question" data-correct="b">
+        <span class="q-num">Soal 19 · Bab 7 · C4</span>
+        <div class="q-narration">
+          Perhatikan hadis populer: <span class="arab">كَادَ الْفَقْرُ أَنْ يَكُونَ كُفْرًا</span> ("Kemiskinan hampir menjadi kekafiran"). Kalimat ini mengandung struktur berlapis: Isim Kada (<span class="arab">كَادَ</span>) yang di dalamnya terdapat Isim Kana (<span class="arab">يَكُونَ</span>).
+        </div>
+        <div class="q-text">Analisis manakah yang paling tepat menguraikan struktur berlapis dalam kalimat ini?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q19" id="q19a" value="a"><label for="q19a">A. <span class="arab">كَادَ</span> = Isim Kana; <span class="arab">الْفَقْرُ</span> = Isim Kana (marfu'); <span class="arab">أَنْ يَكُونَ</span> = Khabar Kana; <span class="arab">كُفْرًا</span> = Khabar <span class="arab">يَكُونَ</span> (manshub).</label></div>
+          <div class="mc-option"><input type="radio" name="q19" id="q19b" value="b"><label for="q19b">B. <span class="arab">كَادَ</span> = Isim Kada (Muqarabah); <span class="arab">الْفَقْرُ</span> = Isim Kada (marfu'); <span class="arab">أَنْ يَكُونَ كُفْرًا</span> = Khabar Kada (mashdar mu'awwal); di dalamnya: <span class="arab">يَكُونَ</span> = fi'il naqishah (Isim Kana), <span class="arab">كُفْرًا</span> = Khabar <span class="arab">يَكُونَ</span> (manshub) — struktur berlapis Isim Kada + Isim Kana.</label></div>
+          <div class="mc-option"><input type="radio" name="q19" id="q19c" value="c"><label for="q19c">C. <span class="arab">كَادَ</span> = Isim Kada (Syuru'); <span class="arab">الْفَقْرُ</span> = Fa'il; <span class="arab">أَنْ يَكُونَ</span> = Maf'ul bih; <span class="arab">كُفْرًا</span> = Hal.</label></div>
+          <div class="mc-option"><input type="radio" name="q19" id="q19d" value="d"><label for="q19d">D. Kalimat ini tidak mengandung struktur berlapis — hanya ada satu tingkat nawasikh.</label></div>
+          <div class="mc-option"><input type="radio" name="q19" id="q19e" value="e"><label for="q19e">E. <span class="arab">كَادَ</span> = fi'il tam (sempurna); <span class="arab">الْفَقْرُ</span> = Fa'il; <span class="arab">أَنْ يَكُونَ كُفْرًا</span> = Maf'ul bih mu'awwal.</label></div>
+        </div>
+      </div>
+
+      <!-- SOAL 20 — Bab 7: Isim Kada (C5-Evaluasi) -->
+      <div class="mc-question" data-correct="d">
+        <span class="q-num">Soal 20 · Bab 7 · C5</span>
+        <div class="q-narration">
+          Dalam sebuah paragraf bertema lingkungan terdapat kalimat: <span class="arab">كَانَتِ الْبِيئَةُ نَظِيفَةً. كَادَ التَّلَوُّثُ أَنْ يُدَمِّرَهَا. جَعَلَ النَّاسُ يَغْرِسُونَ الْأَشْجَارَ.</span> Seorang mahasiswa mengklaim bahwa ketiga kalimat ini menggunakan Isim Kana karena semuanya merafa'kan Mubtada' dan menashabkan Khabar.
+        </div>
+        <div class="q-text">Evaluasi manakah yang paling tepat menilai klaim mahasiswa tersebut?</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q20" id="q20a" value="a"><label for="q20a">A. Klaim benar — ketiga kalimat menggunakan Isim Kana.</label></div>
+          <div class="mc-option"><input type="radio" name="q20" id="q20b" value="b"><label for="q20b">B. Klaim salah — tidak ada satupun kalimat yang menggunakan Isim Kana.</label></div>
+          <div class="mc-option"><input type="radio" name="q20" id="q20c" value="c"><label for="q20c">C. Klaim sebagian benar — hanya kalimat pertama dan kedua yang menggunakan Isim Kana.</label></div>
+          <div class="mc-option"><input type="radio" name="q20" id="q20d" value="d"><label for="q20d">D. Klaim salah — hanya kalimat pertama (<span class="arab">كَانَتْ</span>) yang menggunakan Isim Kana (waktu lampau). Kalimat kedua (<span class="arab">كَادَ</span>) menggunakan Isim Kada kelompok Muqarabah ("hampir"), dan kalimat ketiga (<span class="arab">جَعَلَ</span>) menggunakan Isim Kada kelompok Syuru' ("mulai"). Meskipun struktur i'rab-nya sama (merafa'kan Mubtada', menashabkan Khabar), makna yang dihasilkan berbeda.</label></div>
+          <div class="mc-option"><input type="radio" name="q20" id="q20e" value="e"><label for="q20e">E. Klaim sebagian benar — kalimat pertama menggunakan Isim Kana, kalimat kedua menggunakan Inna, kalimat ketiga menggunakan Isim Kada.</label></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- BAGIAN B: 5 SOAL ESSAY -->
+    <!-- ========================================================= -->
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay (5 Soal)</h3>
+      <p class="part-desc">⚠ Jawablah semua soal essay dengan jawaban yang komprehensif, sistematis, dan disertai analisis i'rab. Skor: 20 poin/soal.</p>
+
+      <div class="essay-question">
+        <span class="q-num">Essay 1 · C4-C5 · Bab 2-3</span>
+        <div class="q-text"><strong>1.</strong> Perhatikan paragraf berikut dari Al-Qur'an:<br><br>
+        <span class="arab" style="font-size:1.3rem">خَلَقَ الْإِنْسَانَ مِنْ عَلَقٍ. اقْرَأْ وَرَبُّكَ الْأَكْرَمُ. الَّذِي عَلَّمَ بِالْقَلَمِ. عَلَّمَ الْإِنْسَانَ مَا لَمْ يَعْلَمْ.</span> (QS. Al-'Alaq: 2–5)<br><br>
+        Identifikasi seluruh <strong>Fa'il</strong> dan <strong>Na'ibul Fa'il</strong> (jika ada) dalam paragraf di atas! Untuk setiap Fa'il/Na'ibul Fa'il, tentukan: (a) jenisnya (zhahir, mustatir, mu'awwal), (b) tanda i'rab-nya, dan (c) ta'lil nahwi mengapa ia berkedudukan demikian!</div>
+        <textarea id="essay1" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <span class="q-num">Essay 2 · C4-C5 · Bab 4-5</span>
+        <div class="q-text"><strong>2.</strong> Bandingkan dan kontraskan struktur <strong>Mubtada'-Khabar</strong> dalam kalimat <span class="arab">الْعِلْمُ نُورٌ</span> dengan struktur <strong>Isim Kana</strong> dalam kalimat <span class="arab">كَانَ الْعِلْمُ نُورًا</span> dan struktur <strong>Isim Kada</strong> dalam kalimat <span class="arab">كَادَ الْعِلْمُ أَنْ يَنْدَثِرَ</span>! Jelaskan: (a) perbedaan hukum i'rab Mubtada'/Isim/Khabar dalam ketiga kalimat, (b) perbedaan makna yang dihasilkan, dan (c) mengapa pemilihan nawasikh yang tepat sangat penting dalam mengekspresikan makna!</div>
+        <textarea id="essay2" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <span class="q-num">Essay 3 · C5-C6 · Bab 6-7</span>
+        <div class="q-text"><strong>3.</strong> Dalam Hadis Arbain Nawawi terdapat kalimat: <span class="arab">فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ</span>. Kalimat ini mengandung <strong>Isim Kana</strong> (<span class="arab">تَكُنْ</span>) dan <strong>Inna</strong> (<span class="arab">إِنَّ</span>) dalam satu rangkaian. Analisislah: (a) struktur i'rab lengkap kalimat ini, (b) perbedaan pengaruh Isim Kana dan Inna terhadap Mubtada' dan Khabar, dan (c) mengapa Allah menggunakan kedua nawasikh ini secara bersamaan dalam satu kalimat!</div>
+        <textarea id="essay3" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <span class="q-num">Essay 4 · C6 · Bab 1-7</span>
+        <div class="q-text"><strong>4.</strong> Rancanglah sebuah <strong>skenario pembelajaran nahwu</strong> untuk siswa MA kelas XI dengan topik "Isim Kana dan Isim Kada" yang mengintegrasikan: (a) pendekatan Case-Based Method (CBM), (b) nilai-nilai budaya Minangkabau, dan (c) tema lingkungan! Jelaskan: langkah-langkah pembelajaran (pembukaan, inti, penutupan), bahan ajar yang digunakan, aktivitas siswa, dan asesmen yang akan dilakukan!</div>
+        <textarea id="essay4" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+
+      <div class="essay-question">
+        <span class="q-num">Essay 5 · C6 · Bab 1-7</span>
+        <div class="q-text"><strong>5.</strong> Susunlah sebuah <strong>paragraf berbahasa Arab</strong> (minimal 100 kata) bertema <strong>"Tanggung Jawab Manusia terhadap Lingkungan"</strong> yang mengintegrasikan seluruh unsur berikut: (a) minimal 2 Fa'il (zhahir dan mustatir), (b) minimal 1 Na'ibul Fa'il, (c) minimal 1 Mubtada'-Khabar, (d) minimal 1 Isim Kana, (e) minimal 1 Isim Kada (dari kelompok Muqarabah atau Syuru'), dan (f) minimal 1 Khabar Jumlah! Sertakan terjemahan Indonesia dan analisis i'rab singkat untuk setiap unsur yang Anda gunakan!</div>
+        <textarea id="essay5" placeholder="Tuliskan jawaban Anda di sini..."></textarea>
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="quiz-actions">
+      <button class="btn-action btn-submit" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+      <button class="btn-action btn-pdf" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+      <button class="btn-action btn-score" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+      <button class="btn-action btn-email" onclick="sendEmail()">✉️ KIRIM EMAIL DOSEN</button>
+      <button class="btn-action btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <!-- RESULT -->
+    <div class="result-box" id="resultBox">
+      <h3>📊 Hasil Ujian Tengah Semester</h3>
+      <div class="result-scores">
+        <div class="score-card">
+          <small>Bagian A (PG HOTS)</small>
+          <div class="score-value"><span id="scorePG">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Bagian B (Essay)</small>
+          <div class="score-value"><span id="scoreEssay">0</span><span>/100</span></div>
+        </div>
+        <div class="score-card">
+          <small>Total Nilai UTS</small>
+          <div class="score-value"><span id="scoreTotal">0</span><span>/100</span></div>
+        </div>
+      </div>
+      <div class="result-grade">
+        Nilai Huruf: <strong id="gradeValue">-</strong> · Status: <strong id="statusValue">-</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">An-Nahw · lil Mutawassithin</div>
+  <div class="arabic-quote">طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ</div>
+  <p>© 2026 Eka Rizal, M.Pd.I — UIN Sjech M. Djamil Djambek Bukittinggi</p>
+  <p style="font-size:.75rem;opacity:.6;margin-top:.5rem">ekarizal@uinbukittinggi.ac.id</p>
+</footer>
+
+<script>
+/* ============ TIMER ============ */
+let timeLeft = 120 * 60;
+let timerInterval;
+function startTimer(){
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    if(timeLeft <= 0){
+      clearInterval(timerInterval);
+      alert('⏰ Waktu ujian telah habis! Jawaban Anda akan dikirim secara otomatis.');
+      submitQuiz();
+      return;
+    }
+    const m = Math.floor(timeLeft / 60);
+    const s = timeLeft % 60;
+    document.getElementById('timerDisplay').textContent =
+      String(m).padStart(3,'0') + ':' + String(s).padStart(2,'0');
+    if(timeLeft < 600){
+      document.getElementById('timerDisplay').style.color = '#e07070';
+    }
+  }, 1000);
+}
+startTimer();
+
+/* ============ SUBMIT ============ */
+function submitQuiz(){
+  clearInterval(timerInterval);
+  const nama = document.getElementById('nama').value.trim();
+  const nim = document.getElementById('nim').value.trim();
+  const semester = document.getElementById('semester').value;
+  if(!nama || !nim || !semester){
+    alert('⚠ Mohon lengkapi data mahasiswa (Nama, NIM, Semester)!');
+    startTimer();
+    return;
+  }
+  let scorePG = 0;
+  const questions = document.querySelectorAll('.mc-question');
+  let allAnswered = true;
+  questions.forEach((q) => {
+    const correct = q.getAttribute('data-correct');
+    const selected = q.querySelector('input[type="radio"]:checked');
+    q.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+    if(!selected){
+      allAnswered = false;
+    } else {
+      const selectedOption = selected.closest('.mc-option');
+      if(selected.value === correct){
+        scorePG += 5;
+        selectedOption.classList.add('correct');
+      } else {
+        selectedOption.classList.add('incorrect');
+        q.querySelectorAll('.mc-option').forEach(opt => {
+          const input = opt.querySelector('input');
+          if(input.value === correct) opt.classList.add('correct');
+        });
+      }
+    }
+  });
+  if(!allAnswered){
+    if(!confirm('⚠ Masih ada soal PG yang belum dijawab. Yakin ingin mengirim?')){
+      startTimer();
+      return;
+    }
+  }
+  let scoreEssay = 0;
+  for(let i = 1; i <= 5; i++){
+    const answer = document.getElementById('essay' + i).value.trim();
+    if(answer.length < 50) scoreEssay += 4;
+    else if(answer.length < 150) scoreEssay += 8;
+    else if(answer.length < 300) scoreEssay += 12;
+    else if(answer.length < 500) scoreEssay += 16;
+    else scoreEssay += 20;
+  }
+  const total = Math.round((scorePG + scoreEssay) / 2);
+  let grade = 'E', status = 'Tidak Lulus';
+  if(total >= 85){ grade = 'A'; status = 'Lulus'; }
+  else if(total >= 80){ grade = 'B'; status = 'Lulus'; }
+  else if(total >= 60){ grade = 'C'; status = 'Lulus'; }
+  else if(total >= 50){ grade = 'D'; status = 'Lulus'; }
+  document.getElementById('scorePG').textContent = scorePG;
+  document.getElementById('scoreEssay').textContent = scoreEssay;
+  document.getElementById('scoreTotal').textContent = total;
+  document.getElementById('gradeValue').textContent = grade;
+  document.getElementById('statusValue').textContent = status;
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('show');
+  resultBox.scrollIntoView({behavior:'smooth', block:'center'});
+  window.quizResult = {
+    nama, nim,
+    ujian: 'UTS',
+    tanggal: document.getElementById('tanggal').value || new Date().toLocaleDateString('id-ID'),
+    fakultas: document.getElementById('fakultas').value,
+    prodi: document.getElementById('prodi').value,
+    semester,
+    kelas: document.getElementById('kelas').value,
+    absen: document.getElementById('absen').value,
+    scorePG, scoreEssay, total, grade, status,
+    essays: []
+  };
+  for(let i = 1; i <= 5; i++){
+    window.quizResult.essays.push(document.getElementById('essay' + i).value);
+  }
+}
+function downloadPDF(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  window.print();
+}
+function downloadScore(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const text = `
+=====================================
+  HASIL UJIAN TENGAH SEMESTER (UTS)
+  An-Nahw lil Mutawassithin
+  Materi: Pertemuan 1–7
+=====================================
+
+DATA MAHASISWA
+--------------
+Nama        : ${r.nama}
+NIM         : ${r.nim}
+Tanggal     : ${r.tanggal}
+Fakultas    : ${r.fakultas}
+Prodi       : ${r.prodi}
+Semester    : ${r.semester}
+Kelas       : ${r.kelas}
+No. Absen   : ${r.absen}
+
+HASIL PENILAIAN
+---------------
+Bagian A (PG HOTS 20 soal): ${r.scorePG}/100
+Bagian B (Essay 5 soal)   : ${r.scoreEssay}/100
+TOTAL NILAI UTS            : ${r.total}/100
+NILAI HURUF                : ${r.grade}
+STATUS                     : ${r.status}
+
+=====================================
+Dosen Pengampu: Eka Rizal, M.Pd.I
+UIN Sjech M. Djamil Djambek Bukittinggi
+=====================================
+  `.trim();
+  const blob = new Blob([text], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `Hasil_UTS_${r.nim}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function sendEmail(){
+  if(!window.quizResult){ alert('⚠ Kirim jawaban terlebih dahulu!'); return; }
+  const r = window.quizResult;
+  const subject = encodeURIComponent(`Hasil UTS - ${r.nama} (${r.nim})`);
+  const body = encodeURIComponent(
+`Yth. Bapak Eka Rizal, M.Pd.I,
+
+Berikut hasil Ujian Tengah Semester (UTS) - An-Nahw lil Mutawassithin:
+
+DATA MAHASISWA
+Nama     : ${r.nama}
+NIM      : ${r.nim}
+Prodi    : ${r.prodi}
+Kelas    : ${r.kelas}
+Semester : ${r.semester}
+
+HASIL PENILAIAN
+Bagian A (PG HOTS) : ${r.scorePG}/100
+Bagian B (Essay)   : ${r.scoreEssay}/100
+TOTAL              : ${r.total}/100
+Grade              : ${r.grade}
+Status             : ${r.status}
+
+Terima kasih.
+
+Hormat saya,
+${r.nama}`
+  );
+  window.location.href = `mailto:ekarizal@uinbukittinggi.ac.id?subject=${subject}&body=${body}`;
+}
+function resetQuiz(){
+  if(!confirm('Apakah Anda yakin ingin mengulang ujian dari awal? Semua jawaban akan dihapus.')) return;
+  clearInterval(timerInterval);
+  timeLeft = 120 * 60;
+  document.getElementById('timerDisplay').textContent = '120:00';
+  document.getElementById('timerDisplay').style.color = 'var(--gold)';
+  document.getElementById('studentForm').reset();
+  document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+  for(let i = 1; i <= 5; i++) document.getElementById('essay' + i).value = '';
+  document.querySelectorAll('.mc-option').forEach(opt => opt.classList.remove('correct','incorrect'));
+  document.getElementById('resultBox').classList.remove('show');
+  window.quizResult = null;
+  startTimer();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.boxShadow = window.scrollY > 50 ? '0 10px 40px rgba(0,0,0,.4)' : 'none';
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+</script>
+
+</body>
+</html>

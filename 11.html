@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pertemuan 11: At-Taukid — An-Nahw lil Mutawassithin</title>
+<meta name="description" content="Pertemuan 11: Seni penekanan informasi melalui Taukid Ma'nawi dan Taukid Lafzhi, dhamir al-fashl, isim-isim taukid, analisis Al-Qur'an dan hadis, serta konstruksi paragraf bertema lingkungan." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#C9A961;--gold-light:#E8D9A8;--gold-dark:#8B7338;
+  --ink:#0B0B0F;--ink-2:#14141B;--ink-3:#1C1C25;
+  --cream:#F5EFE0;--muted:#9A9AA3;
+  --line:rgba(201,169,97,.25);
+  --shadow-gold:0 20px 60px rgba(201,169,97,.15);
+  --serif:'Playfair Display','Cormorant Garamond',serif;
+  --serif-2:'Cormorant Garamond',serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --arab:'Amiri',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ink);color:var(--cream);line-height:1.7;overflow-x:hidden;
+  background-image:radial-gradient(circle at 15% 20%,rgba(201,169,97,.08) 0%,transparent 40%),radial-gradient(circle at 85% 80%,rgba(201,169,97,.06) 0%,transparent 40%);
+}
+.bg-ornament{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(201,169,97,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,169,97,.03) 1px,transparent 1px);
+  background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
+}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(11,11,15,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--gold-light);letter-spacing:1px;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--cream);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;transition:.3s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:none;color:var(--gold);font-size:1.5rem;cursor:pointer}
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:9rem 8% 4rem;position:relative;z-index:1}
+.hero .breadcrumb{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
+.hero .breadcrumb a{color:var(--gold);text-decoration:none}
+.hero .breadcrumb a:hover{text-decoration:underline}
+.hero .chapter-label{display:inline-block;font-size:.8rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;padding:.5rem 1.5rem;border:1px solid var(--gold);border-radius:2px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.15;color:var(--cream);margin-bottom:1.2rem;max-width:900px}
+.hero h1 .accent{background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dark) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.hero-arabic{font-family:var(--arab);font-size:2rem;color:var(--gold);margin:1rem 0 1.5rem;direction:rtl;opacity:.85}
+.hero p.subtitle{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;max-width:720px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.7rem;padding:.9rem 1.8rem;font-size:.78rem;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;font-weight:500;transition:.4s;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+section.content{padding:5rem 8%;position:relative;z-index:1;max-width:1100px;margin:0 auto}
+h2.section-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;color:var(--cream);margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+h2.section-title em{font-style:italic;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h3.sub-title{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin:2.5rem 0 1rem;font-weight:600;display:flex;align-items:center;gap:.8rem}
+h3.sub-title::before{content:"";width:30px;height:1px;background:var(--gold)}
+h4.sub-sub-title{font-family:var(--serif);font-size:1.2rem;color:var(--gold-light);margin:1.8rem 0 .8rem;font-weight:500}
+p{margin-bottom:1.2rem;color:var(--cream);font-size:1rem}
+p.lead{font-family:var(--serif-2);font-size:1.2rem;color:var(--muted);font-style:italic;margin-bottom:2rem;border-left:2px solid var(--gold);padding-left:1.5rem}
+.arabic-display{background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:1.5rem 0;text-align:center;font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;line-height:2.2}
+.arabic-display small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);direction:ltr;margin-top:1rem;letter-spacing:1px}
+.analysis-box{background:rgba(201,169,97,.04);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 6px 6px 0}
+.analysis-box h5{font-family:var(--serif);color:var(--gold);font-size:1.05rem;margin-bottom:.8rem}
+.analysis-box .word-analysis{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.5rem;margin-top:1rem;font-size:.95rem}
+.analysis-box .word{font-family:var(--arab);font-size:1.4rem;color:var(--gold);direction:rtl}
+.analysis-box .detail{color:var(--cream)}
+.analysis-box .detail small{color:var(--muted);font-style:italic}
+.video-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0;text-align:center}
+.video-box .video-icon{font-size:3rem;color:var(--gold);margin-bottom:1rem}
+.video-box h4{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-bottom:.8rem}
+.video-box p{color:var(--muted);font-size:.95rem;margin-bottom:0}
+.video-box .source{font-size:.8rem;color:var(--gold);margin-top:.8rem;letter-spacing:1px;text-transform:uppercase}
+.key-concept{background:rgba(201,169,97,.05);border-left:3px solid var(--gold);padding:1.8rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.key-concept h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.key-concept ul{list-style:none;padding:0}
+.key-concept li{padding:.6rem 0 .6rem 1.5rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed var(--line)}
+.key-concept li:last-child{border-bottom:none}
+.key-concept li::before{content:"◆";position:absolute;left:0;top:.6rem;color:var(--gold);font-size:.7rem}
+.key-concept li strong{color:var(--gold-light)}
+.case-study{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0;position:relative}
+.case-study::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.case-study h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.case-study .case-content{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;padding:1rem 1.5rem;background:rgba(0,0,0,.3);border-radius:4px;margin-bottom:1rem}
+.case-study .lesson{color:var(--gold-light);font-weight:500;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem}
+.reflection{background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center}
+.reflection h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1rem}
+.reflection p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:700px;margin:0 auto}
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+th,td{padding:1rem;text-align:left;border-bottom:1px solid var(--line);font-size:.92rem}
+th{background:rgba(201,169,97,.15);color:var(--gold);font-family:var(--serif);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.8rem}
+td{color:var(--cream)}
+tr:hover td{background:rgba(201,169,97,.04)}
+td .arab{font-family:var(--arab);font-size:1.2rem;color:var(--gold);direction:rtl;display:inline-block}
+.tips-box,.warning-box,.insight-box{padding:1.5rem 2rem;border-radius:6px;margin:2rem 0}
+.tips-box{background:rgba(201,169,97,.05);border:1px solid var(--gold)}
+.warning-box{background:rgba(220,80,80,.08);border:1px solid rgba(220,80,80,.4)}
+.insight-box{background:rgba(100,180,220,.05);border:1px solid rgba(100,180,220,.3)}
+.tips-box h4,.warning-box h4,.insight-box h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.8rem}
+.tips-box h4{color:var(--gold)}
+.warning-box h4{color:#e07070}
+.insight-box h4{color:#78b8e0}
+.tips-box ul,.warning-box ul,.insight-box ul{list-style:none;padding:0}
+.tips-box li,.warning-box li,.insight-box li{padding:.4rem 0 .4rem 1.5rem;position:relative;font-size:.95rem}
+.tips-box li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.warning-box li::before{content:"⚠";position:absolute;left:0;color:#e07070}
+.insight-box li::before{content:"◈";position:absolute;left:0;color:#78b8e0}
+.quote-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2rem;margin:2rem 0;text-align:center;position:relative}
+.quote-box::before{content:"❝";position:absolute;top:-10px;left:20px;font-size:4rem;color:var(--gold);opacity:.3;font-family:var(--serif)}
+.quote-box .arabic{font-family:var(--arab);font-size:1.8rem;color:var(--gold);direction:rtl;margin-bottom:1rem}
+.quote-box .translation{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.1rem}
+.quote-box .source{font-size:.8rem;color:var(--muted);margin-top:1rem;letter-spacing:1px;text-transform:uppercase}
+.concept-map{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.concept-map h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:1.5rem}
+.map-center{text-align:center;margin-bottom:2rem}
+.map-center .core{display:inline-block;padding:1rem 2rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-family:var(--serif);font-size:1.1rem;font-weight:700;border-radius:50px;box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.map-branches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.map-branch{padding:1.2rem;background:rgba(201,169,97,.05);border:1px solid var(--line);border-radius:6px;transition:.3s}
+.map-branch:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:translateY(-3px)}
+.map-branch h5{font-family:var(--serif);color:var(--gold);font-size:1rem;margin-bottom:.5rem}
+.map-branch p{font-size:.85rem;color:var(--muted);margin:0}
+.map-branch ul{list-style:none;padding:0;margin-top:.5rem}
+.map-branch li{font-size:.85rem;color:var(--cream);padding:.2rem 0 .2rem 1rem;position:relative}
+.map-branch li::before{content:"›";position:absolute;left:0;color:var(--gold)}
+.glossary{background:var(--ink-2);border:1px solid var(--line);border-radius:8px;padding:2rem;margin:2rem 0}
+.glossary h4{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.glossary-item{padding:1rem;background:rgba(255,255,255,.02);border-left:2px solid var(--gold);border-radius:0 4px 4px 0}
+.glossary-item .term{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.glossary-item .term strong{color:var(--gold);font-family:var(--serif)}
+.glossary-item .term .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold-light);direction:rtl}
+.glossary-item p{font-size:.88rem;color:var(--muted);margin:0}
+.references{background:var(--ink-2);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2.5rem 0}
+.references h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem}
+.references ol{padding-left:1.5rem}
+.references li{color:var(--muted);font-size:.9rem;margin-bottom:.6rem;line-height:1.6}
+.references li em{color:var(--cream)}
+.conclusion{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:6px;padding:2.5rem;margin:3rem 0;text-align:center}
+.conclusion h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1rem}
+.conclusion p{font-family:var(--serif-2);font-style:italic;color:var(--cream);font-size:1.05rem;max-width:750px;margin:0 auto 1rem}
+.bottom-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;margin-top:3rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:1rem}
+.bottom-nav a{color:var(--gold);text-decoration:none;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;transition:.3s;display:inline-flex;align-items:center;gap:.5rem}
+.bottom-nav a:hover{color:var(--gold-light)}
+.toc{background:rgba(201,169,97,.04);border:1px solid var(--line);border-radius:6px;padding:2rem;margin:2rem 0}
+.toc h4{font-family:var(--serif);color:var(--gold);font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.toc ol{padding-left:1.5rem}
+.toc li{padding:.4rem 0;color:var(--cream);font-size:.95rem}
+.toc a{color:var(--gold-light);text-decoration:none;transition:.3s}
+.toc a:hover{color:var(--gold);text-decoration:underline}
+.toc ol ol{margin-top:.3rem}
+.toc ol ol li{font-size:.88rem;color:var(--muted)}
+.task-box{background:linear-gradient(135deg,rgba(100,180,220,.08) 0%,rgba(100,180,220,.02) 100%);border:1px solid rgba(100,180,220,.3);border-radius:6px;padding:2rem;margin:2rem 0}
+.task-box h4{font-family:var(--serif);color:#78b8e0;font-size:1.2rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.task-box ul{list-style:none;padding:0}
+.task-box li{padding:.5rem 0 .5rem 1.8rem;position:relative;color:var(--cream);font-size:.95rem;border-bottom:1px dashed rgba(100,180,220,.2)}
+.task-box li:last-child{border-bottom:none}
+.task-box li::before{content:"✓";position:absolute;left:0;top:.5rem;color:#78b8e0;font-weight:700}
+.task-box .deadline{display:inline-block;margin-top:1rem;padding:.4rem 1rem;background:rgba(100,180,220,.15);border-radius:4px;font-size:.8rem;color:#78b8e0;letter-spacing:1px;text-transform:uppercase}
+.env-text{background:linear-gradient(135deg,rgba(80,200,120,.06) 0%,rgba(80,200,120,.02) 100%);border:1px solid rgba(80,200,120,.3);border-radius:8px;padding:2rem;margin:2rem 0}
+.env-text h5{font-family:var(--serif);color:#50c878;font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.env-text .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.env-text .translation{font-family:var(--serif-2);font-style:italic;color:var(--muted);font-size:.95rem;padding:1rem;border-left:2px solid #50c878}
+.quran-box{background:linear-gradient(135deg,rgba(201,169,97,.08) 0%,rgba(201,169,97,.02) 100%);border:1px solid var(--gold);border-radius:8px;padding:2rem;margin:2rem 0}
+.quran-box h5{font-family:var(--serif);color:var(--gold);font-size:1.15rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.quran-box .arabic-paragraph{font-family:var(--arab);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:2.4;text-align:right;padding:1.5rem;background:rgba(0,0,0,.25);border-radius:6px;margin-bottom:1rem}
+.quran-box .source-info{font-size:.85rem;color:var(--muted);font-style:italic;border-top:1px solid var(--line);padding-top:.8rem}
+.quiz-section{background:linear-gradient(180deg,var(--ink-2) 0%,var(--ink) 100%);padding:5rem 8%;margin-top:4rem;border-top:2px solid var(--gold);position:relative;z-index:1}
+.quiz-wrap{max-width:1000px;margin:0 auto}
+.quiz-header{text-align:center;margin-bottom:3rem}
+.quiz-header .badge{display:inline-block;padding:.5rem 1.5rem;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;border-radius:2px;margin-bottom:1rem}
+.quiz-header h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--cream);margin-bottom:1rem}
+.quiz-header h2 em{background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic}
+.quiz-header p{color:var(--muted);font-family:var(--serif-2);font-style:italic;font-size:1.05rem;max-width:700px;margin:0 auto}
+.quiz-warning{background:rgba(220,80,80,.1);border:1px solid rgba(220,80,80,.4);color:#f0a0a0;padding:1rem 1.5rem;border-radius:6px;text-align:center;margin-bottom:2rem;font-size:.9rem}
+.student-form{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2.5rem}
+.student-form h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group label{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:500}
+.form-group label .req{color:#e07070}
+.form-group input,.form-group select{padding:.8rem 1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;transition:.3s}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.form-group select option{background:var(--ink-2);color:var(--cream)}
+.quiz-part{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-bottom:2rem}
+.quiz-part h3{font-family:var(--serif);color:var(--gold);font-size:1.3rem;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.quiz-part .part-desc{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.mc-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.mc-question:last-child{border-bottom:none}
+.mc-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.mc-question .q-text strong{color:var(--gold)}
+.mc-question .q-text .arab{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;display:inline-block}
+.mc-options{display:flex;flex-direction:column;gap:.6rem}
+.mc-option{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.3s}
+.mc-option:hover{background:rgba(201,169,97,.08);border-color:var(--gold)}
+.mc-option input{margin-top:.25rem;accent-color:var(--gold);cursor:pointer}
+.mc-option label{cursor:pointer;flex:1;color:var(--cream);font-size:.95rem}
+.mc-option.correct{background:rgba(80,200,120,.12);border-color:#50c878}
+.mc-option.incorrect{background:rgba(220,80,80,.12);border-color:#e07070}
+.essay-question{padding:1.5rem 0;border-bottom:1px dashed var(--line)}
+.essay-question:last-child{border-bottom:none}
+.essay-question .q-text{font-family:var(--serif-2);font-size:1.05rem;color:var(--cream);margin-bottom:1rem;line-height:1.6}
+.essay-question .q-text strong{color:var(--gold)}
+.essay-question textarea{width:100%;min-height:120px;padding:1rem;background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:4px;color:var(--cream);font-family:var(--sans);font-size:.95rem;resize:vertical;transition:.3s}
+.essay-question textarea:focus{outline:none;border-color:var(--gold);background:rgba(201,169,97,.05)}
+.quiz-actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2.5rem 0}
+.btn-action{padding:1rem 1.8rem;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;cursor:pointer;border-radius:4px;border:none;transition:.4s;display:inline-flex;align-items:center;gap:.6rem}
+.btn-submit{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:var(--ink);box-shadow:0 10px 30px rgba(201,169,97,.3)}
+.btn-submit:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(201,169,97,.5)}
+.btn-pdf, .btn-score, .btn-email, .btn-reset{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.btn-pdf:hover, .btn-score:hover, .btn-email:hover{background:var(--gold);color:var(--ink)}
+.btn-reset{color:#e07070;border-color:#e07070}
+.btn-reset:hover{background:#e07070;color:var(--ink)}
+.result-box{display:none;background:linear-gradient(135deg,rgba(201,169,97,.1) 0%,rgba(201,169,97,.03) 100%);border:2px solid var(--gold);border-radius:8px;padding:2.5rem;margin:2rem 0;text-align:center}
+.result-box.show{display:block;animation:fadeIn .6s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.result-box h3{font-family:var(--serif);color:var(--gold);font-size:1.8rem;margin-bottom:1.5rem}
+.result-scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:1.5rem}
+.score-card{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:6px;padding:1.5rem 1rem}
+.score-card small{display:block;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.score-card .score-value{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--gold)}
+.score-card .score-value span{font-size:1rem;color:var(--muted)}
+.result-grade{font-family:var(--serif);font-size:1.3rem;color:var(--cream);margin-top:1rem}
+.result-grade strong{color:var(--gold);font-size:1.8rem}
+footer{padding:3rem 8% 2rem;background:var(--ink-2);border-top:1px solid var(--line);text-align:center;position:relative;z-index:1}
+footer .brand-mark{font-family:var(--serif);font-size:1.5rem;color:var(--gold);margin-bottom:.5rem}
+footer .arabic-quote{font-family:var(--arab);font-size:1.3rem;color:var(--gold);direction:rtl;margin:1rem 0;opacity:.8}
+footer p{color:var(--muted);font-size:.85rem;margin-bottom:.3rem}
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:2rem;gap:1.5rem;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .result-scores{grid-template-columns:1fr}
+  .bottom-nav{flex-direction:column;text-align:center}
+  .map-branches{grid-template-columns:1fr}
+  .glossary-grid{grid-template-columns:1fr}
+  .arabic-display{font-size:1.4rem}
+  .analysis-box .word-analysis{grid-template-columns:1fr}
+  .env-text .arabic-paragraph,.quran-box .arabic-paragraph{font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-ornament"></div>
+
+<nav class="navbar">
+  <a href="index.html" class="brand">An-Nahw <span>·</span> lil Mutawassithin</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="index.html#about">Tentang</a></li>
+    <li><a href="index.html#chapters">Daftar Bab</a></li>
+    <li><a href="index.html#author">Penulis</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> &nbsp;/&nbsp; <a href="index.html#chapters">Daftar Bab</a> &nbsp;/&nbsp; Pertemuan 11
+  </div>
+  <span class="chapter-label">Pertemuan 11 · 2 SKS</span>
+  <h1>At-Taukid: <span class="accent">Seni Penekanan Informasi</span></h1>
+  <div class="hero-arabic">التَّأْكِيدُ: فَنُّ تَأْكِيدِ الْمَعْلُومَاتِ وَتَثْبِيتِهَا</div>
+  <p class="subtitle">Konsep Taukid Ma'nawi dan Taukid Lafzhi, dhamir al-fashl, isim-isim taukid, syarat-syarat, analisis Al-Qur'an dan hadis, serta konstruksi paragraf bertema lingkungan.</p>
+  <div class="hero-actions">
+    <a href="10.html" class="btn btn-outline">← Pertemuan 10</a>
+    <a href="#pendahuluan" class="btn btn-primary">Mulai Membaca ↓</a>
+  </div>
+</header>
+
+<section class="content" id="pendahuluan">
+
+  <div class="toc">
+    <h4>📑 Daftar Isi Pertemuan 11</h4>
+    <ol>
+      <li><a href="#pendahuluan">Pendahuluan</a></li>
+      <li><a href="#s11-1">11.1 Konsep dan Definisi Taukid</a>
+        <ol>
+          <li><a href="#s11-1-1">Pengertian secara Bahasa dan Istilah</a></li>
+          <li><a href="#s11-1-2">Definisi Menurut Ulama Nahwu</a></li>
+          <li><a href="#s11-1-3">Kedudukan Taukid dalam Tawabi'</a></li>
+        </ol>
+      </li>
+      <li><a href="#s11-2">11.2 Taukid Ma'nawi (التَّأْكِيدُ الْمَعْنَوِيّ)</a>
+        <ol>
+          <li><a href="#s11-2-1">Dhamir al-Fashl (ضمير الفصل)</a></li>
+          <li><a href="#s11-2-2">Isim-isim Taukid (نفس, عين, كلا, كلتا, كل, جميع)</a></li>
+          <li><a href="#s11-2-3">Syarat-syarat Taukid Ma'nawi</a></li>
+        </ol>
+      </li>
+      <li><a href="#s11-3">11.3 Taukid Lafzhi (التَّأْكِيدُ اللَّفْظِيّ)</a></li>
+      <li><a href="#s11-4">11.4 Hukum I'rab Taukid</a></li>
+      <li><a href="#s11-5">11.5 Analisis Teks Otentik (Al-Qur'an & Hadis)</a></li>
+      <li><a href="#s11-6">11.6 Fungsi Retorika Taukid</a></li>
+      <li><a href="#s11-7">11.7 Aplikasi: Kalimat Bertema Lingkungan</a></li>
+      <li><a href="#s11-8">11.8 Tugas Pertemuan 11</a></li>
+      <li><a href="#s11-9">11.9 Peta Konsep & Glosarium</a></li>
+      <li><a href="#kesimpulan">Kesimpulan</a></li>
+      <li><a href="#referensi">Daftar Pustaka</a></li>
+    </ol>
+  </div>
+
+  <h2 class="section-title">Pendahuluan</h2>
+
+  <p class="lead">
+    Jika <em>Na'at</em> berfungsi menjelaskan sifat, dan <em>Badal</em> berfungsi menggantikan, maka <em>Taukid</em> berfungsi <strong>menguatkan dan menegaskan</strong> — ia adalah alat retorika yang membuat informasi tidak hanya dipahami, tetapi juga diyakini dan diinternalisasi oleh pendengar.
+  </p>
+
+  <p>
+    Setelah pada pertemuan kesepuluh kita mempelajari <strong>La Nafiyah lil Jins</strong> sebagai alat negasi universal, pada pertemuan kesebelas ini kita memasuki kelompok <strong>Tawabi'</strong> (kata-kata yang mengikuti) dengan unsur pertama: <strong>At-Taukid</strong> (التَّأْكِيدُ). Taukid adalah tabi' yang berfungsi menguatkan makna matbu' (yang diikuti) sehingga menghilangkan keraguan atau kekeliruan dari benak pendengar.
+  </p>
+
+  <p>
+    Dalam Al-Qur'an, Taukid sangat dominan digunakan untuk menegaskan keesaan Allah, kepastian hari kiamat, dan kebenaran wahyu. Contoh paling terkenal adalah firman-Nya: <span class="arab" style="font-size:1.1rem">أُولَٰئِكَ هُمُ الْخَالِدُونَ</span> ("Mereka itulah orang-orang yang kekal") — di mana <span class="arab" style="font-size:1.1rem">هُمُ</span> berfungsi sebagai Taukid Ma'nawi yang menegaskan <span class="arab" style="font-size:1.1rem">أُولَٰئِكَ</span>. Dalam bahasa Indonesia, kita mengenal konsep serupa dalam frasa seperti "Mereka <em>sendiri</em> yang datang" atau "Semua pelajar <em>semuanya</em> hadir".
+  </p>
+
+  <p>
+    Pada pertemuan ini, kita akan membedah Taukid secara komprehensif: mulai dari konsep dan definisi, dua jenisnya (Ma'nawi dan Lafzhi), dhamir-dhamir al-fashl, isim-isim taukid (nafs, 'ain, kila, kilta, kull, jami'), syarat-syaratnya, hukum i'rab, analisis ayat-ayat Al-Qur'an, fungsi retorika, hingga aplikasi dalam konstruksi paragraf bertema lingkungan. Sebagai puncak pembelajaran, mahasiswa akan menyusun paragraf tentang "Pentingnya Bahasa Arab" dengan minimal 3 Taukid Ma'nawi — sebuah latihan yang memadukan kompetensi nahwu dengan keterampilan menulis kreatif.
+  </p>
+
+  <div class="quote-box">
+    <div class="arabic">أُولَٰئِكَ هُمُ الْخَالِدُونَ</div>
+    <div class="translation">"Mereka itulah orang-orang yang kekal."</div>
+    <div class="source">— QS. Al-Baqarah [2]: 82</div>
+  </div>
+
+  <div class="video-box">
+    <div class="video-icon">▶</div>
+    <h4>Video: Mengenal At-Taukid dalam Kalimat Arab</h4>
+    <p>Simak penjelasan visual tentang bagaimana Taukid bekerja dalam struktur kalimat Arab — dari definisi dasar hingga analisis fungsi retorika dalam Al-Qur'an.</p>
+    <div class="source">Sumber: Kanal Pendidikan Bahasa Arab · UIN Bukittinggi</div>
+  </div>
+
+  <div class="key-concept">
+    <h4>🔑 Konsep Kunci Pertemuan 11</h4>
+    <ul>
+      <li><strong>At-Taukid (التَّأْكِيدُ):</strong> Tabi' yang berfungsi menguatkan makna matbu' sehingga menghilangkan keraguan atau kekeliruan dari benak pendengar.</li>
+      <li><strong>Taukid Ma'nawi (التَّأْكِيدُ الْمَعْنَوِيّ):</strong> Taukid yang menggunakan dhamir al-fashl (ضمير الفصل) atau isim-isim taukid (nafs, 'ain, kila, kilta, kull, jami').</li>
+      <li><strong>Taukid Lafzhi (التَّأْكِيدُ اللَّفْظِيّ):</strong> Taukid yang mengulang kata/frasa/kalimat secara lafziah.</li>
+      <li><strong>Dhamir al-Fashl (ضمير الفصل):</strong> Dhamir munfashil (هو, هما, هم, dll) yang berfungsi sebagai Taukid Ma'nawi.</li>
+      <li><strong>Matbu' (المَتْبُوع):</strong> Kata yang diikuti oleh Taukid — bisa berupa Mubtada', Fa'il, Maf'ul Bih, dll.</li>
+      <li><strong>I'rab Taukid:</strong> Selalu mengikuti i'rab matbu'-nya (jika matbu' marfu', taukid marfu'; jika manshub, taukid manshub).</li>
+    </ul>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 1: Mengapa Taukid Penting dalam Al-Qur'an?</h4>
+    <div class="case-content">
+      Bandingkan dua kalimat berikut:<br>
+      (1) <span class="arab" style="font-size:1.3rem">أُولَٰئِكَ الْخَالِدُونَ</span> — "Mereka orang-orang yang kekal."<br>
+      (2) <span class="arab" style="font-size:1.3rem">أُولَٰئِكَ هُمُ الْخَالِدُونَ</span> — "Merekalah <em>sendiri</em> orang-orang yang kekal."<br><br>
+      Kedua kalimat menyampaikan informasi yang sama secara denotatif, tetapi kalimat kedua memiliki <strong>efek retorika</strong> yang jauh lebih kuat. Penggunaan <span class="arab" style="font-size:1.2rem">هُمُ</span> sebagai Taukid Ma'nawi memberikan penegasan yang menghilangkan kemungkinan adanya pengecualian atau keraguan. Inilah fungsi utama Taukid dalam Al-Qur'an — menegaskan kebenaran secara mutlak.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Taukid bukan sekadar "pengulangan" — ia adalah alat retorika yang sangat kuat untuk menegaskan kepastian. Mahasiswa PBA perlu memahami fungsi ini agar mampu menganalisis teks-teks keislaman secara mendalam, di mana penggunaan Taukid sering kali memiliki implikasi teologis dan dakwah.
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi untuk Mahasiswa PBA</h4>
+    <p>
+      Sebagai calon guru bahasa Arab, Anda akan sering mengajarkan Taukid kepada siswa — baik dalam konteks nahwu maupun dalam konteks terjemahan Al-Qur'an dan hadis. Pemahaman yang kokoh tentang Taukid akan menjadi fondasi bagi siswa untuk memahami bagaimana bahasa Arab mengekspresikan penegasan dan kepastian. Bayangkan bagaimana Anda akan menjelaskan konsep ini dengan cara yang menarik — mungkin dengan contoh dari bahasa Indonesia ("mereka sendiri", "semuanya", "semua"), atau dari ayat-ayat Al-Qur'an yang sudah dihafal siswa.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11.1 KONSEP DAN DEFINISI -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s11-1">11.1 Konsep dan Definisi <em>At-Taukid</em></h2>
+
+  <p>
+    Memahami konsep dan definisi Taukid adalah langkah pertama yang krusial. Tanpa pemahaman yang kokoh tentang hakikat Taukid, mahasiswa akan kesulitan dalam membedakannya dengan tabi' lainnya (seperti Na'at dan Badal) dan memahami fungsinya dalam retorika bahasa Arab.
+  </p>
+
+  <h3 class="sub-title" id="s11-1-1">11.1.1 Pengertian Taukid secara Bahasa dan Istilah</h3>
+
+  <p>
+    Secara <strong>etimologis (bahasa)</strong>, kata <em>taukid</em> (تَأْكِيد) berasal dari akar kata <em>akkada</span> (أَّكَدَ) yang berarti "menguatkan", "meneguhkan", atau "memantapkan". Secara harfiah, taukid berarti "penguatan" atau "penegasan".
+  </p>
+
+  <p>
+    Secara <strong>terminologis (istilah nahwu)</strong>, Taukid adalah tabi' yang berfungsi menguatkan makna matbu' (yang diikuti) sehingga menghilangkan keraguan atau kekeliruan dari benak pendengar. Dengan kata lain, Taukid adalah alat retorika yang menegaskan bahwa informasi yang diberikan adalah pasti dan tidak ada pengecualian.
+  </p>
+
+  <h3 class="sub-title" id="s11-1-2">11.1.2 Definisi Taukid Menurut Ulama Nahwu</h3>
+
+  <table>
+    <thead>
+      <tr><th>Ulama / Kitab</th><th>Definisi dalam Bahasa Arab</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ibnu Malik</strong><br><em>Alfiyyah</em></td>
+        <td><span class="arab" style="font-size:1.1rem">وَتَأْكِيدٌ بِضَمِيرِ أَوْ بِاسْمِ *** نَفْسٍ وَعَيْنٍ وَكِلٍ وَكِلْتَا</span></td>
+        <td>"Taukid adalah dengan dhamir atau dengan isim nafs, 'ain, kil, atau kilta."</td>
+      </tr>
+      <tr>
+        <td><strong>Ibnu Hisyam</strong><br><em>Mughni al-Labib</em></td>
+        <td><span class="arab" style="font-size:1.1rem">التَّأْكِيدُ: تَابِعٌ يُرَادُ بِهِ تَثْبِيتُ الْمَتْبُوعِ فِي نَفْسِ الْمَسْمُوعِ بِإِزَالَةِ مَا عَسَىٰ أَنْ يَطْرَأَ عَلَيْهِ مِنْ تَوَهُّمِ تَخَلُّفٍ أَوْ سَهْوٍ</span></td>
+        <td>"Taukid adalah tabi' yang bertujuan untuk menguatkan matbu' dalam benak pendengar dengan menghilangkan kemungkinan adanya kekeliruan atau kelalaian."</td>
+      </tr>
+      <tr>
+        <td><strong>Al-Jarim & Amin</strong><br><em>An-Nahw al-Wadhih</em></td>
+        <td><span class="arab" style="font-size:1.1rem">التَّأْكِيدُ: تَابِعٌ يَتَبَعُ مَا قَبْلَهُ لِيُفِيدَ تَثْبِيتَهُ وَتَحْقِيْقَهُ</span></td>
+        <td>"Taukid adalah tabi' yang mengikuti kata sebelumnya untuk memberikan faidah penguatan dan pemantapan."</td>
+      </tr>
+      <tr>
+        <td><strong>Abbas Hasan</strong><br><em>Al-Nahw al-Wafi</em></td>
+        <td><span class="arab" style="font-size:1.1rem">التَّأْكِيدُ: مَا يُذْكَرُ بَعْدَ الْكَلِمَةِ لِبَيَانِ أَنَّ الْمُرَادَ بِهَا جَمِيعُ مَا تَشْمَلُهُ لَا بَعْضه</span></td>
+        <td>"Taukid adalah apa yang disebutkan setelah kata untuk menjelaskan bahwa yang dimaksudkan adalah semua yang tercakup, bukan sebagiannya."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Taukid adalah <strong>tabi'</strong> — artinya ia selalu mengikuti matbu'-nya dalam hal i'rab (marfu', manshub, majrur, atau majzum).</li>
+      <li>Fungsi utama Taukid adalah <strong>menegaskan</strong> — bukan menjelaskan sifat (seperti Na'at) atau menggantikan (seperti Badal).</li>
+      <li>Taukid memiliki dua jenis: <strong>Ma'nawi</strong> (dengan dhamir atau isim khusus) dan <strong>Lafzhi</strong> (dengan pengulangan lafaz).</li>
+      <li>Dalam Al-Qur'an, Taukid sangat dominan digunakan untuk menegaskan keesaan Allah, kepastian hari kiamat, dan kebenaran wahyu.</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s11-1-3">11.1.3 Kedudukan Taukid dalam Tawabi'</h3>
+
+  <p>
+    Taukid merupakan salah satu dari empat <strong>Tawabi'</strong> (kata-kata yang mengikuti) dalam nahwu. Keempat tabi' tersebut adalah:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Tabi'</th><th>Fungsi</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Na'at (النَّعْت)</strong></td>
+        <td>Menjelaskan sifat matbu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ الْمُجْتَهِدُ</span><br>"Datang pelajar yang rajin."</td>
+      </tr>
+      <tr>
+        <td><strong>Taukid (التَّأْكِيد)</strong></td>
+        <td>Menguatkan makna matbu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ نَفْسُهُ</span><br>"Pelajar itu sendiri yang datang."</td>
+      </tr>
+      <tr>
+        <td><strong>Badal (الْبَدَل)</strong></td>
+        <td>Menggantikan matbu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ أَخُُ</span><br>"Datang pelajar, yaitu saudaranya."</td>
+      </tr>
+      <tr>
+        <td><strong>'Athaf (الْعَطْف)</strong></td>
+        <td>Menghubungkan ma'thuf dengan ma'thuf 'alaih</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ وَالْمُدِيرُ</span><br>"Datang pelajar dan direktur."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="key-concept">
+    <h4>✦ Perbedaan Taukid dengan Tabi' Lainnya</h4>
+    <ul>
+      <li><strong>Taukid vs Na'at:</strong> Na'at menjelaskan sifat matbu' (seperti "pelajar yang rajin"), sedangkan Taukid menegaskan matbu' (seperti "pelajar itu sendiri").</li>
+      <li><strong>Taukid vs Badal:</strong> Badal menggantikan matbu' (seperti "pelajar, yaitu saudaranya"), sedangkan Taukid menguatkan matbu' tanpa menggantikannya.</li>
+      <li><strong>Taukid vs 'Athaf:</strong> 'Athaf menghubungkan dua unsur yang berbeda (seperti "pelajar dan direktur"), sedangkan Taukid mengulang atau menegaskan unsur yang sama.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11.2 Taukid Ma'nawi -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s11-2">11.2 Taukid Ma'nawi <em>(التَّأْكِيدُ الْمَعْنَوِيّ)</em></h2>
+
+  <p>
+    Taukid Ma'nawi adalah Taukid yang menggunakan <strong>dhamir al-fashl</strong> (kata ganti yang terpisah) atau <strong>isim-isim taukid</strong> (nafs, 'ain, kila, kilta, kull, jami'). Taukid ini memberikan penegasan secara makna — yaitu menegaskan bahwa yang dimaksudkan adalah semua yang tercakup, bukan sebagiannya.
+  </p>
+
+  <h3 class="sub-title" id="s11-2-1">11.2.1 Dhamir al-Fashl (ضمير الفصل)</h3>
+
+  <p>
+    Dhamir al-fashl adalah dhamir munfashil (kata ganti yang terpisah) yang berfungsi sebagai Taukid Ma'nawi. Dhamir ini selalu <strong>kembali kepada matbu'</strong> dan <strong>sesuai dengan matbu'</strong> dalam hal jenis (mudzakkar/muannats) dan jumlah (mufrad/mutsanna/jamak).
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Dhamir</th><th>Arti</th><th>Contoh Kalimat</th><th>Terjemahan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">هُوَ</span></td>
+        <td>Ia (lk)</td>
+        <td><span class="arab">جَاءَ الْمُدِيرُ هُوَ</span></td>
+        <td>"Pak direktur <em>sendiri</em> yang datang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">هِيَ</span></td>
+        <td>Ia (pr)</td>
+        <td><span class="arab">جَاءَتِ الْمُدِيرَةُ هِيَ</span></td>
+        <td>"Bu direktur <em>sendiri</em> yang datang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">هُمَا</span></td>
+        <td>Keduanya</td>
+        <td><span class="arab">جَاءَ الطَّالِبَانِ هُمَا</span></td>
+        <td>"Kedua pelajar itu <em>keduanya</em> datang."</td>
+      <tr>
+        <td><span class="arab">هُمْ</span></td>
+        <td>Mereka (lk)</td>
+        <td><span class="arab">جَاءَ الطُّلَّابُ هُمْ</span></td>
+        <td>"Para pelajar <em>mereka semua</em> datang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">هُنَّ</span></td>
+        <td>Mereka (pr)</td>
+        <td><span class="arab">جَاءَتِ الطَّالِبَاتُ هُنَّ</span></td>
+        <td>"Para pelajar perempuan <em>mereka semua</em> datang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">أَنْتَ</span></td>
+        <td>Engkau (lk)</td>
+        <td><span class="arab">أَقْبِلْ أَنْتَ</span></td>
+        <td>"Majulah <em>engkau sendiri</em>."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">نَحْنُ</span></td>
+        <td>Kami</td>
+        <td><span class="arab">نَذْهَبُ نَحْنُ</span></td>
+        <td>"Kami <em>sendiri</em> yang pergi."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="arabic-display">
+    أُولَٰئِكَ هُمُ الْخَالِدُونَ
+    <small>"Mereka itulah orang-orang yang kekal."<br>— QS. Al-Baqarah [2]: 82</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">أُولَٰئِكَ</span>
+      <span class="detail"><strong>Isim isyarah</strong> — marfu' (atau manshub tergantung posisi). <small>Berfungsi sebagai Mubtada' (atau Fa'il, tergantung konteks). Makna: "Mereka itu".</small></span>
+
+      <span class="word">هُمُ</span>
+      <span class="detail"><strong>Dhamir munfashil</strong> — marfu' (karena sebagai Taukid yang mengikuti matbu' marfu'). <small>Berfungsi sebagai <strong>Taukid Ma'nawi</strong> yang menegaskan <span class="arab" style="font-size:1.1rem">أُولَٰئِكَ</span>. Wawu di akhir adalah wawu taukid (wawu al-fashl) yang tidak memiliki makna.</small></span>
+
+      <span class="word">الْخَالِدُونَ</span>
+      <span class="detail"><strong>Khabar</strong> (atau Na'at) — marfu' dengan wawu (karena jamak mudzakkar salim). <small>Makna: "orang-orang yang kekal".</small></span>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Catatan tentang Wawu al-Fashl</h4>
+    <ul>
+      <li>Wawu yang muncul di akhir dhamir taukid (seperti <span class="arab" style="font-size:1.1rem">هُمُ</span>) disebut <strong>wawu al-fashl</strong> (وَاو الْفَصْل) — wawu pemisah.</li>
+      <li>Wawu ini <strong>tidak memiliki makna</strong> — ia hanya berfungsi sebagai pemisah antara dhamir taukid dan kata setelahnya.</li>
+      <li>Wawu al-fashl <strong>tidak boleh dihapus</strong> jika setelahnya ada isim ma'rifah yang dimulai dengan alif-lam (seperti <span class="arab" style="font-size:1.1rem">الْخَالِدُونَ</span>).</li>
+      <li>Contoh lain: <span class="arab" style="font-size:1.1rem">إِنَّهُ هُوَ السَّمِيعُ الْبَصِيرُ</span> — "Sesungguhnya Dia sendiri Yang Maha Mendengar lagi Maha Melihat."</li>
+    </ul>
+  </div>
+
+  <h3 class="sub-title" id="s11-2-2">11.2.2 Isim-isim Taukid</h3>
+
+  <p>
+    Selain dhamir al-fashl, Taukid Ma'nawi juga dapat menggunakan isim-isim khusus yang berfungsi menegaskan matbu'. Isim-isim ini adalah: <strong>nafs</strong> (نَفْس), <strong>'ain</strong> (عَيْن), <strong>kila</strong> (كِلا), <strong>kilta</strong> (كِلْتَا), <strong>kull</strong> (كُلّ), dan <strong>jami'</strong> (جَمِيع).
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Isim</th><th>Arti</th><th>Kondisi</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="arab">نَفْس</span></td>
+        <td>Sendiri / diri</td>
+        <td>Untuk mufrad (tunggal) — mudzakkar dan muannats</td>
+        <td><span class="arab">جَاءَ الْمُدِيرُ نَفْسُهُ</span><br>"Pak direktur <em>sendiri</em> yang datang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">عَيْن</span></td>
+        <td>Sendiri / mata</td>
+        <td>Untuk mufrad (tunggal) — mudzakkar dan muannats</td>
+        <td><span class="arab">جَاءَتِ الْمُدِيرَةُ عَيْنُهَا</span><br>"Bu direktur <em>sendiri</em> yang datang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">كِلا</span></td>
+        <td>Keduanya</td>
+        <td>Untuk mudzakkar mutsanna (dua laki-laki)</td>
+        <td><span class="arab">جَاءَ الطَّالِبَانِ كِلَاهُمَا</span><br>"Kedua pelajar itu <em>keduanya</em> datang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">كِلْتَا</span></td>
+        <td>Keduanya</td>
+        <td>Untuk muannats mutsanna (dua perempuan)</td>
+        <td><span class="arab">جَاءَتِ الطَّالِبَتَانِ كِلْتَاهُمَا</span><br>"Kedua pelajar perempuan itu <em>keduanya</em> datang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">كُلّ</span></td>
+        <td>Semua / seluruh</td>
+        <td>Untuk jamak (lebih dari dua) — mudzakkar dan muannats</td>
+        <td><span class="arab">جَاءَ الطُّلَّابُ كُلُّهُمْ</span><br>"Para pelajar <em>semuanya</em> datang."</td>
+      </tr>
+      <tr>
+        <td><span class="arab">جَمِيع</span></td>
+        <td>Semua / seluruh</td>
+        <td>Untuk jamak (lebih dari dua) — mudzakkar dan muannats</td>
+        <td><span class="arab">جَاءَتِ النِّسَاءُ جَمِيعُهُنَّ</span><br>"Para perempuan <em>semuanya</em> datang."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="arabic-display">
+    جَاءَ الطُّلَّابُ كُلُّهُمْ
+    <small>"Para pelajar semuanya datang."<br>Isim Taukid (كُلّ) + dhamir yang kembali ke matbu'</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">جَاءَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah. <small>Fi'il ma'lum yang membutuhkan Fa'il.</small></span>
+
+      <span class="word">الطُّلَّابُ</span>
+      <span class="detail"><strong>Fa'il</strong> — marfu' dengan dhommah zhahirah. <small>Isim zhahir yang menjadi matbu' (yang diikuti) oleh Taukid.</small></span>
+
+      <span class="word">كُلُّ</span>
+      <span class="detail"><strong>Taukid Ma'nawi</strong> — marfu' dengan dhommah zhahirah (karena mengikuti matbu' yang marfu'). <small>Isim taukid yang menegaskan <span class="arab" style="font-size:1.1rem">الطُّلَّابُ</span>.</small></span>
+
+      <span class="word">هُمْ</span>
+      <span class="detail"><strong>Dhamir muttashil</strong> — marfu' (sebagai mudhaf ilaih dari <span class="arab" style="font-size:1.1rem">كُلّ</span>). <small>Dhamir ini kembali kepada matbu' (<span class="arab" style="font-size:1.1rem">الطُّلَّابُ</span>).</small></span>
+    </div>
+  </div>
+
+  <h3 class="sub-title" id="s11-2-3">11.2.3 Syarat-syarat Taukid Ma'nawi</h3>
+
+  <p>
+    Taukid Ma'nawi tidak sembarangan masuk ke kalimat. Ada syarat-syarat tertentu yang harus dipenuhi agar Taukid dapat berfungsi dengan benar:
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Syarat</th><th>Penjelasan</th><th>Contoh Benar</th><th>Contoh Salah</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Matbu' harus ma'rifah</strong></td>
+        <td>Matbu' (yang diikuti) harus berupa isim ma'rifah (tentu), bukan nakirah (tak tentu).</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ نَفْسُهُ</span> ✓<br>(<span class="arab">الطَّالِبُ</span> ma'rifah)</td>
+        <td><span class="arab">جَاءَ طَالِبٌ نَفْسُهُ</span> ✗<br>(<span class="arab">طَالِبٌ</span> nakirah)</td>
+      </tr>
+      <tr>
+        <td><strong>Taukid harus sesuai dengan matbu'</strong></td>
+        <td>Taukid harus sesuai dengan matbu' dalam hal jenis (mudzakkar/muannats) dan jumlah (mufrad/mutsanna/jamak).</td>
+        <td><span class="arab">جَاءَتِ الطَّالِبَةُ نَفْسُهَا</span> ✓<br>(muannats mufrad)</td>
+        <td><span class="arab">جَاءَتِ الطَّالِبَةُ نَفْسُهُ</span> ✗<br>(tidak sesuai jenis)</td>
+      </tr>
+      <tr>
+        <td><strong>Taukid harus langsung setelah matbu'</strong></td>
+        <td>Tidak boleh ada unsur lain yang memisahkan Taukid dari matbu'-nya.</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ نَفْسُهُ</span> ✓</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ فِي الْفَصْلِ نَفْسُهُ</span> ✗<br>(ada pemisah)</td>
+      </tr>
+      <tr>
+        <td><strong>Isim taukid harus diikuti dhamir yang kembali ke matbu'</strong></td>
+        <td>Isim-isim seperti nafs, 'ain, kila, kilta, kull, jami' harus diikuti dhamir yang kembali kepada matbu'.</td>
+        <td><span class="arab">جَاءَ الطُّلَّابُ كُلُّهُمْ</span> ✓</td>
+        <td><span class="arab">جَاءَ الطُّلَّابُ كُلّ</span> ✗<br>(tanpa dhamir)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="warning-box">
+    <h4>⚠ Kesalahan Umum Mahasiswa</h4>
+    <ul>
+      <li>Mengira semua dhamir munfashil adalah Taukid — padahal dhamir munfashil bisa juga berfungsi sebagai Mubtada' atau Fa'il.</li>
+      <li>Tidak memperhatikan syarat ma'rifah — menggunakan Taukid dengan matbu' nakirah.</li>
+      <li>Tidak memperhatikan kesesuaian jenis dan jumlah antara Taukid dan matbu'.</li>
+      <li>Salah mengidentifikasi Taukid Ma'nawi dengan Na'at — padahal fungsinya berbeda.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11.3 Taukid Lafzhi -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s11-3">11.3 Taukid Lafzhi <em>(التَّأْكِيدُ اللَّفْظِيّ)</em></h2>
+
+  <p>
+    Taukid Lafzhi adalah Taukid yang <strong>mengulang kata, frasa, atau kalimat secara lafziah</strong> (secara lafaz). Taukid ini berfungsi memberikan penekanan melalui pengulangan — mirip dengan teknik repetisi dalam retorika.
+  </p>
+
+  <div class="arabic-display">
+    كَلَّا سَيَعْلَمُونَ *** ثُمَّ كَلَّا سَيَعْلَمُونَ
+    <small>"Sekali-kali tidak! Kelak mereka akan mengetahui. Kemudian sekali-kali tidak! Kelak mereka akan mengetahui."<br>— QS. An-Naba' [78]: 3-4</small>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Taukid Lafzhi</h5>
+    <div class="word-analysis">
+      <span class="word">كَلَّا سَيَعْلَمُونَ</span>
+      <span class="detail"><strong>Kalimat pertama</strong> — <span class="arab" style="font-size:1.1rem">كَلَّا</span> = alat nafy dan tahdzir (penolakan dan peringatan); <span class="arab" style="font-size:1.1rem">سَيَعْلَمُونَ</span> = fi'il mudhari' + fa'il.</span>
+
+      <span class="word">ثُمَّ كَلَّا سَيَعْلَمُونَ</span>
+      <span class="detail"><strong>Taukid Lafzhi</strong> — pengulangan kalimat yang sama dengan tambahan <span class="arab" style="font-size:1.1rem">ثُمَّ</span> (kemudian). Pengulangan ini berfungsi memberikan <strong>penegasan yang sangat kuat</strong> tentang kepastian peristiwa yang akan terjadi.</span>
+    </div>
+  </div>
+
+  <h4 class="sub-sub-title">Jenis-jenis Taukid Lafzhi</h4>
+
+  <table>
+    <thead>
+      <tr><th>Jenis</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Pengulangan Kata</strong></td>
+        <td>Mengulang satu kata secara langsung</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ الطَّالِبُ</span><br>"Datang pelajar, (ya) pelajar itu."</td>
+      </tr>
+      <tr>
+        <td><strong>Pengulangan Frasa</strong></td>
+        <td>Mengulang frasa atau gabungan kata</td>
+        <td><span class="arab">فِي الْفَصْلِ فِي الْفَصْلِ</span><br>"Di kelas, (ya) di kelas."</td>
+      </tr>
+      <tr>
+        <td><strong>Pengulangan Kalimat</strong></td>
+        <td>Mengulang seluruh kalimat</td>
+        <td><span class="arab">كَلَّا سَيَعْلَمُونَ *** ثُمَّ كَلَّا سَيَعْلَمُونَ</span><br>(QS. An-Naba': 3-4)</td>
+      </tr>
+      <tr>
+        <td><strong>Pengulangan dengan Variasi</strong></td>
+        <td>Mengulang dengan sedikit perubahan</td>
+        <td><span class="arab">أَيْنََََََََََََََ</span> dalam doa: <span class="arab">اللَّهُمَّ اغْفِرْ لِيْ *** اللَّهُمَّ ارْحَمْنِيْ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Perbedaan Taukid Ma'nawi dan Taukid Lafzhi</h4>
+    <ul>
+      <li><strong>Taukid Ma'nawi:</strong> Menggunakan dhamir atau isim khusus (nafs, 'ain, kila, kilta, kull, jami') untuk menegaskan makna.</li>
+      <li><strong>Taukid Lafzhi:</strong> Mengulang kata/frasa/kalimat secara lafaz untuk memberikan penekanan.</li>
+      <li><strong>Fungsi:</strong> Keduanya berfungsi menegaskan, tetapi Taukid Ma'nawi lebih halus dan sering digunakan dalam Al-Qur'an, sedangkan Taukid Lafzhi lebih eksplisit dan sering digunakan dalam doa dan retorika.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11.4 HUKUM I'RAB TAUKID -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s11-4">11.4 Hukum I'rab <em>Taukid</em></h2>
+
+  <p>
+    Sebagai tabi', Taukid <strong>selalu mengikuti i'rab matbu'-nya</strong>. Inilah kaidah fundamental yang harus dikuasai oleh mahasiswa.
+  </p>
+
+  <div class="key-concept">
+    <h4>✦ Kaidah Dasar I'rab Taukid</h4>
+    <ul>
+      <li><strong>Jika matbu' marfu', maka Taukid marfu'.</li>
+      <li><strong>Jika matbu' manshub', maka Taukid manshub'.</li>
+      <li><strong>Jika matbu' majrur', maka Taukid majrur'.</li>
+      <li><strong>Jika matbu' majzum', maka Taukid majzum'.</li>
+      <li>Taukid tidak memiliki i'rab sendiri — ia selalu mengikuti matbu'.</li>
+    </ul>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Posisi Matbu'</th><th>I'rab Matbu'</th><th>I'rab Taukid</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Fa'il</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td><span class="arab">جَاءَ الطَّالِبُ نَفْسُهُ</span><br><span class="arab">نَفْسُهُ</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبُ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Mubtada'</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td><span class="arab">الْمُدِيرُ هُوَ قَائِمٌ</span><br><span class="arab">هُوَ</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">الْمُدِيرُ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Maf'ul Bih</strong></td>
+        <td>Manshub</td>
+        <td>Manshub</td>
+        <td><span class="arab">رَأَيْتُ الطَّالِبَ نَفْسَهُ</span><br><span class="arab">نَفْسَهُ</span> manshub mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Majrur (jar)</strong></td>
+        <td>Majrur</td>
+        <td>Majrur</td>
+        <td><span class="arab">مَرَرْتُ بِالطَّالِبِ نَفْسِهِ</span><br><span class="arab">نَفْسِهِ</span> majrur mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبِ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Isim Inna</strong></td>
+        <td>Manshub</td>
+        <td>Manshub</td>
+        <td><span class="arab">إِنَّ الطَّالِبَ نَفْسَهُ قَائِمٌ</span><br><span class="arab">نَفْسَهُ</span> manshub mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبَ</span></td>
+      </tr>
+      <tr>
+        <td><strong>Isim Kana</strong></td>
+        <td>Marfu'</td>
+        <td>Marfu'</td>
+        <td><span class="arab">كَانَ الطَّالِبُ نَفْسُهُ قَائِمًا</span><br><span class="arab">نَفْسُهُ</span> marfu' mengikuti <span class="arab" style="font-size:1.1rem">الطَّالِبُ</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 2: Taukid dalam Berbagai Posisi I'rab</h4>
+    <div class="case-content">
+      Bandingkan tiga kalimat berikut:<br><br>
+      (1) <span class="arab" style="font-size:1.3rem">جَاءَ الطَّالِبُ نَفْسُهُ</span> — "Pelajar itu sendiri yang datang."<br>
+      → <span class="arab" style="font-size:1.2rem">نَفْسُهُ</span> = Taukid Ma'nawi marfu' (mengikuti Fa'il <span class="arab" style="font-size:1.2rem">الطَّالِبُ</span>)<br><br>
+      (2) <span class="arab" style="font-size:1.3rem">رَأَيْتُ الطَّالِبَ نَفْسَهُ</span> — "Aku melihat pelajar itu sendiri."<br>
+      → <span class="arab" style="font-size:1.2rem">نَفْسَهُ</span> = Taukid Ma'nawi manshub (mengikuti Maf'ul Bih <span class="arab" style="font-size:1.2rem">الطَّالِبَ</span>)<br><br>
+      (3) <span class="arab" style="font-size:1.3rem">مَرَرْتُ بِالطَّالِبِ نَفْسِهِ</span> — "Aku berpapasan dengan pelajar itu sendiri."<br>
+      → <span class="arab" style="font-size:1.2rem">نَفْسِهِ</span> = Taukid Ma'nawi majrur (mengikuti majrur <span class="arab" style="font-size:1.2rem">الطَّالِبِ</span>)
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Taukid selalu mengikuti i'rab matbu'-nya, tidak peduli apakah matbu' itu marfu', manshub, atau majrur. Inilah yang membedakan Taukid dari Na'at (yang juga mengikuti matbu', tetapi memiliki fungsi berbeda).
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11.5 ANALISIS TEKS OTENTIK -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s11-5">11.5 Analisis <em>Teks Otentik (Al-Qur'an & Hadis)</em></h2>
+
+  <p>
+    Taukid sangat dominan dalam Al-Qur'an dan hadis. Allah SWT menggunakan Taukid untuk menegaskan keesaan-Nya, kepastian hari kiamat, dan kebenaran wahyu. Mari kita analisis beberapa contoh.
+  </p>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 1: QS. Al-Baqarah [2]: 255 (Ayat Kursi)</h5>
+    <div class="arabic-paragraph">
+      اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Allah, tidak ada tuhan selain Dia Yang Maha Hidup lagi Maha Berdiri sendiri."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "هُوَ"</h5>
+    <div class="word-analysis">
+      <span class="word">اللَّهُ</span>
+      <span class="detail"><strong>Mubtada'</strong> — marfu' dengan dhommah zhahirah. <small>Topik awal kalimat.</small></span>
+
+      <span class="word">لَا</span>
+      <span class="detail"><strong>La Nafiyah lil Jins</strong> — mabni 'ala sukun.</span>
+
+      <span class="word">إِلَٰهَ</span>
+      <span class="detail"><strong>Isim La</strong> — manshub dengan fathah zhahirah.</span>
+
+      <span class="word">إِلَّا</span>
+      <span class="detail"><strong>Adat istitsna'</strong> — mabni la mahalla lahu.</span>
+
+      <span class="word">هُوَ</span>
+      <span class="detail"><strong>Dhamir munfashil</strong> — marfu' dengan dhommah zhahirah. <small>Berfungsi sebagai <strong>Taukid Ma'nawi</strong> yang menegaskan <span class="arab" style="font-size:1.1rem">إِلَٰهَ</span> (setelah istitsna'). Penggunaan Taukid di sini menegaskan bahwa Allah <em>sendiri</em> yang berhak disembah, tidak ada yang lain.</small></span>
+
+      <span class="word">الْحَيُّ الْقَيُّومُ</span>
+      <span class="detail"><strong>Khabar kedua dan ketiga</strong> — marfu' dengan dhommah. <small>Atau bisa juga dianggap sebagai Na'at dari <span class="arab" style="font-size:1.1rem">اللَّهُ</span>.</small></span>
+    </div>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 2: QS. Al-Ikhlas [112]: 1</h5>
+    <div class="arabic-paragraph">
+      قُلْ هُوَ اللَّهُ أَحَدٌ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Katakanlah: Dia-lah Allah Yang Maha Esa."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab</h5>
+    <div class="word-analysis">
+      <span class="word">قُلْ</span>
+      <span class="detail"><strong>Fi'il amr</strong> — mabni 'ala sukun. <small>Fa'il-nya dhamir mustatir taqdiruhu "anta".</small></span>
+
+      <span class="word">هُوَ</span>
+      <span class="detail"><strong>Dhamir sya'n</strong> — marfu' dengan dhommah zhahirah. <small>Berfungsi sebagai Mubtada' 1 (pengantar khabar).</small></span>
+
+      <span class="word">اللَّهُ</span>
+      <span class="detail"><strong>Lafzhu jalalah</strong> — marfu' dengan dhommah zhahirah. <small>Berfungsi sebagai Mubtada' 2 (badal dari <span class="arab" style="font-size:1.1rem">هُوَ</span>) atau Khabar dari Mubtada' 1.</small></span>
+
+      <span class="word">أَحَدٌ</span>
+      <span class="detail"><strong>Khabar</strong> — marfu' dengan tanwin dhommah. <small>Makna: "Yang Maha Esa".</small></span>
+    </div>
+  </div>
+
+  <div class="quran-box">
+    <h5>📖 Contoh 3: QS. Al-Hadid [57]: 3</h5>
+    <div class="arabic-paragraph">
+      هُوَ الْأَوَّلُ وَالْآخِرُ وَالظَّاهِرُ وَالْبَاطِنُ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ
+    </div>
+    <div class="source-info">
+      <strong>Terjemahan:</strong> "Dia-lah Yang Awal dan Yang Akhir Yang Zhahir dan Yang Bathin; dan Dia Maha Mengetahui segala sesuatu."
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis I'rab — Fokus pada "هُوَ" kedua</h5>
+    <div class="word-analysis">
+      <span class="word">هُوَ</span>
+      <span class="detail"><strong>Dhamir munfashil</strong> — marfu' dengan dhommah zhahirah. <small>Berfungsi sebagai <strong>Mubtada'</strong> baru (bukan Taukid, karena tidak mengikuti matbu' sebelumnya secara langsung).</small></span>
+
+      <span class="word">بِكُلِّ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — <span class="arab" style="font-size:1.1rem">بِ</span> = huruf jar; <span class="arab" style="font-size:1.1rem">كُلِّ</span> = majrur dengan kasrah. <small>Perhatikan: <span class="arab" style="font-size:1.1rem">كُلِّ</span> di sini BUKAN Taukid, melainkan bagian dari jar-majrur.</small></span>
+
+      <span class="word">شَيْءٍ</span>
+      <span class="detail"><strong>Mudhaf ilaih</strong> — majrur dengan kasrah.</span>
+
+      <span class="word">عَلِيمٌ</span>
+      <span class="detail"><strong>Khabar</strong> — marfu' dengan tanwin dhommah.</span>
+    </div>
+  </div>
+
+  <div class="case-study">
+    <h4>📖 Studi Kasus 3: Pola Umum Taukid dalam Al-Qur'an</h4>
+    <div class="case-content">
+      Dalam Al-Qur'an, Taukid Ma'nawi sering muncul dalam pola-pola berikut:<br><br>
+      (1) <strong>Pola penegasan keesaan Allah:</strong><br>
+      <span class="arab" style="font-size:1.2rem">إِنَّهُ هُوَ السَّمِيعُ الْبَصِيرُ</span> — "Sesungguhnya Dia sendiri Yang Maha Mendengar lagi Maha Melihat."<br><br>
+      (2) <strong>Pola penegasan kepastian hari kiamat:</strong><br>
+      <span class="arab" style="font-size:1.2rem">أُولَٰئِكَ هُمُ الْخَالِدُونَ</span> — "Mereka itulah orang-orang yang kekal."<br><br>
+      (3) <strong>Pola penegasan kebenaran wahyu:</strong><br>
+      <span class="arab" style="font-size:1.2rem">وَاللَّهُ هُوَ الْغَنِيُّ</span> — "Dan Allah sendiri Yang Maha Kaya."<br><br>
+      <strong>Ta'lil Nahwi:</strong> Penggunaan Taukid dalam Al-Qur'an bukan sekadar variasi gramatikal — ia memiliki implikasi teologis yang dalam. Taukid menegaskan kepastian dan keabsolutan informasi, sehingga menghilangkan keraguan dari benak pendengar.
+    </div>
+    <div class="lesson">
+      <strong>Pembelajaran:</strong> Mahasiswa PBA perlu memahami pola-pola umum Taukid dalam Al-Qur'an agar mampu menafsirkan ayat-ayat secara tepat. Kemampuan ini juga akan berguna dalam mengajarkan nahwu kepada siswa dengan contoh-contoh yang relevan.
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11.6 FUNGSI RETORIKA TAUKID -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s11-6">11.6 Fungsi Retorika <em>Taukid</em></h2>
+
+  <p>
+    Taukid bukan sekadar alat gramatikal — ia adalah alat retorika yang sangat kuat. Dalam bahasa Arab, Taukid memiliki berbagai fungsi retorika yang perlu dipahami oleh mahasiswa PBA.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Fungsi Retorika</th><th>Penjelasan</th><th>Contoh</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Penegasan Kepastian</strong></td>
+        <td>Menghilangkan keraguan dari benak pendengar</td>
+        <td><span class="arab">أُولَٰئِكَ هُمُ الْخَالِدُونَ</span><br>"Mereka <em>itulah sendiri</em> orang-orang yang kekal."</td>
+      </tr>
+      <tr>
+        <td><strong>Penekanan Emosional</strong></td>
+        <td>Memberikan tekanan emosional pada informasi</td>
+        <td><span class="arab">جَاءَ الْمُدِيرُ نَفْسُهُ</span><br>"Pak direktur <em>sendiri</em> yang datang."</td>
+      </tr>
+      <tr>
+        <td><strong>Penghilangan Kekeliruan</strong></td>
+        <td>Mencegah pendengar dari kemungkinan salah paham</td>
+        <td><span class="arab">جَاءَ الطُّلَّابُ كُلُّهُمْ</span><br>"Para pelajar <em>semuanya</em> datang." (bukan sebagian)</td>
+      </tr>
+      <tr>
+        <td><strong>Penegasan Teologis</strong></td>
+        <td>Menegaskan keesaan Allah dan kebenaran wahyu</td>
+        <td><span class="arab">إِنَّهُ هُوَ السَّمِيعُ الْبَصِيرُ</span><br>"Sesungguhnya Dia <em>sendiri</em> Yang Maha Mendengar."</td>
+      </tr>
+      <tr>
+        <td><strong>Retorika Dakwah</strong></td>
+        <td>Memberikan penekanan pada pesan dakwah</td>
+        <td><span class="arab">كَلَّا سَيَعْلَمُونَ *** ثُمَّ كَلَّا سَيَعْلَمُونَ</span><br>"Sekali-kali tidak! Kelak mereka akan mengetahui."</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="insight-box">
+    <h4>◈ Catatan untuk Mahasiswa PBA</h4>
+    <ul>
+      <li>Pemahaman fungsi retorika Taukid akan membantu mahasiswa dalam <strong>menafsirkan Al-Qur'an</strong> secara lebih mendalam.</li>
+      <li>Dalam <strong>khutbah Jumat</strong>, khatib sering menggunakan Taukid untuk memberikan penekanan pada pesan-pesan penting.</li>
+      <li>Dalam <strong>pengajaran nahwu</strong>, mahasiswa dapat menggunakan contoh-contoh Taukid dari Al-Qur'an untuk membuat pembelajaran lebih bermakna.</li>
+      <li>Dalam <strong>penulisan kreatif</strong>, Taukid dapat digunakan untuk memberikan penekanan pada informasi penting.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11.7 APLIKASI: LINGKUNGAN -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s11-7">11.7 Aplikasi: <em>Kalimat Bertema Lingkungan</em></h2>
+
+  <p>
+    Untuk mengaplikasikan pemahaman tentang Taukid, mari kita konstruksi kalimat-kalimat bertema lingkungan dengan menggunakan Taukid Ma'nawi dan Taukid Lafzhi. Tema ini dipilih karena relevan dengan isu global dan sesuai dengan nilai-nilai keislaman tentang tanggung jawab manusia sebagai khalifah di bumi.
+  </p>
+
+  <div class="env-text">
+    <h5>🌿 Contoh Kalimat dengan Taukid Bertema Lingkungan</h5>
+    <div class="arabic-paragraph">
+      ١. جَاءَ الرَّجُلُ نَفْسُهُ لِيَنْظُفَ الْبِيئَةَ<br>
+      ٢. إِنَّ الْمُسْلِمِينَ كُلَّهُمْ مَسْؤُولُونَ عَنْ حِفْظِ الْبِيئَةِ<br>
+      ٣. الْأَشْجَارُ هِيَ الَّتِي تُنَقِّي الْهَوَاءَ<br>
+      ٤. كَلَّا سَيَعْلَمُونَ *** ثُمَّ كَلَّا سَيَعْلَمُونَ عَاقِبَةَ التَّلَوُّثِ<br>
+      ٥. الْمِيَاهُ كُلُّهَا نِعْمَةٌ مِنَ اللهِ
+    </div>
+    <div class="translation">
+      1. Laki-laki itu sendiri yang datang untuk membersihkan lingkungan.<br>
+      2. Sesungguhnya kaum muslimin semuanya bertanggung jawab atas penjagaan lingkungan.<br>
+      3. Pepohonan itu sendirilah yang membersihkan udara.<br>
+      5. Sekali-kali tidak! Kelak mereka akan mengetahui. Kemudian sekali-kali tidak! Kelak mereka akan mengetahui akibat polusi.<br>
+      5. Semua air adalah nikmat dari Allah.
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 1</h5>
+    <div class="word-analysis">
+      <span class="word">جَاءَ</span>
+      <span class="detail"><strong>Fi'il madhi</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الرَّجُلُ</span>
+      <span class="detail"><strong>Fa'il</strong> — marfu' dengan dhommah zhahirah. <small>Matbu' (yang diikuti) oleh Taukid.</small></span>
+
+      <span class="word">نَفْسُهُ</span>
+      <span class="detail"><strong>Taukid Ma'nawi</strong> — marfu' dengan dhommah zhahirah (mengikuti matbu' marfu'). <small><span class="arab" style="font-size:1.1rem">نَفْسُ</span> = isim taukid; <span class="arab" style="font-size:1.1rem">هُ</span> = dhamir muttashil yang kembali ke matbu'.</small></span>
+
+      <span class="word">لِيَنْظُفَ</span>
+      <span class="detail"><strong>Lam ta'lil</strong> + <strong>fi'il mudhari' manshub</strong> — manshub dengan fathah.</span>
+
+      <span class="word">الْبِيئَةَ</span>
+      <span class="detail"><strong>Maf'ul bih</strong> — manshub dengan fathah.</span>
+    </div>
+  </div>
+
+  <div class="analysis-box">
+    <h5>📝 Analisis Kalimat 2</h5>
+    <div class="word-analysis">
+      <span class="word">إِنَّ</span>
+      <span class="detail"><strong>Huruf nasikh</strong> — mabni 'ala fathah.</span>
+
+      <span class="word">الْمُسْلِمِينَ</span>
+      <span class="detail"><strong>Isim Inna</strong> — manshub dengan ya' (karena jamak mudzakkar salim). <small>Matbu' yang diikuti oleh Taukid.</small></span>
+
+      <span class="word">كُلُّهُمْ</span>
+      <span class="detail"><strong>Taukid Ma'nawi</strong> — manshub dengan dhommah muqaddarah (karena mengikuti Isim Inna yang manshub). <small><span class="arab" style="font-size:1.1rem">كُلُّ</span> = isim taukid; <span class="arab" style="font-size:1.1rem">هُمْ</span> = dhamir muttashil yang kembali ke matbu'.</small></span>
+
+      <span class="word">مَسْؤُولُونَ</span>
+      <span class="detail"><strong>Khabar Inna</strong> — marfu' dengan wawu (karena jamak mudzakkar salim).</span>
+
+      <span class="word">عَنْ حِفْظِ الْبِيئَةِ</span>
+      <span class="detail"><strong>Jar-majrur</strong> — berkedudukan khabar kedua atau takhshish.</span>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h4>✦ Tips Mengonstruksi Kalimat dengan Taukid</h4>
+    <ul>
+      <li><strong>Pastikan matbu' ma'rifah:</strong> Taukid Ma'nawi hanya bisa mengikuti matbu' ma'rifah (dengan alif-lam, dhamir, isim isyarah, dll).</li>
+      <li><strong>Pastikan kesesuaian:</strong> Taukid harus sesuai dengan matbu' dalam hal jenis (mudzakkar/muannats) dan jumlah (mufrad/mutsanna/jamak).</li>
+      <li><strong>Pilih isim taukid yang tepat:</strong> Gunakan <span class="arab" style="font-size:1.1rem">نَفْس</span> atau <span class="arab" style="font-size:1.1rem">عَيْن</span> untuk mufrad, <span class="arab" style="font-size:1.1rem">كِلا</span> atau <span class="arab" style="font-size:1.1rem">كِلْتَا</span> untuk mutsanna, <span class="arab" style="font-size:1.1rem">كُلّ</span> atau <span class="arab" style="font-size:1.1rem">جَمِيع</span> untuk jamak.</li>
+      <li><strong>Integrasikan nilai-nilai:</strong> Gunakan tema-tema yang relevan dengan kehidupan dan nilai-nilai keislaman.</li>
+      <li><strong>Perhatikan konteks:</strong> Taukid cocok digunakan untuk memberikan penekanan pada informasi penting — misalnya, dalam dakwah lingkungan.</li>
+    </ul>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11.8 TUGAS PERTEMUAN 11 -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s11-8">11.8 Tugas <em>Pertemuan 11</em></h2>
+
+  <p>
+    Berdasarkan RPS yang telah disepakati, berikut adalah tugas-tugas yang harus diselesaikan mahasiswa setelah pertemuan ini:
+  </p>
+
+  <div class="task-box">
+    <h4>📋 Tugas Mandiri (3%)</h4>
+    <ul>
+      <li>Menyusun <strong>paragraf</strong> tentang <strong>"Pentingnya Bahasa Arab"</strong> dengan menggunakan minimal <strong>3 Taukid Ma'nawi</strong>.</li>
+      <li>Paragraf harus:</li>
+      <li style="padding-left:2.5rem">— Minimal 100 kata dalam bahasa Arab</li>
+      <li style="padding-left:2.5rem">— Bertema "Pentingnya Bahasa Arab" (أَهَمِّيَّةُ اللُّغَةِ الْعَرَبِيَّةِ)</li>
+      <li style="padding-left:2.5rem">— Menggunakan minimal 3 Taukid Ma'nawi (dari jenis berbeda: dhamir al-fashl, nafs, 'ain, kila, kilta, kull, jami')</li>
+      <li>Untuk setiap Taukid Ma'nawi:</li>
+      <li style="padding-left:2.5rem">— Identifikasi jenis Taukid (dhamir al-fashl, nafs, 'ain, kila, kilta, kull, jami')</li>
+      <li style="padding-left:2.5rem">— Tentukan matbu' yang diikuti</li>
+      <li style="padding-left:2.5rem">— Berikan analisis i'rab lengkap</li>
+      <li style="padding-left:2.5rem">— Jelaskan fungsi retorika Taukid tersebut dalam konteks paragraf</li>
+      <li>Sertakan terjemahan Indonesia di bawah paragraf Arab.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="task-box">
+    <h4>📋 Tugas Terstruktur</h4>
+    <ul>
+      <li>Merangkum materi Pertemuan 11 (At-Taukid) secara sistematis.</li>
+      <li>Rangkuman harus mencakup:</li>
+      <li style="padding-left:2.5rem">— Definisi dan konsep Taukid</li>
+      <li style="padding-left:2.5rem">— Taukid Ma'nawi dan Taukid Lafzhi</li>
+      <li style="padding-left:2.5rem">— Dhamir al-fashl dan isim-isim taukid</li>
+      <li style="padding-left:2.5rem">— Syarat-syarat Taukid Ma'nawi</li>
+      <li style="padding-left:2.5rem">— Hukum i'rab Taukid</li>
+      <li style="padding-left:2.5rem">— Fungsi retorika Taukid</li>
+      <li>Sumber: kitab <em>Mughni al-Labib</em> (Ibnu Hisyam), <em>An-Nahw al-Wadhih</em> (Al-Jarim & Amin).</li>
+      <li>Kumpulkan dalam bentuk dokumen digital (PDF/Word) dan unggah ke e-campus.</li>
+    </ul>
+    <div class="deadline">📅 Deadline: 1 minggu setelah pertemuan</div>
+  </div>
+
+  <div class="insight-box">
+    <h4>◈ Contoh Tugas Mandiri (Sebagai Inspirasi)</h4>
+    <p style="margin-bottom:1rem"><strong>Paragraf:</strong></p>
+    <div class="env-text" style="margin-bottom:1rem">
+      <div class="arabic-paragraph">
+        إِنَّ اللُّغَةَ الْعَرَبِيَّةَ هِيَ لُغَةُ الْقُرْآنِ الْكَرِيمِ. هِيَ لُغَةٌ عَظِيمَةٌ نَفْسُهَا. إِنَّ الْمُسْلِمِينَ كُلَّهُمْ يَحْتَاجُونَ إِلَى تَعَلُّمِهَا. هِيَ لُغَةُ الْعِلْمِ عَيْنُهَا. إِنَّ الْعُلَمَاءَ كُلَّهُمْ اعْتَمَدُوا عَلَيْهَا فِي كِتَابَاتِهِمْ.
+      </div>
+      <div class="translation">
+        "Sesungguhnya bahasa Arab adalah bahasa Al-Qur'an Al-Karim. Ia adalah bahasa yang agung sendiri. Sesungguhnya kaum muslimin semuanya membutuhkan mempelajarinya. Ia adalah bahasa ilmu sendiri. Sesungguhnya para ulama semuanya bergantung kepadanya dalam tulisan-tulisan mereka."
+      </div>
+    </div>
+    <p><strong>Taukid Ma'nawi yang digunakan:</strong></p>
+    <ul style="list-style:none;padding:0">
+      <li>• <span class="arab" style="font-size:1.1rem">هِيَ</span> — dhamir al-fashl, menegaskan <span class="arab" style="font-size:1.1rem">اللُّغَةُ الْعَرَبِيَّةُ</span></li>
+      <li>• <span class="arab" style="font-size:1.1rem">نَفْسُهَا</span> — isim taukid <span class="arab" style="font-size:1.1rem">نَفْس</span>, menegaskan <span class="arab" style="font-size:1.1rem">لُغَةٌ عَظِيمَةٌ</span></li>
+      <li>• <span class="arab" style="font-size:1.1rem">كُلُّهُمْ</span> — isim taukid <span class="arab" style="font-size:1.1rem">كُلّ</span>, menegaskan <span class="arab" style="font-size:1.1rem">الْمُسْلِمِينَ</span></li>
+      <li>• <span class="arab" style="font-size:1.1rem">عَيْنُهَا</span> — isim taukid <span class="arab" style="font-size:1.1rem">عَيْن</span>, menegaskan <span class="arab" style="font-size:1.1rem">لُغَةُ الْعِلْمِ</span></li>
+      <li>• <span class="arab" style="font-size:1.1rem">كُلُّهُمْ</span> — isim taukid <span class="arab" style="font-size:1.1rem">كُلّ</span>, menegaskan <span class="arab" style="font-size:1.1rem">الْعُلَمَاءُ</span></li>
+    </ul>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Pembelajaran</h4>
+    <p>
+      Melalui tugas ini, mahasiswa tidak hanya menguji pemahaman teoretis tentang Taukid, tetapi juga melatih keterampilan menulis kreatif dalam bahasa Arab. Kemampuan menyusun paragraf dengan Taukid Ma'nawi akan memperkaya kompetensi mahasiswa dalam mengekspresikan penekanan dan kepastian dalam tulisan Arab.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 11.9 PETA KONSEP & GLOSARIUM -->
+  <!-- ========================================================= -->
+  <h2 class="section-title" id="s11-9">11.9 Peta Konsep <em>& Glosarium</em></h2>
+
+  <div class="concept-map">
+    <h4>🗺️ Peta Konsep At-Taukid</h4>
+    <div class="map-center">
+      <div class="core">AT-TAUKID</div>
+    </div>
+    <div class="map-branches">
+      <div class="map-branch">
+        <h5>📌 Definisi</h5>
+        <p>Tabi' yang menguatkan makna matbu'</p>
+        <ul>
+          <li>Menghilangkan keraguan</li>
+          <li>Memberikan penekanan</li>
+          <li>Selalu mengikuti matbu'</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Jenis-jenis</h5>
+        <ul>
+          <li><strong>Taukid Ma'nawi:</strong>
+            <ul>
+              <li>Dhamir al-fashl (هو, هما, هم)</li>
+              <li>Isim: nafs, 'ain, kila, kilta, kull, jami'</li>
+            </ul>
+          </li>
+          <li><strong>Taukid Lafzhi:</strong>
+            <ul>
+              <li>Pengulangan kata/frasa/kalimat</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 Syarat Taukid Ma'nawi</h5>
+        <ul>
+          <li>Matbu' harus ma'rifah</li>
+          <li>Taukid sesuai dengan matbu'</li>
+          <li>Tidak ada pemisah</li>
+          <li>Isim taukid diikuti dhamir</li>
+        </ul>
+      </div>
+      <div class="map-branch">
+        <h5>📌 I'rab Taukid</h5>
+        <ul>
+          <li>Selalu mengikuti matbu'</li>
+          <li>Marfu' jika matbu' marfu'</li>
+          <li>Manshub jika matbu' manshub</li>
+          <li>Majrur jika matbu' majrur</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="glossary">
+    <h4>📖 Glosarium Istilah Taukid</h4>
+    <div class="glossary-grid">
+      <div class="glossary-item">
+        <div class="term"><strong>Taukid</strong><span class="arab">تَأْكِيد</span></div>
+        <p>Tabi' yang berfungsi menguatkan makna matbu' sehingga menghilangkan keraguan.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Taukid Ma'nawi</strong><span class="arab">تَأْكِيدٌ مَعْنَوِيّ</span></div>
+        <p>Taukid yang menggunakan dhamir al-fashl atau isim-isim taukid.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Taukid Lafzhi</strong><span class="arab">تَأْكِيدٌ لَفْظِيّ</span></div>
+        <p>Taukid yang mengulang kata/frasa/kalimat secara lafaz.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Dhamir al-Fashl</strong><span class="arab">ضميرُ الْفَصْل</span></div>
+        <p>Dhamir munfashil (هو, هما, هم, dll) yang berfungsi sebagai Taukid Ma'nawi.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Nafs</strong><span class="arab">نَفْس</span></div>
+        <p>Isim taukid yang berarti "sendiri" / "diri" — untuk mufrad.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>'Ain</strong><span class="arab">عَيْن</span></div>
+        <p>Isim taukid yang berarti "sendiri" / "mata" — untuk mufrad.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Kila</strong><span class="arab">كِلا</span></div>
+        <p>Isim taukid yang berarti "keduanya" — untuk mudzakkar mutsanna.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Kilta</strong><span class="arab">كِلْتَا</span></div>
+        <p>Isim taukid yang berarti "keduanya" — untuk muannats mutsanna.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Kull</strong><span class="arab">كُلّ</span></div>
+        <p>Isim taukid yang berarti "semua" / "seluruh" — untuk jamak.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Jami'</strong><span class="arab">جَمِيع</span></div>
+        <p>Isim taukid yang berarti "semua" / "seluruh" — untuk jamak.</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Matbu'</strong><span class="arab">مَتْبُوع</span></div>
+        <p>Kata yang diikuti oleh tabi' (dalam Taukid, matbu' adalah yang ditegaskan).</p>
+      </div>
+      <div class="glossary-item">
+        <div class="term"><strong>Wawu al-Fashl</strong><span class="arab">وَاوُ الْفَصْل</span></div>
+        <p>Wawu pemisah yang muncul di akhir dhamir taukid — tidak memiliki makna.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reflection">
+    <h4>💭 Refleksi Penutup Pertemuan 11</h4>
+    <p>
+      Hari ini kita telah menyelami kedalaman konsep At-Taukid — dari definisi dan hakikatnya, dua jenisnya (Ma'nawi dan Lafzhi), dhamir-dhamir al-fashl, isim-isim taukid (nafs, 'ain, kila, kilta, kull, jami'), syarat-syaratnya, hukum i'rab, analisis ayat-ayat Al-Qur'an, fungsi retorika, hingga aplikasi dalam kalimat bertema lingkungan. Ingatlah, Taukid bukan sekadar "pengulangan" — ia adalah <strong>alat retorika</strong> yang sangat kuat untuk menegaskan kepastian dan menghilangkan keraguan. Sebagai calon guru bahasa Arab, penguasaan terhadap Taukid akan menjadi modal berharga dalam mengajarkan nahwu kepada siswa di masa depan.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- KESIMPULAN -->
+  <!-- ========================================================= -->
+  <div class="conclusion" id="kesimpulan">
+    <h3>Kesimpulan Pertemuan 11</h3>
+    <p>
+      Pertemuan kesebelas ini telah membahas secara komprehensif tentang At-Taukid — tabi' yang berfungsi menguatkan makna matbu'. Mahasiswa telah memahami konsep dan definisi Taukid, dua jenisnya (Ma'nawi dan Lafzhi), dhamir-dhamir al-fashl, isim-isim taukid, syarat-syarat Taukid Ma'nawi, hukum i'rab Taukid, serta fungsi retorika Taukid dalam Al-Qur'an dan hadis.
+    </p>
+    <p>
+      Melalui analisis ayat-ayat Al-Qur'an, mahasiswa telah berlatih mengidentifikasi Taukid dalam teks otentik keislaman. Aplikasi melalui konstruksi kalimat bertema lingkungan dan tugas menyusun paragraf tentang "Pentingnya Bahasa Arab" dengan minimal 3 Taukid Ma'nawi telah menunjukkan relevansi Taukid dalam konteks kontemporer dan kepedulian terhadap isu global.
+    </p>
+    <p>
+      Dengan bekal pemahaman ini, mahasiswa siap melangkah ke Pertemuan 12 yang akan membahas <strong>Al-Badal</strong> — tabi' yang menggantikan kedudukan matbu' dalam kalimat. Selamat belajar, dan semoga Allah SWT memudahkan perjalanan kita dalam menuntut ilmu.
+    </p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- DAFTAR PUSTAKA -->
+  <!-- ========================================================= -->
+  <div class="references" id="referensi">
+    <h4>📚 Daftar Pustaka</h4>
+    <ol>
+      <li>Ibnu Hisyam al-Anshari. <em>Mughni al-Labib 'an Kutub al-A'arib</em>. Kairo: Dar al-Hadits.</li>
+      <li>Al-Jarim, Ali & Amin, Musthafa. <em>An-Nahw al-Wadhih</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Sibawayh. <em>Al-Kitab</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Ibnu Malik. <em>Alfiyyah Ibnu Malik</em>. Beirut: Dar al-Kutub al-'Ilmiyyah.</li>
+      <li>Al-Ghalayaini, Musthafa. <em>Jami' ad-Durus al-'Arabiyyah</em>. Beirut: Al-Maktabah al-'Ashriyyah.</li>
+      <li>Hasan, 'Abbas. <em>Al-Nahw al-Wafi</em>. Kairo: Dar al-Ma'arif.</li>
+      <li>Ibnu 'Aqil. <em>Syarah Ibnu 'Aqil 'ala Alfiyyah Ibnu Malik</em>. Beirut: Mu'assasah ar-Risalah.</li>
+      <li>Al-Anbari, Ibnu. <em>Al-Mufrad fi Ushul an-Nahw</em>. Beirut: 'Alam al-Kutub.</li>
+      <li>Supriadi. (2024). <em>Micro Teaching: Keterampilan Dasar Mengajar untuk Calon Pendidik Profesional</em>. Bukittinggi: FTIK UIN Bukittinggi.</li>
+      <li>Tim Pengembang Prodi PBA. (2026). <em>Rencana Pembelajaran Semester: An-Nahw lil Mutawassithin</em>. Bukittinggi: UIN Sjech M. Djamil Djambek.</li>
+      <li>Owens, J. (2010). <em>The Early Grammatical Tradition: Language and Linguistics</em>. Cambridge: CUP.</li>
+      <li>Versteegh, K. (1997). <em>The Arabic Linguistic Tradition</em>. London: Routledge.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-nav">
+    <a href="10.html">← Pertemuan 10: La Nafiyah lil Jins</a>
+    <a href="#top">↑ Ke Atas</a>
+    <a href="12.html">Pertemuan 12: Al-Badal →</a>
+  </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- UJI FORMATIF -->
+<!-- ========================================================= -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-wrap">
+
+    <div class="quiz-header">
+      <span class="badge">📋 Uji Formatif 11</span>
+      <h2>At-Taukid: <span style="background:linear-gradient(135deg, var(--gold-light), var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic">Seni Penekanan Informasi</span></h2>
+      <p>📝 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) · ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>📚 Materi: Konsep Taukid, jenis-jenis, dhamir al-fashl, isim-isim taukid, syarat-syarat, analisis Al-Qur'an</p>
+    </div>
+
+    <div class="quiz-warning">
+      ⚠ Mohon lengkapi semua data dan jawaban terlebih dahulu sebelum mengirimkan!
+    </div>
+
+    <form id="studentForm" class="student-form">
+      <h3>📋 Data Mahasiswa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="nama" required placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>NIM <span class="req">*</span></label>
+          <input type="text" id="nim" required placeholder="Masukkan NIM">
+        </div>
+        <div class="form-group">
+          <label>📅 Tanggal Ujian</label>
+          <input type="date" id="tanggal">
+        </div>
+        <div class="form-group">
+          <label>Fakultas</label>
+          <input type="text" id="fakultas" placeholder="Contoh: Tarbiyah dan Ilmu Keguruan">
+        </div>
+        <div class="form-group">
+          <label>Program Studi</label>
+          <input type="text" id="prodi" placeholder="Contoh: Pendidikan Bahasa Arab">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi / Peminatan</label>
+          <input type="text" id="konsentrasi" placeholder="Contoh: Sastra Arab / Linguistik">
+        </div>
+        <div class="form-group">
+          <label>Semester <span class="req">*</span></label>
+          <select id="semester" required>
+            <option value="">Pilih Semester</option>
+            <option>Semester 1</option><option>Semester 2</option>
+            <option>Semester 3</option><option>Semester 4</option>
+            <option>Semester 5</option><option>Semester 6</option>
+            <option>Semester 7</option><option>Semester 8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Kelas</label>
+          <input type="text" id="kelas" placeholder="Contoh: PBA-A">
+        </div>
+      </div>
+    </form>
+
+    <div class="quiz-part">
+      <h3>📋 Bagian A – Pilihan Ganda</h3>
+      <p class="part-desc">⚠ Mohon lengkapi semua 10 soal pilihan ganda terlebih dahulu!</p>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>1.</strong> Dalam kalimat <span class="arab">جَاءَ الطَّالِبُ نَفْسُهُ</span>, kata <span class="arab">نَفْسُهُ</span> berkedudukan sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a. Na'at (penjelas sifat)</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b. Taukid Ma'nawi (penegas)</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c. Badal (pengganti)</label></div>
+          <div class="mc-option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d. Khabar (pelengkap)</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>2.</strong> Fungsi utama Taukid dalam kalimat adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a. Menjelaskan sifat matbu'</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b. Menggantikan matbu'</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c. Menguatkan dan menegaskan makna matbu'</label></div>
+          <div class="mc-option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d. Menghubungkan dua unsur kalimat</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>3.</strong> Syarat utama matbu' dalam Taukid Ma'nawi adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a. Matbu' harus berupa isim ma'rifah</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b. Matbu' harus berupa isim nakirah</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c. Matbu' harus berupa fi'il</label></div>
+          <div class="mc-option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d. Matbu' harus berupa huruf</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>5.</strong> Isim taukid yang digunakan untuk jamak (lebih dari dua) adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Nafs dan 'ain</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Kila dan kilta</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Huwa dan huma</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Kull dan jami'</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>5.</strong> Dalam ayat <span class="arab">أُولَٰئِكَ هُمُ الْخَالِدُونَ</span>, kata <span class="arab">هُمُ</span> berfungsi sebagai...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a. Mubtada'</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b. Taukid Ma'nawi (dhamir al-fashl)</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c. Khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d. Na'at</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>6.</strong> Hukum i'rab Taukid adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a. Selalu marfu'</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b. Selalu manshub</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c. Selalu mengikuti i'rab matbu'</label></div>
+          <div class="mc-option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d. Selalu majrur</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="a">
+        <div class="q-text"><strong>7.</strong> Perbedaan antara Taukid Ma'nawi dan Taukid Lafzhi adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a. Taukid Ma'nawi menggunakan dhamir/isim, Taukid Lafzhi mengulang lafaz</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b. Taukid Ma'nawi mengulang lafaz, Taukid Lafzhi menggunakan dhamir/isim</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c. Keduanya sama-sama menggunakan dhamir</label></div>
+          <div class="mc-option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d. Keduanya sama-sama mengulang lafaz</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="d">
+        <div class="q-text"><strong>8.</strong> Isim taukid yang digunakan untuk mudzakkar mutsanna (dua laki-laki) adalah...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a. Nafs</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b. 'Ain</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c. Kilta</label></div>
+          <div class="mc-option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d. Kila</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="b">
+        <div class="q-text"><strong>9.</strong> Wawu yang muncul di akhir dhamir tau taukid (seperti <span class="arab">هُمُ</span>) disebut...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a. Wawu jama'ah</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b. Wawu al-fashl (wawu pemisah)</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c. Wawu 'athaf</label></div>
+          <div class="mc-option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d. Wawu hal</label></div>
+        </div>
+      </div>
+
+      <div class="mc-question" data-correct="c">
+        <div class="q-text"><strong>10.</strong> Dalam kalimat <span class="arab">رَأَيْتُ الطَّالِبَ نَفْسَهُ</span>, kata <span class="arab">نَفْسَهُ</span> berkedudukan manshub karena...</div>
+        <div class="mc-options">
+          <div class="mc-option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a. Sebagai maf'ul bih</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b. Sebagai khabar</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c. Sebagai Taukid yang mengikuti matbu' manshub (الطَّالِبَ sebagai maf'ul bih)</label></div>
+          <div class="mc-option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d. Sebagai hal</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-part">
+      <h3>✍️ Bagian B – Essay</h3>
+      <p class="part-desc">⚠ Mohon isi semua 5 soal essay dengan jawaban yang komprehensif!</p>
+
+      <div class="essay-question">
+        <div class="q-text"><strong>1.</strong> Jelaskan secara komprehensif definisi dan hakikat At-Taukid menurut para ulama nahwu! Sebutkan minimal 3 definisi dari kitab yang berbeda (dalam bahasa Arab), dan analisislah perbedaan antara Taukid dengan tabi' lainnya (Na'at, Badal, 'Athaf)!
